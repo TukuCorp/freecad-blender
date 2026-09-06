@@ -8,7 +8,7 @@
 <style>
   html, body { margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none; background: #1c1f26;
                font-family: "Segoe UI", sans-serif; -webkit-text-size-adjust: 100%; }
-  #app { display: flex; flex-direction: column; height: 100%; }
+  #app { display: flex; flex-direction: column; height: calc(100% - 44px); }
 
   #tabs { flex: 0 0 auto; display: flex; gap: 6px; overflow-x: auto; padding: 10px 12px;
           background: #14161b; border-bottom: 1px solid rgba(255,255,255,0.08); box-sizing: border-box;
@@ -33,7 +33,7 @@
   #viewer-pane { flex: 1 1 auto; position: relative; min-width: 0; min-height: 0; background: #1c1f26; }
   #viewer { display: block; width: 100%; height: 100%; touch-action: none; outline: none;
             -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
-  #hud { position: absolute; left: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); color: #d8dbe0;
+  #hud { position: absolute; left: 16px; bottom: calc(58px + env(safe-area-inset-bottom)); color: #d8dbe0;
          font-size: 13px; letter-spacing: 0.03em; opacity: 0.85; background: rgba(10,12,16,0.55);
          padding: 8px 14px; border-radius: 8px; pointer-events: none; max-width: calc(100% - 120px);
          box-sizing: border-box; }
@@ -51,9 +51,10 @@
   .spinner { width: 32px; height: 32px; border-radius: 50%; border: 3px solid rgba(216,219,224,0.25);
              border-top-color: #d8dbe0; animation: spin 0.9s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
+  button:focus-visible, a:focus-visible { outline: 2px solid #8ab4ff; outline-offset: 2px; }
 </style>
 </head>
-<body><div id="top-nav" style="position:sticky;top:0;height:44px;min-height:44px;background:#0f1115;display:flex;align-items:center;gap:6px;padding:0 10px;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;color:#9aa0a6;box-sizing:border-box"><a href="viewers.html" style="color:#8ab4ff;text-decoration:none;padding:8px 10px;border-radius:6px;min-height:28px;display:flex;align-items:center">Home</a><span style="opacity:0.35">/</span><span style="color:#d8dbe0;white-space:nowrap">contractor-as-drawn</span><span style="opacity:0.35">/</span><span style="color:#d8dbe0">Floors</span><span style="opacity:0.35">/</span><span id="build-badge" style="background:rgba(255,255,255,0.08);color:#d8dbe0;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);white-space:nowrap">PHIÊN BẢN ĐẦY ĐỦ — MÁY TÍNH</span><span style="margin-left:auto;display:flex;gap:6px;align-items:center"><button id="copy-link" type="button" style="background:rgba(255,255,255,0.06);color:#d8dbe0;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;min-height:32px;font:inherit;font-size:12px;cursor:pointer">Copy link</button><span id="floor-counter" style="background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.08)">Tầng 1/7</span></span></div>
+<body><div id="top-nav" style="position:sticky;top:0;height:44px;min-height:44px;background:#0f1115;display:flex;align-items:center;gap:6px;padding:0 10px;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;color:#9aa0a6;box-sizing:border-box"><a href="viewers.html" style="color:#8ab4ff;text-decoration:none;padding:8px 10px;border-radius:6px;min-height:28px;display:flex;align-items:center">Home</a><span style="opacity:0.35">/</span><span style="color:#d8dbe0;white-space:nowrap">contractor-as-drawn</span><span style="opacity:0.35">/</span><span style="color:#d8dbe0">Floors</span><span style="opacity:0.35">/</span><span id="build-badge" style="background:rgba(255,255,255,0.08);color:#d8dbe0;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);white-space:nowrap">PHIÊN BẢN ĐẦY ĐỦ — MÁY TÍNH</span><span style="margin-left:auto;display:flex;gap:6px;align-items:center"><button id="copy-link" type="button" style="background:rgba(255,255,255,0.06);color:#d8dbe0;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;min-height:32px;font:inherit;font-size:12px;cursor:pointer">Copy link</button><span id="floor-counter" style="background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.08)">Tầng 1/7 • +0.00m</span></span></div>
 <div id="app">
   <div id="tabs"><button type="button" aria-pressed="true" class="active">Ground</button><button type="button" aria-pressed="false">Mezzanine</button><button type="button" aria-pressed="false">Floor 2</button><button type="button" aria-pressed="false">Floor 3</button><button type="button" aria-pressed="false">Floor 4</button><button type="button" aria-pressed="false">Floor 5</button><button type="button" aria-pressed="false">Roof Terrace</button></div>
   <div id="main">
@@ -1674,11 +1675,11 @@
 <text x="208.0" y="2642.0" font-size="11" fill="#222">Scale: use the graphic bar</text>
 </svg></div></div></div>
     <div id="viewer-pane">
-      <canvas id="viewer"></canvas>
+      <canvas id="viewer" tabindex="0" aria-label="Mô hình 3D: dùng phím mũi tên để xoay"></canvas>
       <div id="overlay">
         <div class="spinner" id="overlay-spinner"></div>
         <div class="title" id="overlay-title">Loading contractor-as-drawn&hellip;</div>
-        <div class="hint" id="overlay-hint">First load can take a few seconds &mdash; the model is embedded in this page.</div>
+        <div class="hint" id="overlay-hint">First load can take a few seconds — the 3D model streams in next (open via http, not as a file, or it stays blank).</div>
       </div>
       <div id="hud">drag/tap-drag to orbit · pinch/scroll to zoom · tap a spot to step closer — <a href="#" id="hud-dismiss" style="color:#8ab4ff">Ẩn</a> · chọn tầng ở trên</div>
     </div>
@@ -6667,10 +6668,11 @@
     controls.screenSpacePanning = true;
     controls.minDistance = 0.2;
     controls.maxDistance = 400;
+    if (controls.listenToKeyEvents) controls.listenToKeyEvents(window);
 
     loader = new THREE.GLTFLoader();
 
-    fetch('contractor-as-drawn.glb').then(function(r){return r.arrayBuffer();}).then(function(b){loader.parse(b, '', onModel, onModelError);}).catch(onModelError);
+    fetch('contractor-as-drawn.glb?v=6a9d3568').then(function(r){return r.arrayBuffer();}).then(function(b){loader.parse(b, '', onModel, onModelError);}).catch(onModelError);
 
     resetBtn.addEventListener('click', function () {
       var home = floorHome[currentFloor];
@@ -6777,7 +6779,7 @@
   var bottomFloor = document.getElementById('bottom-floor');
   function updateFloorCounter(idx){
     var total = tabButtons.length || 7;
-    var names = ["+0.00m","+0.30m","+3.60m","+6.90m","+10.20m","+13.50m","+16.80m"];
+    var names = ["+0.00m", "+3.80m", "+7.00m", "+10.40m", "+13.80m", "+17.20m", "+20.60m"];
     var txt = "Tầng " + (idx+1) + "/" + total + " • " + (names[idx]||"");
     if(floorCounter) floorCounter.textContent = txt;
     if(bottomFloor) bottomFloor.textContent = txt;

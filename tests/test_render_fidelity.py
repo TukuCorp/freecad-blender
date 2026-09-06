@@ -226,7 +226,7 @@ def test_the_full_build_fetches_the_glb_instead_of_inlining_it(tmp_path):
     from homedesign.viewer import write_viewer
 
     html = write_viewer("mini", glb, tmp_path, build="full").html.read_text(encoding="utf-8")
-    assert "fetch('mini.glb')" in html
+    assert "fetch('mini.glb?v=" in html
     # No inlined payload. (`atob(` alone is not the tell — the bundled
     # GLTFLoader carries one for data: URIs — but our base64 chunk literal and
     # its decode loop are unmistakable.)
@@ -266,7 +266,7 @@ def test_a_full_build_over_the_inline_limit_is_still_served(tmp_path, monkeypatc
     glb = tmp_path / "mini.glb"
     glb.write_bytes(b"glTF\x02\x00\x00\x00" + b"\x00" * 512)
     html = viewer_mod.write_viewer("mini", glb, tmp_path, build="full").html.read_text(encoding="utf-8")
-    assert "fetch('mini.glb')" in html
+    assert "fetch('mini.glb?v=" in html
 
 
 def test_a_light_build_over_its_budget_is_an_error(tmp_path):
@@ -333,7 +333,8 @@ def test_no_placeholder_survives_into_a_written_viewer(tmp_path):
     html = _viewer_html(tmp_path, rooms=[], levels=[])
     for placeholder in ("__TITLE__", "__BUILD_BADGE__", "__LOAD_CALL__",
                         "__THREE_JS__", "__GLTF_LOADER__", "__ORBIT_CONTROLS__",
-                        "__ROOM_LABELS__", "__LEVEL_TAGS__", "__ENV_MAP__"):
+                        "__ROOM_LABELS__", "__LEVEL_TAGS__", "__ENV_MAP__",
+                        "__LOAD_HINT__"):
         assert placeholder not in html, f"{placeholder} was never substituted"
 
 
@@ -507,7 +508,7 @@ def test_floor_viewer_copies_its_glb_and_loads_it_by_name(tmp_path):
     assert written is not None
     html_path = getattr(written, "html", written)
     html = html_path.read_text(encoding="utf-8")
-    assert "fetch('mini.glb')" in html, "floors page must load a sibling GLB by bare name"
+    assert "fetch('mini.glb?v=" in html, "floors page must load a sibling GLB by bare name"
     assert (html_path.parent / "mini.glb").exists(), "the GLB was not copied beside the page"
 
 
@@ -525,3 +526,53 @@ def test_no_emitted_viewer_embeds_a_filesystem_path(tmp_path):
     for page in pages:
         text = page.read_text(encoding="utf-8")
         assert needle not in text, f"{page.name} embeds the absolute path {needle}"
+
+def test_floor_viewer_labels_come_from_the_model_not_hardcoded_floors(tmp_path):
+    """The counter/elevations were hardcoded for the 7-storey flagship, so the
+    5-storey dream viewer opened on wrong heights."""
+    from homedesign.viewer import write_floor_viewer
+
+    glb, storeys, svg_dir = _floors_fixture(tmp_path)
+    written = write_floor_viewer("mini", glb, storeys, svg_dir, tmp_path)
+    assert written is not None
+    html = written.html.read_text(encoding="utf-8")
+    assert '["+0.00m", "+3.40m"]' in html
+    assert "Tầng 1/2 • +0.00m" in html
+    assert "Tầng 1/7" not in html
+    for token in ("__FLOOR_LABELS_JSON__", "__FLOOR_COUNTER_INIT__", "__LOAD_HINT__"):
+        assert token not in html
+
+
+def test_viewer_hint_matches_how_the_build_loads(tmp_path):
+    from homedesign.viewer import write_viewer
+
+    glb = _tiny_glb(tmp_path / "mini.glb")
+    light = write_viewer("mini", glb, tmp_path, build="light").html.read_text(encoding="utf-8")
+    assert "embedded in this page" in light
+    full = write_viewer("mini", glb, tmp_path, build="full").html.read_text(encoding="utf-8")
+    assert "streams in next" in full
+
+
+def test_whole_viewer_status_label_follows_level_tags(tmp_path):
+    html = _viewer_html(tmp_path, rooms=[], levels=[
+        {"text": "Ground +0.000", "x": 0, "y": 0, "z": 0.0, "storey": "G"},
+        {"text": "F1 +3.400", "x": 0, "y": 0, "z": 3.4, "storey": "F1"}])
+    assert "bottom-floor" in html
+    assert "Tầng 1/7" not in html
+
+def test_glb_fetch_url_versions_with_model_mtime(tmp_path):
+    """A rebuilt GLB must defeat the browser cache: returning visitors would
+    otherwise orbit a stale model with zero errors."""
+    import os
+    import re
+
+    from homedesign.viewer import write_viewer
+
+    glb = _tiny_glb(tmp_path / "mini.glb")
+    first = write_viewer("mini", glb, tmp_path, build="full").html.read_text(encoding="utf-8")
+    v1 = re.search(r"fetch\('mini\.glb\?v=([0-9a-f]+)'\)", first).group(1)
+    st = glb.stat()
+    os.utime(glb, ns=(st.st_atime_ns, st.st_mtime_ns + 2_000_000_000))
+    second = write_viewer("mini", glb, tmp_path, build="full").html.read_text(encoding="utf-8")
+    v2 = re.search(r"fetch\('mini\.glb\?v=([0-9a-f]+)'\)", second).group(1)
+    assert v1 != v2

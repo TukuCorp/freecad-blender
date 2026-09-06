@@ -202,8 +202,13 @@ def _load_call(glb: Path, viewer_dir: Path, build: str | None = None) -> str:
             "loader.parse(_buf.buffer, '', onModel, onModelError);"
         )
     relative = glb.name if viewer_dir == glb.parent else _relative_to(glb, viewer_dir)
+    # Cache-bust the model fetch: after a rebuild the page HTML may itself
+    # come from the browser cache while the GLB changed (or vice versa), so a
+    # returning visitor would orbit a stale model with zero errors. The mtime
+    # hex changes on every export and costs nothing to mint.
+    version = format(int(glb.stat().st_mtime), "x") if glb.exists() else "0"
     return (
-        f"fetch('{relative}').then(function(r){{return r.arrayBuffer();}})"
+        f"fetch('{relative}?v={version}').then(function(r){{return r.arrayBuffer();}})"
         ".then(function(b){loader.parse(b, '', onModel, onModelError);})"
         ".catch(onModelError);"
     )
@@ -216,6 +221,14 @@ def _badge_text(build: str) -> str:
         return "PHIÊN BẢN ĐẦY ĐỦ — MÁY TÍNH"
     raise ValueError(f"unknown build {build!r}")
 
+
+def _load_hint(build: str) -> str:
+    """Overlay hint matching how the build loads: `light` inlines the model,
+    every other build streams an external GLB (CORS-blocked under file://)."""
+    if build == "light":
+        return "First load can take a few seconds \u2014 the model is embedded in this page."
+    return ("First load can take a few seconds \u2014 the 3D model streams in next "
+            "(open via http, not as a file, or it stays blank).")
 
 class ViewerFiles(NamedTuple):
     """What a viewer write produced: its page, and the GLB it loads if external."""
@@ -295,6 +308,7 @@ def write_viewer(model_name: str, glb_path: Path, out_dir: Path, build: str = "f
     template = _read_asset("viewer_template.html")
     template = template.replace("__TITLE__", model_name)
     template = template.replace("__BUILD_BADGE__", _badge_text(build))
+    template = template.replace("__LOAD_HINT__", _load_hint(build))
     template = template.replace("__ROOM_LABELS__", json.dumps(rooms or [], ensure_ascii=False))
     template = template.replace("__LEVEL_TAGS__", json.dumps(levels or [], ensure_ascii=False))
     template = template.replace("__ENV_MAP__", _env_map_uri())
@@ -378,6 +392,11 @@ def write_floor_viewer(
     template = _read_asset("floor_viewer_template.html")
     template = template.replace("__TITLE__", model_name)
     template = template.replace("__BUILD_BADGE__", _badge_text(build))
+    template = template.replace("__LOAD_HINT__", _load_hint(build))
+    labels = [f"+{s['base_z'] / 1000.0:.2f}m" for s in storeys]
+    template = template.replace("__FLOOR_LABELS_JSON__", json.dumps(labels))
+    template = template.replace(
+        "__FLOOR_COUNTER_INIT__", f"Tầng 1/{len(storeys)} • {labels[0]}")
     template = template.replace("__THREE_JS__", _read_asset("three.min.js"))
     template = template.replace("__GLTF_LOADER__", _read_asset("GLTFLoader.js"))
     template = template.replace("__ORBIT_CONTROLS__", _read_asset("OrbitControls.js"))

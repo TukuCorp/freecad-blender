@@ -8,10 +8,10 @@
 <style>
   html, body { margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none; background: #1c1f26;
                font-family: "Segoe UI", sans-serif; -webkit-text-size-adjust: 100%; }
-  #app { position: relative; width: 100%; height: 100%; }
+  #app { position: relative; width: 100%; height: calc(100% - 44px); }
   #viewer { display: block; width: 100%; height: 100%; touch-action: none; outline: none;
             -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
-  #hud { position: absolute; left: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); color: #d8dbe0;
+  #hud { position: absolute; left: 16px; bottom: calc(58px + env(safe-area-inset-bottom)); color: #d8dbe0;
          font-size: 13px; letter-spacing: 0.03em; opacity: 0.85; background: rgba(10,12,16,0.55);
          padding: 8px 14px; border-radius: 8px; pointer-events: none; max-width: calc(100% - 120px);
          box-sizing: border-box; }
@@ -29,15 +29,16 @@
   .spinner { width: 32px; height: 32px; border-radius: 50%; border: 3px solid rgba(216,219,224,0.25);
              border-top-color: #d8dbe0; animation: spin 0.9s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
+  button:focus-visible, a:focus-visible { outline: 2px solid #8ab4ff; outline-offset: 2px; }
 </style>
 </head>
-<body><div id="top-nav" style="position:sticky;top:0;height:44px;min-height:44px;background:#0f1115;display:flex;align-items:center;gap:6px;padding:0 10px;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;color:#9aa0a6;box-sizing:border-box"><a href="viewers.html" style="color:#8ab4ff;text-decoration:none;padding:8px 10px;border-radius:6px;min-height:28px;display:flex;align-items:center">Home</a><span style="opacity:0.35">/</span><span style="color:#d8dbe0;white-space:nowrap">contractor-as-drawn</span><span style="opacity:0.35">/</span><span style="color:#d8dbe0">Viewers</span><span style="opacity:0.35">/</span><span id="build-badge" style="background:rgba(255,255,255,0.08);color:#d8dbe0;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);white-space:nowrap">PHIÊN BẢN NHẸ — ĐIỆN THOẠI</span><span style="margin-left:auto;display:flex;gap:6px;align-items:center"><button id="copy-link" type="button" style="background:rgba(255,255,255,0.06);color:#d8dbe0;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;min-height:32px;font:inherit;font-size:12px;cursor:pointer">Copy link</button><span id="floor-counter" style="background:rgba(255,255,255,0.06);padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.08)">7 tầng • +19.0m</span></span></div>
+<body><div id="top-nav" style="position:sticky;top:0;height:44px;min-height:44px;background:#0f1115;display:flex;align-items:center;gap:6px;padding:0 10px;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.08);font-size:12px;color:#9aa0a6;box-sizing:border-box"><a href="viewers.html" style="color:#8ab4ff;text-decoration:none;padding:8px 10px;border-radius:6px;min-height:28px;display:flex;align-items:center">Home</a><span style="opacity:0.35">/</span><span style="color:#d8dbe0;white-space:nowrap">contractor-as-drawn</span><span style="opacity:0.35">/</span><span style="color:#d8dbe0">Viewers</span><span style="opacity:0.35">/</span><span id="build-badge" style="background:rgba(255,255,255,0.08);color:#d8dbe0;padding:6px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.12);white-space:nowrap">PHIÊN BẢN NHẸ — ĐIỆN THOẠI</span><span style="margin-left:auto;display:flex;gap:6px;align-items:center"><button id="copy-link" type="button" style="background:rgba(255,255,255,0.06);color:#d8dbe0;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;min-height:32px;font:inherit;font-size:12px;cursor:pointer">Copy link</button></span></div>
 <div id="app">
-  <canvas id="viewer"></canvas>
+  <canvas id="viewer" tabindex="0" aria-label="Mô hình 3D: dùng phím mũi tên để xoay"></canvas>
   <div id="overlay">
     <div class="spinner" id="overlay-spinner"></div>
     <div class="title" id="overlay-title">Loading contractor-as-drawn&hellip;</div>
-    <div class="hint" id="overlay-hint">First load can take a few seconds &mdash; the model is embedded in this page.</div>
+    <div class="hint" id="overlay-hint">First load can take a few seconds — the model is embedded in this page.</div>
   </div>
   <div id="hud">drag/tap-drag to orbit · pinch/scroll to zoom · two-finger or right-drag to pan · tap a spot to step closer — <a href="#" id="hud-dismiss" style="color:#8ab4ff">Ẩn</a></div>
 </div>
@@ -57,7 +58,7 @@
   <label style="display:flex;align-items:center;gap:8px;margin:5px 0"><input type="checkbox" class="tg-layer" data-layer="openings" checked> Cửa &amp; cửa sổ</label>
   <label style="display:flex;align-items:center;gap:8px;margin:5px 0"><input type="checkbox" class="tg-layer" data-layer="furniture" checked> Nội thất</label>
 </div>
-<div id="bottom-bar" style="position:absolute;left:0;right:0;bottom:0;height:44px;min-height:44px;background:rgba(10,12,16,0.96);border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 10px;z-index:998;box-sizing:border-box;gap:8px"><button id="reset-btn" type="button" style="padding:8px 14px;min-height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#d8dbe0;font:inherit;font-size:12px;cursor:pointer">Reset view</button><span id="bottom-floor" style="font-size:12px;color:#9aa0a6">Tầng 1/7 • +0.00m</span><button id="tools-btn" type="button" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:#d8dbe0;font-size:14px;cursor:pointer" title="Công cụ: nhãn, đo, mặt cắt, lớp">&#9881;</button><button id="help-btn" type="button" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:#d8dbe0;font-size:14px;cursor:pointer" title="Trợ giúp điều hướng">?</button></div>
+<div id="bottom-bar" style="position:absolute;left:0;right:0;bottom:0;height:44px;min-height:44px;background:rgba(10,12,16,0.96);border-top:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:space-between;padding:0 10px;z-index:998;box-sizing:border-box;gap:8px"><button id="reset-btn" type="button" style="padding:8px 14px;min-height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#d8dbe0;font:inherit;font-size:12px;cursor:pointer">Reset view</button><span id="bottom-floor" style="font-size:12px;color:#9aa0a6">Toàn nhà</span><button id="tools-btn" type="button" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:#d8dbe0;font-size:14px;cursor:pointer" title="Công cụ: nhãn, đo, mặt cắt, lớp">&#9881;</button><button id="help-btn" type="button" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:#d8dbe0;font-size:14px;cursor:pointer" title="Trợ giúp điều hướng">?</button></div>
 <script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -4857,6 +4858,7 @@
   controls.screenSpacePanning = true;
   controls.minDistance = 0.2;
   controls.maxDistance = 400;
+  if (controls.listenToKeyEvents) controls.listenToKeyEvents(window);
 
   var loader = new THREE.GLTFLoader();
   var modelRoot = null;
@@ -8909,6 +8911,16 @@
   // ---------------------------------------------------------------------
   var ROOM_LABELS = [{"text": "NƠI ĐỂ XE", "x": 1.98, "y": 5.5, "z": 1.6, "storey": "Ground"}, {"text": "P.KHÁCH", "x": 1.98, "y": 9.9, "z": 1.6, "storey": "Ground"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 1.6, "storey": "Ground"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 1.6, "storey": "Ground"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 1.6, "storey": "Ground"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 1.6, "storey": "Ground"}, {"text": "WC", "x": 1.98, "y": 18.9, "z": 1.6, "storey": "Ground"}, {"text": "P. ĂN + BẾP", "x": 1.98, "y": 21.75, "z": 1.6, "storey": "Ground"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 5.4, "storey": "Mezzanine"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 5.4, "storey": "Mezzanine"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 5.4, "storey": "Mezzanine"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 5.4, "storey": "Mezzanine"}, {"text": "P.SINH HOẠT", "x": 1.98, "y": 20.95, "z": 5.4, "storey": "Mezzanine"}, {"text": "BAN CÔNG", "x": 1.98, "y": 4.2, "z": 8.6, "storey": "Floor 2"}, {"text": "P.NGỦ", "x": 1.98, "y": 6.9, "z": 8.6, "storey": "Floor 2"}, {"text": "WC", "x": 0.975, "y": 9.7, "z": 8.6, "storey": "Floor 2"}, {"text": "HÀNH LANG", "x": 2.955, "y": 9.7, "z": 8.6, "storey": "Floor 2"}, {"text": "HÀNH LANG", "x": 1.98, "y": 11.4, "z": 8.6, "storey": "Floor 2"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 8.6, "storey": "Floor 2"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 8.6, "storey": "Floor 2"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 8.6, "storey": "Floor 2"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 8.6, "storey": "Floor 2"}, {"text": "WC", "x": 1.98, "y": 18.9, "z": 8.6, "storey": "Floor 2"}, {"text": "P.NGỦ", "x": 1.98, "y": 21.75, "z": 8.6, "storey": "Floor 2"}, {"text": "BAN CÔNG", "x": 1.98, "y": 4.2, "z": 12.0, "storey": "Floor 3"}, {"text": "P.NGỦ", "x": 1.98, "y": 6.9, "z": 12.0, "storey": "Floor 3"}, {"text": "WC", "x": 0.975, "y": 9.7, "z": 12.0, "storey": "Floor 3"}, {"text": "HÀNH LANG", "x": 2.955, "y": 9.7, "z": 12.0, "storey": "Floor 3"}, {"text": "HÀNH LANG", "x": 1.98, "y": 11.4, "z": 12.0, "storey": "Floor 3"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 12.0, "storey": "Floor 3"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 12.0, "storey": "Floor 3"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 12.0, "storey": "Floor 3"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 12.0, "storey": "Floor 3"}, {"text": "WC", "x": 1.98, "y": 18.9, "z": 12.0, "storey": "Floor 3"}, {"text": "P.NGỦ", "x": 1.98, "y": 21.75, "z": 12.0, "storey": "Floor 3"}, {"text": "BAN CÔNG", "x": 1.98, "y": 4.2, "z": 15.4, "storey": "Floor 4"}, {"text": "P.NGỦ", "x": 1.98, "y": 6.9, "z": 15.4, "storey": "Floor 4"}, {"text": "WC", "x": 0.975, "y": 9.7, "z": 15.4, "storey": "Floor 4"}, {"text": "HÀNH LANG", "x": 2.955, "y": 9.7, "z": 15.4, "storey": "Floor 4"}, {"text": "HÀNH LANG", "x": 1.98, "y": 11.4, "z": 15.4, "storey": "Floor 4"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 15.4, "storey": "Floor 4"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 15.4, "storey": "Floor 4"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 15.4, "storey": "Floor 4"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 15.4, "storey": "Floor 4"}, {"text": "WC", "x": 1.98, "y": 18.9, "z": 15.4, "storey": "Floor 4"}, {"text": "P.NGỦ", "x": 1.98, "y": 21.75, "z": 15.4, "storey": "Floor 4"}, {"text": "BAN CÔNG", "x": 1.98, "y": 4.2, "z": 18.8, "storey": "Floor 5"}, {"text": "P.THỜ", "x": 1.98, "y": 6.9, "z": 18.8, "storey": "Floor 5"}, {"text": "HÀNH LANG", "x": 0.98, "y": 10.6, "z": 18.8, "storey": "Floor 5"}, {"text": "WC", "x": 2.96, "y": 9.85, "z": 18.8, "storey": "Floor 5"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 18.8, "storey": "Floor 5"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 18.8, "storey": "Floor 5"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 18.8, "storey": "Floor 5"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 18.8, "storey": "Floor 5"}, {"text": "WC", "x": 1.98, "y": 18.9, "z": 18.8, "storey": "Floor 5"}, {"text": "P.NGỦ", "x": 1.98, "y": 21.75, "z": 18.8, "storey": "Floor 5"}, {"text": "SÂN THƯỢNG", "x": 1.98, "y": 7.9, "z": 22.200000000000003, "storey": "Roof Terrace"}, {"text": "THANG", "x": 1.5025, "y": 14.3, "z": 22.200000000000003, "storey": "Roof Terrace"}, {"text": "HÀNH LANG", "x": 3.4825, "y": 14.3, "z": 22.200000000000003, "storey": "Roof Terrace"}, {"text": "THANG MÁY", "x": 2.96, "y": 17.2, "z": 22.200000000000003, "storey": "Roof Terrace"}, {"text": "HÀNH LANG", "x": 0.98, "y": 17.2, "z": 22.200000000000003, "storey": "Roof Terrace"}, {"text": "SÂN THƯỢNG", "x": 1.98, "y": 20.95, "z": 22.200000000000003, "storey": "Roof Terrace"}];
   var LEVEL_TAGS = [{"text": "Ground +0.000", "x": 0.0, "y": 0.0, "z": 0.0, "storey": "Ground"}, {"text": "Mezzanine +3.800", "x": 0.0, "y": 0.0, "z": 3.8, "storey": "Mezzanine"}, {"text": "Floor 2 +7.000", "x": 0.0, "y": 0.0, "z": 7.0, "storey": "Floor 2"}, {"text": "Floor 3 +10.400", "x": 0.0, "y": 0.0, "z": 10.4, "storey": "Floor 3"}, {"text": "Floor 4 +13.800", "x": 0.0, "y": 0.0, "z": 13.8, "storey": "Floor 4"}, {"text": "Floor 5 +17.200", "x": 0.0, "y": 0.0, "z": 17.2, "storey": "Floor 5"}, {"text": "Roof Terrace +20.600", "x": 0.0, "y": 0.0, "z": 20.6, "storey": "Roof Terrace"}];
+  (function () {
+    var bf = document.getElementById("bottom-floor");
+    if (bf && LEVEL_TAGS && LEVEL_TAGS.length) {
+      var zmax = 0, li;
+      for (li = 0; li < LEVEL_TAGS.length; li++) {
+        if (LEVEL_TAGS[li].z > zmax) zmax = LEVEL_TAGS[li].z;
+      }
+      bf.textContent = LEVEL_TAGS.length + ' t\u1ea7ng \u2022 +' + zmax.toFixed(2) + ' m';
+    }
+  })();
 
   var toolsPanel = document.getElementById('tools');
   var toolsBtn = document.getElementById('tools-btn');
@@ -9023,7 +9035,7 @@
     setRayFromNdc(ndc);
     var hits = raycaster.intersectObject(modelRoot, true);
     if (!hits.length) {
-      if (measureReadout) measureReadout.textContent = 'Khong trung be mat nao';
+      if (measureReadout) measureReadout.textContent = 'Không trúng bề mặt nào';
       return;
     }
     if (measurePoints.length === 2) clearMeasure();
@@ -9095,12 +9107,19 @@
   // --- layer toggles ----------------------------------------------------
   // Driven by the object-name prefixes build_scene.py already emits, so no
   // extra metadata has to travel in the GLB.
+  // Furniture resolves BEFORE openings: joinery and cabinet names share
+  // the openings vocabulary (bike_bar_*, kitchen_door_*, wardrobe_door_* all
+  // contain _bar/_door), so openings-first strands them on the wrong toggle.
+  // Opening part names (F<n>_O<m>_frame/leaf/handle/...) carry no furniture
+  // root, which makes furniture-first safe in the other direction.
   var LAYER_PREFIXES = {
-    structure: ['slab', 'structure', 'stair', 'tread', 'beam', 'roof', 'facade'],
+    structure: ['slab', 'structure', 'stair', 'tread', 'beam', 'roof', 'facade', 'col'],
     walls: ['wall', 'parapet', 'skirting', 'ceiling', 'floor', 'reveal', 'rail'],
-    openings: ['frame', 'glass', 'leaf', 'door', 'window', 'sill', 'lintel', 'bar'],
     furniture: ['furn', 'bed', 'sofa', 'table', 'chair', 'kitchen', 'wc', 'shelving',
-                'console', 'car', 'planter', 'desk', 'wardrobe']
+                'console', 'car', 'planter', 'desk', 'wardrobe',
+                'basin', 'bike', 'fridge', 'lamp', 'nightstand', 'pendant', 'rug', 'shower'],
+    openings: ['frame', 'glass', 'leaf', 'door', 'window', 'sill', 'lintel', 'bar',
+               'handle', 'lever']
   };
 
   function layerOf(name) {
