@@ -1,7 +1,7 @@
 ---
 title: "Photoreal Render Overhaul"
 date: "2026-08-30"
-status: "open — 42 of 43 tasks done; only TASK-06-05 (the full 12-view 512-sample Cycles bake) remains, blocked on hardware: no GPU render path on this machine, and a measured probe reached sample 41/512 in 6m41s with 1h16m remaining for one frame (~17h for the set). Published stills are the final EEVEE profile instead."
+status: "abandoned — the last task, TASK-06-05's full 12-view 512-sample Cycles bake, is a ~17h CPU-only job on a machine with no GPU render path (measured: sample 41/512 in 6m41s, 1h16m remaining for one frame), so it is not being run; the 256-sample EEVEE `final` stills are published as the shipped deliverable instead and every other task (42 of 43) is done."
 request: "Improve the contractor-as-drawn 3D render: it still reads as rudimentary massing, does not resemble the contractor drawing (the front-facing pillar is missing), and is not impressive enough to share. Produce a visually impressive result; no previously accepted limitation applies."
 plan_type: "multi-phase"
 research_inputs:
