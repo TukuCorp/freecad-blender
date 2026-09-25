@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1c1f26">
+<title>T3 front bedroom split — 3D</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; overscroll-behavior: none;
+    background: #1c1f26; font-family: "Segoe UI", system-ui, sans-serif; }
+  #app { position: fixed; inset: 0; }
+  #viewer { display: block; width: 100%; height: 100%; touch-action: none;
+    -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+  #hud { position: absolute; left: 12px; top: 12px; color: #eceef2; font-size: 14px;
+    background: rgba(10,12,16,0.62); padding: 10px 14px; border-radius: 10px;
+    pointer-events: none; max-width: min(70vw, 340px); line-height: 1.45; }
+  #hud .t { font-weight: 700; }
+  #hud .a { opacity: 0.85; font-size: 13px; }
+  #hud .legend { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+  #hud .sw { display: inline-block; width: 11px; height: 11px; border-radius: 2px;
+    background: #e8590c; margin-right: 5px; vertical-align: baseline; }
+  #err { position: absolute; left: 0; right: 0; top: 0; display: none; z-index: 50;
+    background: #b3261e; color: #fff; font-size: 13px; padding: 10px 14px;
+    white-space: pre-wrap; word-break: break-word; max-height: 40vh; overflow: auto; }
+  /* option chips */
+  #chips { position: absolute; display: flex; gap: 8px; z-index: 10; }
+  #chips button { min-width: 48px; min-height: 44px; padding: 10px 14px; font-size: 15px;
+    font-weight: 700; border-radius: 22px; border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(10,12,16,0.62); color: #eceef2; cursor: pointer; }
+  #chips button[aria-pressed="true"] { background: #e8590c; border-color: #e8590c; color: #fff; }
+  /* tools */
+  #tools { position: absolute; z-index: 10; color: #eceef2; font-size: 14px;
+    background: rgba(10,12,16,0.78); border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 12px; padding: 6px 6px; }
+  #tools button.tgl { display: flex; align-items: center; gap: 8px; width: 100%;
+    min-height: 44px; padding: 8px 12px; font-size: 14px; color: #eceef2;
+    background: none; border: none; border-radius: 8px; cursor: pointer; text-align: left; }
+  #tools button.tgl .st { margin-left: auto; opacity: 0.75; font-size: 12px; }
+  #tools button.tgl[aria-pressed="true"] .st { color: #8fd18f; opacity: 1; }
+  #tools button.tgl:active { background: rgba(255,255,255,0.1); }
+  #tools .sep { border-top: 1px solid rgba(255,255,255,0.12); margin: 4px 6px; }
+  @media (max-width: 899px) {
+    #chips { left: 0; right: 0; bottom: calc(10px + env(safe-area-inset-bottom));
+      justify-content: center; padding: 0 8px; }
+    #hud { font-size: 13px; max-width: calc(100vw - 130px); }
+    #tools { right: 8px; top: 8px; max-width: min(72vw, 260px); }
+    #tools.collapsed .tgl:not(#tools-btn), #tools.collapsed .sep { display: none; }
+  }
+  @media (min-width: 900px) {
+    #chips { right: 12px; top: 12px; flex-direction: row; }
+    #hud { left: 12px; top: 12px; }
+    #tools { right: 12px; top: 76px; width: 218px; }
+    #tools #tools-btn { display: none; }
+  button:focus-visible { outline: 2px solid #8ab4ff; outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div id="app">
+  <canvas id="viewer" aria-label="3D model, front bedroom split options"></canvas>
+  <div id="err" role="alert"></div>
+  <div id="hud"><div class="t" id="hud-title">…</div><div class="a" id="hud-areas">…</div>
+    <div class="legend"><span class="sw"></span>phần mới (vách / rèm)</div></div>
+  <div id="chips" role="group" aria-label="Layout options"></div>
+  <div id="tools">
+    <button type="button" class="tgl" id="tools-btn" aria-pressed="true">? Tùy chọn</button>
+    <div class="sep"></div>
+    <button type="button" class="tgl" id="t-view">Chế độ xem <span class="st" id="t-view-st">3D</span></button>
+    <button type="button" class="tgl" id="t-walls">Tường <span class="st">bật</span></button>
+    <button type="button" class="tgl" id="t-furn">Nội thất <span class="st">bật</span></button>
+    <button type="button" class="tgl" id="t-labels">Nhãn <span class="st">bật</span></button>
+    <button type="button" class="tgl" id="t-ceil">Trần <span class="st">tắt</span></button>
+    <button type="button" class="tgl" id="t-cut">Tường thấp 1,2m <span class="st">tắt</span></button>
+    <button type="button" class="tgl" id="t-fit">Vừa khung</button>
+  </div>
+</div>
+<script>__THREE_JS__</script>
+<script>__ORBIT_CONTROLS__</script>
+<script>
+"use strict";
+/*__MODEL_JSON__*/var MODEL = null;
+function showError(m) {
+  document.title = "ERROR: " + String(m).slice(0, 120);
+  try { console.error(m); } catch (e) {}
+  var b = document.getElementById("err");
+  if (b) { b.style.display = "block"; b.textContent = "ERROR: " + m; }
+}
+window.onerror = function (msg, src, line) {
+  showError(String(msg) + " @" + String(line));
+};
+var S = null; // state
+function boot() {
+  if (!MODEL || !MODEL.options) throw new Error("embedded model missing");
+  var canvas = document.getElementById("viewer");
+  var renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true,
+      powerPreference: "high-performance" });
+  } catch (e) { throw new Error("WebGL unavailable: " + e.message); }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  var scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x23262e);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x4a505c, 1.25));
+  var sun = new THREE.DirectionalLight(0xffffff, 0.85);
+  sun.position.set(-6, -8, 12);
+  scene.add(sun);
+  var fill = new THREE.DirectionalLight(0xfff2e0, 0.30);
+  fill.position.set(8, 12, 7);
+  scene.add(fill);
+  var ground = new THREE.Mesh(new THREE.PlaneGeometry(120, 120),
+    new THREE.MeshLambertMaterial({ color: 0x2c3038 }));
+  ground.position.set(1.98, 7.9, -0.21);
+  scene.add(ground);
+  var persp = new THREE.PerspectiveCamera(45, 1, 0.1, 300);
+  var ortho = new THREE.OrthographicCamera(-5, 5, 5, -5, 0.1, 300);
+  ortho.up.set(0, 1, 0);
+  var ctlP = new THREE.OrbitControls(persp, canvas);
+  var ctlO = new THREE.OrbitControls(ortho, canvas);
+  ctlO.enableRotate = false;
+  var q = {};
+  try {
+    (location.search || "").replace(/^\?/, "").split("&").forEach(function (kv) {
+      var p = kv.split("="); if (p[0]) q[decodeURIComponent(p[0])] = decodeURIComponent(p[1] || "");
+    });
+  } catch (e) {}
+  var wantPlan = (q.view || "").toLowerCase() === "plan";
+  S = { renderer: renderer, scene: scene, canvas: canvas, persp: persp, ortho: ortho,
+    ctlP: ctlP, ctlO: ctlO, opt: null, group: null, labels: [], wallMeshes: [],
+    ceilMeshes: [], furnMeshes: [], showWalls: true, showFurn: true,
+    showLabels: true, showCeil: false, lowCut: true, plan: wantPlan };
+  ctlP.enabled = !wantPlan; ctlO.enabled = wantPlan;
+  buildChips();
+  wireTools();
+  resize();
+  window.addEventListener("resize", resize);
+  window.addEventListener("orientationchange", function () {
+    window.setTimeout(resize, 120); });
+  window.addEventListener("hashchange", hashGo);
+  canvas.addEventListener("dblclick", function () { fit(); });
+  var lastTap = 0;
+  canvas.addEventListener("touchend", function () {
+    var t = Date.now();
+    if (t - lastTap < 320) fit();
+    lastTap = t;
+  }, { passive: true });
+  var id = (location.hash || "").replace("#", "").toUpperCase();
+  if (!byId(id)) id = "A";
+  select(id, true);
+  if ("selftest" in q) requestAnimationFrame(function () { requestAnimationFrame(selftest); });
+  requestAnimationFrame(loop);
+}
+function byId(id) {
+  for (var i = 0; i < MODEL.options.length; i++)
+    if (MODEL.options[i].id === id) return MODEL.options[i];
+  return null;
+}
+function matFor(s) {
+  var kind = s.kind || "", m = s.material || "concrete";
+  var isNew = (kind === "new_partition" || kind === "glass" ||
+               kind === "mullion" || kind === "curtain");
+  var c = { concrete: 0xd9d5cc, stud: 0xe8e2d4, wood: 0x9a6b3f, fabric: 0x7fa3c7,
+    porcelain: 0xf2f4f6, glass: 0x9fc4e8 }[m];
+  if (c === undefined) c = 0xcccccc;
+  if (kind === "new_partition" || kind === "mullion") c = 0xe8590c;
+  if (kind === "curtain") c = 0xe8894a;
+  var p = { color: c };
+  if (m === "glass") {
+    p.transparent = true; p.opacity = 0.25; p.side = THREE.DoubleSide;
+    p.depthWrite = false; p.polygonOffset = true; p.polygonOffsetFactor = 1;
+    p.polygonOffsetUnits = 1;
+    if (isNew) p.color = new THREE.Color(0xe8934a);
+  }
+  if (kind === "curtain") {
+    p.transparent = true; p.opacity = 0.55; p.side = THREE.DoubleSide;
+    p.depthWrite = false;
+  }
+  var mat = new THREE.MeshLambertMaterial(p);
+  return { mat: mat, isNew: isNew };
+}
+function isWallKind(k) {
+  return k === "wall" || k === "new_partition" || k === "glass" ||
+         k === "mullion" || k === "parapet";
+}
+function isFurnKind(k) {
+  return k === "furniture" || k === "fixture" || k === "fixture_wc" ||
+         k === "curtain";
+}
+function buildOption(opt) {
+  if (S.group) {
+    S.scene.remove(S.group);
+    S.group.traverse(function (o) {
+      if (o.geometry) o.geometry.dispose();
+      if (o.material) { (Array.isArray(o.material) ? o.material : [o.material])
+        .forEach(function (mm) { if (mm.map) mm.map.dispose(); mm.dispose(); }); }
+    });
+  }
+  S.group = new THREE.Group();
+  S.labels = []; S.wallMeshes = []; S.ceilMeshes = []; S.furnMeshes = [];
+  var U = 0.001;
+  (opt.solids || []).forEach(function (s, i) {
+    var w = (s.w || 0) * U, d = (s.d || 0) * U, h = (s.h || 0) * U;
+    if (w <= 0 || d <= 0 || h <= 0) return;
+    var r = matFor(s);
+    var mesh = new THREE.Mesh(new THREE.BoxGeometry(w, d, h), r.mat);
+    mesh.position.set(((s.x || 0) * U) + w / 2, ((s.y || 0) * U) + d / 2,
+      ((s.z || 0) * U) + h / 2);
+    mesh.userData = { solid: s, fullH: h, baseZ: (s.z || 0) * U };
+    S.group.add(mesh);
+    var k = s.kind || "";
+    if (isWallKind(k)) S.wallMeshes.push(mesh);
+    if (isFurnKind(k)) S.furnMeshes.push(mesh);
+    if (k === "slab" && (s.z || 0) >= 3000) S.ceilMeshes.push(mesh);
+  });
+  (opt.labels || []).forEach(function (L) {
+    if (!L || !L.text) return;
+    var sp = makeLabel(L.text);
+    sp.position.set((L.x || 0) * U, (L.y || 0) * U, (L.z || 1600) * U);
+    S.group.add(sp);
+    S.labels.push(sp);
+  });
+  S.scene.add(S.group);
+  applyFlags();
+}
+function makeLabel(text) {
+  var fs = 46, pad = 22;
+  var cv = document.createElement("canvas");
+  var cx = cv.getContext("2d");
+  cx.font = "700 " + fs + "px 'Segoe UI', system-ui, sans-serif";
+  var tw = Math.ceil(cx.measureText(text).width);
+  cv.width = tw + pad * 2; cv.height = fs + pad * 2;
+  var c2 = cv.getContext("2d");
+  c2.fillStyle = "rgba(8,10,14,0.78)";
+  var rr = 16;
+  c2.beginPath();
+  c2.moveTo(rr, 0); c2.lineTo(cv.width - rr, 0);
+  c2.quadraticCurveTo(cv.width, 0, cv.width, rr);
+  c2.lineTo(cv.width, cv.height - rr);
+  c2.quadraticCurveTo(cv.width, cv.height, cv.width - rr, cv.height);
+  c2.lineTo(rr, cv.height);
+  c2.quadraticCurveTo(0, cv.height, 0, cv.height - rr);
+  c2.lineTo(0, rr); c2.quadraticCurveTo(0, 0, rr, 0); c2.fill();
+  c2.font = "700 " + fs + "px 'Segoe UI', system-ui, sans-serif";
+  c2.fillStyle = "#f2f4f8"; c2.textBaseline = "middle";
+  c2.fillText(text, pad, cv.height / 2 + 2);
+  var tex = new THREE.CanvasTexture(cv);
+  tex.minFilter = THREE.LinearFilter;
+  var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false,
+    transparent: true }));
+  var H_WORLD = 0.55;
+  sp.scale.set(H_WORLD * cv.width / cv.height, H_WORLD, 1);
+  sp.renderOrder = 50;
+  return sp;
+}
+function applyFlags() {
+  var i, m;
+  for (i = 0; i < S.wallMeshes.length; i++) {
+    m = S.wallMeshes[i];
+    m.visible = S.showWalls;
+    var z = m.userData.baseZ, fh = m.userData.fullH, nh = fh;
+    if (S.lowCut && z < 1.2) nh = Math.min(fh, 1.2 - z);
+    if (S.lowCut && z >= 1.2) { m.visible = false; continue; }
+    if (!S.showWalls) continue;
+    if (nh !== fh) {
+      m.scale.z = nh / fh;
+      m.position.z = z + nh / 2;
+    } else { m.scale.z = 1; m.position.z = z + fh / 2; }
+  }
+  for (i = 0; i < S.furnMeshes.length; i++) S.furnMeshes[i].visible = S.showFurn;
+  for (i = 0; i < S.ceilMeshes.length; i++)
+    S.ceilMeshes[i].visible = S.showCeil && !S.plan;
+  for (i = 0; i < S.labels.length; i++) S.labels[i].visible = S.showLabels && !S.plan;
+}
+function shellFrame() {
+  // Full shell x 0..3960 / y 3500..12300 (m): plan matches the 2D sheets
+  // (balcony + WC + hall) and the 3D fit shows the whole zone.
+  return { x: 1.98, y: 7.9, r: 8.8 };
+}
+function fit() {
+  if (!S.opt) return;
+  var c = shellFrame();
+  if (!S.plan) {
+    var dist = c.r * 1.30;
+    S.persp.position.set(c.x - dist * 0.42, c.y - dist * 0.80, dist * 0.55);
+    S.persp.lookAt(c.x, c.y, 0.8);
+    S.ctlP.target.set(c.x, c.y, 0.8);
+    S.ctlP.update();
+  } else {
+    var half = 5.0;
+    var a = S.canvas.clientWidth / Math.max(1, S.canvas.clientHeight);
+    S.ortho.left = -half * a; S.ortho.right = half * a;
+    S.ortho.top = half; S.ortho.bottom = -half;
+    S.ortho.position.set(c.x, c.y, 40);
+    S.ortho.lookAt(c.x, c.y, 0);
+    S.ortho.updateProjectionMatrix();
+    S.ctlO.target.set(c.x, c.y, 0);
+    S.ctlO.update();
+  }
+}
+function select(id, first) {
+  var opt = byId(id);
+  if (!opt) return;
+  S.opt = opt;
+  buildOption(opt);
+  fit();
+  var t = document.getElementById("hud-title");
+  t.textContent = "P.án " + opt.id + " — " + (opt.title || "");
+  var ar = opt.areas || {};
+  var at = (opt.id === "0" || opt.id === "D")
+    ? "mở " + fmt(ar.total_m2) + " m²"
+    : "học " + fmt(ar.study_m2) + " m² · ngủ " + fmt(ar.bedroom_m2) + " m²";
+  document.getElementById("hud-areas").textContent = at;
+  var btns = document.getElementById("chips").children;
+  for (var i = 0; i < btns.length; i++)
+    btns[i].setAttribute("aria-pressed",
+      btns[i].getAttribute("data-id") === id ? "true" : "false");
+  if (!first && ("#" + id) !== location.hash) {
+    try { location.hash = id; } catch (e) {}
+  }
+  document.title = "P.án " + id + " " + (opt.title || "") + " — T3 front split 3D";
+}
+function fmt(v) {
+  return (v === undefined || v === null) ? "?" : Number(v).toFixed(1);
+}
+function buildChips() {
+  var box = document.getElementById("chips");
+  MODEL.options.forEach(function (o) {
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = o.id; b.setAttribute("data-id", o.id);
+    b.setAttribute("aria-pressed", "false");
+    b.setAttribute("aria-label", "Option " + o.id + ": " + (o.title || ""));
+    b.addEventListener("click", function () { select(o.id); });
+    box.appendChild(b);
+  });
+}
+function setTgl(id, on) {
+  var b = document.getElementById(id);
+  b.setAttribute("aria-pressed", on ? "true" : "false");
+  var st = b.querySelector(".st");
+  if (st && id !== "t-view") st.textContent = on ? "bật" : "tắt";
+}
+function wireTools() {
+  var tools = document.getElementById("tools");
+  document.getElementById("tools-btn").addEventListener("click", function () {
+    var c = tools.classList.toggle("collapsed");
+    this.setAttribute("aria-pressed", c ? "false" : "true");
+  });
+  if (window.innerWidth < 900) {
+    tools.classList.add("collapsed");
+    document.getElementById("tools-btn").setAttribute("aria-pressed", "false");
+  }
+  function tgl(id, fn) {
+    document.getElementById(id).addEventListener("click", function () {
+      fn(this.getAttribute("aria-pressed") !== "true");
+    });
+  }
+  function setPlan(on) {
+    S.plan = !!on;
+    document.getElementById("t-view-st").textContent = S.plan ? "MẶT BẰNG" : "3D";
+    S.ctlP.enabled = !S.plan; S.ctlO.enabled = S.plan;
+    applyFlags(); fit();
+  }
+  tgl("t-view", function () { setPlan(!S.plan); });
+  S.setPlan = setPlan;
+  tgl("t-walls", function (on) { S.showWalls = on; setTgl("t-walls", on); applyFlags(); });
+  tgl("t-furn", function (on) { S.showFurn = on; setTgl("t-furn", on); applyFlags(); });
+  tgl("t-labels", function (on) { S.showLabels = on; setTgl("t-labels", on); applyFlags(); });
+  tgl("t-ceil", function (on) { S.showCeil = on; setTgl("t-ceil", on); applyFlags(); });
+  tgl("t-cut", function (on) { S.lowCut = on; setTgl("t-cut", on); applyFlags(); });
+  document.getElementById("t-fit").addEventListener("click", fit);
+  setTgl("t-walls", true); setTgl("t-furn", true);
+  setTgl("t-labels", true); setTgl("t-ceil", false); setTgl("t-cut", true);
+  document.getElementById("t-view-st").textContent = S.plan ? "MẶT BẰNG" : "3D";
+}
+function hashGo() {
+  var id = (location.hash || "").replace("#", "").toUpperCase();
+  if (byId(id) && S.opt && id !== S.opt.id) select(id);
+}
+function resize() {
+  var w = S.canvas.clientWidth || window.innerWidth;
+  var h = S.canvas.clientHeight || window.innerHeight;
+  S.renderer.setSize(w, h, false);
+  S.persp.aspect = w / Math.max(1, h);
+  S.persp.updateProjectionMatrix();
+  if (S.plan) fit();
+}
+function selftest() {
+  try {
+    var vw = window.innerWidth || 0;
+    var r = S.canvas.getBoundingClientRect();
+    var cw = Math.round(r.width), ch = Math.round(r.height);
+    var dpr = (S.renderer && S.renderer.getPixelRatio) ? S.renderer.getPixelRatio() : 0;
+    var de = document.documentElement;
+    var ov = (de.scrollWidth > window.innerWidth + 1 || de.scrollHeight > window.innerHeight + 1
+      || document.body.scrollWidth > window.innerWidth + 1
+      || document.body.scrollHeight > window.innerHeight + 1) ? 1 : 0;
+    document.title += " | SELFTEST vw=" + vw + " cw=" + cw + " ch=" + ch
+      + " dpr=" + dpr + " opt=" + (S.opt ? S.opt.id : "?")
+      + " plan=" + (S.plan ? 1 : 0) + " overflow=" + ov;
+  } catch (e) { showError("selftest: " + e.message); }
+}
+function loop() {
+  requestAnimationFrame(loop);
+  try {
+    if (S.plan) S.ctlO.update(); else S.ctlP.update();
+    S.renderer.render(S.scene, S.plan ? S.ortho : S.persp);
+  } catch (e) { showError("render: " + e.message); }
+}
+try { boot(); } catch (e) { showError(e && e.stack ? e.stack : String(e)); }
+</script>
+</body>
+</html>

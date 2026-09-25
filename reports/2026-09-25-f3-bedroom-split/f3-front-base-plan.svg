@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420.0mm" height="297.0mm" viewBox="0 0 420.0 297.0">
+<rect x="0" y="0" width="420.0" height="297.0" fill="#ffffff"/>
+<text x="12.00" y="13.50" font-family="Segoe UI,Arial,Helvetica" font-size="4.4" fill="#15181b" text-anchor="start" font-weight="bold">TẦNG 3 — front bedroom (with ban công), as drawn</text>
+<text x="12.00" y="19.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">Source: contractor/MB 2-3-4-Model.pdf, left plan “MẶT BẰNG TẦNG 2,3”.  Printed depth 4000; balcony 1400 recessed; rear band 1600 with WC 1950 + hall beside it.</text>
+<rect x="33.33" y="134.11" width="45.03" height="15.92" fill="#eef4ee" stroke="none" stroke-width="0.12"/>
+<rect x="33.33" y="88.63" width="45.03" height="45.48" fill="#faf7f1" stroke="none" stroke-width="0.12"/>
+<rect x="33.33" y="49.97" width="45.03" height="38.66" fill="#f4f6f8" stroke="none" stroke-width="0.12"/>
+<rect x="35.83" y="71.46" width="18.53" height="16.15" fill="#eef1f3" stroke="#9aa3ab" stroke-width="0.1"/>
+<rect x="38.67" y="78.28" width="4.78" height="7.05" fill="#ffffff" stroke="#9aa3ab" stroke-width="0.1"/>
+<circle cx="41.06" cy="84.20" r="2.16" fill="#ffffff" stroke="#9aa3ab" stroke-width="0.08"/>
+<rect x="42.43" y="79.31" width="9.10" height="5.46" fill="#ffffff" stroke="#9aa3ab" stroke-width="0.1"/>
+<rect x="53.34" y="114.78" width="22.74" height="18.19" fill="#cfe0f0" stroke="#7d95ab" stroke-width="0.1"/>
+<rect x="74.83" y="114.78" width="1.25" height="18.19" fill="#a9c4dc" stroke="#7d95ab" stroke-width="0.1"/>
+<rect x="69.94" y="124.90" width="4.89" height="6.03" fill="#ffffff" stroke="#9db3c7" stroke-width="0.1"/>
+<rect x="69.94" y="116.83" width="4.89" height="6.03" fill="#ffffff" stroke="#9db3c7" stroke-width="0.1"/>
+<rect x="46.97" y="127.86" width="5.12" height="5.12" fill="#e9e3d6" stroke="#a89a80" stroke-width="0.1"/>
+<rect x="46.97" y="114.78" width="5.12" height="5.12" fill="#e9e3d6" stroke="#a89a80" stroke-width="0.1"/>
+<rect x="35.60" y="88.63" width="15.92" height="6.82" fill="#e9e3d6" stroke="#a89a80" stroke-width="0.14"/>
+<line x1="43.56" y1="95.45" x2="43.56" y2="88.63" stroke="#a89a80" stroke-width="0.08"/>
+<rect x="33.33" y="49.97" width="45.03" height="20.47" fill="#fbfbfc" stroke="none" stroke-width="0.12"/>
+<text x="44.70" y="60.20" font-family="Segoe UI,Arial,Helvetica" font-size="1.8" fill="#8a939c" text-anchor="middle" font-weight="normal">HÀNH LANG</text>
+<rect x="33.33" y="49.97" width="2.27" height="105.74" fill="#20242a" stroke="none" stroke-width="0.12"/>
+<rect x="76.08" y="49.97" width="2.27" height="105.74" fill="#20242a" stroke="none" stroke-width="0.12"/>
+<rect x="33.33" y="150.03" width="45.03" height="2.27" fill="#20242a" stroke="none" stroke-width="0.12"/>
+<rect x="33.33" y="133.54" width="45.03" height="1.14" fill="#3d4247" stroke="none" stroke-width="0.12"/>
+<rect x="35.60" y="88.06" width="40.48" height="1.14" fill="#3d4247" stroke="none" stroke-width="0.12"/>
+<rect x="54.93" y="70.44" width="1.14" height="18.19" fill="#3d4247" stroke="none" stroke-width="0.12"/>
+<rect x="33.33" y="69.87" width="45.03" height="1.14" fill="#3d4247" stroke="none" stroke-width="0.12"/>
+<rect x="35.60" y="133.26" width="10.23" height="1.71" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<line x1="45.84" y1="134.11" x2="45.84" y2="123.88" stroke="#15181b" stroke-width="0.18"/>
+<path d="M 35.60 134.11 A 10.23 10.23 0 0 0 45.84 123.88" fill="none" stroke="#15181b" stroke-width="0.13" stroke-dasharray="0.9 0.6"/>
+<rect x="60.16" y="133.26" width="15.92" height="1.71" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<line x1="60.16" y1="134.79" x2="76.08" y2="134.79" stroke="#2f6fb0" stroke-width="0.1"/>
+<line x1="60.16" y1="134.11" x2="76.08" y2="134.11" stroke="#2f6fb0" stroke-width="0.1"/>
+<line x1="60.16" y1="133.43" x2="76.08" y2="133.43" stroke="#2f6fb0" stroke-width="0.1"/>
+<rect x="39.30" y="87.78" width="10.23" height="1.71" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<line x1="39.30" y1="88.63" x2="39.30" y2="78.40" stroke="#15181b" stroke-width="0.18"/>
+<path d="M 49.53 88.63 A 10.23 10.23 0 0 1 39.30 78.40" fill="none" stroke="#15181b" stroke-width="0.13" stroke-dasharray="0.9 0.6"/>
+<rect x="61.81" y="87.78" width="10.23" height="1.71" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<line x1="72.05" y1="88.63" x2="72.05" y2="78.40" stroke="#15181b" stroke-width="0.18"/>
+<path d="M 61.81 88.63 A 10.23 10.23 0 0 0 72.05 78.40" fill="none" stroke="#15181b" stroke-width="0.13" stroke-dasharray="0.9 0.6"/>
+<line x1="33.33" y1="150.37" x2="78.36" y2="150.37" stroke="#2f7a2f" stroke-width="0.35"/>
+<text x="52.66" y="98.86" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#15181b" text-anchor="middle" font-weight="bold">P. NGỦ (trước)</text>
+<text x="52.66" y="103.41" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#5a6167" text-anchor="middle" font-weight="normal">lọt lòng ~3900 × 3560 ≈ 13.9 m²</text>
+<text x="56.64" y="142.07" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#2f7a2f" text-anchor="middle" font-weight="normal">BAN CÔNG 1400</text>
+<text x="44.13" y="79.53" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#4c6b8a" text-anchor="middle" font-weight="normal">WC 1950</text>
+<text x="66.30" y="79.53" font-family="Segoe UI,Arial,Helvetica" font-size="1.8" fill="#8a939c" text-anchor="middle" font-weight="normal">HÀNH LANG</text>
+<line x1="81.99" y1="134.11" x2="81.99" y2="88.63" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="80.74" y1="134.11" x2="83.24" y2="134.11" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="80.74" y1="88.63" x2="83.24" y2="88.63" stroke="#6b7280" stroke-width="0.12"/>
+<rect x="79.99" y="105.37" width="3.40" height="12.00" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<text x="82.99" y="111.37" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#6b7280" text-anchor="middle" font-weight="normal" transform="rotate(-90 82.99 111.37)">4000</text>
+<line x1="81.99" y1="88.63" x2="81.99" y2="70.44" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="80.74" y1="88.63" x2="83.24" y2="88.63" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="80.74" y1="70.44" x2="83.24" y2="70.44" stroke="#6b7280" stroke-width="0.12"/>
+<rect x="79.99" y="73.53" width="3.40" height="12.00" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<text x="82.99" y="79.53" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#6b7280" text-anchor="middle" font-weight="normal" transform="rotate(-90 82.99 79.53)">1600</text>
+<line x1="35.60" y1="82.26" x2="76.08" y2="82.26" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="35.60" y1="81.01" x2="35.60" y2="83.51" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="76.08" y1="81.01" x2="76.08" y2="83.51" stroke="#6b7280" stroke-width="0.12"/>
+<rect x="49.84" y="80.26" width="12.00" height="3.40" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<text x="55.84" y="83.26" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#6b7280" text-anchor="middle" font-weight="normal">door 900 + window 1400</text>
+<line x1="35.60" y1="145.25" x2="76.08" y2="145.25" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="35.60" y1="144.00" x2="35.60" y2="146.50" stroke="#6b7280" stroke-width="0.12"/>
+<line x1="76.08" y1="144.00" x2="76.08" y2="146.50" stroke="#6b7280" stroke-width="0.12"/>
+<rect x="49.84" y="143.25" width="12.00" height="3.40" fill="#ffffff" stroke="none" stroke-width="0.12"/>
+<text x="55.84" y="146.25" font-family="Segoe UI,Arial,Helvetica" font-size="1.9" fill="#6b7280" text-anchor="middle" font-weight="normal">3560</text>
+<line x1="96.00" y1="26.00" x2="96.00" y2="176.00" stroke="#e2e6ea" stroke-width="0.3"/>
+<text x="104.00" y="34.00" font-family="Segoe UI,Arial,Helvetica" font-size="3.0" fill="#15181b" text-anchor="start" font-weight="bold">What the sheet gives</text>
+<text x="104.00" y="40.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Front bedroom 4000 (printed) × 3560 outer → lọt</text>
+<text x="104.00" y="44.20" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   lòng ~3900 × 3560 ≈ 13.9 m².</text>
+<text x="104.00" y="48.40" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Balcony (ban công) 1400 deep at the street, recessed,</text>
+<text x="104.00" y="52.60" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   with a 900 door (west) + a 1400 window (east).</text>
+<text x="104.00" y="56.80" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Together they are the room's daylight — the only</text>
+<text x="104.00" y="61.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   light source, since both side walls are party walls.</text>
+<text x="104.00" y="65.20" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Rear band: WC 1950 wide (west) + hall 2010 (east),</text>
+<text x="104.00" y="69.40" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   both 1600 deep, both doors opening into the bedroom.</text>
+<text x="104.00" y="73.60" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Entry comes from that hall, at the rear-EAST: the</text>
+<text x="104.00" y="77.80" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   stair core and the lift sit behind it.</text>
+<text x="104.00" y="82.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· In the drawing: bed head on the east wall with the</text>
+<text x="104.00" y="86.20" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   bedside tables, wardrobe on the WC wall.</text>
+<text x="104.00" y="93.40" font-family="Segoe UI,Arial,Helvetica" font-size="3.0" fill="#15181b" text-anchor="start" font-weight="bold">What that means for a split</text>
+<text x="104.00" y="99.40" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· Light lives at the STREET end: any desk wants the</text>
+<text x="104.00" y="103.60" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   balcony side (window + door), not the core side.</text>
+<text x="104.00" y="107.80" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· There is only ONE way in, at the rear-east, so a</text>
+<text x="104.00" y="112.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   front/rear split makes one zone a walk-through —</text>
+<text x="104.00" y="116.20" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   whichever zone you do not put the entry in.</text>
+<text x="104.00" y="120.40" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· The WC door is at the rear-west, the entry at the</text>
+<text x="104.00" y="124.60" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   rear-east: the middle of the rear wall is the only</text>
+<text x="104.00" y="128.80" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   place furniture can stand against it.</text>
+<text x="104.00" y="133.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">· A side (front-to-rear) split can give each zone its</text>
+<text x="104.00" y="137.20" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   own door: the east strip takes the entry, the west</text>
+<text x="104.00" y="141.40" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">   strip keeps the balcony door and the WC.</text>
+<text x="12.00" y="192.00" font-family="Segoe UI,Arial,Helvetica" font-size="2.3" fill="#5a6167" text-anchor="start" font-weight="normal">This sheet is the base for the four front-room split options; all four keep the balcony, the WC and the entry door where the drawing puts them.</text>
+</svg>
