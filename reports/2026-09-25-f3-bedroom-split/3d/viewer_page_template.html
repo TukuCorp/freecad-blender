@@ -97,25 +97,60 @@ function boot() {
       powerPreference: "high-performance" });
   } catch (e) { throw new Error("WebGL unavailable: " + e.message); }
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.12;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.shadowMap.autoUpdate = false;
   var scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x23262e);
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x4a505c, 1.25));
-  var sun = new THREE.DirectionalLight(0xffffff, 0.85);
-  sun.position.set(-6, -8, 12);
+  scene.background = new THREE.Color(0xdcd9d2);
+  scene.fog = new THREE.Fog(0xdcd9d2, 38, 110);
+  scene.add(new THREE.HemisphereLight(0xfff6ea, 0x8a8d94, 0.85));
+  var sun = new THREE.DirectionalLight(0xfff1dd, 1.05);
+  sun.position.set(8, 12, 0.1);
+  sun.target.position.set(1.98, 0, -7.9);
+  scene.add(sun.target);
+  sun.castShadow = true;
+  sun.shadow.mapSize.set(2048, 2048);
+  sun.shadow.camera.left = -8; sun.shadow.camera.right = 8;
+  sun.shadow.camera.top = 8; sun.shadow.camera.bottom = -8;
+  sun.shadow.camera.near = 1; sun.shadow.camera.far = 40;
+  sun.shadow.bias = -0.0004;
   scene.add(sun);
-  var fill = new THREE.DirectionalLight(0xfff2e0, 0.30);
-  fill.position.set(8, 12, 7);
+  var fill = new THREE.DirectionalLight(0xe8f0ff, 0.35);
+  fill.position.set(-6, 8, -14);
   scene.add(fill);
+  var bounce = new THREE.DirectionalLight(0xffffff, 0.18);
+  bounce.position.set(2, 4, -6);
+  scene.add(bounce);
+  var glowA = new THREE.PointLight(0xffd9a8, 0.55, 7, 2);
+  glowA.position.set(1.98, 5.6, 2.6);
+  scene.add(glowA);
+  var glowB = new THREE.PointLight(0xffe4c0, 0.5, 7, 2);
+  glowB.position.set(1.98, 10.2, 2.6);
+  scene.add(glowB);
   var ground = new THREE.Mesh(new THREE.PlaneGeometry(120, 120),
-    new THREE.MeshLambertMaterial({ color: 0x2c3038 }));
-  ground.position.set(1.98, 7.9, -0.21);
+    new THREE.MeshStandardMaterial({ color: 0xcfccc4, roughness: 0.96, metalness: 0 }));
+  ground.rotation.x = -Math.PI / 2;
+  ground.position.set(1.98, -0.21, -7.9);
+  ground.receiveShadow = true;
   scene.add(ground);
+  var catcher = new THREE.Mesh(new THREE.PlaneGeometry(60, 60),
+    new THREE.ShadowMaterial({ opacity: 0.22 }));
+  catcher.position.set(1.98, 7.9, -0.195);
+  catcher.receiveShadow = true;
+  scene.add(catcher);
   var persp = new THREE.PerspectiveCamera(45, 1, 0.1, 300);
   var ortho = new THREE.OrthographicCamera(-5, 5, 5, -5, 0.1, 300);
   ortho.up.set(0, 1, 0);
   var ctlP = new THREE.OrbitControls(persp, canvas);
   var ctlO = new THREE.OrbitControls(ortho, canvas);
   ctlO.enableRotate = false;
+  ctlP.enableDamping = true;
+  ctlP.dampingFactor = 0.08;
+  ctlO.enableDamping = true;
+  ctlO.dampingFactor = 0.08;
   var q = {};
   try {
     (location.search || "").replace(/^\?/, "").split("&").forEach(function (kv) {
@@ -153,28 +188,87 @@ function byId(id) {
     if (MODEL.options[i].id === id) return MODEL.options[i];
   return null;
 }
+var TEXC = {};
+function canvasTex(key, size, fn) {
+  if (TEXC[key]) return TEXC[key];
+  var cv = document.createElement("canvas");
+  cv.width = size; cv.height = size;
+  fn(cv.getContext("2d"), size);
+  var tx = new THREE.CanvasTexture(cv);
+  tx.wrapS = THREE.RepeatWrapping; tx.wrapT = THREE.RepeatWrapping;
+  tx.encoding = THREE.sRGBEncoding;
+  TEXC[key] = tx;
+  return tx;
+}
+function woodTex() {
+  return canvasTex("wood", 256, function (c, S) {
+    c.fillStyle = "#cda878"; c.fillRect(0, 0, S, S);
+    var y;
+    for (y = 0; y < S; y += 2) {
+      var v = Math.sin(y * 0.35) * 8 + Math.sin(y * 0.09) * 10;
+      c.fillStyle = "rgba(120,80,40," + (0.05 + 0.05 * Math.abs(v) / 18) + ")";
+      c.fillRect(0, y, S, 1);
+    }
+    c.fillStyle = "rgba(90,60,30,0.55)";
+    for (y = 0; y <= S; y += 64) c.fillRect(0, y, S, 2);
+  });
+}
+function fabricTex() {
+  return canvasTex("fabric", 128, function (c, S) {
+    c.fillStyle = "#ffffff"; c.fillRect(0, 0, S, S);
+    var i, x, yy;
+    for (i = 0; i < 2600; i++) {
+      x = (i * 73) % S; yy = (i * 149) % S;
+      c.fillStyle = (i % 2) ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.7)";
+      c.fillRect(x, yy, 1, 1);
+    }
+  });
+}
+var BLOBMAT = null;
+function blobMat() {
+  if (BLOBMAT) return BLOBMAT;
+  var cv = document.createElement("canvas");
+  cv.width = 128; cv.height = 128;
+  var c = cv.getContext("2d");
+  var g = c.createRadialGradient(64, 64, 8, 64, 64, 62);
+  g.addColorStop(0, "rgba(20,18,14,0.42)");
+  g.addColorStop(0.65, "rgba(20,18,14,0.18)");
+  g.addColorStop(1, "rgba(20,18,14,0)");
+  c.fillStyle = g; c.fillRect(0, 0, 128, 128);
+  BLOBMAT = new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(cv),
+    transparent: true, depthWrite: false });
+  return BLOBMAT;
+}
 function matFor(s) {
   var kind = s.kind || "", m = s.material || "concrete";
   var isNew = (kind === "new_partition" || kind === "glass" ||
                kind === "mullion" || kind === "curtain");
-  var c = { concrete: 0xd9d5cc, stud: 0xe8e2d4, wood: 0x9a6b3f, fabric: 0x7fa3c7,
-    porcelain: 0xf2f4f6, glass: 0x9fc4e8 }[m];
-  if (c === undefined) c = 0xcccccc;
-  if (kind === "new_partition" || kind === "mullion") c = 0xe8590c;
-  if (kind === "curtain") c = 0xe8894a;
-  var p = { color: c };
   if (m === "glass") {
-    p.transparent = true; p.opacity = 0.25; p.side = THREE.DoubleSide;
-    p.depthWrite = false; p.polygonOffset = true; p.polygonOffsetFactor = 1;
-    p.polygonOffsetUnits = 1;
-    if (isNew) p.color = new THREE.Color(0xe8934a);
+    return { mat: new THREE.MeshPhysicalMaterial({ color: isNew ? 0xe8934a : 0xcfe0ee,
+      roughness: 0.08, metalness: 0, transparent: true,
+      opacity: isNew ? 0.34 : 0.24, side: THREE.DoubleSide,
+      depthWrite: false, polygonOffset: true, polygonOffsetFactor: 1,
+      polygonOffsetUnits: 1 }), isNew: isNew };
   }
+  var p = { color: 0xcccccc, roughness: 0.9, metalness: 0.02 };
+  if (m === "concrete") { p.color = 0xe6e1d5; p.roughness = 0.95; }
+  if (m === "stud") { p.color = 0xeae4d5; p.roughness = 0.9; }
+  if (m === "floor") { p.color = 0xffffff; p.map = woodTex(); p.roughness = 0.65; }
+  if (m === "wood") { p.color = 0xd8b285; p.map = woodTex(); p.roughness = 0.6; }
+  if (m === "fabric") { p.color = 0x9db9d9; p.map = fabricTex(); p.roughness = 1.0; }
+  if (m === "porcelain") { p.color = 0xffffff; p.roughness = 0.32; }
+  if (m === "ceiling") { p.color = 0xf2f0ea; p.roughness = 1.0; }
+  if (kind === "slab" && m === "concrete") {
+    p.color = 0xffffff; p.map = woodTex(); p.roughness = 0.7; }
+  if (kind === "new_partition" || kind === "mullion") {
+    p.color = 0xe8590c; p.roughness = 0.55;
+    p.emissive = 0x7a2a00; p.emissiveIntensity = 0.35; }
   if (kind === "curtain") {
-    p.transparent = true; p.opacity = 0.55; p.side = THREE.DoubleSide;
+    p.color = 0xe8894a; p.roughness = 0.9;
+    p.transparent = true; p.opacity = 0.5; p.side = THREE.DoubleSide;
     p.depthWrite = false;
-  }
-  var mat = new THREE.MeshLambertMaterial(p);
-  return { mat: mat, isNew: isNew };
+    p.emissive = 0x5a2400; p.emissiveIntensity = 0.25; }
+  return { mat: new THREE.MeshStandardMaterial(p), isNew: isNew };
 }
 function isWallKind(k) {
   return k === "wall" || k === "new_partition" || k === "glass" ||
@@ -194,7 +288,7 @@ function buildOption(opt) {
     });
   }
   S.group = new THREE.Group();
-  S.labels = []; S.wallMeshes = []; S.ceilMeshes = []; S.furnMeshes = [];
+  S.labels = []; S.wallMeshes = []; S.ceilMeshes = []; S.furnMeshes = []; S.fxMeshes = [];
   var U = 0.001;
   (opt.solids || []).forEach(function (s, i) {
     var w = (s.w || 0) * U, d = (s.d || 0) * U, h = (s.h || 0) * U;
@@ -203,6 +297,24 @@ function buildOption(opt) {
     var mesh = new THREE.Mesh(new THREE.BoxGeometry(w, d, h), r.mat);
     mesh.position.set(((s.x || 0) * U) + w / 2, ((s.y || 0) * U) + d / 2,
       ((s.z || 0) * U) + h / 2);
+    mesh.castShadow = true;
+    mesh.receiveShadow = true;
+    if (isFurnKind(k)) {
+      var edge = new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry),
+        new THREE.LineBasicMaterial({ color: 0x3a3f47, transparent: true, opacity: 0.16 }));
+      edge.position.copy(mesh.position);
+      S.group.add(edge);
+      S.fxMeshes.push(edge);
+      if ((s.z || 0) <= 50) {
+        var blob = new THREE.Mesh(
+          new THREE.PlaneGeometry(w * 1.25 + 0.14, d * 1.25 + 0.14), blobMat());
+        blob.position.set(((s.x || 0) * U) + w / 2, ((s.y || 0) * U) + d / 2,
+          ((s.z || 0) * U) + 0.012);
+        blob.renderOrder = 1;
+        S.group.add(blob);
+        S.fxMeshes.push(blob);
+      }
+    }
     mesh.userData = { solid: s, fullH: h, baseZ: (s.z || 0) * U };
     S.group.add(mesh);
     var k = s.kind || "";
@@ -218,6 +330,7 @@ function buildOption(opt) {
     S.labels.push(sp);
   });
   S.scene.add(S.group);
+  S.shadowDirty = true;
   applyFlags();
 }
 function makeLabel(text) {
@@ -243,15 +356,16 @@ function makeLabel(text) {
   c2.fillText(text, pad, cv.height / 2 + 2);
   var tex = new THREE.CanvasTexture(cv);
   tex.minFilter = THREE.LinearFilter;
-  var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false,
-    transparent: true }));
+  var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: true,
+    transparent: true, opacity: 0.92 }));
   var H_WORLD = 0.55;
   sp.scale.set(H_WORLD * cv.width / cv.height, H_WORLD, 1);
-  sp.renderOrder = 50;
+  sp.renderOrder = 10;
   return sp;
 }
 function applyFlags() {
   var i, m;
+  S.framesLeft = Math.max(S.framesLeft || 0, 90);
   for (i = 0; i < S.wallMeshes.length; i++) {
     m = S.wallMeshes[i];
     m.visible = S.showWalls;
@@ -265,6 +379,7 @@ function applyFlags() {
     } else { m.scale.z = 1; m.position.z = z + fh / 2; }
   }
   for (i = 0; i < S.furnMeshes.length; i++) S.furnMeshes[i].visible = S.showFurn;
+  for (i = 0; i < S.fxMeshes.length; i++) S.fxMeshes[i].visible = S.showFurn;
   for (i = 0; i < S.ceilMeshes.length; i++)
     S.ceilMeshes[i].visible = S.showCeil && !S.plan;
   for (i = 0; i < S.labels.length; i++) S.labels[i].visible = S.showLabels && !S.plan;
@@ -276,12 +391,13 @@ function shellFrame() {
 }
 function fit() {
   if (!S.opt) return;
+  S.framesLeft = Math.max(S.framesLeft || 0, 240);
   var c = shellFrame();
   if (!S.plan) {
-    var dist = c.r * 1.30;
-    S.persp.position.set(c.x - dist * 0.42, c.y - dist * 0.80, dist * 0.55);
-    S.persp.lookAt(c.x, c.y, 0.8);
-    S.ctlP.target.set(c.x, c.y, 0.8);
+    var dist = c.r * 1.22;
+    S.persp.position.set(c.x - dist * 0.34, c.y - dist * 0.58, dist * 0.40);
+    S.persp.lookAt(c.x, c.y, 1.0);
+    S.ctlP.target.set(c.x, c.y, 1.0);
     S.ctlP.update();
   } else {
     var half = 5.0;
@@ -301,6 +417,7 @@ function select(id, first) {
   S.opt = opt;
   buildOption(opt);
   fit();
+  S.framesLeft = 240;
   var t = document.getElementById("hud-title");
   t.textContent = "P.án " + opt.id + " — " + (opt.title || "");
   var ar = opt.areas || {};
@@ -375,6 +492,7 @@ function hashGo() {
   if (byId(id) && S.opt && id !== S.opt.id) select(id);
 }
 function resize() {
+  S.framesLeft = Math.max(S.framesLeft || 0, 240);
   var w = S.canvas.clientWidth || window.innerWidth;
   var h = S.canvas.clientHeight || window.innerHeight;
   S.renderer.setSize(w, h, false);
@@ -401,8 +519,17 @@ function loop() {
   requestAnimationFrame(loop);
   try {
     if (S.plan) S.ctlO.update(); else S.ctlP.update();
-    S.renderer.render(S.scene, S.plan ? S.ortho : S.persp);
-  } catch (e) { showError("render: " + e.message); }
+    if (S.framesLeft === undefined) S.framesLeft = 240;
+    var doRender = S.framesLeft > 0 || S.shadowDirty;
+    if (doRender) {
+      if (S.framesLeft > 0) S.framesLeft--;
+      if (S.shadowDirty && S.renderer.shadowMap) {
+        S.renderer.shadowMap.needsUpdate = true;
+        S.shadowDirty = false;
+      }
+      S.renderer.render(S.scene, S.plan ? S.ortho : S.persp);
+    }
+  } catch (e) { showError(e && e.stack ? e.stack : String(e)); }
 }
 try { boot(); } catch (e) { showError(e && e.stack ? e.stack : String(e)); }
 </script>

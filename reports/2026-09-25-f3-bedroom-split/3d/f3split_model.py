@@ -259,8 +259,8 @@ def labels_common():
     # One HÀNH LANG label per option - the band hall and hall_front share one
     # zone, so the second label drawn there in phase 1 is dropped (review 1).
     return [ {"text": "BAN CÔNG", "x": 1980, "y": 4200, "z": 1600},
-             {"text": "WC", "x": 975, "y": 9700, "z": 1600},
-             {"text": "HÀNH LANG", "x": 1980, "y": 11400, "z": 1600}]
+             {"text": "WC", "x": 700, "y": 9700, "z": 1600},
+             {"text": "HÀNH LANG", "x": 2600, "y": 11400, "z": 1600}]
 
 
 def build_option(oid):

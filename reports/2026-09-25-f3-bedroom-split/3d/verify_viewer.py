@@ -34,7 +34,7 @@ _FLAGS = ["--no-first-run", "--no-default-browser-check", "--disable-extensions"
           "--disable-background-networking"]
 
 
-def chrome(args, timeout=60, tag="?"):
+def chrome(args, timeout=600, tag="?"):
     """Run headless Chrome once per call in a fresh profile.
 
     Retries ONCE on timeout (transient stall under load); a second timeout
@@ -47,7 +47,7 @@ def chrome(args, timeout=60, tag="?"):
             try:
                 return subprocess.run(
                     [CHROME] + args + _FLAGS + [f"--user-data-dir={prof}"],
-                    capture_output=True, text=True, timeout=timeout)
+                    capture_output=True, text=True, timeout=timeout, encoding="utf-8", errors="replace")
             except subprocess.TimeoutExpired as e:
                 last = e
                 print(f"chrome timeout tag={tag} attempt={attempt} "
@@ -59,7 +59,7 @@ def chrome(args, timeout=60, tag="?"):
         shutil.rmtree(prof, ignore_errors=True)
 
 
-def chrome_soft(args, url, tag, timeout=60):
+def chrome_soft(args, url, tag, timeout=600):
     """chrome() returning (proc, elapsed) or (None, elapsed) on timeout."""
     t0 = time.monotonic()
     try:
@@ -201,7 +201,7 @@ def iframe_measure(w, h, opt="A", query=""):
 
 def main():
     chk = subprocess.run([sys.executable, str(HERE / "f3split_model.py"),
-                          "--check"], capture_output=True, text=True, timeout=120)
+                          "--check"], capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace")
     print(chk.stdout.strip())
     if chk.returncode != 0:
         print("FAIL\n - model --check failed")
@@ -248,7 +248,12 @@ def main():
             if not tok:
                 fails.append(f"{opt} {w}x{h}: bad title {t[:100]!r}")
     for a, b in [("0", "A"), ("A", "B"), ("B", "C"), ("C", "D"), ("0", "D")]:
-        d = meandiff(SHOTS / f"{a}-1440.png", SHOTS / f"{b}-1440.png")
+        pa, pb = SHOTS / f"{a}-1440.png", SHOTS / f"{b}-1440.png"
+        if not pa.exists() or not pb.exists():
+            fails.append(f"pair {a}~{b}: missing shot")
+            rows.append({"opt": f"{a}~{b}", "vp": "diff1440", "diff": -1.0})
+            continue
+        d = meandiff(pa, pb)
         rows.append({"opt": f"{a}~{b}", "vp": "diff1440", "diff": d})
         # Same shell from the same camera: options differ only in the room
         # contents, so the floor is 1.0 (byte-identical would read ~0.0).
