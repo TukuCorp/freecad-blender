@@ -1442,7 +1442,7 @@ function shellFrame() {
 }
 function fit() {
   if (!S.opt) return;
-  S.framesLeft = Math.max(S.framesLeft || 0, 240);
+  S.framesLeft = Math.max(S.framesLeft || 0, 120);
   var c = shellFrame();
   if (!S.plan) {
     var dist = c.r * 1.22;
@@ -1468,7 +1468,7 @@ function select(id, first) {
   S.opt = opt;
   buildOption(opt);
   fit();
-  S.framesLeft = 240;
+  S.framesLeft = 120;
   var t = document.getElementById("hud-title");
   t.textContent = "P.án " + opt.id + " — " + (opt.title || "");
   var ar = opt.areas || {};
@@ -1543,7 +1543,7 @@ function hashGo() {
   if (byId(id) && S.opt && id !== S.opt.id) select(id);
 }
 function resize() {
-  S.framesLeft = Math.max(S.framesLeft || 0, 240);
+  S.framesLeft = Math.max(S.framesLeft || 0, 120);
   var w = S.canvas.clientWidth || window.innerWidth;
   var h = S.canvas.clientHeight || window.innerHeight;
   S.renderer.setSize(w, h, false);
@@ -1570,7 +1570,7 @@ function loop() {
   requestAnimationFrame(loop);
   try {
     if (S.plan) S.ctlO.update(); else S.ctlP.update();
-    if (S.framesLeft === undefined) S.framesLeft = 240;
+    if (S.framesLeft === undefined) S.framesLeft = 120;
     var doRender = S.framesLeft > 0 || S.shadowDirty;
     if (doRender) {
       if (S.framesLeft > 0) S.framesLeft--;
