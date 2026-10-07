@@ -1,0 +1,6902 @@
+{
+  "name": "contractor-as-drawn",
+  "style": "modern-minimal",
+  "plot_width_mm": 3960,
+  "plot_depth_mm": 25000,
+  "storeys": [
+    {
+      "level": 0,
+      "name": "Ground",
+      "height_mm": 3800,
+      "base_z": 0.0,
+      "rooms": [
+        {
+          "id": "gara",
+          "type": "garage",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 4000
+          },
+          "name": "N\u01a0I \u0110\u1ec2 XE",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 3750.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "khach",
+          "type": "living",
+          "rect": {
+            "x": 0,
+            "y": 7500,
+            "w": 3960,
+            "d": 4800
+          },
+          "name": "P.KH\u00c1CH",
+          "interior": {
+            "x": 200.0,
+            "y": 7550.0,
+            "w": 3560.0,
+            "d": 4700.0
+          },
+          "level_mm": 100,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12350.0,
+            "w": 2755.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12350.0,
+            "w": 705.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_gf",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 1500.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "bep_an",
+          "type": "kitchen",
+          "rect": {
+            "x": 0,
+            "y": 19700,
+            "w": 3960,
+            "d": 4100
+          },
+          "name": "P. \u0102N + B\u1ebeP",
+          "interior": {
+            "x": 200.0,
+            "y": 19750.0,
+            "w": 3560.0,
+            "d": 3850.0
+          },
+          "level_mm": 300,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F0_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "gara"
+        },
+        {
+          "id": "F0_W002",
+          "x": 0,
+          "y": 7500,
+          "w": 200.0,
+          "h": 4800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "khach"
+        },
+        {
+          "id": "F0_W003",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F0_W004",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F0_W005",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "wc_gf"
+        },
+        {
+          "id": "F0_W006",
+          "x": 0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "bep_an"
+        },
+        {
+          "id": "F0_W007",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "gara"
+        },
+        {
+          "id": "F0_W008",
+          "x": 3760.0,
+          "y": 7500,
+          "w": 200.0,
+          "h": 4800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "khach"
+        },
+        {
+          "id": "F0_W009",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F0_W010",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F0_W011",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "wc_gf"
+        },
+        {
+          "id": "F0_W012",
+          "x": 3760.0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": "bep_an"
+        },
+        {
+          "id": "F0_W013",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": "gara"
+        },
+        {
+          "id": "F0_W014",
+          "x": 0,
+          "y": 7450.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W015",
+          "x": 0,
+          "y": 12250.0,
+          "w": 3005,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W016",
+          "x": 3005,
+          "y": 12250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W017",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F0_W018",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W019",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W020",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W021",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F0_W022",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W023",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W024",
+          "x": 0,
+          "y": 19650.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F0_W025",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 0,
+          "orientation": "horizontal",
+          "room_id": "bep_an"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F0_O000",
+          "type": "door",
+          "wall_id": "F0_W014",
+          "storey_level": 0,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "gara",
+            "khach"
+          ]
+        },
+        {
+          "id": "F0_O001",
+          "type": "door",
+          "wall_id": "F0_W015",
+          "storey_level": 0,
+          "offset_mm": 1052.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "khach",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F0_O002",
+          "type": "door",
+          "wall_id": "F0_W016",
+          "storey_level": 0,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "khach",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F0_O003",
+          "type": "door",
+          "wall_id": "F0_W017",
+          "storey_level": 0,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F0_O004",
+          "type": "door",
+          "wall_id": "F0_W019",
+          "storey_level": 0,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F0_O005",
+          "type": "door",
+          "wall_id": "F0_W018",
+          "storey_level": 0,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F0_O006",
+          "type": "door",
+          "wall_id": "F0_W020",
+          "storey_level": 0,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F0_O007",
+          "type": "door",
+          "wall_id": "F0_W021",
+          "storey_level": 0,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F0_O008",
+          "type": "door",
+          "wall_id": "F0_W023",
+          "storey_level": 0,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "wc_gf"
+          ]
+        },
+        {
+          "id": "F0_O009",
+          "type": "door",
+          "wall_id": "F0_W022",
+          "storey_level": 0,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "wc_gf"
+          ]
+        },
+        {
+          "id": "F0_O010",
+          "type": "door",
+          "wall_id": "F0_W024",
+          "storey_level": 0,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_gf",
+            "bep_an"
+          ]
+        },
+        {
+          "id": "F0_O011",
+          "type": "door",
+          "wall_id": "F0_W013",
+          "storey_level": 0,
+          "offset_mm": 730.0,
+          "width_mm": 2500,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "gara",
+            "exterior"
+          ]
+        },
+        {
+          "id": "F0_O012",
+          "type": "window",
+          "wall_id": "F0_W002",
+          "storey_level": 0,
+          "offset_mm": 1650.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 2,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "khach",
+            "exterior"
+          ]
+        },
+        {
+          "id": "F0_O013",
+          "type": "window",
+          "wall_id": "F0_W025",
+          "storey_level": 0,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "bep_an",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 0,
+        "direction": "up",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 172.72727272727272
+          },
+          {
+            "x": 0,
+            "y": 12554.545454545454,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 345.45454545454544
+          },
+          {
+            "x": 0,
+            "y": 12809.09090909091,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 518.1818181818181
+          },
+          {
+            "x": 0,
+            "y": 13063.636363636364,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 690.9090909090909
+          },
+          {
+            "x": 0,
+            "y": 13318.181818181818,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 863.6363636363636
+          },
+          {
+            "x": 0,
+            "y": 13572.727272727272,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 1036.3636363636363
+          },
+          {
+            "x": 0,
+            "y": 13827.272727272728,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 1209.090909090909
+          },
+          {
+            "x": 0,
+            "y": 14081.818181818182,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 1381.8181818181818
+          },
+          {
+            "x": 0,
+            "y": 14336.363636363636,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 1554.5454545454545
+          },
+          {
+            "x": 0,
+            "y": 14590.909090909092,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 1727.2727272727273
+          },
+          {
+            "x": 0,
+            "y": 14845.454545454546,
+            "w": 3005,
+            "d": 1454.5454545454545,
+            "z": 1900.0
+          },
+          {
+            "x": 1552.5,
+            "y": 14590.909090909092,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2072.7272727272725
+          },
+          {
+            "x": 1552.5,
+            "y": 14336.363636363636,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2245.4545454545455
+          },
+          {
+            "x": 1552.5,
+            "y": 14081.818181818182,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2418.181818181818
+          },
+          {
+            "x": 1552.5,
+            "y": 13827.272727272728,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2590.909090909091
+          },
+          {
+            "x": 1552.5,
+            "y": 13572.727272727274,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2763.6363636363635
+          },
+          {
+            "x": 1552.5,
+            "y": 13318.181818181818,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 2936.363636363636
+          },
+          {
+            "x": 1552.5,
+            "y": 13063.636363636364,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 3109.090909090909
+          },
+          {
+            "x": 1552.5,
+            "y": 12809.09090909091,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 3281.8181818181815
+          },
+          {
+            "x": 1552.5,
+            "y": 12554.545454545456,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 3454.5454545454545
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 3627.272727272727
+          },
+          {
+            "x": 1552.5,
+            "y": 12045.454545454546,
+            "w": 1452.5,
+            "d": 254.54545454545456,
+            "z": 3800.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [],
+      "authored_void_reasons": [],
+      "annotations": [
+        {
+          "x": 1300,
+          "y": 11200,
+          "w": 1800,
+          "d": 950,
+          "text": "Ti\u1ec3u c\u1ea3nh, \u00f4 l\u1ea5y s\u00e1ng",
+          "boxed": true
+        },
+        {
+          "x": 1580,
+          "y": 1150,
+          "w": 800,
+          "d": 700,
+          "text": "- 0.450",
+          "boxed": false
+        },
+        {
+          "x": 1280,
+          "y": 2050,
+          "w": 1400,
+          "d": 700,
+          "text": "S\u00c2N TR\u01af\u1edaC",
+          "boxed": false
+        },
+        {
+          "x": 1580,
+          "y": 24540,
+          "w": 800,
+          "d": 460,
+          "text": "+ 0.200",
+          "boxed": false
+        },
+        {
+          "x": 1430,
+          "y": 23900,
+          "w": 1100,
+          "d": 560,
+          "text": "S\u00c2N SAU",
+          "boxed": false
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 300,
+          "y_mm": -250,
+          "z_mm": 0,
+          "w_mm": 300,
+          "d_mm": 250,
+          "h_mm": 3800,
+          "finish": "facade_trim",
+          "kind": "column",
+          "side": "north",
+          "id": "col_gf"
+        },
+        {
+          "x_mm": 1200,
+          "y_mm": -120,
+          "z_mm": 200,
+          "w_mm": 150,
+          "d_mm": 120,
+          "h_mm": 3400,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 800,
+          "y_mm": 0,
+          "z_mm": 500,
+          "w_mm": 800,
+          "d_mm": 60,
+          "h_mm": 600,
+          "finish": "facade_field",
+          "kind": "panel",
+          "side": "north"
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "name": "Mezzanine",
+      "height_mm": 3200,
+      "base_z": 3800.0,
+      "rooms": [
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12500.0,
+            "w": 2755.0,
+            "d": 3750.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12500.0,
+            "w": 705.0,
+            "d": 3750.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "sinh_hoat",
+          "type": "living",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 5700
+          },
+          "name": "P.SINH HO\u1ea0T",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 5450.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F1_W001",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F1_W002",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F1_W003",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 5700,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "sinh_hoat"
+        },
+        {
+          "id": "F1_W004",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F1_W005",
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F1_W006",
+          "x": 3005,
+          "y": 12300,
+          "w": 955,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F1_W007",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F1_W008",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F1_W009",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F1_W010",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F1_W011",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F1_W012",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 5700,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": "sinh_hoat"
+        },
+        {
+          "id": "F1_W013",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F1_W014",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F1_W015",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F1_W016",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 1,
+          "orientation": "horizontal",
+          "room_id": "sinh_hoat"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F1_O000",
+          "type": "door",
+          "wall_id": "F1_W004",
+          "storey_level": 1,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F1_O001",
+          "type": "door",
+          "wall_id": "F1_W008",
+          "storey_level": 1,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F1_O002",
+          "type": "door",
+          "wall_id": "F1_W007",
+          "storey_level": 1,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F1_O003",
+          "type": "door",
+          "wall_id": "F1_W009",
+          "storey_level": 1,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F1_O004",
+          "type": "door",
+          "wall_id": "F1_W013",
+          "storey_level": 1,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F1_O005",
+          "type": "door",
+          "wall_id": "F1_W015",
+          "storey_level": 1,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "sinh_hoat"
+          ]
+        },
+        {
+          "id": "F1_O006",
+          "type": "door",
+          "wall_id": "F1_W014",
+          "storey_level": 1,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "sinh_hoat"
+          ]
+        },
+        {
+          "id": "F1_O007",
+          "type": "window",
+          "wall_id": "F1_W016",
+          "storey_level": 1,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "sinh_hoat",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 1,
+        "direction": "up_and_down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 177.77777777777777
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 355.55555555555554
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 533.3333333333333
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 711.1111111111111
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 888.8888888888889
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1066.6666666666665
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1244.4444444444443
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1422.2222222222222
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 3005,
+            "d": 2000.0,
+            "z": 1600.0
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1777.7777777777778
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1955.5555555555554
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2133.333333333333
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2311.111111111111
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2488.8888888888887
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2666.6666666666665
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2844.4444444444443
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3022.222222222222
+          },
+          {
+            "x": 1552.5,
+            "y": 12050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3200.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 0,
+          "y": 7500,
+          "w": 3960,
+          "d": 4800
+        },
+        {
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "d": 4000
+        },
+        {
+          "x": 0,
+          "y": 500,
+          "w": 3960,
+          "d": 3000
+        },
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [
+        {
+          "x": 0,
+          "y": 7500,
+          "w": 3960,
+          "d": 4800
+        },
+        {
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "d": 4000
+        },
+        {
+          "x": 0,
+          "y": 500,
+          "w": 3960,
+          "d": 3000
+        }
+      ],
+      "authored_void_reasons": [
+        "",
+        "",
+        "S\u00c2N TR\u01af\u1edaC"
+      ],
+      "annotations": [
+        {
+          "x": 1300,
+          "y": 11200,
+          "w": 1800,
+          "d": 950,
+          "text": "Ti\u1ec3u c\u1ea3nh, \u00f4 l\u1ea5y s\u00e1ng",
+          "boxed": true
+        },
+        {
+          "x": 2560,
+          "y": 18600,
+          "w": 800,
+          "d": 600,
+          "text": "L\u00f4 gia",
+          "boxed": false
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 300,
+          "y_mm": -120,
+          "z_mm": 100,
+          "w_mm": 150,
+          "d_mm": 120,
+          "h_mm": 3000,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 3500,
+          "y_mm": -120,
+          "z_mm": 100,
+          "w_mm": 150,
+          "d_mm": 120,
+          "h_mm": 3000,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "Floor 2",
+      "height_mm": 3400,
+      "base_z": 7000.0,
+      "rooms": [
+        {
+          "id": "ban_cong_f2",
+          "type": "balcony",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 1400
+          },
+          "name": "BAN C\u00d4NG",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 1150.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "slatted"
+        },
+        {
+          "id": "ngu_truoc_f2",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 4900,
+            "w": 3960,
+            "d": 4000
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 4950.0,
+            "w": 3560.0,
+            "d": 3900.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_truoc_f2",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 8900,
+            "w": 1950,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 8950.0,
+            "w": 1700.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_wc_f2",
+          "type": "hall",
+          "rect": {
+            "x": 1950,
+            "y": 8900,
+            "w": 2010,
+            "d": 1600
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 2000.0,
+            "y": 8950.0,
+            "w": 1760.0,
+            "d": 1500.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_front_f2",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 10500,
+            "w": 3960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 10550.0,
+            "w": 3560.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12350.0,
+            "w": 2755.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12350.0,
+            "w": 705.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_sau_f2",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "ngu_sau_f2",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 19700,
+            "w": 3960,
+            "d": 4100
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 19750.0,
+            "w": 3560.0,
+            "d": 3850.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F2_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f2"
+        },
+        {
+          "id": "F2_W002",
+          "x": 0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f2"
+        },
+        {
+          "id": "F2_W003",
+          "x": 0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "wc_truoc_f2"
+        },
+        {
+          "id": "F2_W004",
+          "x": 0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "hall_front_f2"
+        },
+        {
+          "id": "F2_W005",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F2_W006",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F2_W007",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f2"
+        },
+        {
+          "id": "F2_W008",
+          "x": 0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f2"
+        },
+        {
+          "id": "F2_W009",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f2"
+        },
+        {
+          "id": "F2_W010",
+          "x": 3760.0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f2"
+        },
+        {
+          "id": "F2_W011",
+          "x": 3760.0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "hall_wc_f2"
+        },
+        {
+          "id": "F2_W012",
+          "x": 3760.0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "hall_front_f2"
+        },
+        {
+          "id": "F2_W013",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F2_W014",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F2_W015",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f2"
+        },
+        {
+          "id": "F2_W016",
+          "x": 3760.0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f2"
+        },
+        {
+          "id": "F2_W017",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": "ban_cong_f2"
+        },
+        {
+          "id": "F2_W018",
+          "x": 0,
+          "y": 4850.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W019",
+          "x": 0,
+          "y": 8850.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W020",
+          "x": 1950,
+          "y": 8850.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W021",
+          "x": 1900.0,
+          "y": 8900,
+          "w": 100.0,
+          "h": 1600,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F2_W022",
+          "x": 0,
+          "y": 10450.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W023",
+          "x": 1950,
+          "y": 10450.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W024",
+          "x": 0,
+          "y": 12250.0,
+          "w": 3005,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W025",
+          "x": 3005,
+          "y": 12250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W026",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F2_W027",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W028",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W029",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W030",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F2_W031",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W032",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W033",
+          "x": 0,
+          "y": 19650.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F2_W034",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 2,
+          "orientation": "horizontal",
+          "room_id": "ngu_sau_f2"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F2_O000",
+          "type": "door",
+          "wall_id": "F2_W018",
+          "storey_level": 2,
+          "offset_mm": 0.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f2",
+            "ngu_truoc_f2"
+          ]
+        },
+        {
+          "id": "F2_O001",
+          "type": "window",
+          "wall_id": "F2_W018",
+          "storey_level": 2,
+          "offset_mm": 2560,
+          "width_mm": 1400,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f2",
+            "ngu_truoc_f2"
+          ]
+        },
+        {
+          "id": "F2_O002",
+          "type": "door",
+          "wall_id": "F2_W019",
+          "storey_level": 2,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f2",
+            "wc_truoc_f2"
+          ]
+        },
+        {
+          "id": "F2_O003",
+          "type": "door",
+          "wall_id": "F2_W020",
+          "storey_level": 2,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f2",
+            "hall_wc_f2"
+          ]
+        },
+        {
+          "id": "F2_O004",
+          "type": "door",
+          "wall_id": "F2_W021",
+          "storey_level": 2,
+          "offset_mm": 350.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f2",
+            "hall_wc_f2"
+          ]
+        },
+        {
+          "id": "F2_O005",
+          "type": "door",
+          "wall_id": "F2_W022",
+          "storey_level": 2,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f2",
+            "hall_front_f2"
+          ]
+        },
+        {
+          "id": "F2_O006",
+          "type": "door",
+          "wall_id": "F2_W023",
+          "storey_level": 2,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_wc_f2",
+            "hall_front_f2"
+          ]
+        },
+        {
+          "id": "F2_O007",
+          "type": "door",
+          "wall_id": "F2_W024",
+          "storey_level": 2,
+          "offset_mm": 1052.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f2",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F2_O008",
+          "type": "door",
+          "wall_id": "F2_W025",
+          "storey_level": 2,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f2",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F2_O009",
+          "type": "door",
+          "wall_id": "F2_W026",
+          "storey_level": 2,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F2_O010",
+          "type": "door",
+          "wall_id": "F2_W028",
+          "storey_level": 2,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F2_O011",
+          "type": "door",
+          "wall_id": "F2_W027",
+          "storey_level": 2,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F2_O012",
+          "type": "door",
+          "wall_id": "F2_W029",
+          "storey_level": 2,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F2_O013",
+          "type": "door",
+          "wall_id": "F2_W030",
+          "storey_level": 2,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F2_O014",
+          "type": "door",
+          "wall_id": "F2_W032",
+          "storey_level": 2,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "wc_sau_f2"
+          ]
+        },
+        {
+          "id": "F2_O015",
+          "type": "door",
+          "wall_id": "F2_W031",
+          "storey_level": 2,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "wc_sau_f2"
+          ]
+        },
+        {
+          "id": "F2_O016",
+          "type": "door",
+          "wall_id": "F2_W033",
+          "storey_level": 2,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_sau_f2",
+            "ngu_sau_f2"
+          ]
+        },
+        {
+          "id": "F2_O017",
+          "type": "window",
+          "wall_id": "F2_W034",
+          "storey_level": 2,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "ngu_sau_f2",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 2,
+        "direction": "up_and_down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 178.94736842105263
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 357.89473684210526
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 536.8421052631579
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 715.7894736842105
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 894.7368421052631
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1073.6842105263158
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1252.6315789473683
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1431.578947368421
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1610.5263157894738
+          },
+          {
+            "x": 0,
+            "y": 14550.0,
+            "w": 3005,
+            "d": 1750.0,
+            "z": 1789.4736842105262
+          },
+          {
+            "x": 1552.5,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1968.421052631579
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2147.3684210526317
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2326.315789473684
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2505.2631578947367
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2684.2105263157896
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2863.157894736842
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3042.1052631578946
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3221.0526315789475
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3400.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [],
+      "authored_void_reasons": [],
+      "annotations": [
+        {
+          "x": 2560,
+          "y": 18600,
+          "w": 800,
+          "d": 600,
+          "text": "L\u00f4 gia",
+          "boxed": false
+        },
+        {
+          "x": 880,
+          "y": 10400,
+          "w": 2200,
+          "d": 1900,
+          "text": "\u00d4 l\u1ea5y s\u00e1ng 2200",
+          "boxed": true
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 600,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 300,
+          "y_mm": -200,
+          "z_mm": 0,
+          "w_mm": 250,
+          "d_mm": 200,
+          "h_mm": 3300,
+          "finish": "facade_trim",
+          "kind": "column",
+          "side": "north",
+          "id": "col_f2"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Floor 3",
+      "height_mm": 3400,
+      "base_z": 10400.0,
+      "rooms": [
+        {
+          "id": "ban_cong_f3",
+          "type": "balcony",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 1400
+          },
+          "name": "BAN C\u00d4NG",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 1150.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "slatted"
+        },
+        {
+          "id": "ngu_truoc_f3",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 4900,
+            "w": 3960,
+            "d": 4000
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 4950.0,
+            "w": 3560.0,
+            "d": 3900.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_truoc_f3",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 8900,
+            "w": 1950,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 8950.0,
+            "w": 1700.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_wc_f3",
+          "type": "hall",
+          "rect": {
+            "x": 1950,
+            "y": 8900,
+            "w": 2010,
+            "d": 1600
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 2000.0,
+            "y": 8950.0,
+            "w": 1760.0,
+            "d": 1500.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_front_f3",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 10500,
+            "w": 3960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 10550.0,
+            "w": 3560.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12350.0,
+            "w": 2755.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12350.0,
+            "w": 705.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_sau_f3",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "ngu_sau_f3",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 19700,
+            "w": 3960,
+            "d": 4100
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 19750.0,
+            "w": 3560.0,
+            "d": 3850.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F3_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f3"
+        },
+        {
+          "id": "F3_W002",
+          "x": 0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f3"
+        },
+        {
+          "id": "F3_W003",
+          "x": 0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "wc_truoc_f3"
+        },
+        {
+          "id": "F3_W004",
+          "x": 0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "hall_front_f3"
+        },
+        {
+          "id": "F3_W005",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F3_W006",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F3_W007",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f3"
+        },
+        {
+          "id": "F3_W008",
+          "x": 0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f3"
+        },
+        {
+          "id": "F3_W009",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f3"
+        },
+        {
+          "id": "F3_W010",
+          "x": 3760.0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f3"
+        },
+        {
+          "id": "F3_W011",
+          "x": 3760.0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "hall_wc_f3"
+        },
+        {
+          "id": "F3_W012",
+          "x": 3760.0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "hall_front_f3"
+        },
+        {
+          "id": "F3_W013",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F3_W014",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F3_W015",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f3"
+        },
+        {
+          "id": "F3_W016",
+          "x": 3760.0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f3"
+        },
+        {
+          "id": "F3_W017",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": "ban_cong_f3"
+        },
+        {
+          "id": "F3_W018",
+          "x": 0,
+          "y": 4850.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W019",
+          "x": 0,
+          "y": 8850.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W020",
+          "x": 1950,
+          "y": 8850.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W021",
+          "x": 1900.0,
+          "y": 8900,
+          "w": 100.0,
+          "h": 1600,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F3_W022",
+          "x": 0,
+          "y": 10450.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W023",
+          "x": 1950,
+          "y": 10450.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W024",
+          "x": 0,
+          "y": 12250.0,
+          "w": 3005,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W025",
+          "x": 3005,
+          "y": 12250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W026",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F3_W027",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W028",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W029",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W030",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F3_W031",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W032",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W033",
+          "x": 0,
+          "y": 19650.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F3_W034",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 3,
+          "orientation": "horizontal",
+          "room_id": "ngu_sau_f3"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F3_O000",
+          "type": "door",
+          "wall_id": "F3_W018",
+          "storey_level": 3,
+          "offset_mm": 0.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f3",
+            "ngu_truoc_f3"
+          ]
+        },
+        {
+          "id": "F3_O001",
+          "type": "window",
+          "wall_id": "F3_W018",
+          "storey_level": 3,
+          "offset_mm": 2560,
+          "width_mm": 1400,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f3",
+            "ngu_truoc_f3"
+          ]
+        },
+        {
+          "id": "F3_O002",
+          "type": "door",
+          "wall_id": "F3_W019",
+          "storey_level": 3,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f3",
+            "wc_truoc_f3"
+          ]
+        },
+        {
+          "id": "F3_O003",
+          "type": "door",
+          "wall_id": "F3_W020",
+          "storey_level": 3,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f3",
+            "hall_wc_f3"
+          ]
+        },
+        {
+          "id": "F3_O004",
+          "type": "door",
+          "wall_id": "F3_W021",
+          "storey_level": 3,
+          "offset_mm": 350.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f3",
+            "hall_wc_f3"
+          ]
+        },
+        {
+          "id": "F3_O005",
+          "type": "door",
+          "wall_id": "F3_W022",
+          "storey_level": 3,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f3",
+            "hall_front_f3"
+          ]
+        },
+        {
+          "id": "F3_O006",
+          "type": "door",
+          "wall_id": "F3_W023",
+          "storey_level": 3,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_wc_f3",
+            "hall_front_f3"
+          ]
+        },
+        {
+          "id": "F3_O007",
+          "type": "door",
+          "wall_id": "F3_W024",
+          "storey_level": 3,
+          "offset_mm": 1052.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f3",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F3_O008",
+          "type": "door",
+          "wall_id": "F3_W025",
+          "storey_level": 3,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f3",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F3_O009",
+          "type": "door",
+          "wall_id": "F3_W026",
+          "storey_level": 3,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F3_O010",
+          "type": "door",
+          "wall_id": "F3_W028",
+          "storey_level": 3,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F3_O011",
+          "type": "door",
+          "wall_id": "F3_W027",
+          "storey_level": 3,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F3_O012",
+          "type": "door",
+          "wall_id": "F3_W029",
+          "storey_level": 3,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F3_O013",
+          "type": "door",
+          "wall_id": "F3_W030",
+          "storey_level": 3,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F3_O014",
+          "type": "door",
+          "wall_id": "F3_W032",
+          "storey_level": 3,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "wc_sau_f3"
+          ]
+        },
+        {
+          "id": "F3_O015",
+          "type": "door",
+          "wall_id": "F3_W031",
+          "storey_level": 3,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "wc_sau_f3"
+          ]
+        },
+        {
+          "id": "F3_O016",
+          "type": "door",
+          "wall_id": "F3_W033",
+          "storey_level": 3,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_sau_f3",
+            "ngu_sau_f3"
+          ]
+        },
+        {
+          "id": "F3_O017",
+          "type": "window",
+          "wall_id": "F3_W034",
+          "storey_level": 3,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "ngu_sau_f3",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 3,
+        "direction": "up_and_down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 178.94736842105263
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 357.89473684210526
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 536.8421052631579
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 715.7894736842105
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 894.7368421052631
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1073.6842105263158
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1252.6315789473683
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1431.578947368421
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1610.5263157894738
+          },
+          {
+            "x": 0,
+            "y": 14550.0,
+            "w": 3005,
+            "d": 1750.0,
+            "z": 1789.4736842105262
+          },
+          {
+            "x": 1552.5,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1968.421052631579
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2147.3684210526317
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2326.315789473684
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2505.2631578947367
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2684.2105263157896
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2863.157894736842
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3042.1052631578946
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3221.0526315789475
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3400.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [],
+      "authored_void_reasons": [],
+      "annotations": [
+        {
+          "x": 2560,
+          "y": 18600,
+          "w": 800,
+          "d": 600,
+          "text": "L\u00f4 gia",
+          "boxed": false
+        },
+        {
+          "x": 880,
+          "y": 10400,
+          "w": 2200,
+          "d": 1900,
+          "text": "\u00d4 l\u1ea5y s\u00e1ng 2200",
+          "boxed": true
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 600,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 300,
+          "y_mm": -200,
+          "z_mm": 0,
+          "w_mm": 250,
+          "d_mm": 200,
+          "h_mm": 3300,
+          "finish": "facade_trim",
+          "kind": "column",
+          "side": "north",
+          "id": "col_f3"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Floor 4",
+      "height_mm": 3400,
+      "base_z": 13800.0,
+      "rooms": [
+        {
+          "id": "ban_cong_f4",
+          "type": "balcony",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 1400
+          },
+          "name": "BAN C\u00d4NG",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 1150.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "slatted"
+        },
+        {
+          "id": "ngu_truoc_f4",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 4900,
+            "w": 3960,
+            "d": 4000
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 4950.0,
+            "w": 3560.0,
+            "d": 3900.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_truoc_f4",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 8900,
+            "w": 1950,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 8950.0,
+            "w": 1700.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_wc_f4",
+          "type": "hall",
+          "rect": {
+            "x": 1950,
+            "y": 8900,
+            "w": 2010,
+            "d": 1600
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 2000.0,
+            "y": 8950.0,
+            "w": 1760.0,
+            "d": 1500.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_front_f4",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 10500,
+            "w": 3960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 10550.0,
+            "w": 3560.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12350.0,
+            "w": 2755.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12350.0,
+            "w": 705.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_sau_f4",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "ngu_sau_f4",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 19700,
+            "w": 3960,
+            "d": 4100
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 19750.0,
+            "w": 3560.0,
+            "d": 3850.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F4_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f4"
+        },
+        {
+          "id": "F4_W002",
+          "x": 0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f4"
+        },
+        {
+          "id": "F4_W003",
+          "x": 0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "wc_truoc_f4"
+        },
+        {
+          "id": "F4_W004",
+          "x": 0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "hall_front_f4"
+        },
+        {
+          "id": "F4_W005",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F4_W006",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F4_W007",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f4"
+        },
+        {
+          "id": "F4_W008",
+          "x": 0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f4"
+        },
+        {
+          "id": "F4_W009",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f4"
+        },
+        {
+          "id": "F4_W010",
+          "x": 3760.0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ngu_truoc_f4"
+        },
+        {
+          "id": "F4_W011",
+          "x": 3760.0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "hall_wc_f4"
+        },
+        {
+          "id": "F4_W012",
+          "x": 3760.0,
+          "y": 10500,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "hall_front_f4"
+        },
+        {
+          "id": "F4_W013",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F4_W014",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F4_W015",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f4"
+        },
+        {
+          "id": "F4_W016",
+          "x": 3760.0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f4"
+        },
+        {
+          "id": "F4_W017",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": "ban_cong_f4"
+        },
+        {
+          "id": "F4_W018",
+          "x": 0,
+          "y": 4850.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W019",
+          "x": 0,
+          "y": 8850.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W020",
+          "x": 1950,
+          "y": 8850.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W021",
+          "x": 1900.0,
+          "y": 8900,
+          "w": 100.0,
+          "h": 1600,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F4_W022",
+          "x": 0,
+          "y": 10450.0,
+          "w": 1950,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W023",
+          "x": 1950,
+          "y": 10450.0,
+          "w": 2010,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W024",
+          "x": 0,
+          "y": 12250.0,
+          "w": 3005,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W025",
+          "x": 3005,
+          "y": 12250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W026",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F4_W027",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W028",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W029",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W030",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F4_W031",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W032",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W033",
+          "x": 0,
+          "y": 19650.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F4_W034",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 4,
+          "orientation": "horizontal",
+          "room_id": "ngu_sau_f4"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F4_O000",
+          "type": "door",
+          "wall_id": "F4_W018",
+          "storey_level": 4,
+          "offset_mm": 0.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f4",
+            "ngu_truoc_f4"
+          ]
+        },
+        {
+          "id": "F4_O001",
+          "type": "window",
+          "wall_id": "F4_W018",
+          "storey_level": 4,
+          "offset_mm": 2560,
+          "width_mm": 1400,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f4",
+            "ngu_truoc_f4"
+          ]
+        },
+        {
+          "id": "F4_O002",
+          "type": "door",
+          "wall_id": "F4_W019",
+          "storey_level": 4,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f4",
+            "wc_truoc_f4"
+          ]
+        },
+        {
+          "id": "F4_O003",
+          "type": "door",
+          "wall_id": "F4_W020",
+          "storey_level": 4,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ngu_truoc_f4",
+            "hall_wc_f4"
+          ]
+        },
+        {
+          "id": "F4_O004",
+          "type": "door",
+          "wall_id": "F4_W021",
+          "storey_level": 4,
+          "offset_mm": 350.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f4",
+            "hall_wc_f4"
+          ]
+        },
+        {
+          "id": "F4_O005",
+          "type": "door",
+          "wall_id": "F4_W022",
+          "storey_level": 4,
+          "offset_mm": 525.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_truoc_f4",
+            "hall_front_f4"
+          ]
+        },
+        {
+          "id": "F4_O006",
+          "type": "door",
+          "wall_id": "F4_W023",
+          "storey_level": 4,
+          "offset_mm": 555.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_wc_f4",
+            "hall_front_f4"
+          ]
+        },
+        {
+          "id": "F4_O007",
+          "type": "door",
+          "wall_id": "F4_W024",
+          "storey_level": 4,
+          "offset_mm": 1052.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f4",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F4_O008",
+          "type": "door",
+          "wall_id": "F4_W025",
+          "storey_level": 4,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f4",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F4_O009",
+          "type": "door",
+          "wall_id": "F4_W026",
+          "storey_level": 4,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F4_O010",
+          "type": "door",
+          "wall_id": "F4_W028",
+          "storey_level": 4,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F4_O011",
+          "type": "door",
+          "wall_id": "F4_W027",
+          "storey_level": 4,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F4_O012",
+          "type": "door",
+          "wall_id": "F4_W029",
+          "storey_level": 4,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F4_O013",
+          "type": "door",
+          "wall_id": "F4_W030",
+          "storey_level": 4,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F4_O014",
+          "type": "door",
+          "wall_id": "F4_W032",
+          "storey_level": 4,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "wc_sau_f4"
+          ]
+        },
+        {
+          "id": "F4_O015",
+          "type": "door",
+          "wall_id": "F4_W031",
+          "storey_level": 4,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "wc_sau_f4"
+          ]
+        },
+        {
+          "id": "F4_O016",
+          "type": "door",
+          "wall_id": "F4_W033",
+          "storey_level": 4,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_sau_f4",
+            "ngu_sau_f4"
+          ]
+        },
+        {
+          "id": "F4_O017",
+          "type": "window",
+          "wall_id": "F4_W034",
+          "storey_level": 4,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "ngu_sau_f4",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 4,
+        "direction": "up_and_down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 178.94736842105263
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 357.89473684210526
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 536.8421052631579
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 715.7894736842105
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 894.7368421052631
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1073.6842105263158
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1252.6315789473683
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1431.578947368421
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1610.5263157894738
+          },
+          {
+            "x": 0,
+            "y": 14550.0,
+            "w": 3005,
+            "d": 1750.0,
+            "z": 1789.4736842105262
+          },
+          {
+            "x": 1552.5,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1968.421052631579
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2147.3684210526317
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2326.315789473684
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2505.2631578947367
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2684.2105263157896
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2863.157894736842
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3042.1052631578946
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3221.0526315789475
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3400.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [],
+      "authored_void_reasons": [],
+      "annotations": [
+        {
+          "x": 2560,
+          "y": 18600,
+          "w": 800,
+          "d": 600,
+          "text": "L\u00f4 gia",
+          "boxed": false
+        },
+        {
+          "x": 880,
+          "y": 10400,
+          "w": 2200,
+          "d": 1900,
+          "text": "\u00d4 l\u1ea5y s\u00e1ng 2200",
+          "boxed": true
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 600,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 2000,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 3200,
+          "y_mm": -100,
+          "z_mm": 100,
+          "w_mm": 120,
+          "d_mm": 100,
+          "h_mm": 3200,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 300,
+          "y_mm": -200,
+          "z_mm": 0,
+          "w_mm": 250,
+          "d_mm": 200,
+          "h_mm": 3300,
+          "finish": "facade_trim",
+          "kind": "column",
+          "side": "north",
+          "id": "col_f4"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "name": "Floor 5",
+      "height_mm": 3400,
+      "base_z": 17200.0,
+      "rooms": [
+        {
+          "id": "ban_cong_f5",
+          "type": "balcony",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 1400
+          },
+          "name": "BAN C\u00d4NG",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 1150.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "slatted"
+        },
+        {
+          "id": "tho_f5",
+          "type": "living",
+          "rect": {
+            "x": 0,
+            "y": 4900,
+            "w": 3960,
+            "d": 4000
+          },
+          "name": "P.TH\u1edc",
+          "interior": {
+            "x": 200.0,
+            "y": 4950.0,
+            "w": 3560.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_front_f5",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 8900,
+            "w": 1960,
+            "d": 3400
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 8950.0,
+            "w": 1560.0,
+            "d": 3300.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_truoc_f5",
+          "type": "wc",
+          "rect": {
+            "x": 1960,
+            "y": 8900,
+            "w": 2000,
+            "d": 1900
+          },
+          "name": "WC",
+          "interior": {
+            "x": 2010.0,
+            "y": 8950.0,
+            "w": 1750.0,
+            "d": 1650.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12500.0,
+            "w": 2755.0,
+            "d": 3750.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12500.0,
+            "w": 705.0,
+            "d": 3750.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "wc_sau_f5",
+          "type": "wc",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 1600
+          },
+          "name": "WC",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 1500.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "ngu_sau_f5",
+          "type": "bedroom",
+          "rect": {
+            "x": 0,
+            "y": 19700,
+            "w": 3960,
+            "d": 4100
+          },
+          "name": "P.NG\u1ee6",
+          "interior": {
+            "x": 200.0,
+            "y": 19750.0,
+            "w": 3560.0,
+            "d": 3850.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F5_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f5"
+        },
+        {
+          "id": "F5_W002",
+          "x": 0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "tho_f5"
+        },
+        {
+          "id": "F5_W003",
+          "x": 0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 3400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "hall_front_f5"
+        },
+        {
+          "id": "F5_W004",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F5_W005",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F5_W006",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f5"
+        },
+        {
+          "id": "F5_W007",
+          "x": 0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f5"
+        },
+        {
+          "id": "F5_W008",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 1400,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "ban_cong_f5"
+        },
+        {
+          "id": "F5_W009",
+          "x": 3760.0,
+          "y": 4900,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "tho_f5"
+        },
+        {
+          "id": "F5_W010",
+          "x": 3760.0,
+          "y": 8900,
+          "w": 200.0,
+          "h": 1900,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "wc_truoc_f5"
+        },
+        {
+          "id": "F5_W011",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F5_W012",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F5_W013",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 1600,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "wc_sau_f5"
+        },
+        {
+          "id": "F5_W014",
+          "x": 3760.0,
+          "y": 19700,
+          "w": 200.0,
+          "h": 4100,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "ngu_sau_f5"
+        },
+        {
+          "id": "F5_W015",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": "ban_cong_f5"
+        },
+        {
+          "id": "F5_W016",
+          "x": 0,
+          "y": 4850.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W017",
+          "x": 0,
+          "y": 8850.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W018",
+          "x": 1960,
+          "y": 8850.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W019",
+          "x": 1910.0,
+          "y": 8900,
+          "w": 100.0,
+          "h": 1900,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F5_W020",
+          "x": 1760.0,
+          "y": 10800,
+          "w": 200.0,
+          "h": 1500,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": "hall_front_f5"
+        },
+        {
+          "id": "F5_W021",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F5_W022",
+          "x": 0,
+          "y": 12250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W023",
+          "x": 1960,
+          "y": 12300,
+          "w": 1045,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F5_W024",
+          "x": 3005,
+          "y": 12300,
+          "w": 955,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F5_W025",
+          "x": 1960,
+          "y": 10600.0,
+          "w": 2000,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": "wc_truoc_f5"
+        },
+        {
+          "id": "F5_W026",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F5_W027",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W028",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W029",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W030",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W031",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W032",
+          "x": 0,
+          "y": 19650.0,
+          "w": 3960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F5_W033",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 5,
+          "orientation": "horizontal",
+          "room_id": "ngu_sau_f5"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F5_O000",
+          "type": "door",
+          "wall_id": "F5_W016",
+          "storey_level": 5,
+          "offset_mm": 0.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f5",
+            "tho_f5"
+          ]
+        },
+        {
+          "id": "F5_O001",
+          "type": "window",
+          "wall_id": "F5_W016",
+          "storey_level": 5,
+          "offset_mm": 2560,
+          "width_mm": 1400,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "ban_cong_f5",
+            "tho_f5"
+          ]
+        },
+        {
+          "id": "F5_O002",
+          "type": "door",
+          "wall_id": "F5_W019",
+          "storey_level": 5,
+          "offset_mm": 500.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f5",
+            "wc_truoc_f5"
+          ]
+        },
+        {
+          "id": "F5_O003",
+          "type": "door",
+          "wall_id": "F5_W017",
+          "storey_level": 5,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "tho_f5",
+            "hall_front_f5"
+          ]
+        },
+        {
+          "id": "F5_O004",
+          "type": "door",
+          "wall_id": "F5_W022",
+          "storey_level": 5,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_front_f5",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F5_O005",
+          "type": "door",
+          "wall_id": "F5_W026",
+          "storey_level": 5,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F5_O006",
+          "type": "door",
+          "wall_id": "F5_W028",
+          "storey_level": 5,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F5_O007",
+          "type": "door",
+          "wall_id": "F5_W027",
+          "storey_level": 5,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F5_O008",
+          "type": "door",
+          "wall_id": "F5_W029",
+          "storey_level": 5,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F5_O009",
+          "type": "door",
+          "wall_id": "F5_W021",
+          "storey_level": 5,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F5_O010",
+          "type": "door",
+          "wall_id": "F5_W031",
+          "storey_level": 5,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "wc_sau_f5"
+          ]
+        },
+        {
+          "id": "F5_O011",
+          "type": "door",
+          "wall_id": "F5_W030",
+          "storey_level": 5,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "wc_sau_f5"
+          ]
+        },
+        {
+          "id": "F5_O012",
+          "type": "door",
+          "wall_id": "F5_W032",
+          "storey_level": 5,
+          "offset_mm": 1530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "wc_sau_f5",
+            "ngu_sau_f5"
+          ]
+        },
+        {
+          "id": "F5_O013",
+          "type": "window",
+          "wall_id": "F5_W033",
+          "storey_level": 5,
+          "offset_mm": 1230.0,
+          "width_mm": 1500,
+          "sill_mm": 900.0,
+          "head_mm": 2100.0,
+          "divisions": {
+            "columns": 3,
+            "rows": 1,
+            "mullion_mm": 50,
+            "transom_mm": 50
+          },
+          "between": [
+            "ngu_sau_f5",
+            "exterior"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 5,
+        "direction": "up_and_down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 178.94736842105263
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 357.89473684210526
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 536.8421052631579
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 715.7894736842105
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 894.7368421052631
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1073.6842105263158
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1252.6315789473683
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1431.578947368421
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1610.5263157894738
+          },
+          {
+            "x": 0,
+            "y": 14550.0,
+            "w": 3005,
+            "d": 1750.0,
+            "z": 1789.4736842105262
+          },
+          {
+            "x": 1552.5,
+            "y": 14300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1968.421052631579
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2147.3684210526317
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2326.315789473684
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2505.2631578947367
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2684.2105263157896
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2863.157894736842
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3042.1052631578946
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3221.0526315789475
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3400.0
+          }
+        ]
+      },
+      "roof": null,
+      "floor_voids": [
+        {
+          "x": 1960,
+          "y": 10800,
+          "w": 2000,
+          "d": 1500
+        },
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [
+        {
+          "x": 1960,
+          "y": 10800,
+          "w": 2000,
+          "d": 1500
+        }
+      ],
+      "authored_void_reasons": [
+        "\u00d4 l\u1ea5y s\u00e1ng"
+      ],
+      "annotations": [
+        {
+          "x": 2560,
+          "y": 18600,
+          "w": 800,
+          "d": 600,
+          "text": "L\u00f4 gia",
+          "boxed": false
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 800,
+          "y_mm": -120,
+          "z_mm": 100,
+          "w_mm": 150,
+          "d_mm": 120,
+          "h_mm": 3100,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        },
+        {
+          "x_mm": 3000,
+          "y_mm": -120,
+          "z_mm": 100,
+          "w_mm": 150,
+          "d_mm": 120,
+          "h_mm": 3100,
+          "finish": "facade_trim",
+          "kind": "fin",
+          "side": "north"
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "name": "Roof Terrace",
+      "height_mm": 3200,
+      "base_z": 20600.0,
+      "rooms": [
+        {
+          "id": "san_thuong_truoc",
+          "type": "terrace",
+          "rect": {
+            "x": 0,
+            "y": 3500,
+            "w": 3960,
+            "d": 8800
+          },
+          "name": "S\u00c2N TH\u01af\u1ee2NG",
+          "interior": {
+            "x": 200.0,
+            "y": 3700.0,
+            "w": 3560.0,
+            "d": 8550.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "stairwell",
+          "type": "stairwell",
+          "rect": {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          },
+          "name": "THANG",
+          "interior": {
+            "x": 200.0,
+            "y": 12350.0,
+            "w": 2755.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_stair",
+          "type": "hall",
+          "rect": {
+            "x": 3005,
+            "y": 12300,
+            "w": 955,
+            "d": 4000
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 3055.0,
+            "y": 12350.0,
+            "w": 705.0,
+            "d": 3900.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "elevator",
+          "type": "elevator",
+          "rect": {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800
+          },
+          "name": "THANG M\u00c1Y",
+          "interior": {
+            "x": 2010.0,
+            "y": 16350.0,
+            "w": 1750.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "hall_elev",
+          "type": "hall",
+          "rect": {
+            "x": 0,
+            "y": 16300,
+            "w": 1960,
+            "d": 1800
+          },
+          "name": "H\u00c0NH LANG",
+          "interior": {
+            "x": 200.0,
+            "y": 16350.0,
+            "w": 1710.0,
+            "d": 1700.0
+          },
+          "level_mm": null,
+          "parapet_pattern": "solid"
+        },
+        {
+          "id": "san_thuong_sau",
+          "type": "terrace",
+          "rect": {
+            "x": 0,
+            "y": 18100,
+            "w": 3960,
+            "d": 5700
+          },
+          "name": "S\u00c2N TH\u01af\u1ee2NG",
+          "interior": {
+            "x": 200.0,
+            "y": 18150.0,
+            "w": 3560.0,
+            "d": 5450.0
+          },
+          "level_mm": 0,
+          "parapet_pattern": "solid"
+        }
+      ],
+      "walls": [
+        {
+          "id": "F6_W001",
+          "x": 0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 8800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "san_thuong_truoc"
+        },
+        {
+          "id": "F6_W002",
+          "x": 0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "stairwell"
+        },
+        {
+          "id": "F6_W003",
+          "x": 0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "hall_elev"
+        },
+        {
+          "id": "F6_W004",
+          "x": 0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 5700,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "san_thuong_sau"
+        },
+        {
+          "id": "F6_W005",
+          "x": 3760.0,
+          "y": 3500,
+          "w": 200.0,
+          "h": 8800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "san_thuong_truoc"
+        },
+        {
+          "id": "F6_W006",
+          "x": 3760.0,
+          "y": 12300,
+          "w": 200.0,
+          "h": 4000,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "hall_stair"
+        },
+        {
+          "id": "F6_W007",
+          "x": 3760.0,
+          "y": 16300,
+          "w": 200.0,
+          "h": 1800,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "elevator"
+        },
+        {
+          "id": "F6_W008",
+          "x": 3760.0,
+          "y": 18100,
+          "w": 200.0,
+          "h": 5700,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": "san_thuong_sau"
+        },
+        {
+          "id": "F6_W009",
+          "x": 0,
+          "y": 3500,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": "san_thuong_truoc"
+        },
+        {
+          "id": "F6_W010",
+          "x": 0,
+          "y": 12250.0,
+          "w": 3005,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W011",
+          "x": 3005,
+          "y": 12250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W012",
+          "x": 2955.0,
+          "y": 12300,
+          "w": 100.0,
+          "h": 4000,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F6_W013",
+          "x": 0,
+          "y": 16250.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W014",
+          "x": 1960,
+          "y": 16250.0,
+          "w": 1045,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W015",
+          "x": 3005,
+          "y": 16250.0,
+          "w": 955,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W016",
+          "x": 1910.0,
+          "y": 16300,
+          "w": 100.0,
+          "h": 1800,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "vertical",
+          "room_id": null
+        },
+        {
+          "id": "F6_W017",
+          "x": 0,
+          "y": 18050.0,
+          "w": 1960,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W018",
+          "x": 1960,
+          "y": 18050.0,
+          "w": 2000,
+          "h": 100.0,
+          "thickness": 100.0,
+          "kind": "partition",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": null
+        },
+        {
+          "id": "F6_W019",
+          "x": 0,
+          "y": 23600.0,
+          "w": 3960,
+          "h": 200.0,
+          "thickness": 200.0,
+          "kind": "exterior",
+          "storey_level": 6,
+          "orientation": "horizontal",
+          "room_id": "san_thuong_sau"
+        }
+      ],
+      "openings": [
+        {
+          "id": "F6_O000",
+          "type": "door",
+          "wall_id": "F6_W010",
+          "storey_level": 6,
+          "offset_mm": 1052.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "san_thuong_truoc",
+            "stairwell"
+          ]
+        },
+        {
+          "id": "F6_O001",
+          "type": "door",
+          "wall_id": "F6_W011",
+          "storey_level": 6,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "san_thuong_truoc",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F6_O002",
+          "type": "door",
+          "wall_id": "F6_W012",
+          "storey_level": 6,
+          "offset_mm": 1550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_stair"
+          ]
+        },
+        {
+          "id": "F6_O003",
+          "type": "door",
+          "wall_id": "F6_W014",
+          "storey_level": 6,
+          "offset_mm": 72.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F6_O004",
+          "type": "door",
+          "wall_id": "F6_W013",
+          "storey_level": 6,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "stairwell",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F6_O005",
+          "type": "door",
+          "wall_id": "F6_W015",
+          "storey_level": 6,
+          "offset_mm": 27.5,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_stair",
+            "elevator"
+          ]
+        },
+        {
+          "id": "F6_O006",
+          "type": "door",
+          "wall_id": "F6_W016",
+          "storey_level": 6,
+          "offset_mm": 450.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "hall_elev"
+          ]
+        },
+        {
+          "id": "F6_O007",
+          "type": "door",
+          "wall_id": "F6_W018",
+          "storey_level": 6,
+          "offset_mm": 550.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "elevator",
+            "san_thuong_sau"
+          ]
+        },
+        {
+          "id": "F6_O008",
+          "type": "door",
+          "wall_id": "F6_W017",
+          "storey_level": 6,
+          "offset_mm": 530.0,
+          "width_mm": 900,
+          "sill_mm": 0.0,
+          "head_mm": 2100.0,
+          "divisions": null,
+          "between": [
+            "hall_elev",
+            "san_thuong_sau"
+          ]
+        }
+      ],
+      "stairs": {
+        "room_id": "stairwell",
+        "storey_level": 6,
+        "direction": "down",
+        "treads": [
+          {
+            "x": 0,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 177.77777777777777
+          },
+          {
+            "x": 0,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 355.55555555555554
+          },
+          {
+            "x": 0,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 533.3333333333333
+          },
+          {
+            "x": 0,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 711.1111111111111
+          },
+          {
+            "x": 0,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 888.8888888888889
+          },
+          {
+            "x": 0,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1066.6666666666665
+          },
+          {
+            "x": 0,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1244.4444444444443
+          },
+          {
+            "x": 0,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1422.2222222222222
+          },
+          {
+            "x": 0,
+            "y": 14300.0,
+            "w": 3005,
+            "d": 2000.0,
+            "z": 1600.0
+          },
+          {
+            "x": 1552.5,
+            "y": 14050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1777.7777777777778
+          },
+          {
+            "x": 1552.5,
+            "y": 13800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 1955.5555555555554
+          },
+          {
+            "x": 1552.5,
+            "y": 13550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2133.333333333333
+          },
+          {
+            "x": 1552.5,
+            "y": 13300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2311.111111111111
+          },
+          {
+            "x": 1552.5,
+            "y": 13050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2488.8888888888887
+          },
+          {
+            "x": 1552.5,
+            "y": 12800.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2666.6666666666665
+          },
+          {
+            "x": 1552.5,
+            "y": 12550.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 2844.4444444444443
+          },
+          {
+            "x": 1552.5,
+            "y": 12300.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3022.222222222222
+          },
+          {
+            "x": 1552.5,
+            "y": 12050.0,
+            "w": 1452.5,
+            "d": 250.0,
+            "z": 3200.0
+          }
+        ]
+      },
+      "roof": {
+        "storey_level": 6,
+        "type": "flat",
+        "pitch_deg": 20.0,
+        "overhang_mm": 300,
+        "x": -300,
+        "y": 12000,
+        "w": 4560,
+        "d": 6400,
+        "base_z": 23800.0,
+        "voids": [
+          {
+            "x": 0,
+            "y": 12300,
+            "w": 3005,
+            "d": 4000
+          }
+        ],
+        "structures": [
+          {
+            "x": 1960,
+            "y": 16300,
+            "w": 2000,
+            "d": 1800,
+            "height_mm": 2000,
+            "name": "\u00d4 K\u1ef8 THU\u1eacT THANG M\u00c1Y"
+          }
+        ]
+      },
+      "floor_voids": [
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000
+        },
+        {
+          "x": 1960,
+          "y": 16300,
+          "w": 2000,
+          "d": 1800
+        }
+      ],
+      "authored_voids": [],
+      "authored_void_reasons": [],
+      "annotations": [
+        {
+          "x": 0,
+          "y": 12300,
+          "w": 3005,
+          "d": 4000,
+          "text": "\u00d4 l\u1ea5y s\u00e1ng",
+          "boxed": true
+        }
+      ],
+      "facade_elements": [
+        {
+          "x_mm": 0,
+          "y_mm": -150,
+          "z_mm": 2800,
+          "w_mm": 3960,
+          "d_mm": 150,
+          "h_mm": 200,
+          "finish": "facade_trim",
+          "kind": "band",
+          "side": "north"
+        },
+        {
+          "x_mm": 1000,
+          "y_mm": -400,
+          "z_mm": 2200,
+          "w_mm": 1960,
+          "d_mm": 400,
+          "h_mm": 150,
+          "finish": "metal_sheet",
+          "kind": "awning",
+          "side": "north"
+        }
+      ]
+    }
+  ],
+  "views": [
+    {
+      "name": "exterior_front",
+      "kind": "exterior_front",
+      "room_id": null
+    },
+    {
+      "name": "exterior_aerial",
+      "kind": "exterior_aerial",
+      "room_id": null
+    },
+    {
+      "name": "gara",
+      "kind": "room",
+      "room_id": "gara"
+    },
+    {
+      "name": "khach",
+      "kind": "room",
+      "room_id": "khach"
+    },
+    {
+      "name": "lung",
+      "kind": "room",
+      "room_id": "sinh_hoat"
+    },
+    {
+      "name": "ngu_f2",
+      "kind": "room",
+      "room_id": "ngu_truoc_f2"
+    },
+    {
+      "name": "wc_f2",
+      "kind": "room",
+      "room_id": "wc_sau_f2"
+    },
+    {
+      "name": "ngu_f4",
+      "kind": "room",
+      "room_id": "ngu_sau_f4"
+    },
+    {
+      "name": "tho",
+      "kind": "room",
+      "room_id": "tho_f5"
+    },
+    {
+      "name": "bep_an",
+      "kind": "room",
+      "room_id": "bep_an"
+    },
+    {
+      "name": "hanh_lang_thang",
+      "kind": "room",
+      "room_id": "hall_stair"
+    },
+    {
+      "name": "san_thuong",
+      "kind": "room",
+      "room_id": "san_thuong_sau"
+    }
+  ],
+  "context": {
+    "neighbours": true,
+    "street_depth_mm": 6000,
+    "alley_width_mm": 4000,
+    "kerb_height_mm": 150,
+    "kerb_width_mm": 300,
+    "opposite_height_mm": 12000,
+    "opposite_depth_mm": 8000,
+    "neighbour_west_height_mm": 14000,
+    "neighbour_east_height_mm": 10500,
+    "neighbour_width_mm": 4000,
+    "neighbour_depth_mm": 20000
+  },
+  "wall_alignment": "inside",
+  "sections": [
+    {
+      "name": "long",
+      "label": "A-A",
+      "axis": "x",
+      "position_mm": 1500
+    },
+    {
+      "name": "cross_bed",
+      "label": "B-B",
+      "axis": "y",
+      "position_mm": 6900
+    }
+  ],
+  "north_deg": 0.0,
+  "finish_map": {
+    "room:gara:wall": "plaster_painted",
+    "room:gara:floor": "ceramic_tile",
+    "room:khach:wall": "plaster_painted",
+    "room:khach:floor": "wood_board",
+    "room:stairwell:wall": "plaster_painted",
+    "room:stairwell:floor": "ceramic_tile",
+    "room:hall_stair:wall": "plaster_painted",
+    "room:hall_stair:floor": "ceramic_tile",
+    "room:elevator:wall": "plaster_painted",
+    "room:elevator:floor": "ceramic_tile",
+    "room:hall_elev:wall": "plaster_painted",
+    "room:hall_elev:floor": "ceramic_tile",
+    "room:wc_gf:wall": "plaster_painted",
+    "room:wc_gf:floor": "ceramic_tile",
+    "room:bep_an:wall": "plaster_painted",
+    "room:bep_an:floor": "ceramic_tile",
+    "col_gf": "column",
+    "facade:0:fin:1200": "fin",
+    "facade:0:panel:800": "panel",
+    "room:sinh_hoat:wall": "plaster_painted",
+    "room:sinh_hoat:floor": "wood_board",
+    "facade:1:fin:300": "fin",
+    "facade:1:fin:3500": "fin",
+    "room:ban_cong_f2:wall": "plaster_painted",
+    "room:ban_cong_f2:floor": "ceramic_tile",
+    "room:ngu_truoc_f2:wall": "plaster_painted",
+    "room:ngu_truoc_f2:floor": "wood_board",
+    "room:wc_truoc_f2:wall": "plaster_painted",
+    "room:wc_truoc_f2:floor": "ceramic_tile",
+    "room:hall_wc_f2:wall": "plaster_painted",
+    "room:hall_wc_f2:floor": "ceramic_tile",
+    "room:hall_front_f2:wall": "plaster_painted",
+    "room:hall_front_f2:floor": "ceramic_tile",
+    "room:wc_sau_f2:wall": "plaster_painted",
+    "room:wc_sau_f2:floor": "ceramic_tile",
+    "room:ngu_sau_f2:wall": "plaster_painted",
+    "room:ngu_sau_f2:floor": "wood_board",
+    "facade:2:fin:600": "fin",
+    "facade:2:fin:2000": "fin",
+    "facade:2:fin:3200": "fin",
+    "col_f2": "column",
+    "room:ban_cong_f3:wall": "plaster_painted",
+    "room:ban_cong_f3:floor": "ceramic_tile",
+    "room:ngu_truoc_f3:wall": "plaster_painted",
+    "room:ngu_truoc_f3:floor": "wood_board",
+    "room:wc_truoc_f3:wall": "plaster_painted",
+    "room:wc_truoc_f3:floor": "ceramic_tile",
+    "room:hall_wc_f3:wall": "plaster_painted",
+    "room:hall_wc_f3:floor": "ceramic_tile",
+    "room:hall_front_f3:wall": "plaster_painted",
+    "room:hall_front_f3:floor": "ceramic_tile",
+    "room:wc_sau_f3:wall": "plaster_painted",
+    "room:wc_sau_f3:floor": "ceramic_tile",
+    "room:ngu_sau_f3:wall": "plaster_painted",
+    "room:ngu_sau_f3:floor": "wood_board",
+    "facade:3:fin:600": "fin",
+    "facade:3:fin:2000": "fin",
+    "facade:3:fin:3200": "fin",
+    "col_f3": "column",
+    "room:ban_cong_f4:wall": "plaster_painted",
+    "room:ban_cong_f4:floor": "ceramic_tile",
+    "room:ngu_truoc_f4:wall": "plaster_painted",
+    "room:ngu_truoc_f4:floor": "wood_board",
+    "room:wc_truoc_f4:wall": "plaster_painted",
+    "room:wc_truoc_f4:floor": "ceramic_tile",
+    "room:hall_wc_f4:wall": "plaster_painted",
+    "room:hall_wc_f4:floor": "ceramic_tile",
+    "room:hall_front_f4:wall": "plaster_painted",
+    "room:hall_front_f4:floor": "ceramic_tile",
+    "room:wc_sau_f4:wall": "plaster_painted",
+    "room:wc_sau_f4:floor": "ceramic_tile",
+    "room:ngu_sau_f4:wall": "plaster_painted",
+    "room:ngu_sau_f4:floor": "wood_board",
+    "facade:4:fin:600": "fin",
+    "facade:4:fin:2000": "fin",
+    "facade:4:fin:3200": "fin",
+    "col_f4": "column",
+    "room:ban_cong_f5:wall": "plaster_painted",
+    "room:ban_cong_f5:floor": "ceramic_tile",
+    "room:tho_f5:wall": "plaster_painted",
+    "room:tho_f5:floor": "wood_board",
+    "room:hall_front_f5:wall": "plaster_painted",
+    "room:hall_front_f5:floor": "ceramic_tile",
+    "room:wc_truoc_f5:wall": "plaster_painted",
+    "room:wc_truoc_f5:floor": "ceramic_tile",
+    "room:wc_sau_f5:wall": "plaster_painted",
+    "room:wc_sau_f5:floor": "ceramic_tile",
+    "room:ngu_sau_f5:wall": "plaster_painted",
+    "room:ngu_sau_f5:floor": "wood_board",
+    "facade:5:fin:800": "fin",
+    "facade:5:fin:3000": "fin",
+    "room:san_thuong_truoc:wall": "plaster_painted",
+    "room:san_thuong_truoc:floor": "ceramic_tile",
+    "room:san_thuong_sau:wall": "plaster_painted",
+    "room:san_thuong_sau:floor": "ceramic_tile",
+    "facade:6:band:0": "band",
+    "facade:6:awning:1000": "awning",
+    "element:wall": "plaster_painted",
+    "element:floor": "ceramic_tile",
+    "element:ceiling": "plaster_painted",
+    "element:parapet": "concrete_formed",
+    "element:frame": "aluminium",
+    "element:glass": "glass_clear",
+    "element:leaf": "wood_board",
+    "element:neighbour": "plaster_painted",
+    "element:street": "concrete_formed",
+    "element:ground": "concrete_formed"
+  },
+  "setbacks": {
+    "front_mm": 3500,
+    "rear_mm": 2500
+  },
+  "model_hash": "f61791f479bc"
+}
