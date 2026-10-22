@@ -1,0 +1,528 @@
+<title>Rà soát hồ sơ thi công</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Bố cục: bảng tiêu đề kiểu bản vẽ, mặt cắt nhà đo theo tỉ lệ cố định bên trái, sáu quyết định cuộn bên phải, hai khối phụ phía dưới. */
+:root {
+  --bg: #E9ECEF;
+  --surface: #F6F7F8;
+  --ink: #16212B;
+  --muted: #56636F;
+  --line: #BCC5CD;
+  --red: #C23A2E;
+  --amber: #B8741A;
+  --green: #2E7D5B;
+  --blue: #2D5E8C;
+  --gold: #A6791A;
+  --soil: #D9D2C4;
+  --on-red: #FFFFFF;
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10161C; --surface: #18212A; --ink: #E4E9ED; --muted: #9AA7B3; --line: #33414D;
+    --red: #EF6A5C; --amber: #E0A04A; --green: #58B58E; --blue: #6EA6D8; --gold: #D9AE4B; --soil: #2A2A26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10161C; --surface: #18212A; --ink: #E4E9ED; --muted: #9AA7B3; --line: #33414D;
+  --red: #EF6A5C; --amber: #E0A04A; --green: #58B58E; --blue: #6EA6D8; --gold: #D9AE4B; --soil: #2A2A26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-block: 20px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2 { text-wrap: balance; }
+.mono { font-family: var(--font-mono); }
+.cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* bảng tiêu đề */
+.tb { display: grid; grid-template-columns: 2fr 1fr 1fr; border: 1.5px solid var(--ink); background: var(--surface); }
+.tb > div { padding: 8px 12px; border-right: 1px solid var(--line); min-width: 0; }
+.tb > div:last-child { border-right: 0; }
+.tb b { display: block; font-size: 14px; font-weight: 500; }
+@media (max-width: 640px) { .tb { grid-template-columns: 1fr; } .tb > div { border-right: 0; border-bottom: 1px solid var(--line); } .tb > div:last-child { border-bottom: 0; } }
+
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.hero h1 { font-size: clamp(28px, 5.2vw, 48px); line-height: 1.08; font-weight: 800; letter-spacing: -.01em; flex: 1 1 420px; min-width: 0; }
+.stamp { border: 2.5px solid var(--red); color: var(--red); padding: 8px 16px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transform: rotate(-3deg); font-size: 15px; white-space: nowrap; }
+.sub { color: var(--muted); font-size: 16px; max-width: 60ch; }
+
+/* ba đội rà soát */
+.lanes { display: grid; gap: 10px; }
+.lane { display: grid; grid-template-columns: 92px minmax(0,1fr); align-items: center; gap: 4px 12px; }
+.lane .n { font-weight: 700; }
+.lane .n span { font-family: var(--font-mono); font-weight: 500; color: var(--muted); margin-left: 6px; }
+.bar { display: flex; height: 14px; }
+.bar i { display: block; height: 100%; }
+.lane small { grid-column: 2; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.c-crit { background: var(--red); } .c-high { background: var(--amber); } .c-med { background: var(--gold); opacity: .55; } .c-low { background: var(--line); }
+.c-blue { background: var(--blue); } .c-green { background: var(--green); }
+
+/* thân trang */
+.main { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) { .main { grid-template-columns: 380px minmax(0, 1fr); gap: 32px; } .sticky { position: sticky; top: 16px; } }
+.diagram { background: var(--surface); border: 1px solid var(--line); padding: 10px; }
+.diagram svg { display: block; width: 100%; height: auto; max-width: 100%; }
+.diagram .cap { padding: 6px 4px 0; }
+svg text { font-family: var(--font-mono); font-size: 10.5px; fill: var(--muted); }
+svg .ink { stroke: var(--ink); fill: none; }
+svg .fillink { fill: var(--ink); }
+svg .soil { fill: var(--soil); }
+svg .lbl-red { fill: var(--red); font-style: italic; }
+.pin circle { fill: var(--red); stroke: var(--bg); stroke-width: 2; transition: r .15s; }
+.pin text { fill: var(--on-red); font-weight: 500; font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+.pin.on circle { r: 12; }
+.pin { cursor: default; }
+
+.cards { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 4px 14px; outline-offset: 2px; transition: border-color .15s; }
+.card.on, .card:focus-visible { border-color: var(--red); outline: 2px solid var(--red); }
+.card .pn { grid-row: 1 / span 4; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: var(--on-red); display: grid; place-items: center; font-family: var(--font-mono); font-weight: 500; }
+.card h3 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+.card .stat { font-size: 22px; font-weight: 800; line-height: 1.15; }
+.card p { color: var(--muted); font-size: 14px; }
+.who { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { font-family: var(--font-mono); font-size: 11px; padding: 2px 8px; border: 1px solid var(--line); color: var(--muted); }
+.chip.act { border-color: var(--green); color: var(--green); }
+.mini { max-width: 100%; margin-top: 2px; }
+.mini svg { width: 100%; max-width: 260px; height: auto; }
+
+section > h2 { font-size: clamp(22px, 3.4vw, 30px); font-weight: 800; margin-bottom: 14px; }
+.panel { background: var(--surface); border: 1px solid var(--line); padding: 16px; }
+
+/* so sánh cũ / mới */
+.cmp { display: grid; gap: 0; }
+.row { display: grid; grid-template-columns: 120px minmax(0,1fr) 28px minmax(0,1fr); align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row .k { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.old { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--red); }
+.new { font-weight: 700; }
+.arr { color: var(--muted); text-align: center; }
+.hbars { display: grid; gap: 6px; grid-column: 2 / span 3; }
+.hb { display: grid; grid-template-columns: 54px minmax(0,1fr); align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; }
+.hb i { display: block; height: 16px; }
+.hb .o { background: var(--line); } .hb .nw { background: var(--ink); }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr 24px 1fr; } .row .k { grid-column: 1 / -1; } .hbars { grid-column: 1 / -1; } }
+
+/* phong thủy */
+.pt { display: grid; gap: 24px; grid-template-columns: minmax(0,1fr); }
+@media (min-width: 900px) { .pt { grid-template-columns: 330px minmax(0,1fr); } }
+.compass svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+.steps { display: grid; gap: 6px; margin-top: 10px; font-size: 14px; }
+.steps div { display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 8px; }
+.steps b { font-family: var(--font-mono); color: var(--gold); font-weight: 500; }
+.scroll { overflow-x: auto; max-width: 100%; }
+.scroll svg { min-width: 640px; width: 100%; height: auto; display: block; }
+.tiles { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin-top: 14px; }
+.tile { border: 1px solid var(--line); padding: 10px; display: grid; gap: 6px; font-size: 13px; line-height: 1.35; }
+.tile svg { width: 30px; height: 30px; fill: none; stroke: var(--green); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tile.skip svg { stroke: var(--muted); }
+.tile.skip { color: var(--muted); position: relative; }
+.tile.skip span { text-decoration: line-through; text-decoration-color: var(--red); }
+.sub2 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin: 16px 0 0; color: var(--muted); }
+.pt p, .pt li { font-size: 14.5px; line-height: 1.6; }
+.pt p { margin: 10px 0 0; }
+.pt h3 { font-size: 16px; margin: 20px 0 4px; }
+.fit { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 4px; }
+.fit li { display: grid; grid-template-columns: 74px minmax(0,1fr); gap: 8px; border-top: 1px solid var(--line); padding-top: 4px; }
+.fit li b { font-weight: 700; }
+.fit .good b { color: var(--blue); } .fit .bad b { color: var(--amber); }
+
+/* danh sách gửi nhà thầu */
+.todo { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.todo li { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); align-items: start; }
+.todo li:first-child { border-top: 0; }
+.todo input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--green); }
+.btn { font: inherit; font-family: var(--font-mono); font-size: 13px; background: var(--ink); color: var(--bg); border: 0; padding: 8px 14px; cursor: pointer; }
+.btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.head-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+
+.limits { display: flex; flex-wrap: wrap; gap: 8px; }
+.limits .chip { color: var(--ink); background: var(--surface); }
+footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+  <div class="tb">
+    <div><span class="cap">Công trình</span><b>Nhà ở riêng lẻ · 3,9 × 25 m · 6 tầng + sân thượng</b></div>
+    <div><span class="cap">Rà soát</span><b class="mono">22/10/2026</b></div>
+    <div><span class="cap">Hồ sơ</span><b class="mono">33 ảnh · 9/20 tờ KT</b></div>
+  </div>
+
+  <header class="hero">
+    <h1>Chưa nên vội ép cọc hay đổ sàn.</h1>
+    <div class="stamp" aria-label="Kết luận: dừng và hỏi lại">Dừng &amp; hỏi</div>
+    <p class="sub">Bộ bản vẽ nhà thầu gửi còn nhiều chỗ chưa khớp với nhau. Có sáu việc nên hỏi lại cho rõ trước khi bắt đầu làm. Ba việc đầu tốn tiền nhất nếu đợi đến lúc đổ bê tông rồi mới phát hiện, vì khi đó phải đục ra làm lại.</p>
+  </header>
+
+  <div class="lanes" aria-label="Số phát hiện của ba đội rà soát">
+    <div class="lane"><div class="n">An toàn<span>54</span></div>
+      <div class="bar" style="width:100%"><i class="c-crit" style="width:1.85%"></i><i class="c-high" style="width:59.3%"></i><i class="c-med" style="width:37%"></i><i class="c-low" style="width:1.85%"></i></div>
+      <small>1 nghiêm trọng · 32 cao · 20 vừa · 1 thấp (đã chỉnh)</small></div>
+    <div class="lane"><div class="n">Thiết kế<span>38</span></div>
+      <div class="bar" style="width:70.4%"><i class="c-crit" style="width:39.5%"></i><i class="c-high" style="width:18.4%"></i><i class="c-med" style="width:10.5%"></i><i class="c-blue" style="width:31.6%"></i></div>
+      <small>15 lỗi · 7 mâu thuẫn · 4 rủi ro · 12 cải thiện</small></div>
+    <div class="lane"><div class="n">Phong thủy<span>32</span></div>
+      <div class="bar" style="width:59.3%"><i class="c-green" style="width:100%"></i></div>
+      <small>32 mục · bảng Bát Trạch đã đối chiếu</small></div>
+  </div>
+
+  <section>
+    <h2>Sáu việc phải chốt</h2>
+    <div class="main">
+
+      <div class="sticky">
+        <figure class="diagram" style="margin:0">
+          <svg viewBox="0 0 360 500" role="img" aria-label="Mặt cắt dọc nhà theo tỉ lệ: cao 21,9 m, cọc dài 24 m, sáu điểm cần chốt đánh số 1 đến 6">
+            <defs>
+              <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--muted)" stroke-width="1"/></pattern>
+            </defs>
+            <!-- đất + mặt đất -->
+            <rect class="soil" x="0" y="250" width="360" height="250"/>
+            <line class="ink" x1="0" y1="250" x2="360" y2="250" stroke-width="1.5"/>
+            <!-- cao độ + tên tầng -->
+            <g>
+              <text x="60" y="56" text-anchor="end">+21,9</text><text x="60" y="69" text-anchor="end">+20,4</text>
+              <text x="60" y="98" text-anchor="end">+17,2</text><text x="60" y="129" text-anchor="end">+13,8</text>
+              <text x="60" y="160" text-anchor="end">+10,4</text><text x="60" y="190" text-anchor="end">+7,0</text>
+              <text x="60" y="219" text-anchor="end">+3,8</text><text x="60" y="253" text-anchor="end">±0,0</text>
+              <text x="4" y="236">Trệt</text><text x="4" y="204">Lửng</text><text x="4" y="175">T2</text><text x="4" y="144">T3</text><text x="4" y="113">T4</text><text x="4" y="83">T5</text>
+            </g>
+            <g style="stroke:var(--line)" stroke-width="1">
+              <line x1="64" y1="52.9" x2="96" y2="52.9"/><line x1="64" y1="66.4" x2="96" y2="66.4"/><line x1="64" y1="95.2" x2="96" y2="95.2"/><line x1="64" y1="125.8" x2="96" y2="125.8"/>
+              <line x1="64" y1="156.4" x2="96" y2="156.4"/><line x1="64" y1="187" x2="96" y2="187"/><line x1="64" y1="215.8" x2="96" y2="215.8"/>
+            </g>
+            <!-- tường trước/sau -->
+            <line class="ink" x1="96" y1="250" x2="96" y2="95.2" stroke-width="2"/>
+            <line class="ink" x1="270" y1="250" x2="270" y2="95.2" stroke-width="2"/>
+            <!-- sàn các tầng -->
+            <g class="ink" stroke-width="2.2">
+              <line x1="140" y1="215.8" x2="270" y2="215.8"/>
+              <line x1="96" y1="187" x2="270" y2="187"/><line x1="96" y1="156.4" x2="270" y2="156.4"/>
+              <line x1="96" y1="125.8" x2="270" y2="125.8"/><line x1="96" y1="95.2" x2="270" y2="95.2"/>
+            </g>
+            <!-- lỗ thông tầng phía trước -->
+            <rect x="96" y="187" width="44" height="63" fill="url(#hatch)" stroke="none"/>
+            <!-- lõi: thang bộ + thang máy -->
+            <rect x="167" y="95.2" width="45" height="154.8" style="fill:var(--bg);stroke:var(--ink)" stroke-width="1"/>
+            <g class="ink" stroke-width="1">
+              <polyline points="169,250 193,232.9 169,215.8"/><polyline points="169,215.8 193,201.4 169,187"/>
+              <polyline points="169,187 193,171.7 169,156.4"/><polyline points="169,156.4 193,141.1 169,125.8"/>
+              <polyline points="169,125.8 193,110.5 169,95.2"/>
+            </g>
+            <g class="fillink" opacity=".75">
+              <rect x="201" y="231" width="9" height="17"/><rect x="201" y="197" width="9" height="17"/><rect x="201" y="168" width="9" height="17"/>
+              <rect x="201" y="137" width="9" height="17"/><rect x="201" y="107" width="9" height="17"/>
+            </g>
+            <!-- sảnh mái + quá tải thang máy -->
+            <rect x="167" y="66.4" width="45" height="28.8" style="fill:var(--bg);stroke:var(--ink)" stroke-width="1.5"/>
+            <line class="ink" x1="163" y1="66.4" x2="216" y2="66.4" stroke-width="2.2"/>
+            <rect x="198" y="52.9" width="14" height="13.5" style="fill:var(--bg);stroke:var(--ink)" stroke-width="1.5"/>
+            <line x1="167" y1="66.4" x2="196" y2="66.4" style="stroke:var(--blue)" stroke-width="3"/>
+            <!-- lan can sân thượng: chiều cao chưa rõ -->
+            <g style="stroke:var(--red)" stroke-width="1.5" stroke-dasharray="3 2"><line x1="96" y1="95.2" x2="96" y2="85.3"/><line x1="270" y1="95.2" x2="270" y2="85.3"/></g>
+            <text x="102" y="90" class="lbl-red">lan can ? mm</text>
+            <!-- xe và gara -->
+            <rect x="91.5" y="236.5" width="40.5" height="13.5" rx="3" style="fill:none;stroke:var(--red)" stroke-width="1.3" stroke-dasharray="3 2"/>
+            <circle cx="100" cy="250" r="3" class="fillink"/><circle cx="123" cy="250" r="3" class="fillink"/>
+            <!-- ban thờ (T4, phía trước) -->
+            <path d="M106 111 l6 6 l-6 6 l-6 -6 z" style="fill:var(--gold)"/>
+            <text x="116" y="120" style="fill:var(--gold)">thờ</text>
+            <!-- hố thang máy -->
+            <rect x="198" y="250" width="14" height="14.9" style="fill:none;stroke:var(--red)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <!-- cọc 24 m + đài -->
+            <g class="fillink" opacity=".85">
+              <rect x="102.5" y="255" width="3" height="211"/><rect x="136.5" y="255" width="3" height="211"/><rect x="168.5" y="255" width="3" height="211"/>
+              <rect x="223" y="255" width="3" height="211"/><rect x="258.5" y="255" width="3" height="211"/>
+            </g>
+            <g style="stroke:var(--ink)" stroke-width="1"><line x1="300" y1="250" x2="300" y2="466"/><line x1="295" y1="250" x2="305" y2="250"/><line x1="295" y1="466" x2="305" y2="466"/></g>
+            <text x="304" y="362">cọc</text><text x="304" y="374">24 m</text>
+            <text x="8" y="400" class="lbl-red">chưa có số liệu</text><text x="8" y="412" class="lbl-red">địa chất</text>
+            <!-- ghim -->
+            <g class="pin" data-pin="1" transform="translate(181,172)"><circle r="9"/><text>1</text></g>
+            <g class="pin" data-pin="2" transform="translate(196,420)"><circle r="9"/><text>2</text></g>
+            <g class="pin" data-pin="3" transform="translate(244,156.4)"><circle r="9"/><text>3</text></g>
+            <g class="pin" data-pin="4" transform="translate(240,272)"><circle r="9"/><text>4</text></g>
+            <g class="pin" data-pin="5" transform="translate(140,76)"><circle r="9"/><text>5</text></g>
+            <g class="pin" data-pin="6" transform="translate(246,230)"><circle r="9"/><text>6</text></g>
+          </svg>
+          <figcaption class="cap">Mặt cắt dọc · đúng tỉ lệ cao và dài · mặt tiền bên trái</figcaption>
+        </figure>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-pin="1" tabindex="0">
+          <div class="pn">1</div><h3>Thoát hiểm</h3>
+          <div class="stat">1 thang bộ cho 6 tầng</div>
+          <p>Cả nhà chỉ có một cầu thang bộ để chạy ra ngoài khi có cháy. Cửa thang máy mở thẳng ra cầu thang, phía trên cầu thang lại là giếng trời lợp kính. Chỗ để xe nằm ngay dưới khoảng thông tầng và chưa thấy vách ngăn cháy. Nếu xe hay ổ điện dưới trệt bốc cháy, khói sẽ theo cầu thang bốc thẳng lên các tầng trên. Cách dễ và rẻ nhất là hỏi giá hệ thống phun nước hoặc phun sương chữa cháy tự động.</p>
+          <div class="who"><span class="chip act">Hỏi giá phun sương trước</span><span class="chip">Chủ nhà</span><span class="chip">Tư vấn PCCC</span></div>
+        </article>
+        <article class="card" data-pin="2" tabindex="0">
+          <div class="pn">2</div><h3>Móng và nhà bên cạnh</h3>
+          <div class="stat">Cọc 24 m · ~31 cọc</div>
+          <p>Có 7 chỗ móng chỉ đặt một cọc, và cột lại không nằm ngay giữa cọc. Cao độ mặt móng mỗi chỗ ghi một khác (từ −0,05 đến −1,65 m). Hai bức tường hai bên dùng chung với nhà hàng xóm, nên lúc ép cọc dễ làm nứt nhà bên. Trong bộ ảnh cũng không thấy báo cáo khảo sát đất.</p>
+          <div class="who"><span class="chip act">Xin báo cáo địa chất</span><span class="chip">Chụp ảnh, ghi lại hiện trạng nhà bên trước khi ép</span><span class="chip">KS kết cấu</span></div>
+        </article>
+        <article class="card" data-pin="3" tabindex="0">
+          <div class="pn">3</div><h3>Kết cấu · để kỹ sư soát</h3>
+          <div class="stat">Sàn 100 mm</div>
+          <p>Tất cả các sàn chỉ dày 100 mm, cột tầng trên cùng chỉ 200×200 mm. Hai dầm DS7 và DS6a vẽ rộng có 100 mm mà lại ghi 2 cây thép Ø16, nên bề rộng đó không đủ chỗ cho thép và lớp bê tông bọc ngoài. Chỗ tường xây không có dầm đỡ thì bản vẽ chỉ ghi chung chung “thêm 2Ø16”. Kết cấu có đủ chắc hay không thì chúng tôi không đánh giá được, phải để kỹ sư có chứng chỉ xem.</p>
+          <div class="who"><span class="chip act">Xin bản vẽ bố trí dầm cụ thể</span><span class="chip">KS có chứng chỉ</span></div>
+        </article>
+        <article class="card" data-pin="4" tabindex="0">
+          <div class="pn">4</div><h3>Thang máy</h3>
+          <div class="stat">4 kích thước khác nhau</div>
+          <div class="mini">
+            <svg viewBox="0 0 250 78" role="img" aria-label="Bốn kích thước hố thang máy trên các tờ khác nhau, vẽ theo tỉ lệ">
+              <rect x="2" y="12" width="45" height="40" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+              <rect x="64" y="6" width="52.5" height="51" style="fill:none;stroke:var(--red)" stroke-width="1.5"/>
+              <rect x="134" y="7" width="50" height="50" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+              <line x1="202" y1="32" x2="252" y2="32" style="stroke:var(--ink)" stroke-width="1.5"/><line x1="202" y1="27" x2="202" y2="37" style="stroke:var(--ink)"/><line x1="252" y1="27" x2="252" y2="37" style="stroke:var(--ink)"/>
+              <text x="2" y="70">1800×1600</text><text x="64" y="70">2100×2050</text><text x="134" y="70">2000×2000</text><text x="196" y="52">rộng 2000</text>
+            </svg>
+          </div>
+          <p>Thang máy chắc chắn có, nhưng kích thước giếng thang ghi bốn số khác nhau trên bốn tờ: mặt bằng, hố pit, sàn móc treo và mái. Đáy hố sâu −1,650 hay −1,550 cũng chưa thống nhất. Chưa thấy chi tiết chống thấm hay hố thu nước dưới đáy, trong khi Sài Gòn mưa nhiều và hố thang hay bị ngập.</p>
+          <div class="who"><span class="chip act">Lấy một bộ số từ hãng thang máy</span><span class="chip">Nhà cung cấp thang máy</span></div>
+        </article>
+        <article class="card" data-pin="5" tabindex="0">
+          <div class="pn">5</div><h3>Đỉnh nhà</h3>
+          <div class="stat">Lan can: ? mm</div>
+          <p>Tầng 5 chỉ có sảnh cầu thang và hai sân thượng, không có phòng. Không tờ nào ghi lan can cao bao nhiêu, chỉ ghi “kính cường lực 8 ly + tay vịn inox”. Kính giếng trời chưa ghi chịu được bao nhiêu sức nặng. Mặt bằng mái có gạch chéo nhưng không có chú thích gạch chéo nghĩa là gì.</p>
+          <div class="who"><span class="chip act">Xin một bản vẽ riêng cho mái và sân thượng</span><span class="chip">Kiến trúc sư</span></div>
+        </article>
+        <article class="card" data-pin="6" tabindex="0">
+          <div class="pn">6</div><h3>Ánh sáng và công năng</h3>
+          <div class="stat">3 phòng thiếu cửa sổ</div>
+          <p>Phòng khách, bếp và phòng ngủ phía sau chưa thấy có cửa sổ riêng (đọc từ ảnh chụp, cần đối chiếu lại với file bản vẽ gốc). Chỗ để xe chỉ sâu 3,94 m, trong khi xe hơi thường dài khoảng 4,5 m. WC phía trước chỉ rộng 2,88 m², hơi chật. Cũng chưa có chỗ giặt và phơi đồ.</p>
+          <div class="who"><span class="chip act">Xin bảng thống kê cửa đi, cửa sổ</span><span class="chip">Kiến trúc sư</span><span class="chip">Chủ nhà</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Bản vẽ mới khác mô hình 3D cũ ở đâu</h2>
+    <div class="panel cmp">
+      <div class="row">
+        <div class="k">Cao tổng</div>
+        <div class="hbars">
+          <div class="hb"><span>cũ</span><i class="o" style="width:100%"></i></div>
+          <div class="hb"><span>mới</span><i class="nw" style="width:84.9%"></i></div>
+          <div class="mono" style="font-size:12px;color:var(--muted)">25,8 m → 21,9 m · thấp hơn 3,9 m</div>
+        </div>
+      </div>
+      <div class="row"><div class="k">Tầng 5</div><div class="old">phòng thờ · WC · ngủ</div><div class="arr">→</div><div class="new">sảnh · 2 sân thượng</div></div>
+      <div class="row"><div class="k">Tầng 4</div><div class="old">2 phòng ngủ</div><div class="arr">→</div><div class="new">thờ · đọc sách · ngủ</div></div>
+      <div class="row"><div class="k">Thang máy</div><div class="old">suy đoán 2000×1800</div><div class="arr">→</div><div class="new">có thật, 1800×1600</div></div>
+      <div class="row"><div class="k">Giếng thang</div><div class="old">sâu 4,0 m</div><div class="arr">→</div><div class="new">sâu 3,2 m</div></div>
+      <div class="row"><div class="k">Tầng trệt phía sau</div><div class="old">WC rồi bếp</div><div class="arr">→</div><div class="new">bếp rồi WC</div></div>
+    </div>
+    <p class="cap" style="margin-top:8px">Mô hình 3D cũ (file <span style="text-transform:none">designs/contractor-as-drawn.json</span>) làm theo bộ bản vẽ trước nên nay không còn đúng. Mô hình chưa được cập nhật theo bộ mới.</p>
+  </section>
+
+  <section>
+    <h2>Phong thủy</h2>
+    <div class="pt">
+      <div class="panel compass">
+        <div class="cap">Hướng nhà · Nam (khoảng 187°) · đo trên bản đồ</div>
+        <svg viewBox="0 0 300 300" role="img" aria-label="La bàn tám hướng. Đông tứ mệnh: Bắc, Nam, Đông, Đông Nam. Tây tứ mệnh: Tây, Tây Bắc, Tây Nam, Đông Bắc.">
+          <g stroke="var(--bg)" stroke-width="2">
+            <path d="M150 150 L100.3 29.9 A130 130 0 0 1 199.7 29.9 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L199.7 29.9 A130 130 0 0 1 270.1 100.3 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L270.1 100.3 A130 130 0 0 1 270.1 199.7 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L270.1 199.7 A130 130 0 0 1 199.7 270.1 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L199.7 270.1 A130 130 0 0 1 100.3 270.1 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L100.3 270.1 A130 130 0 0 1 29.9 199.7 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L29.9 199.7 A130 130 0 0 1 29.9 100.3 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L29.9 100.3 A130 130 0 0 1 100.3 29.9 Z" style="fill:var(--amber)" opacity=".38"/>
+          </g>
+          <path d="M150 150 L199.7 270.1 A130 130 0 0 1 100.3 270.1 Z" style="fill:none;stroke:var(--gold)" stroke-width="3"/>
+          <!-- cửa chính nhìn ra đường Hồng Bàng: ~187° (Nam, lệch Tây ~7°) -->
+          <line x1="145.6" y1="185.7" x2="136.6" y2="258" style="stroke:var(--ink)" stroke-width="3"/>
+          <path d="M135 272 L129.5 255 L143.5 256.8 Z" style="fill:var(--ink)"/>
+          <circle cx="150" cy="150" r="34" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+          <text x="150" y="147" text-anchor="middle" style="font-size:15px;fill:var(--ink);font-weight:700">Nam</text>
+          <text x="150" y="161" text-anchor="middle" style="font-size:9.5px">~187°</text>
+          <g style="fill:var(--ink);font-size:11px" text-anchor="middle">
+            <text x="150" y="56">Bắc</text>
+            <text x="219" y="85">Đ.Bắc</text>
+            <text x="248" y="154">Đông</text>
+            <text x="219" y="223">Đ.Nam</text>
+            <text x="150" y="252">Nam</text>
+            <text x="81" y="223">T.Nam</text>
+            <text x="52" y="154">Tây</text>
+            <text x="81" y="85">T.Bắc</text>
+          </g>
+          </svg>
+        <div class="who" style="justify-content:center;margin-top:6px"><span class="chip" style="border-color:var(--blue);color:var(--blue)">Đông tứ: Bắc · Nam · Đông · Đ.Nam</span><span class="chip" style="border-color:var(--amber);color:var(--amber)">Tây tứ: Tây · T.Bắc · T.Nam · Đ.Bắc</span></div>
+        <p>Nhà số 506 Hồng Bàng nằm ở dãy số chẵn, tức là phía Bắc của con đường (phía Quận 11 cũ, nay là phường Minh Phụng). Bên kia đường là dãy số lẻ, thuộc Quận 6 cũ. Đoạn đường này chạy gần như thẳng theo hướng Đông – Tây. Vì vậy khi đứng ở cửa chính nhìn ra đường, mình đang nhìn về <b>hướng Nam</b>, hơi lệch sang Tây khoảng 7 độ.</p>
+        <p>Theo cách nói phong thủy, đây là nhà <b>“tọa Bắc, hướng Nam”</b>: lưng nhà quay về phía Bắc, mặt nhà nhìn về phía Nam.</p>
+        <p style="color:var(--muted)">Số 187° này tính từ bản đồ OpenStreetMap, chưa đo tại chỗ. Mặt tiền có thể không song song hẳn với lề đường, nên vẫn nên ra cửa đo lại bằng la bàn điện thoại một lần. Nếu sau này mời thầy xem kỹ theo 24 sơn thì càng phải đo thật: 187° nằm ngay ranh giới giữa sơn Ngọ và sơn Đinh, lệch một hai độ là kết quả khác.</p>
+        <div class="steps">
+          <div><b>1</b><span>Hướng nhà đã biết: Nam. Chỉ cần đo lại tại cửa để chắc chắn.</span></div>
+          <div><b>2</b><span>Còn thiếu năm sinh âm lịch và giới tính của chủ nhà, để biết chủ nhà thuộc nhóm Đông tứ hay Tây tứ.</span></div>
+          <div><b>3</b><span>Xem bảng bên cạnh: hướng Nam hợp với nhóm nào.</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-top:0">Nhà hướng Nam hợp với ai?</h3>
+        <p>Phong thủy Bát Trạch chia người ta làm hai nhóm theo năm sinh: <b>Đông tứ mệnh</b> và <b>Tây tứ mệnh</b>. Hướng Nam là hướng tốt cho cả bốn cung của nhóm Đông tứ, và là hướng xấu cho cả bốn cung của nhóm Tây tứ:</p>
+        <ul class="fit">
+          <li class="good"><b>Chấn</b><span>Nam là <b>Sinh Khí</b>, tốt nhất: làm ăn, tiền bạc.</span></li>
+          <li class="good"><b>Tốn</b><span>Nam là <b>Thiên Y</b>: sức khỏe, có quý nhân giúp.</span></li>
+          <li class="good"><b>Khảm</b><span>Nam là <b>Diên Niên</b>: gia đình êm ấm, vợ chồng hòa thuận.</span></li>
+          <li class="good"><b>Ly</b><span>Nam là <b>Phục Vị</b>: bình yên, ổn định.</span></li>
+          <li class="bad"><b>Tây tứ</b><span>Với người cung Càn, Khôn, Cấn, Đoài thì Nam là hướng xấu (lần lượt là Tuyệt Mệnh, Lục Sát, Họa Hại, Ngũ Quỷ).</span></li>
+        </ul>
+        <p>Nếu chủ nhà thuộc nhóm Tây tứ cũng đừng lo. Mặt tiền chỉ rộng 3,9 m nên không thể xoay cửa chính, và các thầy thường không bắt làm vậy. Cách làm phổ biến là bù lại ở bên trong: quay bàn thờ, đầu giường và bếp về hướng tốt của chủ nhà (xem các mục bên dưới). Nếu trong nhà có hai người khác nhóm thì theo người đứng tên chủ hộ.</p>
+
+        <h3>Thực tế sống trong nhà hướng Nam ở Sài Gòn</h3>
+        <p><b>Nắng:</b> Sài Gòn gần xích đạo nên phần lớn thời gian mặt trời đi gần trên đỉnh đầu. Mặt tiền hướng Nam bị nắng chiếu vào nhiều nhất trong mùa khô (khoảng tháng 11 đến tháng 2), khi mặt trời đi lệch về phía Nam. Từ khoảng cuối tháng 4 đến giữa tháng 8, mặt trời lại đi lệch về phía Bắc, nên mặt tiền hầu như không bị nắng chiếu thẳng. Nắng chiều gắt phía Tây chỉ chiếu xiên vào mặt tiền chứ không chiếu thẳng. Nói chung đây là hướng dễ chịu. Người Nam Bộ vẫn có câu “lấy vợ hiền hòa, làm nhà hướng Nam”.</p>
+        <p><b>Gió:</b> mùa mưa có gió Tây Nam, mùa khô có gió chướng Đông Nam. Cả hai đều thổi vào phía mặt tiền. Nếu giữ sân trước trống, cửa mặt tiền mở được và giếng trời phía sau thông thoáng, gió sẽ lùa suốt chiều dài nhà.</p>
+        <p><b>Mưa tạt:</b> cũng chính gió Tây Nam mùa mưa sẽ tạt nước vào mặt tiền. Nên hỏi nhà thầu về mái che, ô văng, và cách chống thấm cho cửa kính mặt tiền và ban công tầng 4, nơi đặt phòng thờ.</p>
+
+        <h3>Bàn thờ, giường, bếp nên quay hướng nào</h3>
+        <p>Khi đứng trong nhà nhìn ra đường, tường chung bên tay trái là phía <b>Đông</b>, bên tay phải là phía <b>Tây</b>.</p>
+        <ul class="fit">
+          <li><b>Bàn thờ</b><span>Phòng thờ ở tầng 4, phía trước. Nếu đặt bàn thờ dựa lưng vào tường phía sau phòng (tường giáp phòng đọc sách) thì bàn thờ nhìn ra đường, tức nhìn về hướng Nam. Như vậy hợp với chủ nhà nhóm Đông tứ. Nếu chủ nhà nhóm Tây tứ, có thể đặt bàn thờ dựa vào tường bên trái (phía Đông) để bàn thờ nhìn về hướng Tây, là một hướng tốt của nhóm Tây tứ. Dù theo nhóm nào cũng đừng để lưng bàn thờ dựa vào cửa kính mặt tiền.</span></li>
+          <li><b>Giường</b><span>Đầu giường dựa vào một bên tường chung với nhà hàng xóm. Nhóm Đông tứ: tường bên trái (đầu giường hướng Đông). Nhóm Tây tứ: tường bên phải (đầu giường hướng Tây). Tránh kê giường ngay dưới dầm.</span></li>
+          <li><b>Bếp</b><span>Quan niệm chung là “tọa hung, hướng cát”: bếp đặt ở chỗ xấu nhưng quay về hướng tốt. Các thầy lại không thống nhất nên đo theo lưng người nấu hay theo mặt bếp, nên chỉ cần chọn một cách rồi theo đến cùng. Bếp nằm dọc tường chung nên chỉ có hai lựa chọn là Đông hoặc Tây: nhóm Đông tứ chọn Đông, nhóm Tây tứ chọn Tây.</span></li>
+        </ul>
+
+        <div class="cap" style="margin-top:20px">Tầng 4 · mặt tiền (bên trái) nhìn về hướng Nam · hình minh hoạ, không đúng tỉ lệ</div>
+        <div class="scroll">
+          <svg viewBox="0 0 760 170" role="img" aria-label="Sơ đồ tầng 4: ban công, phòng thờ, phòng đọc sách, WC và giếng trời, thang bộ, thang máy, phòng ngủ, WC và lô gia">
+            <g stroke="var(--ink)" stroke-width="1.2">
+              <rect x="10" y="80" width="42" height="50" style="fill:none"/>
+              <rect x="52" y="80" width="90" height="50" style="fill:var(--gold)" opacity=".35"/>
+              <rect x="142" y="80" width="126" height="50" style="fill:var(--surface)"/>
+              <rect x="268" y="80" width="69" height="50" style="fill:var(--blue)" opacity=".3"/>
+              <rect x="337" y="80" width="96" height="50" style="fill:var(--red)" opacity=".18"/>
+              <rect x="433" y="80" width="54" height="50" style="fill:var(--ink)" opacity=".28"/>
+              <rect x="487" y="80" width="135" height="50" style="fill:var(--surface)"/>
+              <rect x="622" y="80" width="63" height="50" style="fill:var(--blue)" opacity=".3"/>
+              <rect x="685" y="80" width="42" height="50" style="fill:none"/>
+            </g>
+            <g text-anchor="middle" style="fill:var(--ink)" font-size="11">
+              <text x="31" y="108" style="font-size:10px">ban</text><text x="31" y="120" style="font-size:10px">công</text>
+              <text x="97" y="109" style="font-size:11px">Thờ</text>
+              <text x="205" y="109" style="font-size:11px">Đọc sách</text>
+              <text x="302" y="102" style="font-size:10px">WC</text><text x="302" y="114" style="font-size:10px">giếng</text><text x="302" y="126" style="font-size:10px">trời</text>
+              <text x="385" y="109" style="font-size:11px">Thang bộ</text>
+              <text x="460" y="102" style="font-size:10px">thang</text><text x="460" y="114" style="font-size:10px">máy</text>
+              <text x="554" y="109" style="font-size:11px">Ngủ</text>
+              <text x="653" y="109" style="font-size:11px">WC</text>
+              <text x="706" y="102" style="font-size:10px">lô</text><text x="706" y="114" style="font-size:10px">gia</text>
+            </g>
+            <!-- cờ -->
+            <g font-size="11" style="fill:var(--ink)">
+              <path d="M97 78 V38" style="stroke:var(--gold)" stroke-width="1.5"/><path d="M97 38 l8 -3 v14 l-8 3z" style="fill:var(--gold)"/>
+              <text x="112" y="38" style="fill:var(--ink)">Bàn thờ nhìn ra đường = hướng Nam.</text><text x="112" y="52" style="fill:var(--ink)">Không dựa lưng vào kính mặt tiền.</text>
+              <path d="M385 78 V18" style="stroke:var(--red)" stroke-width="1.5"/><path d="M385 18 l8 -3 v14 l-8 3z" style="fill:var(--red)"/>
+              <text x="400" y="18" style="fill:var(--ink)">Cầu thang giữa nhà: không dời được</text><text x="400" y="32" style="fill:var(--ink)">(lối thoát hiểm duy nhất).</text>
+              <path d="M653 78 V55" style="stroke:var(--green)" stroke-width="1.5"/><path d="M644 62 l6 7 l12 -14" style="stroke:var(--green);fill:none" stroke-width="2.2"/>
+              <text x="560" y="152" style="fill:var(--green)">WC không nằm trên phòng ngủ</text>
+            </g>
+          </svg>
+        </div>
+
+        <p>Tin vui: ở tầng 4, phòng thờ nằm phía trước, phía sau là phòng đọc sách, và không có WC nào sát tường bàn thờ. Cũng không có WC nào nằm ngay trên phòng ngủ ở tầng dưới. Hai điều này các thầy rất hay kiêng, và bản vẽ đã tránh được cả hai.</p>
+        <p>Điều khó là cầu thang nằm giữa nhà, điều phong thủy kiêng nhiều nhất. Nhưng đây là cầu thang thoát hiểm duy nhất của cả 6 tầng, nên không dời được. Cách hóa giải thông thường là đặt bình phong hoặc vách lam ở lối vào, để từ cửa chính không nhìn thẳng thấy chân cầu thang.</p>
+
+        <div class="sub2">Nên làm ngay, gần như không tốn tiền</div>
+        <div class="tiles">
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 24 V12 M3 20 H29 V24 M29 20 V16 a3 3 0 0 0 -3 -3 H13 V20"/><circle cx="8" cy="15" r="2.5"/></svg><span>Đầu giường dựa vào tường chung với nhà bên, không kê ngay dưới dầm</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 H26 M9 26 V14 H23 V26 M16 14 V8 M13 8 H19 M12 20 H20"/></svg><span>Bàn thờ quay về hướng tốt của chủ nhà, không sát tường WC</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 V6 M27 26 V6 M5 9 H27 M12 9 V26 M20 9 V26"/></svg><span>Đặt bình phong để từ cửa chính không thấy thẳng cầu thang</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C20 10 24 13 24 19 a8 8 0 0 1 -16 0 C8 14 12 12 12 8 C14 9 15 7 16 4Z"/></svg><span>Bếp quay về hướng tốt: Đông nếu Đông tứ, Tây nếu Tây tứ</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 28 V5 H22 V28 M8 28 H26 M18 17 h1"/><path d="M22 7 L28 10 V28"/></svg><span>Cửa WC không mở thẳng vào giường</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 H28 M7 26 V16 H14 V26 M18 26 V12 H25 V26"/><path d="M8 11 h4 M19 7 h4"/></svg><span>Giữ sân trước trống để đón gió Nam vào nhà</span></div>
+        </div>
+
+        <div class="sub2">Không nên làm, vì an toàn quan trọng hơn phong thủy</div>
+        <div class="tiles">
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Dời cầu thang khỏi giữa nhà</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Làm hẹp cửa trên đường thoát hiểm</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Treo gương bát quái ở mặt tiền</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Đặt hồ cá dưới gầm cầu thang thoát hiểm</span></div>
+        </div>
+        <p style="color:var(--muted)">Phong thủy là quan niệm truyền thống, không phải tính toán kỹ thuật, và mỗi trường phái nói một khác. Báo cáo chi tiết (out-phongthuy.md) có ghi rõ chỗ nào các thầy không thống nhất.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head-row">
+      <h2 style="margin-bottom:0">Gửi nhà thầu trước</h2>
+      <button class="btn" id="copy" type="button">Sao chép danh sách</button>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <ul class="todo" id="todo">
+        <li><input type="checkbox" id="q1"><label for="q1">Tầng 5 và sân thượng có đúng như tờ KT06 không (chỉ có sảnh cầu thang và hai sân thượng)? Lan can cao bao nhiêu?</label></li>
+        <li><input type="checkbox" id="q2"><label for="q2">Nhà có phải làm theo quy chuẩn phòng cháy QCVN 06:2022 không? Anh/chị đã tính số tầng, chiều cao và thể tích nhà là bao nhiêu?</label></li>
+        <li><input type="checkbox" id="q3"><label for="q3">Cho xin báo cáo khảo sát địa chất. Trước khi ép cọc, khảo sát và chụp ảnh hiện trạng hai nhà bên. Thống nhất lại cao độ và số lượng móng, bổ sung mặt cắt 8-8 còn thiếu.</label></li>
+        <li><input type="checkbox" id="q4"><label for="q4">Chốt một kích thước giếng thang máy và một độ sâu đáy hố, kèm bảng thông số của hãng thang máy.</label></li>
+        <li><input type="checkbox" id="q5"><label for="q5">Gửi thêm: bản vẽ phòng cháy, bảng thống kê cửa đi và cửa sổ, chi tiết cầu thang, bản vẽ điện nước và các tờ kiến trúc còn thiếu.</label></li>
+        <li><input type="checkbox" id="q6"><label for="q6">Thay ghi chú “thêm 2Ø16 dưới tường” bằng bản vẽ bố trí dầm rõ ràng. Sửa dầm DS7, DS6a, và cho biết nhịp dầm DS2a là 4600 hay 4240.</label></li>
+        <li><input type="checkbox" id="q7"><label for="q7">Phòng khách, bếp và phòng ngủ phía sau có cửa sổ không? Chỗ để xe sâu bao nhiêu? Cái ghi 2600 ở ranh đất phía sau là gì?</label></li>
+        <li><input type="checkbox" id="q8"><label for="q8">Mặt tiền nhìn về hướng Nam, mùa mưa gió Tây Nam tạt thẳng vào. Mặt tiền và ban công tầng 4 có mái che, ô văng và chống thấm cửa kính chưa?</label></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="limits">
+      <span class="chip">Từ ảnh chụp, không phải bản DWG</span>
+      <span class="chip">9/20 tờ kiến trúc</span>
+      <span class="chip">Thiếu: địa chất · MEP · bảng cửa · chi tiết thang</span>
+      <span class="chip">Hướng nhà: Nam ~187°, đo trên bản đồ, nên đo lại tại cửa</span>
+      <span class="chip">Phong thủy là truyền thống, không phải kỹ thuật</span>
+    </div>
+    <span class="cap">Chi tiết: contractor/scan-2026-10-22/review/REVIEW.md · out-safety.md · out-design.md · out-phongthuy.md</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var pins = document.querySelectorAll('.pin[data-pin]');
+  var cards = document.querySelectorAll('.card[data-pin]');
+  function mark(n, on) {
+    pins.forEach(function (p) { if (p.getAttribute('data-pin') === n) p.classList.toggle('on', on); });
+    cards.forEach(function (c) { if (c.getAttribute('data-pin') === n) c.classList.toggle('on', on); });
+  }
+  [].forEach.call(cards, function (c) {
+    var n = c.getAttribute('data-pin');
+    c.addEventListener('mouseenter', function () { mark(n, true); });
+    c.addEventListener('mouseleave', function () { mark(n, false); });
+    c.addEventListener('focus', function () { mark(n, true); });
+    c.addEventListener('blur', function () { mark(n, false); });
+  });
+  [].forEach.call(pins, function (p) {
+    var n = p.getAttribute('data-pin');
+    p.addEventListener('mouseenter', function () { mark(n, true); });
+    p.addEventListener('mouseleave', function () { mark(n, false); });
+  });
+
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function () {
+    var lines = [].map.call(document.querySelectorAll('#todo li label'), function (l, i) { return (i + 1) + '. ' + l.textContent; });
+    var text = lines.join('\n');
+    function done(ok) { btn.textContent = ok ? 'Đã sao chép' : 'Chọn và sao chép thủ công'; setTimeout(function () { btn.textContent = 'Sao chép danh sách'; }, 2000); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('todo'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done(false);
+    }
+    try { navigator.clipboard.writeText(text).then(function () { done(true); }, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>

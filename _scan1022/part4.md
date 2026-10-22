@@ -1,0 +1,105 @@
+### 3.4 Kitchen (bep)
+
+**P-13 - The kitchen is at the REAR of the ground floor, and the tradition's own rule for rear kitchens is the weak one**
+
+- **Where:** P. An + BEP is the rear-most built band on the ground floor. The two readings disagree on the order of the last two bands (see section 0): the transcript reads **kitchen then WC** front-to-rear; `measurements.md` rev.2 and the JSON read **WC then kitchen** (WC y 18100-19700, kitchen y 19700-23800). Both agree the kitchen band is 4100 deep and sits between the core and the rear yard, at the rear end of a 25 m plot.
+- **Rule:** the kitchen is a **Hoa** element and is traditionally placed in a **hung** (bad) zone of the owner's cung, facing a **cat** (good) direction - the fire settles the bad qi [1], [3]. It is also traditionally kept out of the **centre** of the house and away from the main door (tai loc *thoat ra* - the wealth escapes out the front door) [1], [23].
+- **School:** Bat Trach (position by cung) + general folk rule (not at the centre, not facing the main door).
+- **Agreement:** UNIVERSAL on *not in the centre and not facing the main door*; CONTESTED on the toa-hung-huong-cat principle itself, which several modern sources treat as optional and some reject outright.
+- **Severity in the tradition:** MODERATE.
+- **Remedy:** the position is fixed. The cheap, widely-agreed fixes are: (a) **a solid backsplash / partition and a closed kitchen door** so the fire and the cooking smell are contained; [23] and [24] both recommend a curtain, a screen or a tall cabinet between the cooking zone and the door, precisely to break the direct line from the front door; (b) **a hood and good extraction** - the rear kitchen's only opening is a rear window, so the hood is doing real work; (c) keep the stove off the party wall where possible, because a party wall is where cooking odour and heat reach the neighbours.
+- **Practical rationale:** the strongest argument for a closed kitchen in this house is not phong thuy at all. The plan puts the dining/kitchen at the **rear**, the front yard and the garage at the front, and the whole 25 m depth is a single air tube. A cooking smell that escapes at the rear travels the entire length of the house. A kitchen door is an acoustic and odour control measure.
+- **Conflict with safety/design:** the kitchen is immediately **below the rear bedroom** (P. NGU at y 19700-23800 on floors 2-5 sits directly over the kitchen band) and **below the rear WC band** - see P-15, which is the more serious of the two overlaps. A kitchen door must not be confused with a fire-rated separation.
+- **Evidence:** PARTIAL. The drawing facts (rear band, 4100 deep) are VERIFIED; the *order* of the WC and kitchen bands is CONTESTED between the two reads and is stated conditionally. VERIFIED for the rule ([1], [3], [23], [24]).
+
+**P-14 - Stove versus sink, and stove versus WC**
+
+- **Where:** IMG_9972 records *sink, hob and fridge drawn* in the P. An + BEP band. The **positions of the sink, the hob and the fridge relative to each other are not dimensioned in the transcript** - only their presence is recorded. There is no separate kitchen detail sheet in the photographed set.
+- **Rule:** the standard kitchen rules are (a) **stove and sink should not be adjacent** - Hoa vs Thuy, they khac each other; where a small kitchen forces them together, the traditional remedy is a solid work surface or a cabinet between them [24], [25]; (b) the stove should not sit directly under a window (the draught blows the flame out, and the practice reads the window as a competing *mouth*) [25]; (c) the stove should not be against the kitchen's back door or immediately in front of the stair [23].
+- **School:** general nha ong folk rule (Ngu hanh Hoa-Thuy); Bat Trach addresses the kitchen's *zone and facing*, not the internal layout.
+- **Agreement:** COMMON.
+- **Severity in the tradition:** MODERATE.
+- **Remedy:** decide the kitchen layout at the joinery stage, before the units are cut: keep **at least one full worktop cabinet or a 600 mm tall upstand between the hob and the sink**, and keep the hob off the rear window. Both are free at this stage and cost nothing later.
+- **Practical rationale:** a 600 mm gap between a gas hob and a sink is also what stops water from the sink getting into the hob, and it is where you put the drying rack. The window-draught point is genuine for a gas flame. The tradition is, unusually, giving good kitchen advice here.
+- **Conflict with safety/design:** the gas or electric connection and the extraction duct are engineer's items. If the hob is electric induction, the *fire* element of the rule effectively disappears - several practitioners now treat an induction hob as not carrying the Hoa problem at all, which is a further reason to treat the rule as optional rather than load-bearing.
+- **Evidence:** PARTIAL. The presence of sink, hob and fridge is VERIFIED (IMG_9972); their relative positions are **NOT FOUND** in the transcript. VERIFIED for the rule ([24], [25]).
+
+**P-15 - A WC band and a kitchen band sit directly under the rear bedroom on floors 2-5 - the tradition's most serious overlap, and the drawing already confirms it**
+
+- **Where:** the rear band is identical on **every** storey: at y 18100-19700 a WC, at y 19700-23800 the rear bedroom (P. NGU, 4100 deep) on floors 2, 3, 4 and 5. On the ground floor the same two y-bands hold the ground WC and the kitchen. So:
+  - **the rear WC on each floor is directly above the ground-floor WC and directly below the rear bedroom above it** - i.e. a WC stack runs from the ground floor through floors 2, 3, 4 and 5, with a bedroom sitting on top of the topmost WC;
+  - **the rear bedroom on each floor sits directly above the kitchen** (ground) or above the rear bedroom below it.
+  Verified from `measurements.md` (ground, tang 2-4 and tang 5 tables) and from the JSON room rects, which are identical y-ranges on every storey.
+- **Rule:** *nha ve sinh khong dat tren dau phong ngu* - a WC above a bedroom is one of the strongest and most consistently repeated prohibitions in Vietnamese folk practice. The stated reason is that the WC is the room where **ue khi** (impure qi) collects and is then pushed up into the room above by the stack effect; the bedroom above is then read as the room most harmed by it, because sleep is when the occupant is least able to resist it. *Nha ve sinh o cuoi nha* is also the least-favoured position, because the rear of the house is where the qi is weakest and where the house's exit is.
+- **School:** general nha ong folk rule; Bat Trach addresses the WC's *zone and facing*, not the storey above it.
+- **Agreement:** COMMON as a rule; the *severity* is CONTESTED - it is the most-cited prohibition, but its place in the hierarchy of *dai ky* varies between sources.
+- **Severity in the tradition:** MAJOR. This is the tradition's sharpest finding against this particular house, and it is structural.
+- **Remedy:** **no non-structural remedy is fully adequate, and the honest answer is that the owner cannot fix this cheaply.** The cheap mitigations that *do* help are: (a) **ventilation and odour control**: an exhaust fan ducted to the outside (not to the shaft), a floor drain, and a WC that is used with the door closed - [23] specifically advises keeping the WC door shut and the fan running; (b) **a ceiling void**: a 300-450 mm service plenum between the WC slab and the bedroom floor, so the two are not in direct acoustic and air contact - this is the one remedy that is close to free if it is decided *now*, before the slab is poured, and it is the single highest-value phong thuy-driven decision still open on this project; (c) **sealing**: a closable, sound-isolating WC door with an acoustic seal; (d) keep the **bed away from the WC wall** (see P-18) so the head of the sleeper is as far from the stack as the room allows.
+- **Practical rationale:** this is the finding where the tradition is most obviously pointing at something real, and it is *also* a straightforward building-science problem. A five-storey stack of WCs directly under the bedrooms is exactly where stack-effect odour, sound transmission and (in a 100 mm slab) odour transmission through the slab occur. Remedy (a) is ordinary good practice; remedy (b) is ordinary good practice that happens to also be what the tradition asks for.
+- **Conflict with safety/design: the safety answer wins on the ventilation detail.** The fan must be ducted **outside**, not into the light well and **not** into the lift shaft or the roof void. Ducting into the stair light well would push bathroom air into the stair, which is the main escape route - and this is exactly the kind of phong thuy adjacency (the light well as a pleasant feature) that must not override the fire strategy. The safety review owns this; the phong thuy layer only notes that the stacking is undesirable in the tradition's terms too.
+- **Evidence:** VERIFIED (measurements.md per-floor tables; JSON room rects; IMG_9974, IMG_9975, IMG_9976, IMG_9977 rear chains). VERIFIED for the rule ([23], [25], [26]).
+
+### 3.5 WC (nha ve sinh)
+
+**P-16 - The WCs are in the core and at the rear, and they are not at the front**
+
+- **Where:** every WC on the drawing is in the **middle-to-rear** third of the plan: ground WC at y 18100-19700 (rear band); the floor 2-4 front ensuite at y 8900-10500 (mid-plan, 1600 deep) and the rear WC at y 18100-19700; the floor 5 front WC under the light well. There is **no WC at the front** of the house and **no WC under the stair** (the under-stair volume is unbuilt on every storey).
+- **Rule:** the two most-cited WC prohibitions are *WC o cuoi nha* and *WC o dau nha* - a WC at the front is said to let the house's incoming qi enter a dirty room first; a WC at the rear is said to sit where the house's qi has already spent itself, and is the position that makes *thong tam* from the main door to the rear door a real problem. *Nha ve sinh duoi gam cau thang* is the third [12].
+- **School:** general nha ong folk rule.
+- **Agreement:** COMMON.
+- **Severity in the tradition:** MODERATE for the rear position, MAJOR for a front WC or a WC under the stair - neither of which occurs here.
+- **Remedy:** the front-WC prohibition and the under-stair prohibition are both already satisfied - worth stating, because it is the part of the drawing a designer working from the folk rules would get right. For the rear WC, the mitigations in P-15 apply (vent out, close the door, acoustic seal, keep the bed off that wall).
+- **Practical rationale:** keeping the WC out of the front third is also a hygiene and entertaining point: no guest ever walks past the WC to reach the living room in this house, because the WC is behind the core and the front is yard, garage, living room. That is a genuinely good plan decision that the folk rule happens to also endorse.
+- **Conflict with safety/design:** the fire-safety point in P-15 (fan ducting, shaft separation) governs over any phong thuy reading of the WC's position.
+- **Evidence:** VERIFIED (measurements.md per-floor tables; IMG_9972, 9974-9977). VERIFIED for the rule ([12], [23], [25]).
+
+**P-17 - WC doors facing the beds and the stair**
+
+- **Where:** the front ensuite on floors 2-4 opens from the hall (y 10500-12300) into the WC at y 8900-10500, i.e. the WC door faces down the corridor toward the front bedroom zone. On the rear side, the door between `wc_sau` and `ngu_sau` (JSON openings: `door ['wc_sau_f2','ngu_sau_f2'] 900`) means **the WC door opens directly into the rear bedroom** on every floor. The ground-floor rear WC is entered from the kitchen/dining band (`door ['wc_gf','bep_an'] 900`), and its rear door D2 opens to the rear yard.
+- **Rule:** *cua nha ve sinh doi dien giuong ngu* - a WC door opening straight onto a bed is a **dai ky**; the two things share a line of sight and the rule says the impurity is carried directly at the sleeper. The related rule is that the WC door should not open directly onto the stair.
+- **School:** general nha ong folk rule.
+- **Agreement:** COMMON.
+- **Severity in the tradition:** MODERATE.
+- **Remedy:** **the cheapest and most effective fix in the whole report.** The rear bedroom and the rear WC are side by side, sharing a wall, and the door between them is a plain 900 mm leaf. If the WC is entered through the **hall** instead - i.e. the door between `wc_sau` and `ngu_sau` is replaced by a short offset or a 90-degree return so the WC door and the bed are **not** in line - the rule is satisfied. Options, in rising cost: (a) **keep the WC door closed and provide ventilation** - free, and a genuine improvement in a house where the WC is beside the master bedroom; (b) **change the swing** of the WC door so it opens against the wall rather than into the line of the bed - free if the door is not yet hung; (c) build a small **privacy return / dog-leg** in the opening - a modest masonry operation; (d) use a **sliding or pocket door** - [27] names this specifically as the standard remedy for a door facing a bed or another door.
+- **Practical rationale:** the door-as-sightline argument is also a privacy argument, and in this plan the WC door is the only route between the ensuite and the bedroom it serves, so **it is also the en-suite**. A bedroom with an open WC door has no privacy at all. Making the door not line up with the bed improves both, at essentially no cost, and it is a decision that has to be taken **before the doors are ordered**.
+- **Conflict with safety/design:** any alteration is a change to the WC's ventilation and to the bedroom's escape provision - a bedroom door that is the only door to its WC must remain usable as the bedroom's escape route. A sliding or pocket door is the safest variant here because it does not reduce the opening width.
+- **Evidence:** VERIFIED for the adjacency and the direct door (JSON `openings` on floors 2-5: `door ['wc_sau_f*','ngu_sau_f*'] 900`; measurements.md tang 2-4 table). The *exact swing* is not recorded in the transcript - PARTIAL. VERIFIED for the rule ([27], [23]).
+
+### 3.6 Bedrooms
+
+**P-18 - Bed position relative to the door and to the party wall**
+
+- **Where:** each bedroom is entered by a single door from the corridor, with the balcony door on the front bedroom and a window on the rear bedroom. The rear bedroom (P. NGU, 3960 wide x 4100 deep) has its only window on the **rear** wall (JSON `window ['ngu_sau_f*','exterior'] 1500`) and its door on the **WC** wall.
+- **Rule:** the bed's head should be against a solid wall, and the bed should not be placed directly in line with the door (the *door sees the bed* arrangement), nor directly opposite a mirror, nor under a beam [28], [29].
+- **School:** general nha ong folk rule; Bat Trach adds the *direction* of the bed head (a good direction of the owner's cung, usually Dien Nien).
+- **Agreement:** COMMON as a rule.
+- **Severity in the tradition:** MODERATE for the position; MINOR for the direction (the direction is a furniture move, and it is the one phong thuy rule that is genuinely free to comply with - see the summary).
+- **Remedy:** free and fully within the owner's control - **the bed is furniture, and it can be re-oriented after handover without touching the building.** The one constraint the drawing imposes is that the rear bedroom has a single window at the rear wall, so the bed head must go on one of the **side** walls (the party wall or the WC wall). The tradition prefers the **solid** wall, so the head goes on the **party wall** (away from the WC), not on the WC wall; the tradition also prefers the head away from the door's sightline. Keep the mirror on the wall *beside* the bed, never opposite the head.
+- **Practical rationale:** the practical case here is unusually strong. In a 3.96 m wide room with a door on one side and a window at the opposite end, the only arrangement that works is the bed along a side wall - and the side-wall choice decides whether the sleeper's head is against the party wall (solid, silent, best) or against the WC wall (noise, odour, P-15). The tradition and the acoustics agree: **head on the party wall**.
+- **Conflict with safety/design:** the head must not be against a wall carrying a service riser or the kitchen flue - check before finalising. Keeping the bed away from the WC wall is also the phong thuy remedy for P-15 in the one place where it can be applied at zero cost.
+- **Evidence:** VERIFIED for the plan (JSON room rects and openings for `ngu_sau_f2..f5`; measurements.md). The *bed's* actual position is not drawn - the bedroom layout is not in the photographed set. VERIFIED for the rule ([28], [29]).
+
+**P-19 - Beams over the beds**
+
+- **Where:** the structural sheets put a dense beam grid in the floor slabs: **DS5** transverse beams at the ends of the 1800 bay, **DS6** at every axis, **DS3** across the 3200 bay (the stair bay), and - most relevant here - the generic note on every floor sheet: **CHO NAY CO TUONG MA KHONG CO BO TRI DAM THI TA DAT THEM 2O16 HOAC 3O16 TAI VI TRI DO** (where a wall sits with no beam laid out, add 2O16 or 3O16 there), and **SAN BTCT** slabs 100 mm thick throughout (`transcript-beams-slabs.md`, IMG_9992/9993/9996). Beam depths are 500-700 mm for the grade beams (DK4/DK5 500, DG 300x700) and 100 mm-wide edge beams (DS7/DS6a) appear at the balcony end bay on every floor.
+- **Rule:** a beam (xa ngang / dam) crossing directly over the head of a bed is called **huyen tram sat** - the beam presses on the sleeper - and is one of the most frequently-cited bedroom prohibitions [30], [31]. The related prohibitions are a bed under the stair, a mirror facing the bed, and a bed with its head at the foot of the bed.
+- **School:** general nha ong folk rule; Phi Tinh treats the beam grid as the *star chart* of the floor, which is why an under-beam position is the traditional one to avoid - the logic of the two systems agrees here, which is unusual.
+- **Agreement:** COMMON.
+- **Severity in the tradition:** MODERATE.
+- **Remedy:** **free and complete** - the beam positions are fixed by the structure, but the **bed is not**. The remedy is to place the bed so that no beam crosses over the sleeper's head. In a 3.96 m wide room with the beams running transversely at roughly 1.8-4.2 m centres, this is a drawing exercise, not a construction one. The owner should obtain the beam layout (which the structural set contains) at handover and lay out the beds against it. This is a genuine zero-cost phong thuy win.
+- **Practical rationale:** the tradition's stated symptom - dizziness, headache, poor sleep - is the ordinary experience of trying to sleep under a low downstand in a hot climate, and the practical remedy (bed not under the lowest point of the ceiling) is the same one.
+- **Conflict with safety/design:** none - this is a furniture-layout decision. Note for completeness that the beams in this structure are shallow (slabs 100 mm, beams 300-700 mm), so the effect is modest; the finding is a real but minor one.
+- **Evidence:** VERIFIED for the structure (transcript-beams-slabs.md, beam schedule and the wall-note). The *bed positions* are NOT FOUND (no furniture layout in the set). VERIFIED for the rule ([30], [31]).
+
+**P-20 - The master bedroom and the rear bedroom's window**
+
+- **Where:** the rear bedroom (P. NGU, 4100 deep, one rear window 1500 wide, one door to the WC, on floors 2-5) is the most private room in the plan and is the obvious candidate for the master bedroom. The front bedroom has the balcony (S1 window and D5 balcony door) and faces the street. Floors 2, 3 and 4 are identical; floor 5 has the rear bedroom plus the front altar room.
+- **Rule:** the master bedroom is traditionally given the **best** position in the house's own terms of qi, and its head-of-bed direction should be a good direction of the master occupant's cung [3]. There is no universal rule about front versus rear bedroom for a master; the folk preference is generally for the **quieter, more interior** room for the master, which in this house is the rear.
+- **School:** Bat Trach (direction of the bed head) + general folk rule (master in the quietest room).
+- **Agreement:** CONTESTED - no source states a fixed front/rear rule for the master bedroom; the tradition's own logic points to the quietest interior room.
+- **Severity in the tradition:** MINOR (it is a furniture assignment, fully reversible).
+- **Remedy:** put the master in the **rear bedroom** on floor 2 or 3 (not 5 - the top floor has the terrace and the plant room overhead, and the lift head is beside it), head on the **party wall**, away from the WC wall and away from the beam lines.
+- **Practical rationale:** the rear bedroom is the quietest, and the front bedroom on floors 2-4 has a balcony door directly onto the street - a five-storey house's front bedrooms hear the street.
+- **Conflict with safety/design:** none.
+- **Evidence:** VERIFIED for the plan (JSON openings and rects; IMG_9974-9976). CONTESTED / CLAIMED for the master-bedroom rule.
+

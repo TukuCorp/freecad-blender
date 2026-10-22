@@ -1,0 +1,638 @@
+Bagua - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page Contents Current events Random article About Wikipedia Contact us
+Contribute
+Help Learn to edit Community portal Recent changes Upload file Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Contents
+move to sidebar
+hide
+(Top)
+1
+Trigrams
+2
+Relation to other principles
+Toggle Relation to other principles subsection
+2.1
+Tài Jí (太極) Great Axis
+2.2
+Liǎng Yí (兩儀) Dual Powers
+2.3
+Sì Xiàng (四像) Four Aspects
+2.4
+Bā Guà (八卦) Eight Passages
+2.5
+Wǔxíng (五行) Five Phases
+2.6
+Liùshísì Guà (六十四卦) Sixty-Four Hexagrams
+2.6.1
+Hexagram lookup table
+3
+Fuxi's "Earlier Heaven" vs King Wen's "Later Heaven"
+4
+In feng shui
+Toggle In feng shui subsection
+4.1
+Pre-Natal Bagua
+4.2
+Post-Natal Bagua
+4.3
+Bagua Mirror
+4.4
+Western bagua
+4.4.1
+Bagua map
+5
+In Unicode
+6
+Modern usage
+7
+See also
+8
+References
+Toggle the table of contents
+Bagua
+34 languages
+Afrikaans العربية অসমীয়া Bikol Central Català 閩東語 / Mìng-dĕ̤ng-ngṳ̄ Čeština Dansk Deutsch Español فارسی Suomi Français 贛語 客家語 / Hak-kâ-ngî Magyar Bahasa Indonesia Italiano 日本語 한국어 Bahasa Melayu Nederlands Polski Português Русский Српски / srpski Svenska Tagalog Українська Tiếng Việt Vahcuengh 閩南語 / Bân-lâm-gí 粵語 中文
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Switch to legacy parser
+Print/export
+Download as PDF Printable version
+In other projects
+Wikimedia Commons Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+(Redirected from Ba Gua )
+Eight trigrams used in Taoist cosmology
+For other uses, see Bagua (disambiguation) .
+This article has multiple issues. Please help improve it or discuss these issues on the talk page . ( Learn how and when to remove these messages )
+This article needs more citations . Please help improve this article by adding citations to reliable sources . Unsourced material may be challenged and removed . Find sources:   "Bagua"   –   news   · newspapers   · books   · scholar   · JSTOR ( April 2020 ) ( Learn how and when to remove this message ) This article may be in need of reorganization to comply with Wikipedia's layout guidelines . Please help by editing the article to make improvements to the overall structure. ( October 2023 ) ( Learn how and when to remove this message )
+( Learn how and when to remove this message )
+1</sup> kua<sup>4</sup>"},"j":{"wt":"baat3 gwaa3"},"y":{"wt":"baat gwa"},"mc":{"wt":"peat kweaH"},"hanja":{"wt":"八卦"},"hangul":{"wt":"팔괘"},"rr":{"wt":"Palgwae"},"qn":{"wt":"Bát quái"},"chuhan":{"wt":"八卦"},"kanji":{"wt":"八卦"},"hiragana":{"wt":"はっけ"},"romaji":{"wt":"Hakke"}},"i":0}}]}'> Bagua Chinese name Chinese 八卦 Literal meaning Eight trigrams Transcriptions Standard Mandarin Hanyu Pinyin Bāguà Wade–Giles Pa 1 kua 4 Hakka Romanization Pat-koa Yue: Cantonese Yale Romanization baat gwa Jyutping baat3 gwaa3 Middle Chinese Middle Chinese peat kweaH Vietnamese name Vietnamese alphabet Bát quái Chữ Hán 八卦 Korean name Hangul 팔괘 Hanja 八卦 Transcriptions Revised Romanization Palgwae Japanese name Kanji 八卦 Hiragana はっけ Transcriptions Romanization Hakke
+Bagua diagram explanation from Zhao Huiqian's 六書本義 ; Liùshū běnyì , 1370s
+The bagua ( Chinese : 八卦 ; pinyin : bāguà ; lit. ' eight trigrams ' ) is a set of symbols from China intended to illustrate the nature of reality as comprising mutually opposing forces reinforcing one another. Bagua is a group of trigrams—composed of three lines, each either "broken" or "unbroken", which represent yin and yang , respectively. [ 1 ] Each line having two possible states allows for a total of 2 3 = 8 trigrams, whose early enumeration and characterization in China has had an effect on the history of Chinese philosophy and cosmology .
+The trigrams are related to the divination practice as described within the I Ching and practiced as part of the Shang and Zhou state religion , as well as with the concepts of taiji and the five elements within traditional Chinese metaphysics. [ citation needed ] The trigrams have correspondences in astronomy , divination , meditation , astrology , geography , geomancy ( feng shui ), anatomy , decorative arts , the family, martial arts (particularly tai chi and baguazhang ), Chinese medicine and elsewhere. [ 2 ] [ 3 ]
+The bagua can appear singly or in combination, and is commonly encountered in two different arrangements: the Primordial ( 先天八卦 ), "Earlier Heaven", [ 4 ] or " Fuxi " bagua ( 伏羲八卦 ), which is so named according the legend of Fuxi being the first primordial being to identify the eight trigrams; [ 5 ] and the Manifested ( 後天八卦 ), "Later Heaven", [ 4 ] or " King Wen " bagua , which arose during recorded Chinese history.
+In the I Ching , two trigrams are stacked together to create a six-line figure known as a hexagram . There are 64 possible permutations. The 64 hexagrams and their descriptions make up the book. The trigram symbolism can be used to interpret the hexagram figure and text. An example from Hexagram 19 commentary is "The earth above the lake: The image of Approach. Thus the superior man is inexhaustible in his will to teach, and without limits in his tolerance and protection of the people." [ 6 ] The trigrams have been used to organize Yijing charts as seen below.
+Trigrams [ edit ]
+There are eight possible combinations to render the various trigrams:
+Trigram figure
+Possible binary value [ 7 ]
+Possible decimal sequential number [ 7 ]
+Name
+Translation: Wilhelm [ 8 ]
+Image in nature (pp.l-li)
+Phase
+Later Heaven's Direction (p.   269) [ citation needed ]
+Later Heaven's Equinox or Solstice [ citation needed ]
+Earlier Heaven's Direction [ citation needed ]
+Earlier Heaven's Equinox or Solstice [ citation needed ]
+Family relationship (p.   274)
+Body part (p.   274)
+Attribute (p.   273)
+Stage/ state (pp.l-li)
+Animal (p.   273)
+Obtained Images [ 9 ]
+1 ☰ 111 7 乾 qián the Creative , '(natural) force' heaven, sky 天 metal northwest south Summer Solstice father head strong, persisting creative 馬 horse 三連 three lines
+2 ☱ 110 6 兌 duì the Joyous , 'open (reflection)' lake, marsh 澤 metal
+west Fall Equinox southeast third daughter mouth pleasure tranquil (complete devotion) 羊 sheep, goat 上缺 flawed above
+3 ☲ 101 5 離 lí the Clinging , 'radiance' fire, glow 火 fire
+south Summer Solstice east Spring Equinox second daughter eye light-giving, humane "dependence" clinging, clarity, adaptable 雉 pheasant 中虛 hollow middle
+4 ☳ 100 4 震 zhèn the Arousing , 'shake' thunder 雷 wood
+east Spring Equinox northeast first son foot inciting movement initiative 龍 dragon 仰盂 face-up jar
+5 ☴ 011 3 巽 xùn the Gentle , 'ground' wind, air 風 wood
+southeast southwest first daughter thigh penetrating gentle entrance 雞 fowl 下斷 broken below
+6 ☵ 010 2 坎 kǎn the Abyssal , ' gorge ' water 水 water
+north Winter Solstice west Fall Equinox second son ear dangerous in-motion 豕 pig 中滿 full middle
+7 ☶ 001 1 艮 gèn Keeping Still , bound mountain 山 earth northeast northwest third son hand resting, stand-still completion 狗 dog 覆碗 face-down bowl
+8 ☷ 000 0 坤 kūn the Receptive , field ground, earth 地 earth
+southwest north Winter Solstice mother belly devoted, yielding receptive 牛 cow 六斷 six fragments
+Alternative conversion of the trigrams to binary [ 10 ]
+Relation to other principles [ edit ]
+The Scripture of Changes 易经 (I Ching) listed two sources for the eight trigrams. Its chapter Xì Cí shàng ; ' Great Treatise Beginning ' explains the first source thus: [ 11 ] [ 12 ]
+Original text 易有太極，
+是生兩儀，
+兩儀生四象，
+四象生八卦。
+Transliteration Yì yǒu tàijí,
+shì shēng liǎngyí,
+liǎngyí shēng sìxiàng,
+sìxiàng shēng bāguà.
+English translation Having change is the great-axis,
+The great-axis produces the paired forces,
+The paired forces produce the four aspects,
+the four aspects produce the eight ways.
+Tài Jí (太極) Great Axis [ edit ]
+Taiji is the encapsulation of all the universe, space and time.
+It is derived from Wújí 無極 (without axis) the formless, dimensionless, limitless, unbounded, infinite void.
+When the formless void began to stir and move, Taiji came into being.
+Liǎng Yí (兩儀) Dual Powers [ edit ]
+The beginning of the universe begot the twin forces:
+⚋ yīn ( trad. 陰 / simp. 阴) dark, original, central, passive
+⚊ yáng ( trad. 陽 / simp. 阳) bright, extreme, furthest, active
+Sì Xiàng (四像) Four Aspects [ edit ]
+The twin powers produce four aspects named:
+⚌ great yang 太陽 tàiyáng
+⚎ lesser yang 少陽 shǎoyáng
+⚍ lesser yin 少陰 shǎoyīn
+⚏ great yin 太陰 tàiyīn
+The four aspects are the differing levels of energy in world. Primarily they are associated with the solar terms, the two solstices and the two equinoxes. Being aspects they are also associated with the four main compass directions. Each direction is associated with a level of solar energy, and a mythological animal.
+⚌ great yang 太陽 tàiyáng, Summer Solstice (longest day), South (most sun), Red Bird
+⚎ lesser yang 少陽 shǎoyáng, Spring Equinox (increasing day), East (increasing sun), Blue Dragon
+⚍ lesser yin 少陰 shǎoyīn, Fall Equinox (increasing night), West (decreasing sun), White Tiger
+⚏ great yin 太陰 tàiyīn, Winter Solstice (longest night), North (least sun), Black Tortoise
+Bā Guà (八卦) Eight Passages [ edit ]
+Derivation of the bagua
+The four phenomena act through the eight gates (bā guà):
+☰ Heaven 乾 ; Qián , warming
+☳ Thunder 震 ; Zhèn , storming
+☵ Water 坎 ; Kǎn , pooling
+☶ Mountain 艮 ; Gèn , jutting
+☴ Wind 巽 ; Xùn , dispersing
+☲ Fire 離 ; Lí , dancing
+☱ Lake/Marsh 兌 ; Duì , engulfing
+☷ Earth 坤 ; Kūn , resting
+Another chapter, 說卦 ; Shuō Guà ; ' Discussing the Trigrams ' , characterizes the relationship of the trigrams as being:
+乾 ; Qián ☰ Heaven, Father
+坤 ; Kūn ☷ Earth, Mother
+who have three sons:
+震 ; Zhèn ☳ Thunder, 1st Son
+坎 ; Kǎn , ☵ Water, 2nd Son
+艮 ; Gèn ☶ Mountain, 3rd Son
+and have three daughters:
+巽 ; Xùn ☴ Wind, 1st Daughter
+離 ; Lí ☲ Fire, 2nd Daughter
+兌 ; Duì ☱ Lake, 3rd Daughter
+The son trigrams all have a single ⚊ yáng line in their formation. The Yang trigrams correspond to odd numbers 1, 3, 5, 7.
+The daughter trigrams all have a single ⚋ yīn line in their formation. The Yin trigrams correspond to even numbers 0, 2, 4, 6.
+Their ordering is from bottom line, mid line, top line.
+Wǔxíng (五行) Five Phases [ edit ]
+The trigrams are related to the five phases of the Wuxing . The phases are: Water, Wood, Fire, Earth and Metal.
+The major qualities associated with the 5 phases are:
+Water - Receding
+Fire - Bursting
+Earth - Resting
+Wood - Growing
+Metal - Contracting
+These qualities are associated with the seasons.
+Water is associated with mid winter, the time of lowest energy.
+Fire is associated with mid summer, the time of highest energy.
+Earth is the pivot or balanced energy, either given as late summer, or as a brief transitional period between the seasons, where they are neither obviously one quality or the next.
+Wood is associated with the spring time, burst with life and increasing sunshine.
+Metal with the fall, life is slowing down, the days are shortening, and both men and creatures are taking precaution by storing food, and preparing for winter.
+Typically the trigram-to-phase correspondences are given as follows:
+The phase of Water 水 only corresponds with the trigram of the Deep 坎 ; Kǎn .
+The phase of Fire 火 only corresponds with the trigram of Flame 離 ; Lí .
+The phase of Earth or Soil 土 corresponds with the trigrams of Earth 坤 ; Kūn and Mountain 艮 ; Gèn .
+The phase of Wood 木 corresponds with the trigrams of Wind 巽 ; Xùn and Thunder 震 ; Zhèn .
+The phase of Metal or Gold 金 corresponds with the trigrams of Heaven 乾 ; Qián and Lake 兌 ; Duì . [ 13 ]
+Notably, more than just their seasonal correspondence, the elements have interactions with each other and relationships of promoting and subverting other elements, as well as reversals where there is insufficiency in one element, resulting in an unbalanced relationship giving unexpected results where it should normally promote or subvert another element, but gives the opposite effect.
+The wuxing and its promoting/subverting relationship system is also used as a frame work for understanding the relationships in spacial features in feng shui as well as the relationships between the organ systems in traditional Chinese medicine .
+Liùshísì Guà (六十四卦) Sixty-Four Hexagrams [ edit ]
+Eight trigrams stacked atop another eight trigrams give sixty-four variations of hexagrams, with the dominant quality above, and the secondary quality below. These sixty four hexagrams make up the main body of the Yijing oracle used for divination. The Yijing itself gives a pithy explanation for each hexagram.
+The ways can be thought of as eight main expectations, and each variation is an outcome either typical, inverted; promoted, subverted; nurtured, neglected; surprised or disappointed; depending on circumstance. The sixty-four hexagrams give many possibilities for how an endeavor may turn out.
+Diviners consulting the Yijing oracle use a variety of methods to elicit a response from the oracle, such as throwing yarrow stalks, tossing coins, pulling cards from a deck, or consulting exterior signs, such as examining the shapes of sacrificed animal entrails, examining the cracking patterns of bones tossed into a fire, observing the flight path of startled birds, etc.
+Hexagram lookup table [ edit ]
+Lower"},"2":{"wt":"Upper"},"3":{"wt":"LightYellow"}},"i":0}}]}'> Upper Lower
+☰
+☱
+☲
+☳
+☴
+☵
+☶
+☷
+乾 ( qián )
+兌 ( duì )
+離 ( lí )
+震 ( zhèn )
+巽 ( xùn )
+坎 ( kǎn )
+艮 ( gèn )
+坤 ( kūn )
+Heaven
+Lake
+Flame
+Thunder
+Wind
+Water
+Mountain
+Earth
+☰
+1
+43
+14
+34
+9
+5
+26
+11
+䷀
+䷪
+䷍
+䷡
+䷈
+䷄
+䷙
+䷊
+乾 ( qián )
+乾 ( qián )
+夬 ( guài )
+大有 ( dàyǒu )
+大壯 ( dàzhuàng )
+小畜 ( xiǎoxù )
+需 ( xū )
+大畜 ( dàxù )
+泰 ( tài )
+Heaven
+Force
+Displacement
+Great Possessing
+Great Invigorating
+Small Harvest
+Attending
+Great Accumulating
+Pervading
+☱
+10
+58
+38
+54
+61
+60
+41
+19
+䷉
+䷹
+䷥
+䷵
+䷼
+䷻
+䷨
+䷒
+兌 ( duì )
+履 ( lǚ )
+兌 ( duì )
+睽 ( kuí )
+歸妹 ( guīmèi )
+中孚 ( zhōngfú )
+節 ( jié )
+損 ( sǔn )
+臨 ( lín )
+Lake
+Treading
+Open
+Polarising
+Converting the Maiden
+Inner Truth
+Articulating
+Diminishing
+Nearing
+☲
+13
+49
+30
+55
+37
+63
+22
+36
+䷌
+䷰
+䷝
+䷶
+䷤
+䷾
+䷕
+䷣
+離 ( lí )
+同人 ( tóngrén )
+革 ( gé )
+離 ( lí )
+豐 ( fēng )
+家人 ( jiārén )
+既濟 ( jìjì )
+賁 ( bì )
+明夷 ( míngyí )
+Flame
+Concording People
+Skinning
+Radiance
+Abounding
+Dwelling People
+Already Fording
+Adorning
+Intelligence Hidden
+☳
+25
+17
+21
+51
+42
+3
+27
+24
+䷘
+䷐
+䷔
+䷲
+䷩
+䷂
+䷚
+䷗
+震 ( zhèn )
+无妄 ( wúwàng )
+隨 ( suí )
+噬嗑 ( shìhé )
+震 ( zhèn )
+益 ( yì )
+屯 ( tún )
+頤 ( yí )
+復 ( fù )
+Thunder
+Innocence
+Following
+Gnawing Bite
+Shake
+Augmenting
+Sprouting
+Swallowing
+Returning
+☴
+44
+28
+50
+32
+57
+48
+18
+46
+䷫
+䷛
+䷱
+䷟
+䷸
+䷯
+䷑
+䷭
+巽 ( xùn )
+姤 ( gòu )
+大過 ( dàguò )
+鼎 ( dǐng )
+恆 ( héng )
+巽 ( xùn )
+井 ( jǐng )
+蠱 ( gǔ )
+升 ( shēng )
+Wind
+Coupling
+Great Exceeding
+Holding
+Persevering
+Ground
+Welling
+Correcting
+Ascending
+☵
+6
+47
+64
+40
+59
+29
+4
+7
+䷅
+䷮
+䷿
+䷧
+䷺
+䷜
+䷃
+䷆
+坎 ( kǎn )
+訟 ( sòng )
+困 ( kùn )
+未濟 ( wèijì )
+解 ( jiě )
+渙 ( huàn )
+坎 ( kǎn )
+蒙 ( méng )
+師 ( shī )
+Water
+Arguing
+Confining
+Before Completion
+Deliverance
+Dispersing
+Gorge
+Enveloping
+Leading
+☶
+33
+31
+56
+62
+53
+39
+52
+15
+䷠
+䷞
+䷷
+䷽
+䷴
+䷦
+䷳
+䷎
+艮 ( gèn )
+遯 ( dùn )
+咸 ( xián )
+旅 ( lǚ )
+小過 ( xiǎoguò )
+漸 ( jiàn )
+蹇 ( jiǎn )
+艮 ( gèn )
+謙 ( qiān )
+Mountain
+Retiring
+Conjoining
+Sojourning
+Small Exceeding
+Infiltrating
+Limping
+Bound
+Humbling
+☷
+12
+45
+35
+16
+20
+8
+23
+2
+䷋
+䷬
+䷢
+䷏
+䷓
+䷇
+䷖
+䷁
+坤 ( kūn )
+否 ( pǐ )
+萃 ( cuì )
+晉 ( jìn )
+豫 ( yù )
+觀 ( guàn )
+比 ( bǐ )
+剝 ( bāo )
+坤 ( kūn )
+Earth
+Obstruction
+Clustering
+Prospering
+Providing-For
+Viewing
+Grouping
+Stripping
+Field
+Fuxi 's "Earlier Heaven" vs King Wen 's "Later Heaven" [ edit ]
+Fuxi 's "Earlier Heaven" bagua arrangement
+King Wen "Later Heaven" bagua arrangement
+Name Nature Personality Family Direction (Fu Xi) Direction (Wenwang) Solar term (Fu Xi) Solar Term (Wenwang)
+乾  Qián Sky , Heaven Creative Father South Northwest Summer Solstice Beginning of Winter
+兌  Duì Lake Joyous 3rd Daughter Southeast West Beginning of Summer Autumn Equinox
+離  Lí Fire Clinging 2nd Daughter East South Spring Equinox Summer Solstice
+震  Zhèn Thunder Arousing 1st Son Northeast East Beginning of Spring Spring Equinox
+巽  Xùn Wind Gentle 1st Daughter Southwest Southeast Beginning of Autumn Beginning of Summer
+坎  Kǎn Water Deep 2nd Son West North Autumn Equinox Winter Solstice
+艮  Gèn Mountain Still 3rd Son Northwest Northeast Beginning of Winter Beginning of Spring
+坤  Kūn Earth Receptive Mother North Southwest Winter Solstice Beginning of Autumn
+In feng shui [ edit ]
+See also: Feng shui
+The bagua is a tool in the majority of feng shui schools. The bagua used in feng shui can appear in two different versions: the Earlier Heaven bagua , used for burial sites, and the Later Heaven bagua , used for residences.
+Pre-Natal Bagua [ edit ]
+Primordial bagua is also known as Fuxi bagua or Earlier Heaven bagua . Named after the mythological first emperor of China. In the Preface of Shang Shu by Kong Anguo, he writes that "In ancient times, Fuxi ruled the whole world. It was he who began to draw Eight Trigrams and to create Scripts in order to substitute the system of tying knots." [ 14 ] In traditional Chinese medicine, this sequence is known as the prenatal sequence and is used to understand familial risk for illness or disease. The Heaven trigram is at the top, the Earth trigram is at the bottom (the South was located at the top in Chinese maps of this period) of the bagua . The Fire trigram is located on the left, while the Water trigram is on the right. Thunder and wind form another pair, being the opposites of each other; the first is on the bottom left next to fire, while the second is next to Heaven on the top right of the bagua . Mountain and Lake form the last pair, with one opposite to the other. The adjustment of the trigrams is symmetrical by forming exact contrary pairs. They symbolize the opposite forces of Yin and Yang and represent a state in which everything is in balance.
+Post-Natal Bagua [ edit ]
+The sequence of trigrams in the Later Heaven bagua is attributed to King Wen . It is also known as the postnatal bagua arrangement in traditional Chinese medicine; it is used to understand physical, emotional and environmental patterns that influence health or disease. [ 15 ] In this arrangement, Water is placed downwards and Fire at the top; Thunder is in the East, while Lake is in the West. Contrary to the Earlier Heaven bagua , the Later Heaven bagua is dynamic ; energies and the aspects of each of its trigrams flow towards the following. It is the sequence used by the Luo Pan compass, which is used in feng shui and referred to as the manifest pattern; it analyzes the movement of the qi that practitioners believe affect them.
+Bagua Mirror [ edit ]
+Cast bronze Bagua mirror with trigrams decor. Song dynasty, AD 960-1279.
+Three variants of modern Bagua mirror talismans sold at a shop. From left to right: Flat, Convex, Concave.
+A Bagua Mirror (八卦鏡, sometimes transliterated as Pa Kua Mirror ) is a feng shui talisman , typically octagonal or circular in shape, with a display of bagua trigrams around a circular mirror, which could be flat , convex or concave . Modern bagua mirrors are evolved from ancient bronze-cast versions used by taoist masters to perform powerful Mirror Techniques (鏡術) said to reveal or destroy evil spirits or even overcome natural calamities. [ 16 ]
+Although a bagua mirror bears some resemblance to a loupan , it is not a feng shui instrument but a feng shui remedy that is believed to reflect (flat variant), disperse (convex variant) or converge/absorb (concave variant) external Sha Qi (煞氣) or poison-arrows and hence alter the feng shui conditions of a residence. [ 17 ]
+Bagua mirrors offer an inexpensive, often self-administered quick fix to certain feng shui concerns. For example, sharp corners of buildings or an open road leading to a house are considered sources of poison-arrows . [ 17 ] [ 18 ] When faced with such sources, people would sometimes install a bagua mirror above their front door or window to deflect the poison-arrows away from entering their residence. Since any reflected poison-arrows would supposedly be redirected towards the direction the mirror faces, pointing a bagua mirror towards a neighbor's residence is generally considered offensive and is a feng shui taboo . [ 19 ] Unfortunately, the DIY nature makes them prone to misuse or abuse for personal vendetta against neighbors. Conflicts caused by offensive bagua mirror installations are well known in populous Chinese communities like Hong Kong and such feng shui mirror feuds have been parodied in popular culture. [ 19 ]
+Western bagua [ edit ]
+The popularity of feng shui increased in the West because of the bagua of the eight aspirations. Each trigram corresponds to an aspect of life that also corresponds to one of the cardinal directions. Applying feng shui using the bagua of the eight aspirations (or bagua map for short) made it possible to simplify feng shui and to use it for the general public. Western bagua focuses more heavily on intention than the traditional forms of feng shui. [ 20 ]
+Experienced practicers of traditional feng shui disregard Western bagua [ 21 ] for its simplicity, since it does not take into account the forms of the landscape, time, or the annual cycles. The bagua of the eight aspirations is divided into two branches: the first, which uses the compass and cardinal directions, and the second, which uses the bagua by using the main door.
+Bagua map [ edit ]
+A bagua map is a tool used in Western forms of feng shui to map a room or location and see how the different sections correspond to different aspects in one's life. These sections are believed to relate to every area or aspect of life and are divided into categories such as fame, relationships/marriage, children/creativity, helpful people/travel, career, inner knowledge, family/ancestors/health, and wealth/blessings.
+In this system, the map is intended to be used over the land, one's home, office or desk to find areas lacking good chi , and to show where there are spaces that may need rectifying or enhancing in life or the environment.
+For example, if the bagua grid is placed over an entire house plan and it shows the toilet, bathroom, laundry, or kitchen in the wealth/blessings area of the map, it would be said that the money coming into that particular environment would disappear very fast.
+A Tibetan "Mystic Tablet" containing the Eight Trigrams on top of a large tortoise (presumably, alluding to the animal that presented them to Fuxi ), along with the 12 signs of Chinese zodiac , and a smaller tortoise carrying the Lo Shu Square on its shell
+In Unicode [ edit ]
+The bagua symbols in the Miscellaneous Symbols block of Unicode include the following:
+Miscellaneous Symbols Unicode block
+Official name Glyph Unicode # HTML
+Trigram for Heaven ☰ U+2630 & #9776;
+Trigram for Lake ☱ U+2631 & #9777;
+Trigram for Fire ☲ U+2632 & #9778;
+Trigram for Thunder ☳ U+2633 & #9779;
+Trigram for Wind ☴ U+2634 & #9780;
+Trigram for Water ☵ U+2635 & #9781;
+Trigram for Mountain ☶ U+2636 & #9782;
+Trigram for Earth ☷ U+2637 & #9783;
+The Miscellaneous Symbols block also encodes the constituents ⚊ ( yang —U+268A, & #9866;) and ⚋ ( yin —U+268B, & #9867;), as well as the digrams ⚌ (greater yang—U+268C, & #9868;), ⚍ (lesser yin—U+268D, & #9869;), ⚎ (lesser yang—U+268E, & #9870;), and ⚏ (greater yin—U+268F, & #9871;).
+The hexagrams they form are separately encoded in the Yijing Hexagram Symbols Unicode block.
+Modern usage [ edit ]
+In traditional Chinese medicine, including the profession of acupuncture , the Earlier Heaven and Later Heaven arrangements are used to understand the pathogenesis of disease or illness and to select treatment plans specifically related and tailored to a patient's constitution. [ 22 ]
+The flag of South Korea has the four cardinal trigrams ( qian , kun , kan , li ) surrounding the taegeuk , or taijitu . These are specific representations of the movement and harmony of yin and yang. These trigrams were also depicted on the commissioning pennant of the South Korean Navy .
+See also [ edit ]
+Tian gan and Di zhi : the archaic calendar system of East Asia.
+Baguazhen , a military tactical formation based on the bagua .
+Ba Xian , Eight Taoist Immortals
+Ba Mai
+Ba Duan Jin
+Chinese ritual mastery traditions
+Chinese spiritual world concepts
+Fuji (planchette writing)
+Fulu
+Octal
+References [ edit ]
+↑ The World Book Encyclopedia . Vol.   19. Chicago: Scott Fetzer Company . 2003. p.   36. ISBN   0-7166-0103-6 . OCLC   50204221 .
+↑ TSUEI, Wei. Roots of Chinese culture and medicine Archived 2012-08-12 at the Wayback Machine Chinese Culture Books Co., 1989.
+↑ ZONG, Xiao-Fan and Liscum, Gary. Chinese Medical Palmistry: Your Health in Your Hand , Blue Poppy Press, 1999.
+1 2 Wilhelm, Richard (1950). The I Ching or Book of Changes . translated by Cary F. Baynes , foreword by C. G. Jung , preface to 3rd ed. by Hellmut Wilhelm (1967). Princeton, NJ: Princeton University Press. pp.   266, 269. ISBN   0-691-09750-X . {{ cite book }} : ISBN / Date incompatibility ( help )
+↑ Wong, Eva (2007). Tales of the dancing dragon: stories of the Tao (1st   ed.). Boston   : [New York]: Shambhala; Distributed in the United States by Random House. ISBN   978-1-59030-523-2 . OCLC   123284916 .
+↑ Wilhelm, Richard (1950). I Ching . Princeton, NJ: Princeton University Press. p.   79. . The quote is from the "Image" commentary, which is one of the Ten Wings , part of the Yijing.
+1 2 "Understanding Bagua sequence" (December 6, 2015) Shanghai Daily . Quote: "According to the authentic rules of binary method, the value conversion is bottom-up. The ID numbers of Mountain (☶, 100) and Thunder (☳, 001) should be reversed, [i.e. Mountain (☶)'s binary value should be 001 while Thunder (☳)'s binary value should be 100] [...] their sequential numbers are 0-Earth, 1-Mountain, 2-Water, 3-Wind, 4-Thunder, 5-Fire, 6-Valley, and 7-Sky."
+↑ Wilhelm, R. & Baynes, C., (1967): "The I Ching or Book of Changes", With foreword by Carl Jung, Introduction, Bollingen Series XIX, Princeton University Press, (1st ed. 1950)
+↑ Zhouyi Jie. Explaining the Zhou's [Book of] Changes . "八卦取象歌" [Song about how the Eight Trigrams Obtained Their Images]. "☰乾三連，☷坤六斷，☳震仰盂，☶艮覆碗，☲離中虛，☵坎中滿，☱兌上缺，☴巽下斷。"
+↑ "Understanding Bagua sequence" (December 6, 2015) Shanghai Daily . Quote: "Leibniz came up with the ID number of each 3-yao gua's based on the position of yao from top down to base. He defined yang yao (whole line) as 1 and yin yao (broken line) as 0. Here are some examples according to Leibniz-Shao Yong approach. Mountain (☶) can be converted to 100. [...]"
+↑ Book of Changes "繫辭上 - Xi Ci I (The Great Treatise) 11.3" with James Legge 's translation
+↑ Zhu Xi (2020). The Original Meaning of the Yijing: Commentary on the Scripture of Change . Translated by Joseph A. Adler. New York: Columbia University Press. p.   46.
+↑ Yi Jing " Shuo Gua 10 ". Translated by James Legge
+↑ Gong, Y., Yan, H., & Ge, Y. (2009). The Accounts of the Origin of Writing from Sumer, Egypt and China — A Comparative Perspective. Wiener Zeitschrift Für Die Kunde Des Morgenlandes, 99, 137–158. http://www.jstor.org/stable/23861987
+↑ Golding, Roisin (2010). The Complete Stems and Branches: Time and Space in Traditional Acupuncture . Churchill Livingstone. ISBN   978-0-7020-2961-5 .
+↑ 韓,吉紹 (2005). "道教中的鏡法" [ Daoist Mirror Techniques ] (PDF) . Hong Dao 弘道 (quarterly) . 22 (1). 香港道教學院 (Hong Kong Daoist Institute): 32– 37. ISSN   1726-1902 .
+1 2 Li, JiZhong 李计忠 (2010). 周易家居环境与人生 [ Household Environment and Living ] . 北京团结出版社. pp.   91, 193. ISBN   978-7-80214-377-7 .
+↑ Han, K.T. (April 2023). "An empirical study of consistency in the judgments of Feng Shui scholars and practitioners regarding taboos for residential space" . Heliyon . 9 (4) e15296. doi : 10.1016/j.heliyon.2023.e15296 . PMC   10119760 . PMID   37089290 .
+1 2 Emmons, Charles F. (June 1992). "Hong Kong's Feng Shui: Popular Magic in a Modern Urban Setting". The Journal of Popular Culture . 26 (1): 39– 50. doi : 10.1111/j.0022-3840.1992.00039.x .
+↑ Cisek, Jan. Feng Shui London blog , 2007.
+↑ Moran, Elizabeth and Master Yu, Joseph. The Complete Idiot's Guide to Feng Shui, 3rd Edition , Penguin, 2005.
+↑ Duveen, Joan (2022). Applying Stems and Branches Acupuncture in Clinical Practice . Jessica Kingsley Publishers. ISBN   9781787753716 .
+Authority control databases National United States Israel Other Yale LUX
+Retrieved from " https://en.wikipedia.org/w/index.php?title=Bagua&oldid=1377761262 "
+Categories : Esoteric cosmology I Ching Symbolism Taoist cosmology Eastern esotericism Hidden categories: Articles with short description Short description is different from Wikidata Articles needing additional references from April 2020 All articles needing additional references Wikipedia articles needing reorganization from October 2023 Articles with multiple maintenance issues Articles containing Chinese-language text Articles containing Vietnamese-language text Articles containing Korean-language text Articles containing Japanese-language text All articles with unsourced statements Articles with unsourced statements from December 2023 Webarchive template wayback links CS1 errors: ISBN date Articles containing Zhire-language text Articles containing traditional Chinese-language text
+This page was last edited on 1 October 2026, at 01:01  (UTC) .
+Page was rendered with Parsoid .
+Text is available under the Creative Commons Attribution-ShareAlike 4.0 License ;
+additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Legal & safety contacts
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Search
+Search
+Toggle the table of contents
+Bagua
+34 languages
+Add topic

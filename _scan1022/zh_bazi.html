@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>命卦计算器——八宅东西四命与八方位游年星</title>
+<meta name="description" content="免费命卦计算器：按出生日期与性别算出八宅命卦，立春分界时刻直接展示，两套世纪公式逐步推导，东西四命归属与八方位游年星全部展开，大游年总表可逐格核对，流派分歧公开陈列，不打包任何契合度百分比。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="命卦计算器——八宅东西四命与八方位游年星">
+<meta property="og:description" content="免费命卦计算器：按出生日期与性别算出八宅命卦，立春分界时刻直接展示，两套世纪公式逐步推导，东西四命归属与八方位游年星全部展开，大游年总表可逐格核对，流派分歧公开陈列，不打包任何契合度百分比。">
+<meta property="og:image" content="../og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="命卦计算器——八宅东西四命与八方位游年星">
+<meta name="twitter:description" content="免费命卦计算器：按出生日期与性别算出八宅命卦，立春分界时刻直接展示，两套世纪公式逐步推导，东西四命归属与八方位游年星全部展开，大游年总表可逐格核对，流派分歧公开陈列，不打包任何契合度百分比。">
+<meta name="twitter:image" content="../og-card.png">
+<link rel="canonical" href="https://bazi-atlas.com/zh/kua-number-calculator">
+<link rel="alternate" hreflang="en" href="https://bazi-atlas.com/kua-number-calculator">
+<link rel="alternate" hreflang="zh-Hans" href="https://bazi-atlas.com/zh/kua-number-calculator">
+<link rel="alternate" hreflang="x-default" href="https://bazi-atlas.com/kua-number-calculator">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"八字图谱 命卦计算器","applicationCategory":"UtilityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0"},"description":"免费命卦计算器：按出生日期与性别算出八宅命卦，立春分界时刻直接展示，两套世纪公式逐步推导，东西四命归属与八方位游年星全部展开，大游年总表可逐格核对，流派分歧公开陈列，不打包任何契合度百分比。"}
+</script>
+<link rel="stylesheet" href="../site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"命卦是什么？","acceptedAnswer":{"@type":"Answer","text":"八宅风水给每个「出生年＋性别」定一个命卦：1 到 9 的一个数（5 不单独出现）、一个卦、一组归属。坎一、震三、巽四、离九为东四命；坤二、乾六、兑七、艮八为西四命。归属决定八卦位里哪四位对本命带吉星。"}},{"@type":"Question","name":"年份分界用哪一天？","acceptedAnswer":{"@type":"Answer","text":"用立春时刻，与本站年柱同一分界：立春前出生按上一年算。很多命卦表用元旦或农历正月初一切，那是不同口径而非对错，在分界附近的出生会给出不同结果。本页按立春实算，并把比较用的立春时刻直接展示出来。"}},{"@type":"Question","name":"余数是 5 怎么办？","acceptedAnswer":{"@type":"Answer","text":"九宫的 5 属中宫、没有对应卦象，所以余 5 要寄宫：男命作坤二、女命作艮八。这是通行口径，结果面板在命中时会明确标出这一步。"}},{"@type":"Question","name":"八个方位的吉凶星从哪来？","acceptedAnswer":{"@type":"Answer","text":"来自大游年歌——所有八宅流派共用的固定表：以本命卦为伏位，其余七宫按固定顺序落生气、延年、天医、祸害、六煞、五鬼、绝命。下方印出完整 8×8 总表。它有两个可逐格核对的结构性质：全表对称；四吉星永远只落同组（东四见东四、西四见西四）四宫。"}},{"@type":"Question","name":"东四命／西四命拿来做什么？","acceptedAnswer":{"@type":"Answer","text":"八宅派的经典约定是同类相配：东四命配东四宅（坐坎、震、巽、离的宅），西四命配西四宅。本页只陈述这一流派约定并算出你这一侧的事实，不作吉凶预测，也不能替代你自己的判断。"}}]}
+</script>
+<style>
+.radio-row{display:flex;gap:18px;margin:4px 0 14px}
+.kua-hero-form{display:grid;grid-template-columns:minmax(280px,420px);gap:0}
+#result .counts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+#result .counts div{border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center}
+#result .counts b{display:block;font-size:1.4rem;font-family:"Fraunces",serif;color:var(--gold-soft)}
+#result .counts span{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--parchment-dim)}
+table.matrix{border-collapse:collapse;width:100%;min-width:560px}
+table.matrix th,table.matrix td{border:1px solid var(--line);padding:9px 10px;text-align:center;vertical-align:middle}
+table.matrix th{background:rgba(201,162,39,.08);font-weight:600;font-size:.82rem}
+table.matrix .rowhead{text-align:left;min-width:130px}
+table.matrix td.self{background:rgba(201,162,39,.16)}
+.mat-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tag{display:inline-block;margin:2px 3px 2px 0;padding:2px 8px;border-radius:99px;font-size:.72rem;font-weight:600;letter-spacing:.03em}
+.tag-he{background:rgba(201,162,39,.18);color:var(--gold-soft);border:1px solid rgba(201,162,39,.4)}
+.tag-chong{background:rgba(192,80,77,.18);color:#e29a97;border:1px solid rgba(192,80,77,.45)}
+.tag-xing{background:rgba(156,110,190,.16);color:#c3a3dd;border:1px solid rgba(156,110,190,.42)}
+.poslab{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--parchment-dim)}
+@media (max-width:820px){ .kua-hero-form{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <a class="brand" href="./">八字<span>图谱</span></a>
+  <div class="links">
+    <a href="./">排盘</a>
+    <a href="./learn-bazi">入门</a>
+    <a href="./chinese-zodiac">生肖</a>
+    <a href="./day-pillar">日柱</a>
+    <a href="./day-master">日主</a>
+    <a href="./relations">关系</a><a href="./elements">五行</a>
+    <a href="./earthly-branches">地支</a>
+    <a href="./twelve-stages">长生</a>
+    <a href="./ten-gods">十神</a>
+    <a href="./hexagrams">六十四卦</a>
+    <a href="./shensha">神煞</a>
+    <a href="./scenarios">场景</a>
+    <a href="./ten-gods-calculator">十神计算器</a>
+    <a href="./compatibility-calculator">合盘</a>
+    <a href="./luck-pillars-calculator">大运</a>
+    <a href="./favorable-element-calculator">喜用神</a>
+    <a href="./kua-number-calculator" aria-current="page">命卦</a>
+    <a href="./daily-pillar">今日</a>
+    <a href="./wedding-date-picker">择日</a><a href="./name-analysis">姓名</a><a href="./bazi-report">报告</a>
+    <a href="./methodology">方法论</a>
+    <a class="lang" href="../kua-number-calculator" hreflang="en">English</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>命卦计算器</h1>
+  <p class="sub">出生年（立春分界）与性别 → 命卦数 → 卦象与东西四命 → 八方位游年星。每一步公式摆在明面上，两套世纪公式与统一式的等价、大游年表的对称与分组结构都可逐格核对——<b>不打包成任何百分比</b>。</p>
+</header>
+
+<div class="kua-hero-form">
+<form class="panel" id="form" novalidate>
+    <label for="dob">出生日期（公历）</label>
+    <input type="date" id="dob" min="1900-01-01" max="2099-12-31" required>
+    <label for="tob">出生时间（可选，仅立春当天出生才影响结果）</label>
+    <input type="time" id="tob" value="12:00">
+    <label>性别（命卦公式男女不同）</label>
+    <div class="radio-row">
+      <label class="check"><input type="radio" name="gender" value="male"> 男命</label>
+      <label class="check"><input type="radio" name="gender" value="female"> 女命</label>
+    </div>
+    <button type="submit" id="go" class="btn">算命卦</button>
+    <p class="hint">命卦只看出生年与性别，不需要出生地点。出生数据不会离开你的浏览器。</p>
+  </form>
+</div>
+<div id="err"></div>
+<section id="result" hidden></section>
+
+<section class="block" id="how">
+  <h2 class="sec">命卦数怎么算</h2>
+  <p class="sec-intro">两条世纪公式（上表为通行口径，本站与外部速查表逐例对账过），余数即命卦数；余 0 作 9，余 5 寄宫（男坤二、女艮八）。</p>
+  <div class="mat-wrap"><div class="wrap-scroll"><table class="matrix" id="formulatable">
+    <thead><tr><th>出生年代</th><th>男命</th><th>女命</th></tr></thead>
+    <tbody>
+      <tr><td>1900–1999</td><td>(100 − 年份后两位) ÷ 9 取余</td><td>(年份后两位 − 4) ÷ 9 取余</td></tr>
+      <tr><td>2000–2099</td><td>(99 − 年份后两位) ÷ 9 取余</td><td>(年份后两位 + 6) ÷ 9 取余</td></tr>
+    </tbody>
+  </table></div></div>
+  <p class="hint">统一式（校验用）：男 (2 − 年份) mod 9、女 (年份 − 5) mod 9——两套世纪公式在 mod 9 下与统一式完全同余，本站测试对 1900–2099 每一年、两种性别都断言过这条等价，不是口头上说说。</p>
+  <h3>算例</h3>
+  <ul class="ref-list">
+    <li>男命 1985（乙丑 Yi Chou 年）：(100 − 85) = 15 → 15 mod 9 = 6 → <b>乾六命</b>，西四命，五行属金。</li>
+    <li>女命 1990（庚午 Geng Wu 年）：(90 − 4) = 86 → 86 mod 9 = 5 → 余 5 寄宫，作 <b>艮八命</b>，西四命，五行属土。</li>
+    <li>男命 2000（庚辰 Geng Chen 年）：(99 − 0) = 99 → 99 mod 9 = 0 → 余 0 作 9，<b>离九命</b>，东四命，五行属火。</li>
+    <li>立春边界：2026 年立春在 2026-02-04 04:02（北京时间）。男命生于 2026-02-03 → 按 2025 年算（乙巳 Yi Si）→ 坤二；生于 2026-02-05 → 按 2026 年算（丙午 Bing Wu）→ 坎一。同一周出生，命卦不同。</li>
+  </ul>
+</section>
+<section class="block" id="table">
+  <h2 class="sec">大游年总表（8 命卦 × 8 方位）</h2>
+  <p class="sec-intro">大游年歌的完整展开。每个命卦在自己的宫位得伏位，其余七宫按固定顺序落七星。这张表由本站引擎逐格实算生成，并在测试里断言两个结构性质：</p>
+  <ul class="ref-list"><li><b>全表对称</b>——坎离互为延年、乾兑互为生气、乾坤互为延年……表的上三角与下三角逐格相等，12 对吉星配对两向一致。</li>
+    <li><b>东西不相混</b>——四吉星（生气、延年、天医、伏位）只落与命卦同组的四宫，四凶星（祸害、六煞、五鬼、绝命）只落异组四宫。这不是巧合，是八宅模型在先天卦爻变上的编码结果。</li></ul>
+  <div class="mat-wrap"><div class="wrap-scroll"><table class="matrix" id="dytable"><thead><tr><th class="rowhead">命卦 ＼ 方位</th><th><span lang="zh">坎</span> Kan<br><span class="poslab">正北</span></th><th><span lang="zh">艮</span> Gen<br><span class="poslab">东北</span></th><th><span lang="zh">震</span> Zhen<br><span class="poslab">正东</span></th><th><span lang="zh">巽</span> Xun<br><span class="poslab">东南</span></th><th><span lang="zh">离</span> Li<br><span class="poslab">正南</span></th><th><span lang="zh">坤</span> Kun<br><span class="poslab">西南</span></th><th><span lang="zh">兑</span> Dui<br><span class="poslab">正西</span></th><th><span lang="zh">乾</span> Qian<br><span class="poslab">西北</span></th></tr></thead><tbody><tr><td class="rowhead"><b lang="zh">乾</b> Qian<br><span class="poslab">西四</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td></tr><tr><td class="rowhead"><b lang="zh">坎</b> Kan<br><span class="poslab">东四</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td></tr><tr><td class="rowhead"><b lang="zh">艮</b> Gen<br><span class="poslab">西四</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-he" lang="zh">天医</span></td></tr><tr><td class="rowhead"><b lang="zh">震</b> Zhen<br><span class="poslab">东四</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td></tr><tr><td class="rowhead"><b lang="zh">巽</b> Xun<br><span class="poslab">东四</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td></tr><tr><td class="rowhead"><b lang="zh">离</b> Li<br><span class="poslab">东四</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td></tr><tr><td class="rowhead"><b lang="zh">坤</b> Kun<br><span class="poslab">西四</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-he" lang="zh">生气</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td><span class="tag tag-he" lang="zh">延年</span></td></tr><tr><td class="rowhead"><b lang="zh">兑</b> Dui<br><span class="poslab">西四</span></td><td><span class="tag tag-chong" lang="zh">祸害</span></td><td><span class="tag tag-he" lang="zh">延年</span></td><td><span class="tag tag-chong" lang="zh">绝命</span></td><td><span class="tag tag-chong" lang="zh">六煞</span></td><td><span class="tag tag-chong" lang="zh">五鬼</span></td><td><span class="tag tag-he" lang="zh">天医</span></td><td class="self"><span class="tag tag-he" lang="zh">伏位</span></td><td><span class="tag tag-he" lang="zh">生气</span></td></tr></tbody></table></div></div>
+  <h3 style="margin-top:20px">八星、九星与五行</h3>
+  <div class="mat-wrap"><div class="wrap-scroll"><table class="matrix" id="startable"><thead><tr><th>游年星</th><th>九星</th><th>五行</th><th>吉凶等级</th></tr></thead><tbody><tr><td><b lang="zh">生气</b></td><td><span lang="zh">贪狼</span></td><td><span lang="zh">木</span></td><td>上吉</td></tr><tr><td><b lang="zh">延年</b></td><td><span lang="zh">武曲</span></td><td><span lang="zh">金</span></td><td>上吉</td></tr><tr><td><b lang="zh">天医</b></td><td><span lang="zh">巨门</span></td><td><span lang="zh">土</span></td><td>中吉</td></tr><tr><td><b lang="zh">伏位</b></td><td><span lang="zh">辅弼</span></td><td><span lang="zh">木</span></td><td>小吉</td></tr><tr><td><b lang="zh">祸害</b></td><td><span lang="zh">禄存</span></td><td><span lang="zh">土</span></td><td>小凶</td></tr><tr><td><b lang="zh">六煞</b></td><td><span lang="zh">文曲</span></td><td><span lang="zh">水</span></td><td>次凶</td></tr><tr><td><b lang="zh">五鬼</b></td><td><span lang="zh">廉贞</span></td><td><span lang="zh">火</span></td><td>大凶</td></tr><tr><td><b lang="zh">绝命</b></td><td><span lang="zh">破军</span></td><td><span lang="zh">金</span></td><td>大凶</td></tr></tbody></table></div></div>
+  <p class="hint">等级（上吉／中吉／小吉／小凶／次凶／大凶）是传统命书对各星的定性，各文本用词略有出入；本页采用常见的一档并在方法论页标注来源口径。</p>
+</section>
+<section class="block" id="schools">
+  <h2 class="sec">流派分歧，摆在明面上</h2>
+  <ul class="ref-list">
+    <li><b>年份分界</b>：立春（本站口径）／农历正月初一／元旦，三种口径都在流传。分界附近出生的人会拿到不同命卦——这不是谁算错，是约定不同。本页实算用立春，并把立春时刻展示出来供你核对。</li>
+    <li><b>余 5 寄宫</b>：男寄坤二、女寄艮八是通行口径；个别文本把男命 5 也寄艮八。本页按通行口径，并在结果面板标明寄宫步骤。</li>
+    <li><b>学派归属</b>：命卦是八宅派（八宅明镜）的模型。玄空等其它理气流派根本不用命卦；「东四命配东四宅」是八宅派内部约定，不是跨流派共识。</li>
+    <li><b>只列事实，不打分</b>：本页给出命卦数、卦、归属与八方位吉凶星，不给「契合度百分比」之类的合成数字——传统文本没有给过权重，任何百分比都是印刷它的站点发明的。</li>
+  </ul>
+</section>
+<section class="block" id="faq">
+  <h2 class="sec">常见问题</h2>
+  <dl class="faq">
+    <dt>命卦是什么？</dt>
+    <dd>八宅风水给每个「出生年＋性别」定一个命卦：1 到 9 的一个数（5 不单独出现）、一个卦、一组归属。坎一、震三、巽四、离九为东四命；坤二、乾六、兑七、艮八为西四命。归属决定八卦位里哪四位对本命带吉星。</dd>
+    <dt>年份分界用哪一天？</dt>
+    <dd>用立春时刻，与本站年柱同一分界：立春前出生按上一年算。很多命卦表用元旦或农历正月初一切，那是不同口径而非对错，在分界附近的出生会给出不同结果。本页按立春实算，并把比较用的立春时刻直接展示出来。</dd>
+    <dt>余数是 5 怎么办？</dt>
+    <dd>九宫的 5 属中宫、没有对应卦象，所以余 5 要寄宫：男命作坤二、女命作艮八。这是通行口径，结果面板在命中时会明确标出这一步。</dd>
+    <dt>八个方位的吉凶星从哪来？</dt>
+    <dd>来自大游年歌——所有八宅流派共用的固定表：以本命卦为伏位，其余七宫按固定顺序落生气、延年、天医、祸害、六煞、五鬼、绝命。下方印出完整 8×8 总表。它有两个可逐格核对的结构性质：全表对称；四吉星永远只落同组（东四见东四、西四见西四）四宫。</dd>
+    <dt>东四命／西四命拿来做什么？</dt>
+    <dd>八宅派的经典约定是同类相配：东四命配东四宅（坐坎、震、巽、离的宅），西四命配西四宅。本页只陈述这一流派约定并算出你这一侧的事实，不作吉凶预测，也不能替代你自己的判断。</dd>
+  </dl>
+</section>
+
+<footer>
+  <p><b>八字图谱 BaZi Atlas</b> · 引擎 <span data-engine-version>v0.15.1</span> · 历法库 <code>lunar-javascript</code> · 页面更新于 2026-09-20 · <a href="./">免费八字排盘</a> · <a href="./learn-bazi">入门</a> · <a href="./compatibility-calculator">合盘计算器</a> · <a href="./ten-gods-calculator">十神计算器</a> · <a href="./luck-pillars-calculator">大运计算器</a> · <a href="./favorable-element-calculator">喜用神计算器</a> · <a href="./kua-number-calculator">命卦计算器</a> · <a href="./daily-pillar">今日干支</a> · <a href="./wedding-date-picker">嫁娶择日</a><a href="./name-analysis">姓名</a><a href="./bazi-report">报告</a> · <a href="./methodology">方法论与勘误日志</a> · <a href="./chinese-zodiac">十二生肖总览</a> · <a href="./day-pillar">日柱总览</a> · <a href="./earthly-branches">十二地支总览</a> · <a href="./twelve-stages">十二长生总览</a> · <a href="./ten-gods">十神与柱位总览</a> · <a href="./hexagrams">六十四卦总览</a> · <a href="./shensha">三十六神煞总览</a> · <a href="./scenarios">场景三十页</a> · <a href="./day-master">日主十型</a> · <a href="./relations">干支关系</a> · <a href="./elements">五行</a></p>
+  <p style="margin-top:8px">本站用于自我认知与文化研习——不作预测，不构成任何建议。出生数据不会离开你的浏览器。</p>
+<p class="trust"><a href="./about">关于</a> · <a href="./sources">数据来源</a> · <a href="./corrections">勘误日志</a> · <a href="./chart-rules">排盘口径</a> · <a href="./disclaimer">免责声明</a> · <a href="https://github.com/bazi-atlas/bazi-engine" target="_blank" rel="noopener">开源引擎</a></p>
+</footer>
+
+</div>
+
+<script src="../vendor/lunar.min.js"></script>
+<script src="../bazi-engine.web.js"></script>
+<script>
+(function(){
+  'use strict';
+  var E = window.BaziEngine;
+  function $(id){ return document.getElementById(id); }
+  var GZ_PY = {"甲":"Jia","乙":"Yi","丙":"Bing","丁":"Ding","戊":"Wu","己":"Ji","庚":"Geng","辛":"Xin","壬":"Ren","癸":"Gui","子":"Zi","丑":"Chou","寅":"Yin","卯":"Mao","辰":"Chen","巳":"Si","午":"Wu","未":"Wei","申":"Shen","酉":"You","戌":"Xu","亥":"Hai"};
+  function gzPyText(gz){ return GZ_PY[gz.charAt(0)] + ' ' + GZ_PY[gz.charAt(1)]; }
+  function el(tag, cls, html){ var e = document.createElement(tag); if (cls) e.className = cls; if (html !== undefined) e.innerHTML = html; return e; }
+  function showError(m){ $('err').innerHTML = '<p class="err">' + m + '</p>'; $('result').hidden = true; }
+  function clearError(){ $('err').innerHTML = ''; }
+
+  function compute(){
+    clearError();
+    var dob = $('dob').value;
+    if (!dob) { showError('请先填写出生日期——数据不会离开你的浏览器。'); return; }
+    var pp = dob.split('-');
+    var y = +pp[0], m = +pp[1], d = +pp[2];
+    var tob = $('tob').value || '12:00';
+    var tp = tob.split(':');
+    var hh = +tp[0], mm = +(tp[1] || 0);
+    var gsel = document.querySelector('input[name=gender]:checked');
+    if (!gsel) { showError('请选择男命或女命——两者的公式不同。'); return; }
+    var gender = gsel.value;
+    var p = E.kuaProfile(y, m, d, gender, hh, mm);
+    if (!p) { showError('出生年份超出支持范围（1900–2099）。'); return; }
+    render(p, { y: y, m: m, d: d, hh: hh, mm: mm, gender: gender });
+  }
+
+  function render(p, inp){
+    var box = $('result');
+    box.hidden = false;
+    box.innerHTML = '';
+    var zh = true;
+
+    // 第一步：风水年（立春边界）
+    var lc = E.lichunOf(inp.y);
+    var stamp = inp.m * 1000000 + inp.d * 10000 + inp.hh * 100 + inp.mm;
+    var line = lc ? (lc.month * 1000000 + lc.day * 10000 + lc.hour * 100 + lc.minute) : 0;
+    var before = lc && stamp < line;
+    var step1 = '<b>' + '风水年' + '</b>: ' + p.fsYear
+      + ' <span lang="zh">' + p.fsYearGanzhi + '</span> ' + gzPyText(p.fsYearGanzhi)
+      + (lc ? ' — ' + (before
+        ? '出生在立春 ' + inp.y + '-' + lc.text.slice(5) + ' 之前，按上一年算。'
+        : '出生在立春 ' + inp.y + '-' + lc.text.slice(5) + ' 当天或之后，按当年算。') : '');
+
+    // 第二步：公式与余数
+    var yy = p.fsYear % 100;
+    var expr, raw;
+    if (inp.gender === 'male') {
+      expr = (p.fsYear < 2000 ? '100 − ' + yy : '99 − ' + yy) + ' = ' + (p.fsYear < 2000 ? 100 - yy : 99 - yy);
+      raw = ((p.fsYear < 2000 ? 100 - yy : 99 - yy) % 9 + 9) % 9;
+    } else {
+      expr = (p.fsYear < 2000 ? yy + ' − 4' : yy + ' + 6') + ' = ' + (p.fsYear < 2000 ? yy - 4 : yy + 6);
+      raw = (((yy - (p.fsYear < 2000 ? 4 : -6)) % 9) + 9) % 9;
+    }
+    var remNote = raw === 0
+      ? '余 0 按惯例作 9。'
+      : (raw === 5
+        ? '余 5 属中宫无卦：' + '男命寄坤二，女命寄艮八。'
+        : '');
+    var step2 = '<b>' + '公式' + '</b>: ' + (inp.gender === 'male'
+      ? (p.fsYear < 2000 ? '(100 − ' + yy + ') mod 9' : '(99 − ' + yy + ') mod 9')
+      : (p.fsYear < 2000 ? '(' + yy + ' − 4) mod 9' : '(' + yy + ' + 6) mod 9'))
+      + ' → ' + expr + ' → mod 9 = ' + raw + (remNote ? ' (' + remNote + ')' : '');
+
+    // 第三步：命卦
+    var step3 = '<b>' + '命卦' + '</b>: <span lang="zh" style="font-weight:900;font-size:1.3rem">' + p.gua + '</span> '
+      + p.guaPy + ' — 命卦数 <b>' + p.kua + '</b>, '
+      + '<span lang="zh">' + p.groupCn + '</span> (' + p.groupEn + '), '
+      + '<span lang="zh">' + p.elCn + '</span> ' + p.elEn
+      + (p.fiveHandled ? ' · <span class="tag tag-xing">五寄宫</span>' : '');
+
+    box.appendChild(el('div', 'counts',
+      '<div><b>' + p.kua + '</b><span>命卦数</span></div>'
+      + '<div><span lang="zh" style="font-size:1.4rem;font-weight:900">' + p.gua + '</span><span>' + p.guaPy + '</span></div>'
+      + '<div><b>' + (p.group === 'east' ? '东四' : '西四') + '</b><span>命</span></div>'
+      + '<div><b lang="zh">' + p.elCn + '</b><span>' + p.elEn + '</span></div>'));
+
+    var steps = el('div', 'panel', '<h3 style="margin-top:0">推导链</h3>'
+      + '<ol style="margin:0;padding-left:20px;line-height:1.9">'
+      + '<li>' + step1 + '</li>'
+      + '<li>' + step2 + '</li>'
+      + '<li>' + step3 + '</li>'
+      + '</ol>'
+      + '<p class="hint" style="margin-bottom:0">每一步都能用上文的公式表手工复核。</p>');
+    box.appendChild(steps);
+
+    // 八方位表
+    var h = '<h3>八方位游年星</h3>';
+    h += '<div class="mat-wrap"><table class="matrix"><thead><tr><th>方位</th><th>游年星</th><th>九星</th><th>五行</th><th>吉凶</th></tr></thead><tbody>';
+    var LV = { '生气': '上吉', '延年': '上吉', '天医': '中吉', '伏位': '小吉', '祸害': '小凶', '六煞': '次凶', '五鬼': '大凶', '绝命': '大凶' };
+    p.directions.forEach(function(dir){
+      h += '<tr><td><b lang="zh">' + dir.gua + '</b> ' + dir.guaPy + '<br><span class="poslab">' + dir.dirEn + '</span></td>'
+        + '<td><span class="tag ' + (dir.luck === 1 ? 'tag-he' : 'tag-chong') + '" lang="zh">' + dir.starCn + '</span><br><span style="font-size:.75rem;color:var(--parchment-dim)">' + dir.starEn + '</span></td>'
+        + '<td><span lang="zh">' + dir.starXingCn + '</span> ' + dir.starXingEn + '</td>'
+        + '<td><span lang="zh">' + dir.elCn + '</span> ' + dir.elEn + '</td>'
+        + '<td>' + LV[dir.starCn] + '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+    h += '<p class="hint">方位星由大游年歌定表给出（见下方总表）；「吉凶」是该体系内部的等级标注，本页不作任何行动建议。</p>';
+    box.appendChild(el('div', null, h));
+  }
+
+  $('go').addEventListener('click', compute);
+  $('form').addEventListener('submit', function(e){ e.preventDefault(); compute(); });
+})();
+</script>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c84eb89dc55849878a09617a8903c2e3"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>

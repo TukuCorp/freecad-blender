@@ -1,0 +1,2222 @@
+                                     CHAPTER 2
+                                MEANS OF ESCAPE
+2.1       GENERAL
+
+  2.1.1   The provisions of this chapter of the Code shall serve to express
+          the intentions for determining the design, construction, protection,
+          location, arrangement and maintenance of exit facilities to provide
+          safe means of escape for occupants from all buildings hereafter
+          erected, altered or changed in occupancy. Areas which are
+          designated as means of escape, such as exit staircase, fire-fighting
+          lobby, smoke-stop lobby, exit passageway, escape corridors shall
+          not be turned into other usage.
+
+2.2       DETERMINATION OF EXIT REQUIREMENTS
+
+  2.2.1   The determination of exit requirements for a building shall be             General
+          based upon the type of use or occupancy of the building, the
+          occupant load, the floor area, the travel distance to an exit and the
+          capacity of exits as provided in Table 2.2A and herein. Every storey
+          of a building shall be provided with exit facilities for its occupant
+          load. Vertical exits provided from any storey above ground level
+          may serve simultaneously all storeys above the ground level and
+          vertical exits provided from any storey below ground level may
+          serve all storeys below ground level, subject to the provisions of
+          Cl.2.3.5 which prohibit basement staircases being continuous with
+          exit staircases serving the upper storeys, unless otherwise allowed
+          by the Relevant Authority.
+
+  2.2.2   Where different parts of a building or storey of a building are            Mixed
+          designed for different types of occupancies or used for different          occupancy
+          purposes at the same time, the exit requirements of the entire
+          building or storey of the building shall be determined on the
+          basis of that type of occupancy or usage having the strictest exit
+          requirements or the exit requirements for each building section
+          shall be determined separately.
+
+  2.2.3   Where a building or storey of a building or a part of a building is used   Multiple
+          for multiple purposes involving different activities at different times,   occupancy or
+          that purpose or use involving the greatest number of occupants             use
+          shall form the basis for determining the exit requirements.
+
+  2.2.4   The floor areas of toilets, locker rooms, storage rooms, lobbies,          Non-
+          corridors and similar rooms and spaces that serve other rooms and          simultaneous
+          spaces on the same storey but are not occupied at the same time            occupancy
+          as such other rooms or spaces, may be omitted from the occupant
+          load calculations of that storey of the building on which they are
+          located.
+2.2.5   The capacity of exits, exit staircases, exit passageways, corridors,      Capacity of exits
+        exit doors and other exit facilities shall be measured in units of        and exit facilities
+        width of half of a metre. The number of persons per unit of width
+        shall be determined by the type of occupancy and type of exit as
+        listed under Table 2.2A. In the determination of each exit width,
+        fractions of a unit width less than 250mm shall not be credited.
+        Where 250mm or more are added to one or more full units, half of
+        a unit of width shall be credited.
+
+        Where a room or space is required to be provided with two exits,
+        each exit shall be of sufficient width to accommodate not less than
+        half the total occupant load.
+
+2.2.6   The maximum travel distance for the respective types of                   Determination of
+        occupancies shall be not greater than as laid down in Table 2.2A          travel distance
+        read in conjunction with the following:
+
+        (a)    In the case of a floor area designed with minimum two exits,
+               the maximum travel distance as given in Table 2.2A shall be
+               applicable. The maximum travel distance starting from the
+               most remote point in any occupied space to the nearest
+               exit, shall not exceed the limits specified in Table 2.2A, and
+
+        (b)    In a large floor area sub divided into rooms, corridors and
+               so forth, the travel distance requirements of the foregoing
+               paragraphs of this clause shall be deemed to be satisfied
+               if the 'direct distance' does not exceed two third of the
+               maximum travel distance permitted under Table 2.2A, and
+
+        (c)    For the purpose of this clause, the most remote point from
+               which the travel distance is measured shall be taken as being
+               400mm from the enclosure walls of the room or space, and
+
+        (d)    In the case of a hotel bedroom, travel distance shall be
+               determined based on the provisions under Cl.2.7.3 for Exit
+               Requirements for Hotels, and
+
+        (e)    In the case of a residential apartment or maisonette, the travel
+               distance shall be determined based on the provisions under
+               Cl.2.4.7 for Exit Requirements for Residential Occupancy,
+               and
+
+        (f)    Where Area of Refuge is provided in lieu of required exits,
+               travel distance shall be measured to the exit door at the
+               corridor leading to the Area of Refuge, and
+        (g)    Where permitted under Cl.2.3.3 for exit staircases to be
+               entered without the provision of an exit door, the travel
+               distance shall be measured to a position where the exit
+               door would be installed if otherwise required.
+
+        (h)    Where an ancillary office is housed within a space belong       Ancillary office
+               to other Purpose Groups, the travel distance requirement        within other
+               for the ancillary office is allowed to be based on Purpose      Purpose
+               Group IV, provided :                                            Groups
+
+         (i) the ancillary office is fire compartmented from spaces
+              belonging to the other Purpose Groups; and
+        		
+         (ii) the ancillary office occupants shall have access to
+              exit(s) within the ancillary office compartment leading
+              to direct discharge at ground level into a safe exterior
+              open space, into a protected exit staircase or internal/
+              external exit passageway.
+
+2.2.7   (a)    No exit, exit staircase or other exit facilities shall be       Minimum
+               narrower than the minimum width requirement as specified        width
+               under Table 2.2A. The minimum clear width of an exit door
+               opening shall be not less than 850mm.
+
+        (b)    Exit access doors serving a room with an occupant load of
+               not more than 2 persons shall not be less than 610mm in
+               clear width.
+
+        (c)    A single leaf swing door along the means of egress shall not
+               exceed 1250mm in clear width
+
+2.2.8   The maximum width of exit staircases shall be not more than            Maximum
+        2000mm. Where staircases exceed 2000 mm in width, handrails            width
+        shall be used to divide the staircase into sections of not less than
+        1000mm of width or more than 2000mm of width.
+
+        For the purpose of determining the exit capacity of a staircase that   Measurement of
+        is wider than 2000mm that forms part of the required means of          width
+        escape from any storey of the building, that part of its width in
+        excess of 2000mm shall not be taken into account.
+
+2.2.9   The measurement of width referred to under Clauses 2.2.7 and
+        2.2.8 shall be the clear width, including the width of plinth to
+        balustrade or parapet wall:
+
+        (a)    In the case of an exit staircase, between
+ (i) the finished surfaces of the walls, if the staircase is
+       enclosed on both sides by walls only, or
+		
+ (ii) the finished surface of the wall and the inner side of
+       the balustrade, if the staircase has a wall on one side
+       and a balustrade on the other side, or
+		
+ (iii) the inner sides of the balustrades if the staircase has
+       balustrades on both sides, and
+
+      the projection of handrail into the clear width of a staircase
+      shall not exceed 80mm on each side of the staircase. If the
+      projection exceeds 80mm, the clear width of the staircase
+      shall be measured from the inner sides of the handrails.
+
+(b)   (i) In the case of an exit door having a single leaf door, the
+          opening shall be measured between the edge of the
+          door jamb and the surface of the door when opened at
+          an angle of 90 degrees (See diagram 2.2.9(b)); and
+
+      (ii) In the case of an exit door having 2-leaf and fitted with
+           an approved automatic flush bolt, the clear openings
+           shall be measured between the surface of one leaf to
+           the other door leaf when opened at an angle of 90
+           degrees; and
+
+ (iii) If one of the door leaves is bolted to the door frame and/
+       or floor by a manually operated bolt, this door leaf shall
+       not be considered for the purpose of determining the
+       exit capacity of the door.The opening of the other door
+       leaf shall have a clear width of not less than 850mm,
+       measured between the edge of the bolted door leaf and
+       the surface of the other door leaf, when opened at an
+       angle of 90 degrees;
+		
+ (iv) Door hardware and handrails which do not protrude
+       more than 80mm into the clear width of exit opening
+       can be ignored.
+2.2.10   There shall be at least two door openings remote from each               Number of
+         other and leading to exits from every room or enclosed space in          exits from
+         which the total occupant load exceeds the maximum permissible            rooms and
+         occupant load for one door as listed in the table below:                 spaces
+
+
+                    Type of Occupancy                 Maximum Occupant
+                                                      Load with One Door
+          High Hazard                                         25
+          Patient accommodation area                          50
+          Classrooms                                          50
+          Godowns, stores, and factories not
+                                                        50
+          being of high hazard type
+          Assembly                                      50
+         Rooms and spaces with occupancy of more than 50 persons shall
+         comply with the requirements for `Number and Width of Exits'
+         under Cl.2.8.2 for Assembly Occupancy.
+
+         Note:      i.     For residential occupancy, see Cl.2.4.
+         		         ii.    For health care occupancy, see Cl.2.5.
+         		         iii.   For office/shop/factory/warehouse occupancy,
+                           see Cl.2.6.
+         		         iv.    For hotels, see Cl.2.7.
+         		         v.     For assembly occupancy, see Cl.2.8.
+
+2.2.11   There shall be at least two independent exit staircases or other         Number of exit
+         exits from every storey of a building, unless otherwise permitted        staircases or
+         under other subsequent provisions of the code.                           exits per storey
+
+2.2.12   All exits and access facilities shall be required to comply with the     Location of
+         following:                                                               exits & access
+                                                                                  to exits
+         (a)     Exits and access facilities shall be clearly visible or their
+                 locations shall be clearly indicated and shall be kept readily
+                 accessible and unobstructed at all times, and
+
+         (b)     Every occupant or tenant within a building or storey of
+                 a building shall have direct access to the required exit or
+                 exits without the need to pass through the spaces or rooms
+                 occupied by other occupants or tenants.
+
+         (c)     When more than one exit is required from any room or
+                 space or a storey of a building, each exit shall be placed
+                 as remote as possible from the other as permitted under
+                 Cl.1.2.60(a), (b) or (c).
+2.2.13   Entry at every storey level (including 1st storey) to an exit staircase   Smoke free
+         of any building or part of a building of more than four storeys above     approach to exit
+         ground level shall be through:                                            staircase
+
+         (a)    an external exit passageway or external corridor. The              External
+                openings for natural lighting and ventilation to the corridor      approach
+                shall be so located that they face and open to
+
+                (i) the external space; or
+
+                (ii) a street, service road or other public space which is
+                     open to the sky; or
+
+                (iii) an air-well which opens vertically to the sky and having
+                      a min. width of 6m and a superficial plan area of not
+                      less than 93m², except that for residential occupancy,
+                      the external corridors for smoke free approach shall
+                      comply with the requirements of Cl.2.4.8 and 2.4.9, and
+                      in the case of workers’ dormitories and hotel bedrooms
+                      being served by external corridors, such corridors shall
+                      comply with Cl.2.9.4 and Cl.2.7.2 respectively;
+
+         (b)    a lobby that is separated from the adjoining areas of the          Smoke-stop
+                building by a wall having a fire resistance of 1 hour. The         lobby
+                exit access door shall have fire resistance of half an hour
+                fitted with automatic self closing device conforming to the
+                requirements of Cl.3.9.2. The design of a smoke-stop lobby
+                must be such as not to impede movement of occupants
+                through the escape route. The floor area of a smoke-stop
+                lobby shall be not less than 3m² and if a smoke-stop lobby
+                also serves as a fire-fighting lobby, the floor area shall be
+                not smaller than 6m² and with no dimension smaller than
+                2m.The floor shall be graded from the lift door towards the
+                lobby door with a fall not exceeding 1 in 200.
+
+                A smoke-stop lobby, including fire-fighting lobby, which acts
+                as buffer space for entry into the protected staircase and
+                use by fire fighters during emergency, shall be maintained
+                as common property.
+      A smoke-stop lobby shall be ventilated by:
+
+      (i) permanent fixed ventilation openings in the external
+          wall of the lobby; such ventilation openings shall have
+          an area of not less than 15 per cent of the floor area
+          of the lobby and located not more than 9m from an
+          air-well or external recessed space of minimum clear
+          area 93m² and minimum width of 6m. The air-well
+          or external recessed space shall have no obstruction
+          vertically throughout the air space for ventilation; or
+
+ (ii) mechanical ventilation, except for Purpose Group II,
+       complying with the requirements in Chapter 7, or
+		
+ (iii) permanently fixed ventilation openings of area not
+       less than 15 per cent of the floor area of the lobby and
+       located not more than 9m from any part of the lobby,
+       opening to an open air well which is open vertically
+       to the sky for its full height. The air-well size shall be
+       in accordance with Cl.2.2.13(a)(iii) except for building
+       not more than 4-storey, in which the air-well shall have
+       a horizontal plan area of not less than 10m² or 0.1m²
+       for each 300mm of height of the building, whichever is
+       the greater. The minimum width of such air-well space
+       shall not be less than 3000mm. The enclosure walls
+       to the air well shall have a minimum fire resistance of
+       1 hour and have no openings other than ventilation
+       openings for the smoke-stop lobby, exit staircase and
+       toilets, or
+		
+ (iv) cross-ventilated corridor having fixed ventilation
+       openings in at least two external walls. The openings to
+       each part of the external walls shall not be less than 50
+       per cent of the superficial area of the opposing external
+       walls. No part of the floor area of the corridor shall be
+       at a distance of more than 13m from any ventilation
+       openings.
+(c)   Exception:
+
+      (i) The omission of smoke-stop lobby required under                 Omission of
+          Cl.2.2.13(b) to exit staircase of any building exceeding        smoke-stop
+          4 storeys is allowed under the following situations,            lobby is
+          provided the door opening into the exit staircases              allowed
+          shall be at least 1-hour fire resistance and fitted with
+          automatic self-closing device to comply with the
+          requirements of Cl.3.9.2:
+
+		        (1) where the internal exit staircase is provided with
+              pressurization up to a habitable height of 24m in
+              compliance with the requirements of Chapter 7;
+
+		        (2) where an external exit staircase is constructed to
+              comply with Cl.1.2.29;
+
+		        (3) where an external exit staircase of a building is
+              located along its perimeter wall and provided
+              with uninterrupted external ventilation openings
+              having not less than 50% of the planal area of the
+              staircase at each storey level;
+
+		        (4) in an open-sided car park floor where cross-
+              ventilation is provided. Under this situation, the
+              fire door to the exit staircase can be ½-hour fire
+              rated.
+
+      (ii) The omission of smoke-stop lobby to exit staircases            Omission of
+           shall not be allowed under the following situations : -        smoke-stop lobby
+                                                                          is not allowed
+		        (1) where the building exceeds 4 storeys and belongs
+              to Purpose Group III and VII;
+
+		        (2) where the internal exit staircase, which is provided
+              with pressurization, exceeds the habitable height
+              of 24m;
+
+		        (3) where the exit staircase is designated as fire-
+              fighting staircase adjacent to a fire lift as required in
+              Chapter 6.
+2.2.14   Smoke Free Approach to Exit Staircase in Basement Occupancy:               Smoke free
+                                                                                    approach in
+         (a)    In a building comprising more than 4 basement storeys,              basement
+                entry to exit staircases serving the basement storeys at every
+                basement storey level shall be through smoke-stop lobbies,
+                one of which shall be designated as fire-fighting lobby. The
+                exit staircase connecting to the fire-fighting lobby shall be
+                pressurised to comply with the requirements in Chapter 7,
+                and
+
+         (b)    In a building comprising 2, 3 or 4 basement storeys, entry
+                at every basement storey level to at least one of the exit
+                staircases serving the basement storeys shall be through a
+                smoke-stop lobby and where only one smoke-stop lobby is
+                provided, it shall be required to serve as a fire-fighting lobby,
+                and
+
+         (c)    Smoke-stop lobbies in basement occupancies shall be
+                required to comply with the relevant provisions under
+                Cl.2.2.13(b) and shall be mechanically ventilated to comply
+                with the requirements in Chapter 7.
+
+2.2.15   When a floor area has access to Area of Refuge in compliance with          Area of refuge
+         following requirements in this Clause, the occupant load for which         and exit
+         vertical exits are to be accounted for the floor area may be reduced       reduction
+         to half when one Area of Refuge is provided and to one third when
+         two or more Areas of Refuge are provided.
+
+         (a)    Area of Refuge shall be :
+
+                (i) Adequate in size to hold the occupant load it receives
+                    from the floor area it serves as provision for required
+                    exit, in addition to its own occupant load calculated on
+                    the basis of 0.3m2 per person except for Health Care
+                    Occupancies when the occupant load shall comply
+                    with the provisions under Cl.2.5.3 , and
+
+                (ii) Provided with at least one staircase for use by the
+                     occupants to gain access to other exit staircases or the
+                     ground level directly to an exterior open space; and
+
+         (b)    An Area of Refuge shall be entered through an external
+                corridor and the room or space or Area of Refuge shall be
+                separated from the corridor by a wall with minimum 1
+                hour fire resistance, and
+          (c)   External corridors when used as entry into an Area of
+                Refuge shall conform to the requirements of external exit
+                passageway for minimum width, changes in floor level, roof
+                protection, enclosure on the open side and provision of
+                opening of wall between the room or space and the exit
+                passageway, and
+
+          (d)   Exit doors between the room or space or Area of Refuge
+                and the external corridor shall have fire resistance of at least
+                half an hour and fitted with automatic self closing device to
+                comply with the requirements of Cl.3.9.2, and
+
+          (e)   Every fire compartment in which exit reduction is permitted
+                in connection with Area of Refuge shall have in addition
+                to exit through the Area(s) of Refuge at least one staircase
+                complying with Cl.2.3.3.
+
+2.3       MEANS OF ESCAPE REQUIREMENTS - GENERAL
+
+  2.3.1   (a)   Means of escape shall be provided for all buildings by             General
+                one or more of the facilities listed herein. Access and exit
+                facilities not specifically covered in this Code shall not
+                be used without the approval of the Relevant Authority.
+                Required exits shall be kept readily accessible, and doors
+                shall be openable and unobstructed at all times during the
+                occupancy of the building.
+
+          (b)   Staircases serving all buildings (except Purpose Group I)
+                shall be provided with a signage not smaller than 300 x
+                300mm and within the stairwell at each storey landing.
+
+                The signage shall contain the following information in the
+                order as follows:
+
+                (i) The storey number, at least 125mm in height
+
+           (ii) An identification of the staircase in alphabetical and/or
+                 numeric, at least 25mm in height.
+          		
+           (iii) The signage shall be located such that it is visible when         Location of the
+                 the door is in the open position and also visible to any          signage
+                 person moving up or down the staircase.
+
+                (iv) The letters and numbers on the sign can be of any             Colour of the
+                     colour that shall contrast with the background colour.        signage
+2.3.2   Exit passageways
+
+        (a)   Exit passageways that serve as a means of escape or required      Fire resistance
+              exits from any building or storey of a building shall have the
+              requisite fire resistance as specified under Cl.3.3.
+
+        (b)   Internal exit passageway
+
+              (i) an internal exit passageway which serves as required          Internal exit
+                  exit of the building shall be enclosed with construction      passageway
+                  complying with the provisions of Cl.3.3, and
+
+              (ii) the enclosure walls of an exit passageway shall have
+                   not more than two exit doors opening into the exit
+                   passageway, and
+
+              (iii) exit doors opening into an exit passageway shall have
+                    fire resistance rating as required for exit doors opening
+                    into exit staircases, fitted with automatic self closing
+                    device and complying with the requirements of Cl.3.9.2
+                    for fire resisting doors, and
+
+              (iv) the minimum width and capacity of exit passageway
+                   shall comply with the requirements as provided in
+                   Table 2.2A, and
+
+              (v) changes in level along an exit passageway requiring
+                  less than two risers shall be by a ramp complying with
+                  the provisions under Cl.2.3.8, and
+
+              (vi) if the exit staircase which connects to the internal
+                   exit passageway is pressurised, the internal exit
+                   passageway shall not be naturally ventilated but shall
+                   be mechanically ventilated, and it shall be pressurised
+                   to comply with the requirements in Chapter 7.
+
+        (c)   External exit passageway:
+
+              (i) an external exit passageway can be used as a required         External exit
+                  exit in lieu of an internal exit passageway. The external     passageway
+                  wall between the exit passageway and the rest of the
+                  floor space can have ventilation openings of non
+                  combustible construction, fixed at or above a level
+                  1.8m, measured from the finished floor level of the
+                  passageway to the sill level of the openings and such
+                  ventilation openings shall be located not less than 3m
+                  from any opening of an exit staircase, and
+               (ii) an external exit passageway may not be subjected to
+                    the limitations of a maximum of two exit doors opening
+                    into the exit passageway, and
+
+               (iii) an external exit passageway may be roofed over
+                     provided the depth of the roofed over portion shall not
+                     exceed 3m to avoid smoke logging, and
+
+               (iv) an external exit passageway may be enclosed on the
+                    open side by only a parapet wall of not less than 1m or
+                    more than 1.1m in height and the vertical height of the
+                    unobstructed ventilation opening measured from the
+                    parapet wall up to the top edge of the opening or eaves
+                    of overhang shall not be less than 1.2m, and
+               (v) exit doors opening into an external exit passageway
+                    shall have fire resistance for at least half an hour and
+                    fitted with automatic self closing device.
+
+        (d)    Ventilation                                                     Ventilation
+
+         (i) all internal exit passageways shall be naturally ventilated
+              by fixed ventilation openings in an external wall, such
+              ventilation openings being not less than 15 per cent of
+              the floor area of the exit passageway, and
+        		
+         (ii) internal exit passageways that cannot be naturally
+              ventilated shall be mechanically ventilated to comply
+              with the requirements in Chapter 7.
+
+2.3.3   Exit Staircase:                                                        Internal exit
+                                                                               staircase
+        (a)    Internal Exit Staircase
+
+         (i) an internal exit staircase which serves as the required
+              exit of the building shall be enclosed with construction
+              complying with the provisions of Cl.3.8; and
+        		
+         (ii) where an internal exit staircase is directly approached
+              from an external exit passageway or external corridor,
+              it shall not be necessary to provide such enclosure
+              between the staircase and the external exit passageway
+              or external corridor; and
+
+         (iii) there shall be no unprotected openings of occupancy             Unprotected
+               area within 1.5m horizontally or within 3m vertically           Openings
+               below any openings including final discharge openings
+               located in the external wall of the internal exit staircase.
+        		
+ (iv) Exception
+
+		   (1) Exit staircases serving single storey basement car     Single storey
+         park are not required to be protected with fire        basement
+         rated enclosures, provided the travel distances        car park
+         in the car park are measured to the exit doors at
+         ground level and comply with Table 2.2A of the
+         Fire Code.
+
+		   (2) Doors to exit staircases of standalone car park        Standalone car
+         buildings that are without any commercial              park
+         activities or non-ancillary usage can be omitted,
+         provided that the following conditions are fully
+         complied with:
+
+			      * The car park building shall not exceed 5
+           storeys above ground. It shall not consist of any
+           basement storey, and shall not be connected to
+           other building, except by open-sided covered
+           link-way;
+
+			      * At least two exit staircases shall be provided
+           to serve every upper storey. The two staircases
+           shall be located as remotely from one another as
+           practicable. The exit openings to the staircases
+           at each storey shall have a clear width of not
+           wider than 1000mm or less than 850mm and
+           a clear height of not more than 2200mm. The
+           staircases shall be ventilated by fixed openings
+           in the external walls, such openings being of
+           area not less than 10 per cent of the floor area
+           per floor of the staircase. Exit staircase and
+           occupancy area shall not share the same air-well
+           or void for lighting and ventilation;
+
+			      * Every storey shall be provided with cross
+           ventilation. The building shall be open sided
+           having not less than 50% of the sides (front, rear
+           and sides elevations) permanently open, and
+           such openings being evenly distributed around
+           the perimeter walls, excluding perimeter walls
+           to air-well, so as to provide effective cross
+           ventilation to all parts of the car parking decks;
+			            * No part of the floor space shall be more than
+                 12m from the openings on the perimeter walls of
+                 the building or air-well.Air-well where provided
+                 for this purpose shall have a superficial plan
+                 area of not less than 10m², and have a minimum
+                 dimension on plan of 2000mm, open vertically
+                 to the sky for its full height;
+
+			            * Travel distance within each car parking deck
+                 shall comply with Table 2.2A. For upper
+                 storeys, the travel distance requirement shall
+                 be measured to a position where the exit door
+                 to the staircase would be installed if otherwise
+                 required; and
+
+			            * The separation distance between the nearest
+                 edge of exit opening to exit staircase and the
+                 nearest edge of any vehicle parking lot shall not
+                 be less than 3m.
+
+(b)   External Exit Staircase                                         External exit
+                                                                      staircase
+ (i) external exit staircase may be used as required exit
+      in lieu of internal exit staircase provided it complies
+      with the requirements of exit staircase, except for
+      enclosure of an internal staircase, and
+		
+ (ii) there shall be no unprotected openings within 3m
+      horizontally or within 3m vertically below, or adjacent
+      or facing (unless there is adequate separation complying
+      with Cl.3.5) any part of the external exit staircase; and
+
+		Exception:
+
+		         In building designed with external corridor access, the
+           access to the external exit staircase shall be permitted
+           by means of the open sided external corridor adjoining
+           the occupancy areas, subject to the following :
+
+		 (1) the external corridor shall be served by at least 2
+       exit staircases; and
+			
+		 (2) that unobstructed ventilation openings shall
+       be provided along the long side of the external
+       corridor above the parapet or balustrade.
+		
+      (iii) the external exit staircase shall be located so as to lead
+            directly to a street or open space with direct access to
+            street.
+
+      (iv) Doors to the external exit staircases can be omitted, if      Exception
+           the conditions given in sub-clause 2.3.3(a)(iv) are fully
+           complied with.
+
+(c)   (i) All exit staircases shall discharge at ground level            Discharge
+          directly into a safe exterior space opened to the sky.
+          Open-sided external corridor which does not have any
+          commercial activity and not more than 5m measured
+          to the building eave line shall be considered as safe
+          exterior open space. In a sprinkler protected building,
+          maximum 50% of the total number of exit staircase is
+          allowed to be discharged directly to the ground level
+          covered circulation space subject to the following:
+
+		         (1) The discharge point of the exit staircase into the
+               ground level circulation space shall be within
+               sight of and with direct access to a safe exterior
+               open space; and
+
+		         (2) The maximum distance between the discharge
+               point of an exit staircase and the exterior open
+               space opened to the sky shall not exceed 10m; and
+
+		 (3) Where there are commercial activities e.g. shops or
+       kiosks/carts located along one side or both sides of
+       the designated escape passageway leading to the
+       safe exterior open space, a minimum separation
+       distance of 10m shall be maintained between the
+       commercial activities and the designated escape
+       passageway. The circulation space shall also be
+       installed with engineered smoke control system.
+       Alternatively the commercial activities shall be fire
+       compartmented with walls and doors of minimum
+       one-hour fire resistance rating.
+			
+		 (4) The clear width of the exit doors leading to the safe
+       exterior open space shall be adequate to receive
+       the occupant load in the 1st storey circulation
+       space and the total number of people discharging
+       from the internal exit staircases.
+			
+      (ii) In the case of a Purpose Group II residential building
+           not fitted with an automatic sprinkler system, at
+           least 50% of the total number of exit staircases shall
+           discharge to the safe exterior space opened to the
+           sky and the remaining exit staircase is allowed to be
+           discharged onto the ground level covered circulation
+           space subject to the following:
+
+		      (1) The ground level covered circulation space shall
+             be free of any commercial activity; and
+			
+		 (2) The discharge point into the ground level
+             circulation space shall be within sight of and
+             provided with at least two alternative routes to the
+             safe exterior space opened to the sky; and
+			
+		 (3) The maximum distance between the discharge
+             point of an exit staircase and the safe exterior
+             space opened to the sky shall not exceed 10m; and
+			
+		      (4) There shall not be more than 4 residential units
+             opening into the designated escape passageway at
+             grade level into which the exit staircase discharges;
+             and
+			
+		      (5) The discharge point of an exit staircase shall be
+             effectively cross-ventilated such that:
+			
+			          * each end has at least 50% permanent openings;
+                and
+				
+			          * no part of the circulation space shall be more
+                than 10m from the openings on the perimeter
+                walls of the building or air-well.
+			
+  (iii) There shall be no unprotected openings of occupancy
+        area within 3m from discharge point of the exit
+        staircase (both internal and external).This distance can
+        be reduced to 1.5m if the unprotected openings are
+        along the same plane of the staircase exit.
+(d)
+ The minimum width and capacity of exit staircases shall be
+ as specified in Table 2.2A, and such staircases shall comply
+ with the following:
+		
+ (i) Winders shall not be permitted in any building other              Winders
+      than for access staircases in a residential unit and in
+      such cases, there shall be not more than 1 winder per
+      90 degree turn.
+		
+ (ii) Where circular staircase is used as exit staircases or           Treads for
+      access staircase in Purpose Group I & II, the width of           circular staircase
+      treads measured at the narrower end shall be not less
+      than 100mm in residential buildings and 125mm in
+      other buildings and at a distance of half metre from
+      the narrower end shall be not less than 225mm in
+      residential buildings and 250mm in other buildings.
+      Such staircase shall not be more than 10m in height.
+
+(e) Handrails                                                          Handrails
+		
+    (i) every exit staircase shall have walls, grilles or handrails
+         on both sides, except that staircases that are 1250mm
+         or less in width, can have a handrail one side only; and
+		
+    (ii) Where the width of the exit staircase exceeds 2000mm,
+         handrails shall be provided in accordance with the
+         requirements of Cl.2.2.8.
+
+(f)    All exit staircases shall be ventilated by fixed openings in    Ventilation
+       the external walls, such openings being of area not less than
+       10 per cent of the floor area per floor of the staircase, or
+       mechanically ventilated to comply with the requirements in
+       Chapter 7.Ventilation openings fronting an air-well, external
+       recessed space or external shall be in accordance with
+       Table 1.2.1(A). Exit staircase and occupancy area shall not
+       share the same airwell or void for lighting and ventilation.
+       Mechanical ventilation is not allowed for Purpose Group II,
+       except for staircase storey shelter.
+
+(g)    In any building of which the habitable height exceeds           Pressurisation
+       24m, any internal exit staircases without provision for
+       natural ventilation shall be pressurised to comply with the
+       requirements in Chapter 7. In a building comprising more
+       than four basement storeys, the exit staircase connecting to
+       the fire-fighting lobby shall be pressurised.
+        (h)    Different modes of ventilation within a single staircase shaft
+
+               For buildings exceeding 24m in habitable height, the
+               internal exit staircase can be naturally ventilated at its upper
+               part and mechanically ventilated at its lower part provided
+               this lower part does not exceed 24m in habitable height
+               and there shall not be any intermediate staircase landing
+               door separating the 2 modes of ventilation. If the lower part
+               exceeds 24m in habitable height, this lower part shall be
+               pressurized instead.
+
+2.3.4   Scissor Exit Staircase
+
+        (a)    Where two separate internal exit staircases are contained          Scissor exit
+               within the same enclosure, each exit staircase shall be            staircase
+               separated from the other by non combustible construction
+               having fire resistance for a minimum period equal to that
+               required for the enclosure, and
+
+        (b)    Such scissor exit staircases shall comply with all applicable
+               provisions for exit staircase, and
+
+        (c)    Door opening into scissor exit staircases shall be at least 7m
+               measured as travel distance between the two closer edges
+               of the staircase doors, and
+
+        (d)    Where there is only one pair of scissor exit staircases, the
+               door opening into scissor exit staircases shall be spaced at
+               least 1/3 the diagonal dimension of the area to be served in a
+               sprinkler protected building and ½ the diagonal dimension
+               in a non-sprinkler protected building in accordance with
+               Cl.1.2.60, and
+
+        (e)    The ventilation openings of each staircase shall be located
+               on alternate storeys if such openings or windows are serving
+               both staircases on the same wall.
+
+2.3.5   Basement Exit Staircase
+
+        (a)    Any exit staircase which serves a basement storey of a             Basement
+               building shall comply with all the applicable provisions for       exit staircase
+               exit staircase, and
+
+        (b)    Such exit staircase shall not be made continuous with any
+               other exit staircase which serves a non basement storey of
+               the building, and
+        (c)    Basement exit staircases which are vertically aligned with       Separate
+               the exit staircases of non basement storeys shall be separated   protected
+               from such other exit staircases by construction having fire      shaft
+               resistance for a minimum period equal to that required for
+               the enclosure.
+
+        (d)
+         Where upper storey staircase is allowed by the Relevant                Upper storey
+         Authority to be continuous with that serving the basement              staircase
+         which is naturally ventilated, the following shall be complied         continues into
+         with:                                                                  basement
+        		
+         (i) the entry into the basement staircase shall be through             Entry at
+               a protected lobby, or directly from the basement                 basement
+               occupancy area provided the door to the basement
+               staircase is minimum 1-hour fire rated;
+        		
+         (ii) to prevent occupants exiting continuously from upper              Barrier
+               storeys into the basement storey during an emergency,
+               a physical barrier in the form of a door or gate (self-
+               closing type)could be provided across the staircase
+               landing at ground level to separate the discharge route
+               of upper storeys from the basement staircase;
+        		
+         (iii) Smoke-stop lobby shall be provided for entry into the            Smoke-stop
+               staircase at all storeys,including basement if the staircase     lobby
+               serves more than 4 storeys, including basement;
+        		
+         (iv) appropriate signages shall be provided inside the                 Signages
+               staircase enclosure to direct occupants out of the
+               building at ground level.
+
+2.3.6   (a)    Hardwood staircase shall be allowed to be used as internal       Hardwood
+               access staircase in building.                                    staircase
+
+        (b)    Where timber staircases are used in units under Purpose          Apartment or
+               Groups I and II buildings, which are not under conservation,     maisonette unit
+               the structural elements such as the stringer supporting the      within
+               treads and risers shall be constructed of non-combustible        residential
+               materials.                                                       building
+2.3.7   Spiral Staircase
+
+        (a)    Spiral staircases shall not serve as required exits except     Spiral staircases
+               that external unenclosed spiral staircases when built of non
+               combustible materials and having a tread length of at least
+               750mm may serve as required exits from mezzanine floors
+               and balconies or any storey having an occupant load not
+               exceeding 25 persons, and
+
+        (b)    Such spiral staircases shall be not more than 10m high , and
+
+        (c)    Spiral staircase shall not be designed as the sole means of
+               escape for buildings under Purpose Group I and maisonettes
+               and penthouses for buildings under Purpose Group II.
+
+2.3.8   Internal and external exit ramps may be used as exits in lieu of      Exit ramp
+        internal and external exit staircases subject to compliance to the
+        applicable requirements of Cl.2.3.3. and to the following:
+
+        (a)    The slope of such exit ramps shall not be steeper than 1 in    Slope
+               10, and
+
+        (b)    Exit ramps shall be straight with changes in direction being   Changes in
+               made at level platforms or landings only, except that exit     direction
+               ramps having a slope not greater than 1 in 12 at any place
+               may be curved, and
+
+        (c) Platform                                                          Platform
+        		
+            (i) level platforms or landings shall be provided at the
+                  bottom, at intermediate levels where required and at
+                  the top of all exit ramps, and
+        		
+            (ii) level platforms shall be provided at each door opening
+                  into or from an exit ramp, and
+        		
+            (iii) the minimum width of a platform or landing and length
+                  shall be not less than the width of the ramp, except that
+                  on a straight run ramp, the length of the level platform
+                  or landing need not be more than 1m, and
+
+        (d)    Exit ramps shall have walls, guards or handrails and shall     Guards and
+               comply with the applicable requirements of Cl.2.3.3(d) for     handrails
+               exit staircases, and
+        (e)    All exit ramps shall be provided with non slip surface           Surface
+               finishes, and
+
+        (f)    Exit ramps shall be ventilated to comply with             the    Ventilation
+               requirements for ventilation of exit staircases, and
+
+        (g)    Exit ramps serving as means of escape to only one basement       Enclosure
+               storey need not be protected by enclosure walls.                 exemption
+
+2.3.9   Exit doors and exit access doors shall comply with the following:       Exit doors and
+                                                                                Exit access
+        (a)    Exit doors shall be capable of being opened manually,            doors
+               without the use of a key, tool, special knowledge or effort
+               for operation from the inside of the building; (not applicable
+               to buildings under Purpose Group I & II) and
+
+        (b)    Exit doors which are required to have fire resistance rating
+               shall comply with the relevant provisions for fire resisting
+               doors under Cl.3.9.2; and
+
+        (c)    Exit doors and exit access doors shall open in the direction     Door swing
+               of exit travel:
+
+            (i) when leading to an area of refuge, exit and exit
+                  passageway, or
+        		
+            (ii) when used in exit enclosure, including smoke-stop and
+                  fire-fighting lobbies in a building. It shall not apply to
+                  doors of individual residential units that open directly
+                  into an exit enclosure, or
+        		
+            (iii) when serving a high hazard area, or
+        		
+            (iv) when serving a room or space with more than 50
+                  persons, and
+        		
+        (d) (i) Exit doors opening into exit staircases and exit                Exit door
+                  passageways shall not impede the egress of occupants          opening
+                  when such doors are swung open, and
+        		
+            (ii) All doors which open into the corridor shall not               Door opening
+                  hinder movement of occupants. The corridor’s clear            into corridor
+                  width shall at least remain to be half of the required
+                  clear width as stipulated under Table 2.2A when such
+                  door(s) is swung open.
+(e)   Fire door to protected staircase and smoke-stop/fire lift         Vision panel
+      lobby shall be constructed to incorporate a vision panel.
+      The vision panel shall have a clear view size of 100mm
+      width by 600mm height. The vision panel shall have the
+      requisite fire resistance rating and shall not turn opaque
+      when subject to heat. The vision panel shall be located with
+      the bottom edge not higher than 900mm and the top edge
+      lower than 1500mm measured from the finished floor level.
+      The provision of vision panel shall not apply to exit doors
+      of residential apartment or maisonette units.
+
+(f)   Revolving doors shall not be used as exit doors for required
+      exits.
+
+(g)   Exit door of each residential unit shall be located at not more
+      than 500mm from the strata-title line to prevent the creation
+      of large entrance alcove/corridor. However, in situation
+      where the entrance alcove/corridor leads into an open
+      sided common corridor which meets the requirements for
+      smoke free approach under Cl.2.4.8, the separation distance
+      between the entrance alcove/corridor and the nearest exit
+      staircase shall not be less than 3000mm.
+
+(h)   Any door located in a path of travel shall be of the side-        Side-hinged or
+      hinged or pivoted swing type. The door shall be designed          pivoted swing
+      and installed so that when swung open, it does not prevent        door
+      full use of the opening. The minimum clear width of the
+      door opening shall not be less than the required door clear
+      width.
+
+      Exception 1: Requirement on door swing shall not apply
+      to buildings under Purpose Group I and residential units
+      under Purpose Group II.
+                                                                        Locking Device
+      Exception 2: With prior consent from the Relevant
+      Authority, locking of exit doors is permissible at certain
+      rooms or spaces of health care occupancies and detention
+      and correctional occupancies.
+                                                                        Sliding Doors &
+      Exception 3: Sliding door and roller shutter as listed in (i)     Roller Shutters
+      to (iv) are permitted to be installed across the exit access
+      or escape paths leading to exits, including the exterior door
+      openings except in areas stipulated under Cl.2.3.9(c)(i) and
+      (iii).These doors shall not form part of the fire compartment
+      integrity.
+      Note:
+      2.3.9(c)(i) - when leading to an area of refuge, exit and exit
+      passageway, or
+      2.3.9(c)(iii)- when serving a high hazard area
+
+      Manually operable sliding doors or roller shutters shall be
+      capable of being opened and closed manually from either
+      side of the door. The maximum door opening force shall be
+      30N at 0 degree and 20N at 30 degree opening.
+
+ (i) Manually operable sliding door or roller shutter that             Manually
+       can remain in closed position during the period of              operable
+       occupation is permitted at rooms or spaces with                 sliding doors/
+       occupant load not exceeding 50 persons.When opened,             roller
+       it shall not reduce the effective width/height of the           shutters
+       doorway leading to the escape route. Sliding door or
+       roller shutter is allowed within rooms or spaces that
+       serve more than 50 persons provided it shall remain in
+       the full open position during the period of occupation.
+       A readily discernible sign with the lettering “THIS
+       DOOR TO REMAIN OPEN WHEN THE BUILDING IS
+       OCCUPIED” shall be permanently pasted on both
+       sides of such sliding door or roller shutter at a height
+       of 1.4m from the finished floor level. The lettering
+       shall be 25mm in height and painted in white on a red
+       background with reflective surface, or
+		
+ (ii) Wicket door shall be permitted to be incorporated                Wicket door
+       within a roller shutter or sliding door. The wicket door
+       shall be of the swing type having a minimum head height
+       of 2m and a clear width of not less than the required
+       door clear width. The wicket door shall comply with
+       all the requirements of exit access door, and be clearly
+       marked and readily visible so that the occupants can
+       readily see where the door is. It should be fitted only
+       with simple fastenings that can be manually operated
+       for ease of escape, or
+		
+ (iii) A sliding door which can be swung open shall swing in           Sliding door
+       the direction of escape travel when a certain horizontal        with swing-out
+       force is applied to the door. When the sliding door is          feature
+       converted to a swing door, it shall comply with all the
+       requirements of an exit access door. The maximum
+       door opening force shall be 30N at 0 degree and 20N
+       at 30 degree opening. A readily visible sign with the
+       letterings “IN EMERGENCY, PUSH TO OPEN” shall be
+       affixed onto the door, or
+      (iv) Power operated automatic sliding doors/ roller shutters,     Power operated
+           shall be linked to the building fire alarm system. The       sliding doors/
+           sliding door/ roller shutter shall automatically open to     roller shutter
+           the required width/height (of door opening) upon the
+           activation of the fire alarm. The automatic sliding door/
+           roller shutter shall also comply with the following:
+
+		        (1) The automatic sliding doors/ roller shutters shall        Fail-safe type
+              be of the fail safe type. Should there be any fault
+              in the electrical or sensor device, or any power
+              failure (either mains or battery powered), these
+              doors shall automatically open and remain in an
+              open position until power is restored.
+
+		 (2) A manual override mechanism (a device to trigger                 Manual override
+       the immediate opening of sliding doors/ roller
+       shutters) shall be provided. The doors shall open
+       and remain open upon activation of this device.
+       This device shall be housed in a break glass box
+       located beside the sliding doors or roller shutters
+       and fixed at a height of 1.4m above the finished
+       floor level. It shall be easily accessible, conspicuous
+       and be free from obstructions. A readily discernible
+       sign with the lettering “EMERGENCY DOOR
+       RELEASE” shall be permanently pasted beside the
+       switch. The letterings shall be of at least 15mm in
+       height.
+			    Exception : Powered sliding doors, roller shutters
+       and swing doors that belong to the unit owners
+       or tenants are not required to be linked to the
+       building fire alarm system, provided they are
+       designed as fail safe type, installed with manual
+       over-ride, and do not form part of the building’s
+       fire protection system, for example, smoke control
+       system.
+
+(i)   Any exit door or exit access door serving spaces of assembly/
+      mass occupation, such as auditorium, concert hall, theatre,
+      assembly hall, exhibition hall, cinema, etc which has to be
+      kept shut and fastened while the building or part of the
+      building is occupied shall be fitted with ‘panic exit device’.
+      The panic exit device shall operate to open the door when
+      a pressure is applied on the bar in the direction of travel and
+      be appropriately marked ‘Push Bar To Open’ in letters not
+      less than 50mm high.
+(j)   Locking of staircase and smoke-stop/fire lift lobby doors
+
+      One way locking device is allowed to be provided to doors
+      of exit staircase, smoke-stop/fire-lift lobby in the following
+      situations, provided only one-way locking device is used, eg
+      panic bolt or thumb turn locking device:
+
+ (i) exit door between staircase shaft and occupancy area;
+       and
+		
+ (ii) exit access door between smoke-stop/fire-fighting
+       lobby and occupancy area; and
+		
+ (iii) exit door between staircase shaft and smoke-stop
+       lobby; and
+		
+ (iv) exit door between staircase shaft and circulation area;
+       and
+		
+ (v) exit access door between smoke-stop/fire-fighting
+       lobby and circulation area.
+
+      For selected floors under subclause 2.3.9(l), the doors of
+      the fire-fighting/exit staircase and smoke-stop/fire-fighting
+      lobby shall not be fitted with any locking device to allow for
+      re-entry from the staircase to the interior of the building.
+
+(k)   Where access-control is provided to exit door using smart
+      card locking device, magnetic bar and electro-mechanical
+      locking device : -
+
+      (i) The activation of the building fire alarm or sprinkler
+          system shall automatically unlock the door. It shall
+          remain unlocked until the building fire alarm system
+          system has been manually reset; and
+
+ (ii) The door shall be arranged to unlock from a manual
+      release device located within the occupancy space,
+      1200mm above the floor and within 1.5m of the exit
+      door jamb. The manual override device shall be readily
+      accessible and clearly identified by a sign that reads
+      “Emergency Door Release”. The mechanism to unlock
+      the door shall be fail-safe type.
+		
+       (iii) Where doors opening into passenger lift lobby are
+             to be provided with access-control and would be
+             locked after normal operation hours, the lobby shall
+             be designed to have direct access to at least one exit
+             staircase to prevent any occupant from being trapped
+             in the lobby when the lifts are recalled at 1st storey
+             or other designated floor during fire emergency or
+             building’s power failure. Alternatively, a two-way
+             communication system shall be available inside the
+             lift lobby for use by trapped occupants to call for help.
+             The two-way communication system shall be linked to
+             the fire command centre and/or building control room
+             which shall be manned 24 hours.
+
+(l)    Staircase re-entry
+
+       (i) Every exit staircase enclosure serving more than 7
+           storeys of non-residential building, excluding buildings
+           of detention and correctional occupancies, shall allow
+           re-entry from the staircase enclosure to the interior of
+           the building. There shall be at least 1 level where it is
+           possible to re-enter into the interior of the building
+           from the staircase enclosure.
+
+       (ii) The re-entry points shall be located not more than 6
+            storeys apart. There shall not be more than 3 storeys
+            above the highest re-entry door in the building.
+
+ (iii) Where re-entry is provided from the staircase enclosure,
+       it shall enter into a common corridor that is connected
+       directly to at least one other exit staircase
+		
+ (iv) Staircase doors permitting re-entry into the building,
+       shall be identified with a signage “Re-entry door” of
+       min. 50mm lettering height on the staircase side of the
+       staircase door.
+
+Note: Where the doors of exit staircases, smoke-stop lobbies or
+fire-fighting lobbies are provided with one-way locking device or
+electro-mechanical lock, a signage, though not mandatory, should
+be provided to warn occupants that they would not be able to
+re-enter the floor should they exit from it. The signage should be
+positioned at the entrance into exit staircase, smoke-stop lobby or
+fire-fighting lobby.
+		
+2.4       RESIDENTIAL OCCUPANCY
+
+  2.4.1   Means of escape for a building or a separate part of a building of     Residential
+          single occupancy of Purpose Group I can be provided via access         buildings of
+          staircases, and exit staircase under the provision of Cl.2.3 is not    Purpose
+          required.                                                              Group I
+
+  2.4.2   Means of escape for a building or a separated part of a building of    Residential
+          Purpose Group II shall comply with the provision of Cl.2.3.            buildings of
+                                                                                 Purpose
+                                                                                 Group II
+
+  2.4.3   In a block of residential apartments or maisonettes, at least two      No of exit
+          independent exit staircases or other exits from every storey shall     staircases or
+          be provided in compliance with the requirements of Cl.2.2.11           exits per
+          unless otherwise permitted.                                            storey
+
+  2.4.4   In a block of residential apartments or maisonettes not exceeding      Provision for
+          24m in habitable height, one exit staircase only may be allowed to     buildings not
+          serve every upper storey, subject to:                                  exceeding 24m
+                                                                                 in habitable
+          (a)    The exit staircase shall comply with the requirements           height
+                 of Cl.2.3.3.
+
+          (b)    If the building consists of more than four storeys, approach
+                 to the exit staircase on all storeys shall comply with the
+                 requirements of smoke free approach to exit staircase
+                 under Cl.2.2.13.
+
+          (c)    Access to the building for fire-fighting appliances being
+                 provided for in compliance with the requirements in
+                 Chapter 4.
+
+  2.4.5   In a block of residential apartments or maisonettes exceeding 24m      Provision for
+          in habitable height, one exit staircase only may be allowed to serve   buildings
+          every upper storey, subject to                                         exceeding 24m
+                                                                                 in habitable
+          (a)    The habitable height not exceeding 60m unless otherwise         height
+                 permitted by the Relevant Authority, and
+
+          (b)    The single exit staircase shall serve not more than four
+                 apartments or maisonettes at each storey level, and
+
+          (c)    Provision of exits from each residential apartment or
+                 maisonette shall comply with the requirements under
+                 Cl.2.4.6, and
+        (d)    Travel distance from the most remote exit door to the
+               exit staircase from each apartment or maisonette shall not
+               exceed 15m, and
+
+        (e)    Exit staircase shall comply with the requirements of Cl.2.3.3
+               for exit staircases, and
+
+        (f)    Approach to the exit staircase shall be through cross-
+               ventilated lobby. The ventilation openings having a minimum
+               width of 2000mm and a minimum height of 1200mm
+               shall be unobstructed from parapet wall or balustrade
+               level upwards and be positioned on opposite sides of the
+               lobby such that they provide cross-ventilation throughout
+               the entire space of the lobby. Where multiple ventilation
+               openings are provided on opposite sides of the lobby, the
+               minimum width and height of each opening shall not be
+               less than 1000mm and 1200mm respectively, provided the
+               aggregate width of the openings at each opposite side is not
+               less than 2000mm. See diagram 2.4.5(f).
+
+        (g)    Fire lift shall be provided to comply with the requirements
+               in Chapter 6, and
+
+        (h)    Dry rising main shall be provided to comply with the
+               requirements in Chapter 6, and
+
+        (i)    Access to the building for fire-fighting appliances shall be
+               provided to comply with the requirements in Chapter 4.
+
+2.4.6   Exits from Residential Unit
+
+        (a)    In each residential apartment or maisonette unit, the exit      Exits from
+               access door or doors shall be provided such that the travel     residential
+               distances measured from any point within the unit to the        unit
+               entrance door or doors of the unit shall not exceed 20m
+               (see diagram 2.4.6(a)); and
+
+        (b)    In addition, in the case of a maisonette unit comprising not
+               more than two storeys, where a single door is provided,
+
+               (i) the door shall not be located on the upper storey of the
+                   unit; and
+
+               (ii) the floor area of the upper storey shall not exceed
+                    60m², unless a separate exit is provided on this upper
+                    storey.
+        (c)    all exits from residential or maisonette units shall have
+               direct access to exit staircase, exit passageway or exterior
+               open space.
+
+2.4.7   Travel distance shall be measured from the door or doors of the           Measurement
+        residential apartment or maisonette unit. Where a residential             of travel
+        apartment is required to be provided with two doors at the same           distance
+        storey level, and if only one-way escape or one exit staircase only
+        is provided, the travel distance shall be measured from the most
+        remote door. If two-way escape is achieved, the travel distance shall
+        be measured from each of the doors.
+
+2.4.8   In a block of residential apartments or maisonettes, smoke free           Smoke-free
+        approach to an exit staircase is permitted by means of an external        approach to
+        corridor subject to compliance with the following:                        exit staircase
+
+        (a)    Such external corridors conform to the requirements of
+               external exit passageways for minimum width, headroom
+               clearance, changes in floor level. The provision of parapet
+               wall or balustrade which shall not exceed 1.1m or lower
+               than 1m in height along the outer side of the corridor. The
+               corridor may be roofed over, provided the depth of the
+               roofed over portion shall not exceed 3m.The vertical height
+               of the unobstructed ventilation opening measured from the
+               parapet wall or balustrade up to the top edge of the opening
+               or eaves of overhang shall not be less than 1.2m
+
+        (b)    The residential apartment or maisonette shall be separated
+               from the external corridor by an external wall with fire
+               resistance rating of at least 1 hour, except that ventilation
+               openings of non combustible construction may be fixed at
+               or above a level of 1.1m, measured from the finished floor
+               level of the external corridor to the sill level of the opening.
+
+2.4.9   Travel Distance
+
+        (a)    In a block of residential apartment or maisonette where the        One-way travel
+               means of escape is through an external corridor, the one way       distance
+               travel distance measured from the door of the apartment or
+               maisonette to exit staircase shall not exceed 20m or 24m
+               if the aggregate one-way travel distance within the unit
+               and along the external corridor does not exceed 40m. The
+               above one-way travel distances along the external corridor
+               shall not apply to residential apartments or maisonettes in a
+               building exceeding 24m permitted under Cl.2.4.5, and
+         (b)    In a block of residential apartments or maisonettes, the two       Two-way travel
+                way travel distance may be extended to 45m if the means of         distance
+                escape is through an external corridor as in Cl.2.4.8.
+
+                In the case of buildings which are required to be provided
+                with rising mains, the number and distribution of rising
+                mains specified in Chapter 6 shall be complied with.
+
+2.4.10   The provisions of Cl.2.3.3(a)(ii) and (b)(ii) that there shall be no      Protection of
+         unprotected openings within 3m horizontally or vertically below           staircases
+         ventilation openings of exit staircases may not be applicable in the
+         case of exit staircases for residential apartments or maisonettes
+         provided:
+
+         (a)    the exit staircases are cross ventilated and maintained under
+                smoke free condition at all times; and
+
+         (b)    unprotected openings of the apartment or maisonette units
+                are not facing or ventilating into the exit staircase enclosures
+                as shown in diagram 2.4.10.
+
+2.4.11   Doors of residential apartments or maisonettes opening into               Residential
+         external corridors need not have fire resistance rating.                  doors opening
+                                                                                   into external
+                                                                                   corridors
+
+2.4.12   An attic in buildings under Purpose Group I and II can be                 Attic floor
+         constructed of timber boardings on timber joists, provided it
+         is protected to achieve the fire resistance rating required of the
+         elements of structure of the building or compartment.
+
+2.4.13   Common internal corridor - means of ventilation
+
+         The common internal corridor not forming part of smoke free
+         approach to exit staircase shall have ventilation openings of not
+         less than 15 per cent of the floor area and located not more than
+         9m from any part of the common internal corridor. If the common
+         internal corridor is cross-ventilated, the fixed ventilation openings
+         at each end of the wall shall not be less than 50 per cent of the
+         superficial area of the end walls. No part of the floor area of the
+         common internal corridor shall be at a distance of more than 13m
+         from any ventilation openings.
+2.5       HEALTH CARE OCCUPANCY                                                 General
+
+  2.5.1   The provisions stated herein shall apply to Health Care Occupancies
+          which may be identified under the following categories:
+
+          (a)    Hospital
+
+                 A building used for medical and surgical care and shall
+                 include general hospitals, hospitals for psychiatric care,
+                 children's hospitals, with 24 hours or in patient service.
+
+                 (i) Basement
+
+          		      Patient accommodation area containing beds shall not
+                  be located in the basement storey.
+          		
+            (ii) Number of exits per ward
+          		
+          		 Each patient accommodation ward area shall be
+                  provided with at least 2 exits, which shall be remotely
+                  located from each other, if the occupant load exceeds
+                  50 persons.
+          		
+            (iii) Provision of area of refuge
+          		
+          		 Every upper storey used for the accommodation of
+                  patients shall be provided with at least an area of refuge
+                  for horizontal evacuation purposes.The size of the area
+                  of refuge and the routes leading to it shall comply with
+                  clauses 1.2.4 and 2.5.3.
+          		
+            (iv) Size and compartmentation of patient accommodation
+                  area
+
+          		(1) Each patient accommodation ward shall not
+                exceed a floor area of 750m² and an occupant
+                load of 75 persons, calculated on the basis of gross
+                floor area of 10m² per person.
+          		
+		   (2) Each patient accommodation ward area shall
+         be constructed as a compartment having fire
+         resistance rating of at least 1-hour for walls/
+         ceilings and ½-hour fire door for protection of door
+         openings. The internal walls between wards shall
+         be constructed to have min. 1-hour fire resistance
+         rating and door opening shall be protected by ½
+         hour fire door. For walls and doors between ward
+         and main exit access corridor (either internal
+         or external corridor), the requirements given in
+         subclause 2.5.1(a)(vi) and 2.5.1(a)(vii) respectively
+         shall be complied with.This requirement shall not
+         be applicable to patient accommodation floor
+         which is sprinkler protected.
+		
+ (v) Provision of Escape Bed-lifts
+
+		 (1) An escape bed-lift shall be provided adjacent to a
+       protected exit staircase to serve every storey and/or
+       every area of refuge above the 1st storey containing
+       Operating Theatre Department, Coronary Care
+       Unit, Intensive Care Units, Intensive Therapy Units,
+       Neo Natal Units and patient accommodation areas
+       where patients could not be able to be evacuated,
+       in the event of a fire, by any means other than a
+       bed, patient trolley or similar conveyance.
+		
+		 (2) A protected shaft containing an escape bed-lift
+       shall be constructed to comply with the relevant
+       requirements under clause 3.8.
+		
+		 (3) The entry into the escape bed-lift and the protected
+       exit staircase shall be through a common protected
+       lobby. The protected lobby shall have a floor area
+       of not less than 9m², having a depth of min. 2.5m
+       perpendicular to the lift landing door, and shall
+       be large enough to hold a minimum of two beds,
+       attendant staff and additional equipment. In the
+       situation where the protected lobby is also acting
+       as a smoke-stop lobby or fire-fighting lobby, the
+       floor area of the lobby shall be of sufficient size
+       to allow the evacuation of the required number of
+       beds and the movements of other occupants into
+       the protected staircase.
+		
+		 (4) Escape bed-lift is to be used for the evacuation of
+       patients in beds including those confined to wheel-
+       chairs or physically disabled, in a fire emergency,
+       although it can be used as a normal passenger lift
+       during normal times in the day to day running of
+       the hospital. A signage shall be posted outside the
+       bed-lift stating “FIRE ESCAPE BED-LIFT”
+		
+		 (5) The escape route for the escape bed-lift at the
+       1st storey level shall be made protected from
+       other occupancy areas by minimum 1-hour fire
+       resistance separation and shall discharge directly
+       into a safe exterior space.
+		
+		 (6) An escape bed-lift that opens directly into an
+       external corridor and is sited adjacent to a protected
+       exit staircase does not require a protected lobby,
+       provided there is no unprotected opening within
+       3m horizontally from the escape bed-lift door
+       opening. The escape bed-lift provided under the
+       above situation may be treated as common bed-lift
+       that can serve multiple compartments located on
+       the same floor.
+			
+		 (7) An escape bed-lift shall be provided with the
+       following features :
+		
+			    * a duplicate power supply from an emergency
+          generating plant;
+		
+			    * a switch labelled “Evacuation Bed-Lift” situated
+          next to the lift landing door at the final exit storey,
+          which enables an authorised person nominated
+          by the building management to take control of
+          the lift car during an emergency. Operation of
+          the switch should isolate the lift landing call
+          controls and return the lift immediately to the
+          final exit storey, where upon the lift can only
+          operate in response to the lift car control panel.
+          Such a switch is not needed in 2-storey buildings;
+          and
+		
+			    * a communications system (except in 2-storey
+          building) should be installed to allow
+          communication between occupants at each lift
+          landing and the operator in the lift car.
+			
+		     (8) The installation of escape bed-lifts shall be in
+            accordance with SS 550 Code Of Practice For
+            Installation, Operation And Maintenance Of
+            Electric Passenger And Good Lifts.
+		
+  (vi) Internal access corridor to wards
+		
+		 Patient accommodation ward with access through
+       an internal access corridor shall comply with the
+       requirements as follows:
+		
+		     (1) Each ward shall be separated from the internal
+            access corridor by a wall having fire resistance of
+            at least 1-hour; and
+			
+		     (2) Doors opening into internal access corridor shall
+            have fire resistance of at least ½-hour and fitted
+            with automatic self-closing device to comply with
+            the requirements of Cl.3.9.2; or held open by
+            electromagnetic or electromechanical device; and
+			
+		     (3) Requirements on fire compartmentation under (vi)
+            (a) and (vi)(b) will not be applicable if the patient
+            accommodation floor is sprinkler protected; and
+			
+		 (4) Internal          access corridors shall be naturally
+            ventilated with fixed openings in an external wall,
+            such ventilation openings being not less than 15
+            percent of the floor area of the internal access
+            corridor; and
+			
+		     (5) The ventilation opening in the external walls shall
+            not be less than 3.5m² and shall be unobstructed
+            from parapet wall or balustrade level upwards and
+            be positioned on opposite sides of the internal
+            access corridor such that they provide effective
+            cross-ventilation throughout the entire space of
+            the corridor; and
+			
+		 (6) The ventilation openings in the external walls
+            shall not be more than 12m from any part of the
+            internal access corridor; and
+			
+		     (7) Internal access corridor may be provided with
+            mechanical ventilation and pressurisation in lieu
+            of natural ventilation; and
+			
+		       (8) Other non-patient accommodation areas or spaces
+             which open into or form part of the internal access
+             corridor and which may prejudice the means of
+             escape provision shall be compartmentalised by
+             min. 1-hour fire rated enclosures and min ½-hour
+             fire doors.
+			
+  (vii) External access corridor
+		
+		 Patient accommodation ward with access through
+         an external access corridor shall comply with the
+         requirements as follows:
+			
+		       (1) Patient accommodation ward shall be separated
+             from the external access corridor by a wall
+             having fire resistance of at least 1-hour, except
+             that ventilation openings of non-combustible
+             construction may be fixed at or above 1.1m,
+             measured from the finished floor level of the
+             external exit access corridor to the sill height of
+             the opening; and
+			
+		       (2) Doors opening into the external access corridor
+             shall not be required to have fire resistance rating;
+             and
+			
+		 (3) External access corridor shall conform to the
+             requirements of external exit passageway for
+             minimum width, changes in floor level, roof
+             protection and provision of parapet wall or solid
+             balustrade which shall not exceed 1000mm height
+             along the outer side of the corridor.
+			
+  (viii) Smoke free approach to exit staircase
+
+		         (1) Entry into an exit staircase from any part of a
+               building of more than 4 storey above ground
+               level shall comply with Cl.2.2.13 – requirements
+               of smoke free approach to an exit staircase.
+               Pressurisation of staircase in lieu of the provision
+               of smoke-stop lobby is not permitted.
+
+		         (2) Any exit staircase which serves a basement storey
+               shall comply with Cl.2.2.14 and Cl.2.3.5.
+      		         (3) Where a smoke- stop lobby is provided to exit
+                     staircase to serve a patient accommodation
+                     floor, or any area where patients may need to be
+                     evacuated on mattresses or stretchers, the lobby
+                     shall have a minimum clear space (unobstructed
+                     by door swings) of 6m².
+
+        (ix) Staircase landing width/depth
+      			
+      		     (1) Exit staircases that serve patient accommodation
+                  floor and are to be used by patients in an emergency
+                  fire situation shall be designed to allow evacuation
+                  of patients on mattresses or stretchers.
+
+      		         (2) The width of stair, landing width and depth shall
+                     comply with the following table:
+
+               Table 2.5.1(a)(viii)(2)
+       MIN       MIN
+STAIR 		
+       LANDING   LANDING
+WIDTH
+       WIDTH     DEPTH
+1000   2800      1900        ))) Allows mattress or stretcher
+                                   evauation only (ie no
+                                   pedestrian passing).
+1250   2800      1900        ))) Allows mattress or stretcher
+1500   3200      1550              evacuation and restricted
+                                   ambulant passing.
+1750   3600      * 1350      ))) Allows mattress or stretcher
+2000   4000      * 1250            evacuation and ambulant
+                                   passing.
+            * For the purpose of calculating the exit capacity of the
+            staircase, clear landing depth, instead of the clear stair width,
+            should be taken.
+
+
+      (b)   A building or part thereof, used for the housing and
+            nursing care of persons, who because of mental or physical
+            incapacity, may be unable to care for their own needs
+            and safety without the assistance of other persons. Such
+            buildings shall include nursing and convalescent homes,
+            homes for the aged and hospices.
+
+       (i) Fire safety requirements under Cl.2.5.1(a) – Hospital
+           shall be fully complied with.
+      		
+(c)   Custodian Care Facility
+
+      Custodian Care Facility is a building or part thereof,
+      used for the housing of persons who, because of age, or
+      physical or mental disabilities, are unable to care for their
+      self preservation and safety. Such buildings shall include
+      nurseries for children under 6 years of age and institutions
+      for the mentally disabled.
+
+      (i) Nurseries, including Childcare Centres, Kindergarten,
+          infant care, if located within a building of mixed use,
+          shall be compartmentalised from other spaces and
+          occupancies by walls and doors having at least 1-hour
+          fire resistance rating.
+
+		    Where such facilities are located on the 1st storey, they
+      shall be provided with direct access to the exterior of
+      the building, and if located on the upper storey shall be
+      sited adjacent to an exit staircase with direct dedicated
+      access through smoke-stop lobby to the staircase
+      (minimum one exit staircase) or direct access without
+      passing through the common areas to the exit staircase.
+		
+		 The requirement on the provision of fire
+      compartmentation will not apply to any nursery,
+      including Childcare Centres, Kindergarten, Infant
+      Care that is located within a building protected by an
+      automatic sprinkler system.
+		
+ (ii) Institutions for the mentally disabled shall be designed
+      with each storey having an area of refuge in accordance
+      with Cl.1.2.4 and Cl.2.5.3. Fire safety requirements
+      under Cl.2.5.1(a)- Hospital, shall be fully complied with,
+      except Cl.2.5.1(a)(v) on Provision of escape bed-lift
+      and Cl.2.5.1(a)(ix) on Staircase landing width/depth.
+
+(d)   Supervisory Care Facility
+
+ A building or part thereof, used for the housing, on a 24
+ hour basis, of mental health patients who may be capable of
+ self preservation but require supervision and are receiving
+ therapy, training or other health related care and for whom
+ there may be security measures not under their control.
+		
+ (i) Fire safety requirements under Cl.2.5.1(a) – Hospital,
+      shall be fully complied with, except Cl.2.5.1(a)(v)
+      on Provision of escape bed-lift and Cl.2.5.1(a)(ix) on
+      Staircase landing width/depth.
+        (e)    Ambulatory Health Care Centre
+
+            A building or part thereof, used for providing services on an
+            out patient basis for:
+        		
+            (i) treatment for patients which would render them
+                  incapable of taking action for self preservation or safety
+                  under emergency conditions without assistance from
+                  others, such as hemodialysis units, or
+        		
+            (ii) surgical treatment requiring general anaesthesia.
+        		
+            (iii) Ambulatory Health Care Centre, if located within a
+                  building of mixed use, shall be compartmentalised
+                  from other tenants and occupancies by walls and
+                  doors having at least 1-hour fire resistance rating. The
+                  Ambulatory Health Care Centre shall be provided with
+                  its own means of escape to at least one exit staircase.
+        		
+            (iv) Fire Safety requirements under (a) – Hospital, shall be
+                  fully complied with except Cl.2.5.1(a)(iii) on Provision
+                  of area of refuge for horizontal evacuation, Cl.2.5.1(a)
+                  (v) on Provision of escape bed-lift and Cl.2.5.1(a)(ix)
+                  on Staircase landing/depth.
+        		
+        (f) Outpatient clinics that do not fall under categories described
+            above.
+
+               Fire safety requirements under Cl.2.5.1(a) are not applicable,
+               except on the provision of separate compartment, which
+               shall comply with Cl.3.2.5(b).
+
+2.5.2   Number of Doors
+
+        (a)    In compliance with the provisions of Cl. 2.2.10 for number       Number of doors
+               of doors from rooms and spaces, two openings for doors
+               located remote from each other shall be provided for any
+               patient's sleeping room or suite of patients' sleeping room
+               having an occupancy load exceeding 50 persons, and
+
+        (b)    Rooms and spaces with occupancy of 50 persons or more
+               shall comply with the requirements of Cl.2.8.2 for Assembly
+               Occupancy.
+  2.5.3   Area of refuge - Occupancy load
+
+          Where Area of Refuge serves as required exit, the calculation of
+          area for refuge occupants shall be based on the following:
+
+          (i)     Hospitals – 2.8 m²/person.
+          (ii)    Nursing Homes – 2.8 m²/person.
+          (iii)   Custodian Care Facility – 1.4 m²/person.
+          (iv)    Supervisory Care Facility – 0.56 m²/person.
+          (v)     Ambulatory Health Care Centre – 1.4 m²/person.
+
+          On storey of hospitals or nursing homes where patient
+          accommodation is not provided, at least 0.56 m² per occupant shall
+          be taken for the calculation of the area for refuge of occupants.
+
+2.6       OFFICE/SHOP/FACTORY/WAREHOUSE OCCUPANCY
+
+  2.6.1   In an office, shop, factory and warehouse building, at least two          Number of exit
+          independent exit staircases or other exits shall be provided in           staircases or
+          compliance with the requirements of Cl.2.2.11, except that one            exits per storey
+          exit staircase is permitted to serve the upper storeys, if the building
+          is of non combustible construction and not exceeding four storeys,
+          subject to:
+
+          (a)     The maximum travel distance on any storey complying with
+                  column (ii) of Table 2.2A; and
+
+          (b)     Exit staircase conforming to the requirements of Cl.2.3.3;
+                  and
+
+          (c)     The gross floor area of each upper storey of shop, factory
+                  and warehouse building not exceeding 200m², including
+                  service ducts, lift shafts, toilets, staircase etc; and
+
+          (d)     The habitable height of the shop, factory or warehouse
+                  building not exceeding 15m; and
+
+          (e)     Access to the building for fire-fighting appliances being
+                  provided for in compliance with the requirements in
+                  Chapter 4.
+  2.6.2   In factory unit with mezzanine floor, one open stair is allowed to    Mezzanine floor
+          serve the mezzanine floor, provided:
+
+          (a)   there is only one mezzanine floor above the main factory
+                floor per factory unit; and
+
+          (b)   the mezzanine floor and open stair shall be of fire resistant
+                construction, the stair shall have a minimum width of 1m;
+                and
+
+          (c)   the maximum travel distance measuring from remote point
+                on the mezzanine floor to the exit access door of the factory
+                unit on the main factory floor shall comply with column (ii)
+                of Table 2.2A; and
+
+          (d)   the area of the mezzanine floor shall not exceed 60m²,
+                including service ducts, toilets, staircase and etc; and
+
+          (e)   the habitable height of mezzanine floor shall not exceed
+                24m; and
+
+          (f)   mezzanine floor shall only be used for factory, store and/or
+                ancillary office.
+
+2.7       HOTELS, BOARDING HOUSES, SERVICED APARTMENTS,
+          HOSTELS, BACKPACKERS HOTEL
+
+  2.7.1   Guestroom or accommodation unit with access through an internal       Internal corridor
+          corridor shall comply with the requirements as follows:               to guestroom or
+                                                                                accommodation
+                                                                                unit
+
+          (a)   Guestroom or accommodation unit shall be separated from         Guestroom or
+                the internal corridor by a wall having fire resistance of at    accommodation
+                least 1 hour, and                                               unit
+
+          (b)   Doors opening into internal corridors shall have fire
+                resistance of at least half an hour and fitted with automatic
+                self-closing device to comply with the requirements of
+                Cl.3.9.2, and
+
+          (c)   Internal corridors shall be naturally ventilated with fixed
+                openings in an external wall, such ventilation openings
+                shall comply with Cl.2.2.13(i) & (iv), and internal corridors
+                which cannot be naturally ventilated shall be pressurised
+                to comply with the requirements in Chapter 7.
+        (d)   Other rooms or spaces which open into or form part of
+              the guestroom or accommodation unit corridor which may
+              prejudice the means of escape provision shall be required
+              to be compartmented to the same extent as the guestroom
+              or accommodation unit.
+
+2.7.2   Guestroom or accommodation unit with access through an external          External
+        corridor shall comply with the requirements as follows:                  corridor
+
+        (a)   Guestroom or accommodation unit shall be separated
+              from the external corridor by a wall having fire resistance
+              of at least 1 hour, except that ventilation openings of non
+              combustible construction may be fixed at or above a level of
+              1.1m, measured from the finished floor level of the external
+              corridor to the sill height of the opening, and
+
+        (b)   Doors opening into the external corridor shall not be
+              required to have fire resistance rating, and
+
+        (c)   External corridors shall conform to the requirements of
+              external exit passageway in respect of minimum width of
+              1.5m, changes in floor level, maximum roofed-over width,
+              and enclosure on the open side.
+
+2.7.3   The travel distance shall be measured from the most remote point         Measurement
+        of a guestroom or accommodation unit or suite to the exit door of        of travel
+        an exit staircase, exit passageway or exterior open space                distance
+
+2.7.4   (a)   Internal corridors which are not naturally ventilated shall        Spacing of
+              be subdivided by smoke barriers into the following lengths:        smoke barrier
+
+              Building protected by sprinkler system                   .. 45m
+              Building not protected by sprinkler system               .. 30m
+
+        (b)   The smoke barriers shall consist of non-combustible
+              partitions containing smoke check doors. The smoke
+              barriers, including the enclosing walls to the corridor, shall
+              be constructed to full height, carried right up to form a close
+              joint with the soffit of the floor slab above, or an imperforate
+              non-combustible ceiling or the roof coverings;
+
+        (c)   the smoke barriers shall be sited at suitable locations
+              across the corridor to create multiple sections, with each
+              having free and direct access to an exit or exit staircase, exit
+              passageway or exit ramp.
+          (d)      smoke-check doors excluding glass doors, shall be provided     Vision panel
+                   with clear glass vision panels having at least 25% of the
+                   surface area of each door leaf;
+
+          (e)      smoke-check doors shall be self-closing, swinging type and
+                   may be double-swing but shall close the opening completely
+                   with only such clearance as is reasonably necessary for
+                   proper operation. The doors shall be closely fitted around
+                   their edges and the bottom clearance gap between such
+                   doors and the floor shall not exceed 4mm;
+
+          (f)      smoke-check doors shall normally be in the closed position.
+                   However, they may be left open if they are arranged to close
+                   automatically by an approved electro-magnetic or electro-
+                   mechanical device which can be activated by the presence
+                   of smoke and/or the building fire alarm system.
+
+2.8       ASSEMBLY OCCUPANCY                                                      General
+
+  2.8.1   Assembly Occupancy include all buildings or portions of buildings
+          used for gathering together of more than 50 persons for such
+          purpose as deliberation, worship, entertainment, eating, drinking,
+          amusement or awaiting transportation.
+
+          Assembly Occupancies include but are not limited to :
+
+          Performance Theatres, Cinemas, Assembly Halls, Auditoriums,
+          Exhibition Halls, Museums, Skating Rinks, Gymnasiums, Bowling
+          Establishments, Pool Rooms, Armouries, Mortuary Chapels,
+          Libraries, Restaurants, Nightclubs, Discotheques, Churches, Dance
+          Halls, Club Rooms, Passenger Stations and Terminals of Public
+          Transportation Facilities, Courtrooms, Conference Rooms and
+          Drinking Establishments.
+
+  2.8.2   Number and minimum width of exits for assembly occupancies              Number and
+          shall comply with the provisions tabulated as follows :                 width of exit
+                                                                                  facilities
+                     No of                                    Min width
+                                    Min No of Doors
+                  Occupants                                  of corridors
+                    51 - 200                2                 1000 mm
+                   201 - 500                2                 1250 mm
+                  501 - 1000                3                 1250 mm
+                exceeding 1000              4                 1250 mm
+2.8.3   Assembly Occupancy with Fixed Seating: (Performance theatres,           Aisles and
+        Cinemas, Auditoriums, Concert Halls etc)                                gangways
+
+        Aisles and Gangways
+
+        (a)    clear aisles or gangways of not less than the minimum width
+               of corridors shall be provided around the auditorium, stalls
+               and balconies leading to doors or exit doors, and
+                                                                                		
+        (b)    aisles or gangways shall be provided with intersecting
+               rows of seating and the number of seats in a row shall be in
+               accordance with the provisions tabulated as follows:
+
+        Table 2.8.3(a)(ii) Number of seats in a row
+        Seatway width          Maximum No of seats in a row
+                               Gangway on one      Gangway on two
+        mm
+                               side                sides
+        300 to 324                   7             14
+        325 to 349                   8             16
+        350 to 374                   9             18
+        375 to 399                   10            20
+        400 to 424                   11            22
+        425 to 449             )                   24
+        450 to 474             )    12             26
+        475 to 499             )                   28
+        500 or more            )                   Limited by the
+                                                   travel distance
+
+               The seatway shall be the minimum clear width between
+               rows, which shall not be less than 300mm, measured as the
+               clear horizontal distance from the back of the row ahead
+               (including seats that tip up automatically) and the nearest
+               projection of the row behind when the seats are in upright
+               position. The seatway widths shall be constant throughout
+               the length of the row. (See diagrams 2.8.3(a)(ii) - A and B).
+
+        (c)    for changes of level, steps shall not be used to overcome
+               differences in level in aisles or gangways unless the slope of
+               such gangways exceeds 1 in 10, and
+
+        (d)    handrails shall be provided, where steps of a pitch
+               exceeding 30 degrees or ramps of a slope exceeding 1 in 10
+               are provided in aisles or gangways flanking the seating, and
+        (e)   flooring for the surface of steps and ramps forming the aisles
+              or gangways shall be finished using non slip materials, and
+
+        (f)   illumination of steps shall be such that each step is clearly
+              visible in the event of emergency.
+
+        (g)   Seats for cinemas, theatre, auditorium, etc                      Combustible
+                                                                               seats
+              The construction of combustible upholstered seats in
+              cinema, theatre, auditorium, etc shall comply with BS5852
+              in respect of the following testing standard :
+
+              (i) Smouldering Ignition Source;
+              (ii) Flaming Ignition Source 1; and
+              (iii) Crib Ignition Source 5.
+
+2.8.4   (a)   The number and capacity of exits from an enclosed space in       Exits from
+              an assembly occupancy used or intended for use as cinema,        a theatre,
+              concert hall, auditorium, performance theatre that is not        cinema or a
+              normally provided with natural ventilation and lighting,         concert hall
+              shall be provided its own means of escape without having
+              to take into account exits provided for its adjoining parts      		
+              of the same building in which it is housed. Exception may
+              be permitted where the occupancy load does not exceed
+              200 persons, in which case at least half the capacity of exits
+              must be provided within the compartment.
+
+        (b)   Where a building or part of a building is designed as a
+              cineplex to house multiple mini-cinemas, the means of
+              escape to be provided may be shared by all the mini-cinemas.
+              Each cineplex shall be treated as a single big cinema for the
+              purpose of determining the exit requirements under sub-
+              clause 2.8.4.
+
+        (c)   The exits adjacent or attached to cinema, theatre or concert
+              hall and the like can be shared as exits with the other parts
+              of the building, provided the exits are accessible from
+              the common circulation areas. The occupancy load of the
+              cinema, theatre, concert hall and the like does not exceed
+              200 persons.
+2.9       WORKERS’ DORMITORIES                                                  Dormitories
+
+  2.9.1   Dormitories include buildings or spaces in buildings where
+          group sleeping accommodation is provided for workers under
+          joint occupancy and single management, with or without meals,
+          but without individual cooking facilities. The phrase "without
+          individual cooking facilities" refers to the absence of cooking
+          equipment in any room or unit of a dormitory.
+
+  2.9.2   (a)   Each dormitory bedroom shall not exceed 120m² and               Size
+                occupant load of 40 persons.
+
+          (b)   The occupant load shall be based on gross floor area on the     Occupant load
+                basis of 3m² per person.
+
+          (c)   There shall be at least two independent exit staircases or      No of exit
+                other exits from every storey of a building.                    staircases or
+                                                                                exit per storey
+
+          (d)   The travel distance, measured from the most remote point        Maximum
+                of the dormitory bedroom to the nearest exit staircase or       travel distance
+                other storey exit, shall not exceed the maximum travel
+                distance permitted under Table 2.2A.
+
+  2.9.3   Dormitory bedrooms with access through an internal corridor           Internal
+          shall comply with the requirements as follows:                        corridor to
+                                                                                dormitory
+          (a)   Dormitory bedrooms shall be separated from the internal         bedrooms
+                corridor by a wall having fire resistance of at least 1-hour;
+                and
+
+          (b)   Doors opening into internal corridors shall have fire
+                resistance of at least half an hour and fitted with automatic
+                self-closing device to comply with the requirements of
+                Cl.3.9.2, and
+
+          (c)   Internal corridors shall be naturally ventilated with fixed
+                openings in an external wall, such ventilation openings
+                being not less than 15 percent of the floor area of the
+                internal corridor, and
+
+          (d)   The ventilation openings in the external walls shall not be
+                less than 3.5m² and shall be unobstructed from parapet wall
+                or balustrade level upwards and be positioned on opposite
+                sides of the corridor such that they provide effective cross-
+                ventilation throughout the entire space of the corridor, and
+           (e)    The ventilation openings in the external walls shall not be
+                  more than 12m from any part of the corridor, and
+
+           (f)    Pressurisation of internal corridors in lieu of natural
+                  ventilation is not permitted, and
+
+           (g)    Other rooms or spaces which open into or form part of the
+                  bedroom corridor and which may prejudice the means of
+                  escape provision shall be required to be compartmented by
+                  1-hour fire rated enclosures and ½-hour fire doors.
+
+  2.9.4    Dormitory bedrooms with access through an external corridor                 External corridor
+           shall comply with the requirements as follows:
+
+           (a)    Dormitory bedrooms shall be separated from the external
+                  corridor by a wall having fire resistance of at least 1 hour,
+                  except that ventilation openings of non combustible
+                  construction may be fixed at or above a level of 1.1m,
+                  measured from the finished floor level of the external
+                  corridor to the sill height of the opening, and
+
+           (b)    Doors opening into the external corridor shall not be
+                  required to have fire resistance rating, and
+
+           (c)    External corridors shall conform to the requirements of
+                  external exit passageway for minimum width, changes in
+                  floor level, roof protection and enclosure on the open side.
+
+  2.9.5    Entry into an exit staircase from any part of a building of more than       Smoke-free
+           4 storey above ground level shall comply with requirements of               approach to exit
+           Cl.2.2.13 - requirements of smoke free approach to exit staircase.          staircase
+           Pressurisation of staircase in lieu of the provision of smoke-stop
+           lobby is not permitted.
+
+2.10       EXIT LIGHTING AND DIRECTIONAL SIGN                                          Exit lighting
+
+  2.10.1   Exits of all buildings, except for those belonging to Purpose Group I,      Exit and
+           shall be provided with artificial lighting facilities to the satisfaction   directional sign
+           of the requirements in Chapter 8.
+
+  2.10.2   In all buildings or parts of building other than those belonging to
+           Purpose Groups I and II (residential floors only), the location of
+           every exit on every floor shall be clearly indicated by exit sign and
+           directional signs to comply with the requirements in Chapter 8.
+2.10.3   Photo luminescent marking
+
+         In all buildings, except Purpose Groups I & II, photo luminescent
+         marking/tape to guide occupants along evacuation routes to
+         appropriate exit shall be provided:
+
+         (a)   along internal walls and/or floors of the exit staircase,
+               smoke-stop lobby and fire-fighting lobby;
+
+         (b)   on the doors of smoke-stop lobby, fire-fighting lobby and
+               exit staircase;
+
+         (c)   along corridor with exit directional signs.
+
+         Omission of photo luminescent marking/tape is permitted on the
+         following conditions:
+
+               (i) the emergency power supply of the exit lightings, exit
+                   signs and directional signs in the above locations shall
+                   be self-contained battery pack (single point system)
+                   in compliance with SS 563 or central battery supply
+                   backed up by stand-by generator;
+
+               (ii) there shall be at least 2 emergency luminaires in the
+                    smoke-stop lobby, fire-fighting lobby and corridor with
+                    exit directional signs, such that no part of such spaces
+                    shall be left in total darkness should there be failure of
+                    anyone of the emergency luminaires; and
+
+               (iii) there shall be at least one emergency luminaire at every
+                     exit staircase landing.
+
+         Note: Single point (emergency lighting) system - A system
+         of emergency lighting employing self-contained emergency
+         luminaires.
+
+2.10.4   The width of photo luminescent marking or tape shall be at least
+         50mm and be placed at low level.The bottom of the low level sign
+         shall not be less than 150mm or more than 400mm above the floor
+         level.
+                                                            TABLE 2.2A DETERMINATION OF EXIT REQUIREMENT
+                 (i)                                (ii)                           (iii)                                         (iv)                                      (v)                (vi)
+                                          Max Travel Distance (m)              Max Travel                                     Capacity                                 Min Width        Max Dead End (m)
+                                          (One-way travel)                    Distance (m)                        No of persons per unit of width (x)                     (m)
+        Type of Occupancy                                                 (Two-way Escape)
+                                                                                                          Door opening               (f)                (d)                                   Corridors
+                                                                                                           (c), (d) & (e)
+                                                                                                   To outdoors Other exit                      Ramps Corridors
+                                          Unsprin-         Sprin-         Unsprin-     Sprin-       at ground        & corridor    Stair-      Exits Passageways   Stairs    Corri-    Unsprin-       Sprin-
+                                          klered           klered          klered      klered          level         doors         cases                                      dors      klered        klered
+High hazard                                    10             20             20          35              50               40        30                  50             1       1.2        15            20
+Industrial buildings (factories,               15             25             30          60             100               80        60                  100            1       1.2        15            20
+workshops, godown/warehouse)
+Shops                                          15             25             45          60            100              80           60                 100           1        1.2       15               20
+Offices                                        15             30             45          75            100              80           60                 100           1        1.2       15               20
+Places of public resort & carparks             15             25             45          60            100              80           60                 100          1(h)    1.2 (h)     15               20
+Schools & educational buildings                15             25             45          60            100              80           60                 100           1      1½(a)       15               20
+Hospitals                                      15             25             30          45             30              30           15                 30            1       2(b)       15               20
+Hotels, Boarding Houses, Serviced              15             20             30          60             60              50           45                 50            1        1.2       15               20
+Apartments, Hostels, Backpackers
+Hotel, Dormitories
+Blocks of flats/maisonettes (k)               15(g)          30(g)           30          75             50              40           30                 50           1(i)     1.2        15               20
+                                              20(j)          40(j)          45(j)
+Detached, semi-detached & terrace              NR             NR            NR          NR             NR              NR           NR                  NR            0.9     0.9        NR               NR
+house, including townhouses
+
+NR          = No requirements. Maximum direct distance = 2∕3 x Maximum travel distance ….see Cl.1.2.18.
+(x)         Unit of width = 0.5 metres.
+(a)         Applies to corridors serving classrooms. Other corridors shall have a minimum width of 1.2 metre.
+(b)         Applies to corridors serving patients. Other corridors shall have a minimum of 1.2 metre.
+(c)         See Cl.2.3.9.
+(d)         See Cl.2.3.8.
+(e)         Where a door opening is divided by mullions into two or more openings, each such opening shall be measured separately in computing the number of units of exit width.
+(f)         See Cl.2.2.15 regarding reduction of exit provision.
+(g)         For travel distance in single staircase flats … see Cl.2.4.
+(h)         Refer to Cl.2.8.2.
+(i)         Staircase within maisonette serving as an internal access to be at least 0.9m width.
+(j)         Applies to external corridor … see Cl.2.4.9.
+(k)         Measurement of travel distance is from the residential unit door to exit …. see Cl.2.4.7.
+
+
+
+                                                                                                             86
+ Diagram2.2.9(b)
+Diagram 2.2.9(b)
+
+                   Measurement of width of exit doors
+
+
+
+
+                      SINGLE LEAF DOOR
+
+
+
+
+                         2 LEAF DOOR
+
+
+
+
+                     MULTI-LEAF DOOR
+
+
+
+
+                                   87
+Diagram 2.4.5(f)
+Diagram  2.4.5(f)
+
+                           Provision of Exit Staircase
+
+       For residential building not exceeding 60m in habitable height
+
+
+
+
+                                Single Exit Provision
+
+In a block of residential apartments or maisonettes not exceeding 60m in habitable
+height, one exit staircase only may be provided to every storey
+
+
+
+
+                                         88
+  Diagram2.4.6(a)
+Diagram   2.4.6(a)
+
+                     Provision of Exit From Apartment Unit
+
+
+
+
+  Legend
+
+               Travel distance from any point within unit to the exit door (max. 20m)
+
+
+
+
+                                           89
+   Diagram
+Diagram      2.4.10
+        2.4.10
+                                  Exit Staircase
+
+                      For residential apartment or maisonette
+
+
+
+
+      Cross-ventilated Exit Staircase To Residential Apartment Or Maisonette
+
+Exit staircase is cross-ventilated & maintained under smoke free condition at all
+times. Unprotected openings of the apartment or maisonette units are not facing (as
+shown in above diagram) or ventilating into the exit staircase enclosure.
+
+
+
+
+                                        90
+Diagram 2.8.3(a)(ii)-(1)
+Diagram 2.8.3(a)(ii) – (1)
+
+
+
+
+                             Seatway width and number of seats in a row
+
+
+
+                                             91
+Diagram 2.8.3(a)(ii)-(2)
+Diagram 2.8.3(a)(ii) – (2)
+
+                        Determination Of Seatway Width
+
+
+
+
+Seatway widths should be not less than 300mm and should be constant throughout
+the length of the row.
+
+
+
+
+                                      92
+

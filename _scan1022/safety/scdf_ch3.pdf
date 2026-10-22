@@ -1,0 +1,268 @@
+<!-- html head-->
+<head>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@govtechsg/sgds-web-component/Masthead/index.js">
+    </script>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- meta-->
+<title>SCDF - 404 Error</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="ICA" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- icons-->
+<!-- stylesheets-->
+<style type="text/css">
+    body {
+        color: #2a2a2a;
+        font-size: 1.6rem;
+        padding: 0;
+        margin: 0;
+        font-family:DM Sans,sans-serif;
+    }
+
+    blue-text {
+        color: blue;
+    }
+
+    body h1 {
+        color: #ffffff;
+        font-size: 43px;
+        margin: 40px 0;
+        padding-left: 20px;
+        font-family:DM Sans,sans-serif;
+    }
+
+    body * {
+        outline: none !important;
+        box-sizing: border-box;
+    }
+
+    body *:focus {
+        outline: none !important;
+    }
+
+    body a {
+        text-decoration: none;
+    }
+
+    body a:hover,
+    body a:focus {
+        text-decoration: none;
+    }
+
+    body ol,
+    body ul {
+        margin-bottom: 20px;
+    }
+
+    body p {
+        font-size: 16px;
+        color: #2a2a2a;
+        line-height: 22px;
+        margin: 0 0 20px;
+    }
+
+    body h1 {
+        color: #005eb8;
+        font-family:DM Sans,sans-serif;
+        font-size: 43px;
+        margin: 40px 0;
+        padding: 0px;
+    }
+
+    body header {
+        width: 100%;
+		height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+    }
+
+    body header .top-header {
+        display: table;
+        width: 100%;
+    }
+
+    body header .left,
+    body header .right {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+
+    body header .logo {
+		display: block;
+		padding: 16px;
+    }
+    body header .wis-logo {
+        float: right;
+    }
+
+    body header .header-wrap {
+        background-color: #ffffff;
+        border-bottom: 1px solid #d7d7d7;
+
+    }
+
+    body div[role="main"] {
+        padding-top: 120px;
+        background-color: #f4f7fa;
+    }
+
+    body div[role="main"] section.content-maintenance-page {
+        max-width: 900px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        font-family:DM Sans,sans-serif;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link {
+        list-style-type: none;
+        padding: 0;
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li {
+        display: inline-block;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li+li {
+        margin-left: 15px;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.facebook {
+        background-color: #06465e;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.facebook img {
+        height: 23px;
+        margin-top: 8.5px;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.twitter {
+        background-color: #2b6d85;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.twitter img {
+        height: 17px;
+        margin-top: 11.5px;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.youtube {
+        background-color: #af232d;
+    }
+
+    body div[role="main"] section.content-maintenance-page ul.social-media-link li a.youtube img {
+        height: 25px;
+        margin-top: 7.5px;
+    }
+
+    body footer {
+        padding: 35px 20px 30px;
+        border-top: 1px solid #ebeef4;
+        background-color: #14130d;
+    }
+
+    body footer .left {
+        text-align: center;
+    }
+
+    body footer .left span {
+        display: block;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    body footer .left span b {
+        font-family: 'Avenir Black', sans-serif;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    @media (max-width: 1024px) {
+        body header .logo img {
+            height: 65px;
+			width:128px;
+        }
+
+        /* .content-maintenance-page td {
+            display: block;
+            width: 100%;
+        } */
+    }
+
+    @media (min-width: 767px) {
+        #mobile {
+            display: none;
+        }
+    }
+    @media (max-width: 767px) {
+        
+
+        body header .right {
+            display: none;
+        }
+
+        body header .logo img {
+			height: 65px;
+			width: 1;
+
+        }
+
+        #desktop {
+            display: none;
+        }
+    }
+</style>
+<!-- body-->
+<!-- header-->
+<!-- page header-->
+<header>
+    <div class="header-wrap">
+        <sgds-masthead></sgds-masthead>
+        <div class="top-header">
+
+            <div class="left">
+                <a class="logo">
+                    <img alt="Singapore Civil Defence Force"
+                        src="https://www.scdf.gov.sg/images/default-source/shared/scdf-logo.jpg?sfvrsn=aabb2f8e_1" />
+                </a>
+            </div>
+            <div class="right">
+
+            </div>
+        </div>
+    </div>
+</header>
+<div role="main">
+    <section class="content-maintenance-page"  style="min-height:450px">
+        <h1>404 Error<h1> 
+       <p style="text-align:center;">We're sorry, the page you are looking for cannot be found. The page may have been moved, renamed, or the URL may have been entered incorrectly. Please return to the <a href="https://www.scdf.gov.sg/" style="color:blue" target="_blank">homepage</a>.</p>
+
+        
+
+    </section>
+    <!-- footer-->
+    <footer>
+        <div class="container">
+            <div class="left">
+                <span class="copyright">&copy; 2026, Singapore Civil Defence Force</span>
+            </div>
+        </div>
+    </footer>
+</div>

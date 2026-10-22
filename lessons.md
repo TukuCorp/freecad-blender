@@ -115,3 +115,7 @@ textures from **Object** coordinates with `projection='BOX'` rather than UVs:
 no unwrap needed, the scale stays metric, and the pattern runs continuously
 across adjacent boxes. When a visual change is claimed, compare two rendered
 frames — the presence of texture nodes in the graph proves nothing.
+
+## 2026-10-23 — Vietnamese reports for the owner's family
+- Correction: REVIEW-vi.html read as too terse / AI-sounding (chip-style fragments, jargon like "đài một cọc", "tờ phối hợp").
+- Rule: write owner-facing Vietnamese reports in full, everyday sentences; explain each technical term or why it matters ("vì khi đó phải đục ra làm lại"); avoid noun-stack fragments outside labels. Watch for ambiguous words (e.g. "khoan" = hold off vs. drill).

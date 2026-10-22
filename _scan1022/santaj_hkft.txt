@@ -1,0 +1,319 @@
+Huyền Không Phi Tinh - Tam Nguyên Cửu Vận - Santa Lịch
+Santa Lịch
+Menu
+Xem lịch
+Hôm nay
+Lịch tháng
+Đổi ngày Âm Dương
+Đông Phương
+Tìm ngày tốt
+Hợp tuổi · Tình duyên
+Bát Tự · Tứ Trụ
+Kinh Dịch
+Xin Xăm
+Bói SIM
+Bói biển số
+Tây Phương
+Thần Số Học
+Tarot
+Bói Bài Tây
+Cung hoàng đạo
+Phong thủy
+Phong thủy tuổi
+Huyền Không Phi Tinh
+Lá số Tử Vi
+Cách xem
+Cỡ chữ
+A−
+A
+A+
+Huyền Không Phi Tinh
+Lập bàn Phi Tinh nguyên thủy
+Santa Lịch xác định Vận từ mốc thời gian công trình, sau đó dùng hướng nhà chính xác theo 24 Sơn để lập riêng Vận tinh, Sơn tinh và Hướng tinh. Hệ này được giữ độc lập với Bát Trạch.
+Dữ liệu lập bàn Thời vận + hướng nhà
+Ngày hoàn tất / mốc dùng để lập vận
+Giờ (cần nếu sát Lập Xuân)
+Số độ hướng nhà (0–360°)
+Lập bàn Phi Tinh
+Đối chiếu thời vận, Phi Tinh năm và tháng tại ngày khác (mặc định là lúc hiện tại)
+Ngày đối chiếu
+Giờ (chỉ cần khi sát Lập Xuân)
+Mặt bằng thực tế · Cửa, Bếp, Ngủ (tùy chọn)
+Phần này chỉ dùng hình học mặt bằng để đặt các hạng mục vào đúng cung Phi Tinh. Không đọc Cung Phi/Bát Trạch tại đây và không tự tính tâm cho mặt bằng chữ L.
+Tôi đã xoay mặt bằng để Bắc ở phía trên
+Dạng mặt bằng
+Vuông
+Chữ nhật cân đối
+Chữ nhật ngang
+Chữ nhật dọc
+Chữ L · khuyết Tây Bắc
+Chữ L · khuyết Đông Bắc
+Chữ L · khuyết Tây Nam
+Chữ L · khuyết Đông Nam
+Chiều ngang Tây–Đông (m)
+Chiều dọc Bắc–Nam (m)
+X của tâm từ mép Tây (m)
+Y của tâm từ mép Bắc (m)
+Cửa chính
+X (m)
+Y (m)
+Bếp / khu nấu
+X (m)
+Y (m)
+Phòng ngủ chính / giường
+X (m)
+Y (m)
+Cửa
+Bếp
+Ngủ
+Chọn hạng mục rồi bấm vào mặt bằng.
+Bắc ↑
+Tâm
+Cửa
+Bếp
+Ngủ
+X tăng từ Tây sang Đông; Y tăng từ Bắc xuống Nam. Bấm trên sơ đồ chỉ là cách nhập tọa độ, không tự suy cát/hung.
+Hướng nhà phải là hướng đã được xác định theo phương pháp bạn sử dụng, không mặc định đồng nghĩa với cửa chính. Số độ chỉ dùng để phân đúng 24 Sơn. Nếu bỏ trống số độ, Santa Lịch vẫn tra Tam Nguyên Cửu Vận như trước.
+Mốc hoàn tất dùng để phân Vận lập bàn . Mốc đối chiếu là một lớp thời gian riêng, mặc định dùng thời điểm hiện tại; mốc này đồng thời xác định Vận đối chiếu, Phi Tinh năm và Phi Tinh tháng, nhưng không làm thay đổi bàn nguyên thủy.
+Santa Lịch không tự quyết định một lần sửa chữa/đại tu có làm công trình “đổi vận” hay không.
+Mốc lập vận
+22/10/2026
+Hạ Nguyên
+Vận 9
+Cửu Tử · Hỏa
+Khoảng Vận
+2024–2043
+Tính theo ranh Lập Xuân
+Vận bàn nền Cửu Tử Hữu Bật nhập Trung cung
+Vận tinh luôn phi thuận theo quỹ đạo Lạc Thư: Trung cung → Tây Bắc → Tây → Đông Bắc → Nam → Bắc → Tây Nam → Đông → Đông Nam.
+Tây Bắc
+1
+Nhất Bạch
+Thủy
+Bắc
+5
+Ngũ Hoàng
+Thổ
+Đông Bắc
+3
+Tam Bích
+Mộc
+Tây
+2
+Nhị Hắc
+Thổ
+Trung cung
+9
+Cửu Tử
+Hỏa
+Đông
+7
+Thất Xích
+Kim
+Tây Nam
+6
+Lục Bạch
+Kim
+Nam
+4
+Tứ Lục
+Mộc
+Đông Nam
+8
+Bát Bạch
+Thổ
+Phi Tinh năm Năm khí 2026 · Nhất Bạch nhập Trung
+Từ 04/02/2026 khoảng 02:50 đến trước 04/02/2027 khoảng 08:40. Niên tinh phi thuận theo cùng quỹ đạo Lạc Thư; sao nhập Trung thay đổi ngược một số qua mỗi năm.
+Niên tinh nhập Trung
+1 · Nhất Bạch
+Thủy · Khởi đầu · trí tuệ · lưu chuyển
+Ranh năm khí
+Lập Xuân
+Không dùng mùng 1 Tết để đổi bàn Phi Tinh năm.
+Quan hệ với bàn nhà
+Chưa cần hướng nhà
+Phi Tinh năm có thể lập chỉ từ mốc đối chiếu.
+Tây Bắc
+2
+Nhị Hắc
+Thổ
+Bắc
+6
+Lục Bạch
+Kim
+Đông Bắc
+4
+Tứ Lục
+Mộc
+Tây
+3
+Tam Bích
+Mộc
+Trung cung
+1
+Nhất Bạch
+Thủy
+Đông
+8
+Bát Bạch
+Thổ
+Tây Nam
+7
+Thất Xích
+Kim
+Nam
+5
+Ngũ Hoàng
+Thổ
+Đông Nam
+9
+Cửu Tử
+Hỏa
+Tách lớp: bàn nguyên thủy mô tả cấu trúc của ngôi nhà theo Vận lập bàn; Vận đối chiếu mô tả bối cảnh 20 năm; Phi Tinh năm là lớp thay đổi từng năm. Ba lớp không được nhập làm một “điểm phong thủy”.
+Phi Tinh tháng Tháng khí Tuất · Cửu Tử nhập Trung
+Từ Hàn Lộ · 08/10/2026 khoảng 13:26 đến trước Lập Đông · 07/11/2026 khoảng 16:47. Nguyệt tinh đổi tại 12 Tiết mở tháng và phi thuận theo cùng quỹ đạo Lạc Thư.
+Nguyệt tinh nhập Trung
+9 · Cửu Tử
+Hỏa · Danh tiếng · hiển lộ · hỷ sự
+Tháng khí
+Tháng Tuất
+Hàn Lộ → Lập Đông · không dùng ngày 1 âm/dương lịch.
+Năm khí làm gốc
+2026 · năm Ngọ
+Tháng Dần bắt đầu bằng sao 8; mỗi tháng sau lùi một số.
+Tây Bắc
+1
+Nhất Bạch
+Thủy
+Bắc
+5
+Ngũ Hoàng
+Thổ
+Đông Bắc
+3
+Tam Bích
+Mộc
+Tây
+2
+Nhị Hắc
+Thổ
+Trung cung
+9
+Cửu Tử
+Hỏa
+Đông
+7
+Thất Xích
+Kim
+Tây Nam
+6
+Lục Bạch
+Kim
+Nam
+4
+Tứ Lục
+Mộc
+Đông Nam
+8
+Bát Bạch
+Thổ
+Đối chiếu Phi Tinh tháng với lớp năm và bàn nguyên thủy
+Tây Bắc
+Tháng 1
+Năm 2
+Bắc
+Tháng 5
+Năm 6
+Đông Bắc
+Tháng 3
+Năm 4
+Tây
+Tháng 2
+Năm 3
+Trung cung
+Tháng 9
+Năm 1
+Đông
+Tháng 7
+Năm 8
+Tây Nam
+Tháng 6
+Năm 7
+Nam
+Tháng 4
+Năm 5
+Đông Nam
+Tháng 8
+Năm 9
+Đây là phép chồng dữ liệu để tra cứu vị trí sao theo thời gian. Santa Lịch chưa dùng tổ hợp tháng/năm/Sơn/Hướng/Vận để tự kết luận cát-hung hoặc đưa phép hóa giải.
+Tách lớp: bàn nguyên thủy là cấu trúc nhà; Vận đối chiếu là bối cảnh 20 năm; Phi Tinh năm đổi theo Lập Xuân; Phi Tinh tháng đổi theo 12 Tiết mở tháng. Các lớp được hiển thị cạnh nhau, không cộng thành một điểm số.
+Muốn lập Sơn tinh và Hướng tinh?
+Nhập thêm số độ hướng nhà ở biểu mẫu phía trên. Phi Tinh cần phân đúng Sơn trong 24 Sơn; chỉ chọn chung “Nam”, “Bắc”, “Đông”… là chưa đủ cho bàn nguyên thủy.
+Cửu Tinh 9 sao dùng trong Huyền Không Phi Tinh
+Đặc tính dưới đây là metadata nền dùng để giải thích từng lớp sao. Santa Lịch vẫn không coi một tên sao riêng lẻ là đủ để kết luận một cung cát hay hung.
+1
+Nhất Bạch Tham Lang 一白貪狼 · Thủy · Khảm Khởi đầu · trí tuệ · lưu chuyển
+2
+Nhị Hắc Cự Môn 二黑巨門 · Thổ · Khôn Nuôi dưỡng · đất đai · sức khỏe
+3
+Tam Bích Lộc Tồn 三碧祿存 · Mộc · Chấn Hành động · cạnh tranh · phát động
+4
+Tứ Lục Văn Khúc 四綠文曲 · Mộc · Tốn Học hành · văn chương · giao tiếp
+5
+Ngũ Hoàng Liêm Trinh 五黃廉貞 · Thổ · Trung cung Trung tâm · chuyển hóa · quyền lực
+6
+Lục Bạch Vũ Khúc 六白武曲 · Kim · Càn Quyền uy · tổ chức · trách nhiệm
+7
+Thất Xích Phá Quân 七赤破軍 · Kim · Đoài Biểu đạt · giao dịch · biến động
+8
+Bát Bạch Tả Phù 八白左輔 · Thổ · Cấn Tích lũy · ổn định · tài sản
+9
+Cửu Tử Hữu Bật 九紫右弼 · Hỏa · Ly Danh tiếng · hiển lộ · hỷ sự
+Tam Nguyên Cửu Vận Một chu kỳ 180 năm
+Vận 1
+Thượng Nguyên
+1864–1883
+Nhất Bạch
+Vận 2
+Thượng Nguyên
+1884–1903
+Nhị Hắc
+Vận 3
+Thượng Nguyên
+1904–1923
+Tam Bích
+Vận 4
+Trung Nguyên
+1924–1943
+Tứ Lục
+Vận 5
+Trung Nguyên
+1944–1963
+Ngũ Hoàng
+Vận 6
+Trung Nguyên
+1964–1983
+Lục Bạch
+Vận 7
+Hạ Nguyên
+1984–2003
+Thất Xích
+Vận 8
+Hạ Nguyên
+2004–2023
+Bát Bạch
+Vận 9
+Hạ Nguyên
+2024–2043
+Cửu Tử
+Phạm vi của phần Huyền Không Phi Tinh hiện tại
+Đã có: Tam Nguyên Cửu Vận, ranh Lập Xuân, Cửu Tinh, Vận bàn nền, 24 Sơn, Nguyên long, Âm/Dương Huyền Không, bàn nguyên thủy Sơn/Hướng/Vận, bốn cấu trúc nền, đối chiếu Vận hiện tại, Phục Ngâm/Phản Ngâm, Hợp Thập, Tam Ban Quái, Lệnh tinh nhập tù, Phi Tinh năm/tháng và ghép Cửa/Bếp/Ngủ vào mặt bằng theo tọa độ thực.
+Chưa có: Thế quái/kiêm hướng, Phi Tinh ngày/giờ, hình thế tự động và phép hóa giải. Số đo sát ranh 24 Sơn nên được kiểm tra lại trước khi luận.
+Tách trường phái: Phi Tinh không cộng/trừ với Bát Trạch và không làm thay đổi Cung Phi/Trạch quái đã đóng ổn định.
+Quyền riêng tư: dữ liệu công trình và tọa độ mặt bằng được gửi bằng POST; trang kết quả cá nhân không được index, không cache công khai và dùng chính sách no-referrer.
+Không chấm điểm: Santa Lịch không tạo “điểm phong thủy” từ bàn Phi Tinh.
+© 2026 Santa Lịch · Công ty Cổ phần Kỹ nghệ Santa
+Lịch âm dương Việt Nam & thông tin lịch thư truyền thống · santajsc.vn
+Biểu tượng con giáp: OpenMoji · CC BY-SA 4.0 -->
+↑
+Đầu trang
