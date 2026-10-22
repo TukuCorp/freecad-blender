@@ -13,3 +13,7 @@ Thumbs.db
 # FreeCAD backup files
 *.FCStd1
 *.FCBak
+
+# Local-only files
+.claude/settings.local.json
+*.log
