@@ -1,0 +1,758 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>Rà soát hồ sơ thi công</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Bố cục: bảng tiêu đề kiểu bản vẽ, mặt cắt nhà đo theo tỉ lệ cố định bên trái, sáu quyết định cuộn bên phải, hai khối phụ phía dưới. */
+:root {
+  --bg: #E9ECEF;
+  --surface: #F6F7F8;
+  --ink: #16212B;
+  --muted: #56636F;
+  --line: #BCC5CD;
+  --red: #C23A2E;
+  --amber: #B8741A;
+  --green: #2E7D5B;
+  --blue: #2D5E8C;
+  --gold: #A6791A;
+  --soil: #D9D2C4;
+  --on-red: #FFFFFF;
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #10161C; --surface: #18212A; --ink: #E4E9ED; --muted: #9AA7B3; --line: #33414D;
+    --red: #EF6A5C; --amber: #E0A04A; --green: #58B58E; --blue: #6EA6D8; --gold: #D9AE4B; --soil: #2A2A26;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #10161C; --surface: #18212A; --ink: #E4E9ED; --muted: #9AA7B3; --line: #33414D;
+  --red: #EF6A5C; --amber: #E0A04A; --green: #58B58E; --blue: #6EA6D8; --gold: #D9AE4B; --soil: #2A2A26;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-block: 20px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2 { text-wrap: balance; }
+.mono { font-family: var(--font-mono); }
+.cap { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+/* bảng tiêu đề */
+.tb { display: grid; grid-template-columns: 2fr 1fr 1fr; border: 1.5px solid var(--ink); background: var(--surface); }
+.tb > div { padding: 8px 12px; border-right: 1px solid var(--line); min-width: 0; }
+.tb > div:last-child { border-right: 0; }
+.tb b { display: block; font-size: 14px; font-weight: 500; }
+@media (max-width: 640px) { .tb { grid-template-columns: 1fr; } .tb > div { border-right: 0; border-bottom: 1px solid var(--line); } .tb > div:last-child { border-bottom: 0; } }
+
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.hero h1 { font-size: clamp(28px, 5.2vw, 48px); line-height: 1.08; font-weight: 800; letter-spacing: -.01em; flex: 1 1 420px; min-width: 0; }
+.stamp { border: 2.5px solid var(--red); color: var(--red); padding: 8px 16px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; transform: rotate(-3deg); font-size: 15px; white-space: nowrap; }
+.sub { color: var(--muted); font-size: 16px; max-width: 62ch; }
+
+/* ba đội rà soát */
+.lanes { display: grid; gap: 10px; }
+.lanes > p { color: var(--muted); font-size: 14px; }
+.lane { display: grid; grid-template-columns: 92px minmax(0,1fr); align-items: center; gap: 4px 12px; }
+.lane .n { font-weight: 700; }
+.lane .n span { font-family: var(--font-mono); font-weight: 500; color: var(--muted); margin-left: 6px; }
+.bar { display: flex; height: 14px; }
+.bar i { display: block; height: 100%; }
+.lane small { grid-column: 2; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.c-crit { background: var(--red); } .c-high { background: var(--amber); } .c-med { background: var(--gold); opacity: .55; } .c-low { background: var(--line); }
+.c-blue { background: var(--blue); } .c-green { background: var(--green); }
+
+/* thân trang */
+.main { display: grid; gap: 24px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 900px) { .main { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 28px; } .sticky { position: sticky; top: 16px; } }
+.diagram { background: var(--surface); border: 1px solid var(--line); padding: 10px; }
+.diagram svg { display: block; width: 100%; height: auto; max-width: 100%; }
+.diagram .cap { padding: 6px 4px 0; }
+svg text { font-family: var(--font-mono); font-size: 10.5px; fill: var(--muted); }
+svg .ink { stroke: var(--ink); fill: none; }
+svg .fillink { fill: var(--ink); }
+svg .soil { fill: var(--soil); }
+svg .lbl-red { fill: var(--red); font-style: italic; }
+.pin circle { fill: var(--red); stroke: var(--bg); stroke-width: 2; transition: r .15s; }
+.pin text { fill: var(--on-red); font-weight: 500; font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+.pin.on circle { r: 12; }
+.pin { cursor: default; }
+
+.cards { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 14px 16px; display: grid; grid-template-columns: 34px minmax(0,1fr); gap: 4px 14px; outline-offset: 2px; transition: border-color .15s; }
+.card.on, .card:focus-visible { border-color: var(--red); outline: 2px solid var(--red); }
+.card > :not(.pn) { grid-column: 2; }
+.card .pn { grid-row: 1 / span 5; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: var(--on-red); display: grid; place-items: center; font-family: var(--font-mono); font-weight: 500; }
+.card h3 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+.card .stat { font-size: 22px; font-weight: 800; line-height: 1.15; }
+.card p { color: var(--muted); font-size: 14px; }
+.who { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.chip { font-family: var(--font-mono); font-size: 11px; padding: 2px 8px; border: 1px solid var(--line); color: var(--muted); }
+.chip.act { border-color: var(--green); color: var(--green); }
+.mini { max-width: 100%; margin-top: 2px; }
+.mini svg { width: 100%; max-width: 280px; height: auto; }
+
+section > h2 { font-size: clamp(22px, 3.4vw, 30px); font-weight: 800; margin-bottom: 14px; }
+section > p.lead { color: var(--muted); max-width: 62ch; margin: -6px 0 14px; }
+.panel { background: var(--surface); border: 1px solid var(--line); padding: 16px; }
+
+/* so sánh cũ / mới */
+.cmp { display: grid; gap: 0; }
+.row { display: grid; grid-template-columns: 120px minmax(0,1fr) 28px minmax(0,1fr); align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); }
+.row:first-child { border-top: 0; }
+.row .k { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.old { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--red); }
+.new { font-weight: 700; }
+.arr { color: var(--muted); text-align: center; }
+.hbars { display: grid; gap: 6px; grid-column: 2 / span 3; }
+.hb { display: grid; grid-template-columns: 54px minmax(0,1fr); align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; }
+.hb i { display: block; height: 16px; }
+.hb .o { background: var(--line); } .hb .nw { background: var(--ink); }
+@media (max-width: 560px) { .row { grid-template-columns: 1fr 24px 1fr; } .row .k { grid-column: 1 / -1; } .hbars { grid-column: 1 / -1; } }
+
+/* phong thủy */
+.pt { display: grid; gap: 24px; grid-template-columns: minmax(0,1fr); }
+@media (min-width: 900px) { .pt { grid-template-columns: 330px minmax(0,1fr); } }
+.compass svg { width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; }
+.verdict { margin-top: 10px; font-size: 14px; display: grid; gap: 6px; }
+.verdict b { font-weight: 700; }
+.steps { display: grid; gap: 6px; margin-top: 10px; font-size: 14px; }
+.steps div { display: grid; grid-template-columns: 22px minmax(0,1fr); gap: 8px; }
+.steps b { font-family: var(--font-mono); color: var(--gold); font-weight: 500; }
+.scroll { overflow-x: auto; max-width: 100%; }
+.scroll svg { min-width: 640px; width: 100%; height: auto; display: block; }
+.tiles { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); margin-top: 14px; }
+.tile { border: 1px solid var(--line); padding: 10px; display: grid; gap: 6px; font-size: 13px; line-height: 1.35; }
+.tile svg { width: 30px; height: 30px; fill: none; stroke: var(--green); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.tile.skip svg { stroke: var(--muted); }
+.tile.skip { color: var(--muted); position: relative; }
+.tile.skip span { text-decoration: line-through; text-decoration-color: var(--red); }
+.sub2 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin: 16px 0 0; color: var(--muted); }
+
+/* danh sách gửi nhà thầu */
+.todo { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.todo li { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); align-items: start; }
+.todo li:first-child { border-top: 0; }
+.todo input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--green); }
+.btn { font: inherit; font-family: var(--font-mono); font-size: 13px; background: var(--ink); color: var(--bg); border: 0; padding: 8px 14px; cursor: pointer; }
+.btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.head-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+
+.limits { display: flex; flex-wrap: wrap; gap: 8px; }
+.limits .chip { color: var(--ink); background: var(--surface); }
+footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
+/* khối 3D */
+.v3 { padding: 0; overflow: hidden; }
+.v3bar { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; border-bottom: 1px solid var(--line); }
+.v3bar button, .v3foot button { font: inherit; font-family: var(--font-mono); font-size: 12px; min-height: 32px; padding: 4px 10px; background: transparent; color: var(--ink); border: 1px solid var(--line); cursor: pointer; }
+.v3bar button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.v3bar button:focus-visible, .v3foot button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.v3stage { position: relative; height: clamp(340px, 60vh, 540px); background: var(--bg); }
+.v3stage canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.v3layer { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.v3lab { position: absolute; left: 0; top: 0; font-family: var(--font-mono); font-size: 11px; line-height: 1.3; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 1px 5px; white-space: nowrap; }
+.v3lab.ori { background: transparent; border: 0; color: var(--muted); }
+.v3pin { position: absolute; left: 0; top: 0; width: 24px; height: 24px; padding: 0; border-radius: 50%; border: 2px solid var(--bg); background: var(--red); color: var(--on-red); font-family: var(--font-mono); font-size: 12px; display: grid; place-items: center; pointer-events: auto; cursor: pointer; }
+.v3pin.on { outline: 3px solid var(--red); outline-offset: 2px; }
+.v3msg { position: absolute; inset: 0; display: grid; place-items: center; padding: 24px; text-align: center; color: var(--muted); }
+.v3foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 12px; border-top: 1px solid var(--line); font-size: 13px; }
+#v3info { flex: 1 1 260px; min-width: 0; font-family: var(--font-mono); font-size: 12px; }
+.v3foot label { display: flex; align-items: center; gap: 6px; }
+.v3foot input { accent-color: var(--red); width: 16px; height: 16px; margin: 0; }
+.v3key { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 12px; }
+.v3key .chip { display: inline-flex; align-items: center; gap: 6px; }
+.v3key i { width: 10px; height: 10px; display: inline-block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+  <div class="tb">
+    <div><span class="cap">Công trình</span><b>Nhà phố 3,9 × 25 m · 6 tầng + sân thượng</b></div>
+    <div><span class="cap">Ngày xem</span><b class="mono">22/10/2026</b></div>
+    <div><span class="cap">Đã có</span><b class="mono">33 ảnh · 9/20 tờ kiến trúc</b></div>
+  </div>
+
+  <header class="hero">
+    <h1>Chưa nên ép cọc hay đổ sàn.</h1>
+    <div class="stamp" aria-label="Kết luận: dừng lại và hỏi nhà thầu">Dừng &amp; hỏi</div>
+    <p class="sub">Bản vẽ còn sáu chỗ phải hỏi lại nhà thầu. Hai chỗ đầu (móng sát nhà hàng xóm, khung bê tông) sẽ tốn tiền nhất nếu đổ bê tông xong mới phát hiện.</p>
+  </header>
+
+  <div class="lanes" aria-label="Số điểm ba nhóm rà soát tìm ra">
+    <p>Ba nhóm đọc cùng bộ bản vẽ, mỗi nhóm xem một mặt. Con số là số điểm mỗi nhóm ghi lại.</p>
+    <div class="lane"><div class="n">An toàn<span>54</span></div>
+      <div class="bar" style="width:100%"><i class="c-crit" style="width:1.85%"></i><i class="c-high" style="width:59.3%"></i><i class="c-med" style="width:37%"></i><i class="c-low" style="width:1.85%"></i></div>
+      <small>1 rất nặng · 32 nặng · 20 vừa · 1 nhẹ</small></div>
+    <div class="lane"><div class="n">Thiết kế<span>38</span></div>
+      <div class="bar" style="width:70.4%"><i class="c-crit" style="width:39.5%"></i><i class="c-high" style="width:18.4%"></i><i class="c-med" style="width:10.5%"></i><i class="c-blue" style="width:31.6%"></i></div>
+      <small>15 lỗi · 7 chỗ hai tờ ghi khác nhau · 4 rủi ro · 12 gợi ý</small></div>
+    <div class="lane"><div class="n">Phong thủy<span>32</span></div>
+      <div class="bar" style="width:59.3%"><i class="c-green" style="width:100%"></i></div>
+      <small>32 mục · tra theo Bát Trạch</small></div>
+  </div>
+
+  <section>
+    <h2>Sáu chỗ cần hỏi lại</h2>
+    <p class="lead">Bấm số đỏ trên khối 3D để xem thẻ tương ứng.</p>
+    <div class="main">
+
+      <div class="sticky">
+        <div class="panel v3">
+          <div class="v3bar" id="v3bar" role="toolbar" aria-label="Chọn tầng để xem"></div>
+          <div class="v3stage" id="v3">
+            <div class="v3layer" id="v3layer"></div>
+            <div class="v3msg" id="v3msg" hidden></div>
+          </div>
+          <div class="v3foot">
+            <span id="v3info" aria-live="polite">Chạm vào một phòng để xem tên và cao độ.</span>
+            <label><input type="checkbox" id="v3pins" checked> 6 chỗ cần hỏi</label>
+            <button type="button" id="v3reset">Góc nhìn ban đầu</button>
+          </div>
+          <div class="v3key" aria-label="Chú thích màu">
+            <span class="chip"><i style="background:var(--muted);opacity:.45"></i>Phòng</span>
+            <span class="chip"><i style="background:var(--blue);opacity:.6"></i>WC · giếng trời</span>
+            <span class="chip"><i style="background:var(--red);opacity:.5"></i>Thang bộ</span>
+            <span class="chip"><i style="background:var(--ink);opacity:.7"></i>Thang máy</span>
+            <span class="chip"><i style="background:var(--gold);opacity:.75"></i>Phòng thờ</span>
+            <span class="chip"><i style="background:var(--green);opacity:.5"></i>Sân · ban công</span>
+            <span class="chip"><i style="border:1.5px dashed var(--red)"></i>Lan can chưa ghi cao</span>
+            <span class="chip"><i style="border:1.5px dashed var(--green)"></i>Bể tự hoại đề xuất</span>
+            <span class="chip"><i style="background:var(--amber);opacity:.7"></i>Honda BR-V</span>
+          </div>
+        </div>
+        <p class="cap" style="margin-top:8px;text-transform:none;letter-spacing:0">Dựng lại từ các kích thước trên 9 tờ kiến trúc mới. Kéo để xoay, cuộn hoặc chụm hai ngón để phóng to. Khối phác, không phải bản vẽ. Vị trí phòng ước lượng từ chuỗi kích thước đọc trên ảnh chụp, có thể lệch vài trăm mm. Thang máy được đặt sát một bên tường vì bản vẽ chưa rõ. Cọc chỉ vẽ 5 m đầu, thực tế dài 24 m.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card" data-pin="1" tabindex="0">
+          <div class="pn">1</div><h3>Nhà hàng xóm và móng</h3>
+          <div class="stat">Ép cọc sát hai tường chung</div>
+          <p>Hai tường bên dùng chung với nhà hàng xóm. Ép cọc 24 m sát đó có thể làm nứt nhà họ, nên phải chụp ảnh và lập biên bản hiện trạng nhà bên trước khi ép. Chưa có kết quả khoan thử đất, nên chưa ai biết cọc 24 m là vừa, thiếu hay thừa. Có 7 chỗ chỉ đặt một cọc dưới cột, mà cột lại lệch khỏi tâm cọc. Đáy các móng sâu nông khác nhau, từ 5 cm đến 1,65 m.</p>
+          <div class="who"><span class="chip act">Chụp ảnh, lập biên bản nhà bên trước khi ép</span><span class="chip act">Xin báo cáo khoan địa chất</span><span class="chip">Kỹ sư kết cấu</span></div>
+        </article>
+        <article class="card" data-pin="2" tabindex="0">
+          <div class="pn">2</div><h3>Khung bê tông · cần kỹ sư kiểm</h3>
+          <div class="stat">Sàn dày 10 cm</div>
+          <p>Cột tầng trên cùng chỉ 20 × 20 cm. Hai dầm DS7 và DS6a rộng 10 cm, nhét không vừa số thép đã vẽ. Chỗ xây tường mà bên dưới không có dầm, bản vẽ chỉ ghi “thêm 2Ø16” (thêm hai cây thép phi 16) thay vì vẽ một cây dầm.</p>
+          <div class="who"><span class="chip act">Yêu cầu vẽ dầm thật thay cho ghi chú</span><span class="chip">Kỹ sư có chứng chỉ</span></div>
+        </article>
+        <article class="card" data-pin="3" tabindex="0">
+          <div class="pn">3</div><h3>Thang máy</h3>
+          <div class="stat">4 tờ, 4 kích thước</div>
+          <div class="mini">
+            <svg viewBox="0 0 268 78" role="img" aria-label="Bốn kích thước hố thang máy trên các tờ khác nhau, vẽ theo tỉ lệ">
+              <rect x="2" y="12" width="45" height="40" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+              <rect x="64" y="6" width="52.5" height="51" style="fill:none;stroke:var(--red)" stroke-width="1.5"/>
+              <rect x="134" y="7" width="50" height="50" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+              <line x1="202" y1="32" x2="252" y2="32" style="stroke:var(--ink)" stroke-width="1.5"/><line x1="202" y1="27" x2="202" y2="37" style="stroke:var(--ink)"/><line x1="252" y1="27" x2="252" y2="37" style="stroke:var(--ink)"/>
+              <text x="2" y="70">1800×1600</text><text x="64" y="70">2100×2050</text><text x="134" y="70">2000×2000</text><text x="196" y="52">rộng 2000</text>
+            </svg>
+          </div>
+          <p>Mặt bằng, hố thang, móc treo và mái mỗi tờ ghi một số khác. Đáy hố sâu 1,65 m hay 1,55 m cũng chưa thống nhất. Hố chưa có lớp chống thấm và chưa có chỗ thu nước.</p>
+          <div class="who"><span class="chip act">Lấy một bộ số từ hãng thang máy</span><span class="chip">Hãng thang máy</span></div>
+        </article>
+        <article class="card" data-pin="4" tabindex="0">
+          <div class="pn">4</div><h3>Tầng trên cùng</h3>
+          <div class="stat">Lan can cao bao nhiêu? Chưa ghi</div>
+          <p>Tầng 5 chỉ có sảnh và hai sân thượng. Không tờ nào ghi chiều cao lan can. Mái kính giếng trời chưa ghi chịu được bao nhiêu sức nặng. Phần mái có một vùng gạch chéo mà không giải thích là gì.</p>
+          <div class="who"><span class="chip act">Xin một tờ vẽ riêng phần mái</span><span class="chip">Kiến trúc sư</span></div>
+        </article>
+        <article class="card" data-pin="5" tabindex="0">
+          <div class="pn">5</div><h3>Chỗ để xe và ánh sáng</h3>
+          <div class="stat">Honda BR-V dài hơn chỗ đậu 55 cm</div>
+          <p>Chỗ đậu xe sâu 3,94 m (thông thủy). Honda BR-V đời 2021/2022 dài 4,49 m, rộng 1,78 m, nên khi đậu vào, đầu hoặc đuôi xe lấn khoảng 55 cm sang phòng khách. Cộng thêm khoảng 50 cm để đi lại quanh xe, chỗ đậu cần sâu khoảng 5 m. Bề ngang thì đủ: cửa D1 rộng 2,8 m, mỗi bên xe còn dư khoảng 50 cm, chưa tính gương.</p>
+          <p>Ngoài ra, phòng khách, bếp và phòng ngủ phía sau có thể không có cửa sổ. Điều này đọc từ ảnh chụp, cần so lại với bản gốc. WC phía trước chỉ rộng 2,88 m².</p>
+          <div class="who"><span class="chip act">Xin chỗ đậu sâu 5 m, lấy thêm từ phòng khách</span><span class="chip act">Xin bảng kê cửa đi và cửa sổ</span><span class="chip">Kiến trúc sư</span><span class="chip">Chủ nhà</span></div>
+        </article>
+        <article class="card" data-pin="6" tabindex="0">
+          <div class="pn">6</div><h3>Bể tự hoại</h3>
+          <div class="stat">Không tờ nào vẽ bể tự hoại</div>
+          <p>Mặt bằng móng, đà kiềng và tầng trệt đều không có bể. Chỉ mặt cắt ghi “hộp gen thoát nước” ở tường sau. Bể nằm chen giữa móng và đà kiềng, nên phải chốt vị trí trước khi đổ móng. Đề xuất đặt dưới sân sau, sát hộp gen, không đặt dưới bếp hay gara (xem mục Phong thủy).</p>
+          <div class="who"><span class="chip act">Xin vị trí, kích thước bể và đường ống</span><span class="chip">Kiến trúc sư</span><span class="chip">Kỹ sư kết cấu</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Phong thủy</h2>
+    <div class="pt">
+      <div class="panel compass">
+        <div class="cap">Hướng nhà · nhiều khả năng hướng Nam</div>
+        <svg viewBox="0 0 300 300" role="img" aria-label="La bàn tám hướng, mũi tên chỉ hướng Nam là hướng mặt tiền dự đoán. Đông tứ: Bắc, Nam, Đông, Đông Nam. Tây tứ: Tây, Tây Bắc, Tây Nam, Đông Bắc.">
+          <g stroke="var(--bg)" stroke-width="2">
+            <path d="M150 150 L100.3 29.9 A130 130 0 0 1 199.7 29.9 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L199.7 29.9 A130 130 0 0 1 270.1 100.3 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L270.1 100.3 A130 130 0 0 1 270.1 199.7 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L270.1 199.7 A130 130 0 0 1 199.7 270.1 Z" style="fill:var(--blue)" opacity=".4"/>
+            <path d="M150 150 L199.7 270.1 A130 130 0 0 1 100.3 270.1 Z" style="fill:var(--blue)" opacity=".85"/>
+            <path d="M150 150 L100.3 270.1 A130 130 0 0 1 29.9 199.7 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L29.9 199.7 A130 130 0 0 1 29.9 100.3 Z" style="fill:var(--amber)" opacity=".38"/>
+            <path d="M150 150 L29.9 100.3 A130 130 0 0 1 100.3 29.9 Z" style="fill:var(--amber)" opacity=".38"/>
+          </g>
+          <line x1="150" y1="184" x2="150" y2="276" style="stroke:var(--ink)" stroke-width="2.5"/>
+          <path d="M142 268 L150 286 L158 268 Z" style="fill:var(--ink)"/>
+          <circle cx="150" cy="150" r="34" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+          <text x="150" y="150" text-anchor="middle" style="font-size:17px;fill:var(--ink);font-weight:500">Nam</text>
+          <text x="150" y="164" text-anchor="middle" style="font-size:9.5px">chưa đo</text>
+          <g style="fill:var(--ink);font-size:11px" text-anchor="middle">
+            <text x="150" y="56">Bắc</text>
+            <text x="219" y="85">Đ.Bắc</text>
+            <text x="248" y="154">Đông</text>
+            <text x="219" y="223">Đ.Nam</text>
+            <text x="181" y="252">Nam</text>
+            <text x="81" y="223">T.Nam</text>
+            <text x="52" y="154">Tây</text>
+            <text x="81" y="85">T.Bắc</text>
+          </g>
+        </svg>
+        <div class="who" style="justify-content:center;margin-top:6px"><span class="chip" style="border-color:var(--blue);color:var(--blue)">Đông tứ: Bắc · Nam · Đông · Đ.Nam</span><span class="chip" style="border-color:var(--amber);color:var(--amber)">Tây tứ: Tây · T.Bắc · T.Nam · Đ.Bắc</span></div>
+        <div class="verdict">
+          <p><b>Vì sao đoán hướng Nam.</b> Bản vẽ không có mũi tên chỉ hướng Bắc. Theo bản đồ OpenStreetMap, đoạn đường Hồng Bàng gần kênh Tân Hóa chạy gần như thẳng Đông sang Tây. Nhà số chẵn nằm ở phía Bắc của đường, nên mặt tiền quay ra đường về phía Nam, lệch chừng 10° tùy đoạn.</p>
+          <p><b>Nếu đúng hướng Nam.</b> Nhà tọa Bắc, hướng Nam, thuộc nhóm Đông tứ trạch. Hợp với chủ nhà có cung Khảm, Ly, Chấn hoặc Tốn. Chủ nhà thuộc Tây tứ thì không đổi được hướng nhà, chỉ cần xoay bàn thờ, bếp và giường về hướng tốt của mình.</p>
+          <p><b>Về nắng.</b> Mặt tiền hướng Nam ở Sài Gòn ít bị nắng chiều gắt. Hai tường hông là hướng Đông và Tây, nhưng đều dùng chung với nhà bên nên gần như không ăn nắng.</p>
+        </div>
+        <div class="steps">
+          <div><b>1</b><span>Đứng ở cửa chính, lưng quay vào nhà, mặt nhìn ra đường. Mở la bàn điện thoại và đọc số độ. Từ 158° đến 202° là hướng Nam.</span></div>
+          <div><b>2</b><span>Tra cung mệnh của chủ nhà theo năm sinh âm lịch và giới tính.</span></div>
+          <div><b>3</b><span>Cung thuộc nhóm Đông tứ (xanh) thì hợp nhà hướng Nam. Thuộc Tây tứ (cam) thì chỉnh bằng nội thất như các ô bên dưới.</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="cap">Tầng 4 · từ mặt tiền ra sau · hình minh họa, không đúng tỉ lệ</div>
+        <div class="scroll">
+          <svg viewBox="0 0 760 170" role="img" aria-label="Sơ đồ tầng 4: ban công, phòng thờ, phòng đọc sách, WC và giếng trời, cầu thang bộ, thang máy, phòng ngủ, WC và lô gia">
+            <g stroke="var(--ink)" stroke-width="1.2">
+              <rect x="10" y="80" width="42" height="50" style="fill:none"/>
+              <rect x="52" y="80" width="90" height="50" style="fill:var(--gold)" opacity=".35"/>
+              <rect x="142" y="80" width="126" height="50" style="fill:var(--surface)"/>
+              <rect x="268" y="80" width="69" height="50" style="fill:var(--blue)" opacity=".3"/>
+              <rect x="337" y="80" width="96" height="50" style="fill:var(--red)" opacity=".18"/>
+              <rect x="433" y="80" width="54" height="50" style="fill:var(--ink)" opacity=".28"/>
+              <rect x="487" y="80" width="135" height="50" style="fill:var(--surface)"/>
+              <rect x="622" y="80" width="63" height="50" style="fill:var(--blue)" opacity=".3"/>
+              <rect x="685" y="80" width="42" height="50" style="fill:none"/>
+            </g>
+            <g text-anchor="middle" style="fill:var(--ink)" font-size="11">
+              <text x="31" y="108" style="font-size:10px">ban</text><text x="31" y="120" style="font-size:10px">công</text>
+              <text x="97" y="109" style="font-size:11px">Thờ</text>
+              <text x="205" y="109" style="font-size:11px">Đọc sách</text>
+              <text x="302" y="102" style="font-size:10px">WC</text><text x="302" y="114" style="font-size:10px">giếng</text><text x="302" y="126" style="font-size:10px">trời</text>
+              <text x="385" y="109" style="font-size:11px">Thang bộ</text>
+              <text x="460" y="102" style="font-size:10px">thang</text><text x="460" y="114" style="font-size:10px">máy</text>
+              <text x="554" y="109" style="font-size:11px">Ngủ</text>
+              <text x="653" y="109" style="font-size:11px">WC</text>
+              <text x="706" y="102" style="font-size:10px">lô</text><text x="706" y="114" style="font-size:10px">gia</text>
+            </g>
+            <g font-size="11" style="fill:var(--ink)">
+              <path d="M97 78 V38" style="stroke:var(--gold)" stroke-width="1.5"/><path d="M97 38 l8 -3 v14 l-8 3z" style="fill:var(--gold)"/>
+              <text x="112" y="38" style="fill:var(--ink)">Xoay bàn thờ về hướng tốt,</text><text x="112" y="52" style="fill:var(--ink)">không quay ra cửa kính mặt tiền</text>
+              <path d="M385 78 V18" style="stroke:var(--red)" stroke-width="1.5"/><path d="M385 18 l8 -3 v14 l-8 3z" style="fill:var(--red)"/>
+              <text x="400" y="18" style="fill:var(--ink)">Cầu thang giữa nhà: không dời được.</text><text x="400" y="32" style="fill:var(--ink)">Đặt bình phong che lối lên.</text>
+              <path d="M653 78 V55" style="stroke:var(--green)" stroke-width="1.5"/><path d="M644 62 l6 7 l12 -14" style="stroke:var(--green);fill:none" stroke-width="2.2"/>
+              <text x="560" y="152" style="fill:var(--green)">WC không nằm trên phòng ngủ</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="sub2">Làm được ngay, gần như không tốn tiền</div>
+        <div class="tiles">
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 24 V12 M3 20 H29 V24 M29 20 V16 a3 3 0 0 0 -3 -3 H13 V20"/><circle cx="8" cy="15" r="2.5"/></svg><span>Đầu giường kê sát tường hông, không nằm dưới dầm</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 H26 M9 26 V14 H23 V26 M16 14 V8 M13 8 H19 M12 20 H20"/></svg><span>Bàn thờ xoay về hướng tốt, không chung tường với WC</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 V6 M27 26 V6 M5 9 H27 M12 9 V26 M20 9 V26"/></svg><span>Bình phong che lối lên cầu thang</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C20 10 24 13 24 19 a8 8 0 0 1 -16 0 C8 14 12 12 12 8 C14 9 15 7 16 4Z"/></svg><span>Bếp đặt sao cho người nấu quay lưng về hướng tốt</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 28 V5 H22 V28 M8 28 H26 M18 17 h1"/><path d="M22 7 L28 10 V28"/></svg><span>Cửa WC không mở thẳng vào giường</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 H28 M7 26 V16 H14 V26 M18 26 V12 H25 V26"/><path d="M8 11 h4 M19 7 h4"/></svg><span>Để sân trước trống, không chất đồ</span></div>
+        </div>
+
+        <div class="sub2">Không nên làm, vì an toàn quan trọng hơn</div>
+        <div class="tiles">
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Dời cầu thang</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Thu hẹp cửa trên lối thoát nạn</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Gắn gương ngoài mặt tiền</span></div>
+          <div class="tile skip"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 6 L26 26 M26 6 L6 26"/></svg><span>Đặt hồ cá dưới cầu thang thoát nạn</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:24px">
+      <div class="head-row"><h3 style="font-size:20px;font-weight:800">Bể tự hoại nên đặt ở đâu</h3><span class="chip" style="border-color:var(--red);color:var(--red)">Chỗ cần hỏi số 6</span></div>
+      <p style="color:var(--muted);max-width:70ch;margin-top:6px">Bản vẽ chưa có bể. Theo phong thủy và theo kỹ thuật, chỗ hợp nhất là dưới sân sau, sát hộp gen thoát nước ở tường sau.</p>
+      <div class="scroll" style="margin-top:12px">
+        <svg viewBox="0 0 760 175" role="img" aria-label="Sơ đồ tầng trệt từ mặt tiền ra sau. Vị trí đề xuất cho bể tự hoại là dưới sân sau. Không đặt dưới sân trước và gara, dưới phòng khách, ở khối cầu thang giữa nhà, hay dưới bếp.">
+          <defs><pattern id="hatch2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--muted)" stroke-width="1"/></pattern></defs>
+          <g stroke="var(--ink)" stroke-width="1.2">
+            <rect x="10" y="70" width="90.3" height="50" style="fill:var(--green)" opacity=".25"/>
+            <rect x="100.3" y="70" width="127.2" height="50" style="fill:var(--surface)"/>
+            <rect x="227.5" y="70" width="120" height="50" style="fill:var(--surface)"/>
+            <rect x="347.5" y="70" width="150" height="50" style="fill:url(#hatch2)"/>
+            <rect x="497.5" y="70" width="135" height="50" style="fill:var(--surface)"/>
+            <rect x="632.5" y="70" width="48" height="50" style="fill:var(--blue)" opacity=".3"/>
+            <rect x="680.5" y="70" width="69" height="50" style="fill:var(--green)" opacity=".25"/>
+          </g>
+          <rect x="688" y="78" width="54" height="34" rx="2" style="fill:none;stroke:var(--green)" stroke-width="2.2" stroke-dasharray="5 3"/>
+          <g text-anchor="middle" style="fill:var(--ink)" font-size="11">
+            <text x="55" y="99">Sân trước</text><text x="164" y="99">Gara</text><text x="287" y="99">P. Khách</text>
+            <text x="422" y="93" style="fill:var(--ink)">Thang · thang máy</text><text x="422" y="107" style="font-size:10px">trung cung</text>
+            <text x="565" y="99">Bếp + ăn</text><text x="656" y="99">WC</text><text x="715" y="99" style="fill:var(--green);font-weight:500">Bể</text>
+          </g>
+          <g style="stroke:var(--red)" stroke-width="2" stroke-linecap="round">
+            <path d="M157 38 l12 12 M169 38 l-12 12"/><path d="M281 38 l12 12 M293 38 l-12 12"/><path d="M416 38 l12 12 M428 38 l-12 12"/><path d="M559 38 l12 12 M571 38 l-12 12"/>
+          </g>
+          <g font-size="10.5" text-anchor="middle" style="fill:var(--muted)">
+            <text x="105" y="30">trước nhà · xe đè</text><text x="287" y="30">phòng khách</text><text x="422" y="30">giữa nhà</text><text x="565" y="30">dưới bếp</text>
+          </g>
+          <path d="M715 58 V70" style="stroke:var(--green)" stroke-width="1.5"/><path d="M706 46 l6 7 l12 -14" style="stroke:var(--green);fill:none" stroke-width="2.2"/>
+          <g font-size="11" style="fill:var(--ink)"><text x="10" y="142">← Mặt tiền</text><text x="750" y="142" text-anchor="end">Phía sau →</text>
+          <text x="750" y="162" text-anchor="end" style="fill:var(--green)">Đề xuất: dưới sân sau, sát hộp gen</text></g>
+        </svg>
+      </div>
+      <div class="pt" style="margin-top:12px;gap:16px">
+        <div class="verdict" style="margin-top:0">
+          <p><b>Vì sao chọn sân sau.</b> Các nguồn phong thủy đều tránh để chất thải ở nửa trước khu đất hay trước cửa chính. Họ cũng tránh đặt bể dưới bếp, dưới phòng khách và ở trung cung. Ở nhà này, trung cung chính là khối cầu thang và thang máy. Một số nguồn gợi ý đặt dưới gara, nhưng gara ở đây chỉ sâu 3,94 m nên bánh xe sẽ đè thẳng lên nắp bể, dễ làm nứt bể.</p>
+          <p><b>Hợp với cả hai nhóm mệnh, nếu nhà hướng Nam.</b> Khi đó phía sau nhà là hướng Bắc. Chủ nhà Tây tứ thì Bắc là hướng xấu của mình, nên đặt bể ở giữa sân sau. Chủ nhà Đông tứ thì lệch bể về góc Đông Bắc hoặc Tây Bắc. Phải đo la bàn mới biết góc đó ở bên nào.</p>
+        </div>
+        <div class="verdict" style="margin-top:0">
+          <p><b>Hỏi nhà thầu về mặt kỹ thuật.</b></p>
+          <div class="steps" style="margin-top:0">
+            <div><b>1</b><span>Bể mấy ngăn, kích thước bao nhiêu? Ống thông hơi đi lên mái theo đường nào? Nắp thăm đặt ở đâu?</span></div>
+            <div><b>2</b><span>Sân sau không có lối ra đường, nên xe hút phải kéo ống khoảng 25 m xuyên qua nhà. Có làm sẵn ống hút chờ ra phía trước không?</span></div>
+            <div><b>3</b><span>Kỹ sư kết cấu cần kiểm tra móng M8, đà kiềng ĐK6 và ĐK1b sát bên bể.</span></div>
+            <div><b>4</b><span>Giữ bể xa hố thang máy, vì hố đó chưa có lớp chống thấm.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="head-row">
+      <h2 style="margin-bottom:0">Gửi nhà thầu trước</h2>
+      <button class="btn" id="copy" type="button">Sao chép danh sách</button>
+    </div>
+    <div class="panel" style="margin-top:14px">
+      <ul class="todo" id="todo">
+        <li><input type="checkbox" id="q1"><label for="q1">Tầng 5 có đúng như tờ KT06 không (một sảnh và hai sân thượng)? Lan can cao bao nhiêu?</label></li>
+        <li><input type="checkbox" id="q2"><label for="q2">Đã tính theo quy chuẩn phòng cháy QCVN 06:2022 chưa? Tính với bao nhiêu tầng, chiều cao và thể tích nhà?</label></li>
+        <li><input type="checkbox" id="q3"><label for="q3">Khảo sát và chụp ảnh nhà bên trước khi ép cọc. Gửi báo cáo khoan địa chất. Thống nhất độ sâu đáy móng và số móng, vẽ thêm mặt cắt 8-8.</label></li>
+        <li><input type="checkbox" id="q4"><label for="q4">Chốt một kích thước hố thang máy và một độ sâu đáy hố, kèm thông số của hãng thang máy.</label></li>
+        <li><input type="checkbox" id="q5"><label for="q5">Gửi các tờ còn thiếu: phòng cháy, bảng cửa đi và cửa sổ, chi tiết cầu thang, điện nước và các tờ kiến trúc khác.</label></li>
+        <li><input type="checkbox" id="q6"><label for="q6">Vẽ dầm cụ thể thay cho ghi chú “thêm 2Ø16 dưới tường”. Sửa dầm DS7 và DS6a. Nhịp dầm DS2a là 4600 hay 4240 mm?</label></li>
+        <li><input type="checkbox" id="q7"><label for="q7">Phòng khách, bếp và phòng ngủ phía sau có cửa sổ không? Chỗ đậu xe chỉ sâu 3,94 m, ngắn hơn Honda BR-V (4,49 m): lấy thêm khoảng 1 m từ phòng khách được không? Khối ghi 2600 ở ranh đất phía sau là gì?</label></li>
+        <li><input type="checkbox" id="q8"><label for="q8">Bể tự hoại đặt ở đâu? Đề nghị đặt dưới sân sau, sát hộp gen thoát nước, không đặt dưới bếp hay gara. Gửi kích thước, số ngăn, đường ống thông hơi, nắp thăm và cách xe hút tiếp cận.</label></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="limits">
+      <span class="chip">Đọc từ ảnh chụp, chưa có file bản vẽ gốc</span>
+      <span class="chip">Mới có 9/20 tờ kiến trúc</span>
+      <span class="chip">Còn thiếu: địa chất · điện nước · bể tự hoại · bảng cửa</span>
+      <span class="chip">Hướng Nam là suy từ bản đồ, chưa đo tại nhà</span>
+      <span class="chip">Phong thủy là tập quán, không phải kỹ thuật</span>
+    </div>
+    <span class="cap">Chi tiết: contractor/scan-2026-10-22/review/REVIEW.md · out-safety.md · out-design.md · out-phongthuy.md</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var pins = document.querySelectorAll('.pin[data-pin]');
+  var cards = document.querySelectorAll('.card[data-pin]');
+  function mark(n, on) {
+    pins.forEach(function (p) { if (p.getAttribute('data-pin') === n) p.classList.toggle('on', on); });
+    cards.forEach(function (c) { if (c.getAttribute('data-pin') === n) c.classList.toggle('on', on); });
+  }
+  [].forEach.call(cards, function (c) {
+    var n = c.getAttribute('data-pin');
+    c.addEventListener('mouseenter', function () { mark(n, true); });
+    c.addEventListener('mouseleave', function () { mark(n, false); });
+    c.addEventListener('focus', function () { mark(n, true); });
+    c.addEventListener('blur', function () { mark(n, false); });
+  });
+  [].forEach.call(pins, function (p) {
+    var n = p.getAttribute('data-pin');
+    p.addEventListener('mouseenter', function () { mark(n, true); });
+    p.addEventListener('mouseleave', function () { mark(n, false); });
+  });
+
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function () {
+    var lines = [].map.call(document.querySelectorAll('#todo li label'), function (l, i) { return (i + 1) + '. ' + l.textContent; });
+    var text = lines.join('\n');
+    function done(ok) { btn.textContent = ok ? 'Đã sao chép' : 'Chọn và sao chép thủ công'; setTimeout(function () { btn.textContent = 'Sao chép danh sách'; }, 2000); }
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(document.getElementById('todo'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); done(false);
+    }
+    try { navigator.clipboard.writeText(text).then(function () { done(true); }, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* Khối 3D: trục x từ mặt tiền (0) ra sau, y lên trên, z theo bề ngang 3,9 m; đơn vị mét. */
+(function () {
+  var stage = document.getElementById('v3'), layer = document.getElementById('v3layer'), msg = document.getElementById('v3msg');
+  var info = document.getElementById('v3info');
+  function fail(t) { msg.textContent = t; msg.hidden = false; }
+  if (typeof THREE === 'undefined' || !THREE.OrbitControls) { fail('Không tải được thư viện 3D. Kiểm tra mạng rồi tải lại trang.'); return; }
+  var renderer;
+  try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); } catch (e) { fail('Trình duyệt này không chạy được WebGL.'); return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  stage.insertBefore(renderer.domElement, layer);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(35, 1, 0.1, 500);
+  var controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.screenSpacePanning = true; controls.minDistance = 4; controls.maxDistance = 140;
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x8a8a8a, 0.9));
+  var sun = new THREE.DirectionalLight(0xffffff, 0.45); sun.position.set(-12, 30, 22); scene.add(sun);
+
+  function cssv(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim() || '#888888'; }
+  var T = {
+    room: ['--muted', .22], wc: ['--blue', .45], stair: ['--red', .32], lift: ['--ink', .55], lobby: ['--muted', .1],
+    tho: ['--gold', .6], out: ['--green', .35], void: ['--blue', .07], roof: ['--muted', .4], frame: ['--muted', .18],
+    guard: ['--red', 0], ground: ['--soil', .75], pile: ['--ink', .5], tank: ['--green', .3], car: ['--amber', .45]
+  };
+  var EDGE = { void: '--blue', out: '--green', guard: '--red', ground: '--line', tank: '--green', car: '--amber' };
+
+  // [tên, loại, x0, x1, tùy chọn {h: cao riêng, z: [z0, z1], note}]
+  var core = [
+    ['Thang bộ', 'stair', 11.25, 14.45, { note: 'lối thoát nạn duy nhất' }],
+    ['Thang máy', 'lift', 14.45, 16.25, { z: [0.2, 1.8], note: '1800×1600 trên mặt bằng, các tờ khác ghi khác' }],
+    ['Sảnh', 'lobby', 14.45, 16.25, { z: [1.8, 3.7] }]
+  ];
+  function upper(front) {
+    return [['Ban công', 'out', -1.4, 0]].concat(front, [
+      ['WC', 'wc', 7.25, 9.6],
+      ['Giếng trời', 'void', 9.6, 11.25, { z: [0.2, 1.8], note: 'rộng 1,6 m, xuyên lên mái' }]
+    ], core, [
+      ['P. Ngủ', 'room', 16.25, 19.85],
+      ['WC', 'wc', 19.85, 21.45],
+      ['Lô gia', 'out', 21.45, 22.35]
+    ]);
+  }
+  var bed = [['P. Ngủ', 'room', 0, 7.25]];
+  var F = [
+    { n: 'Trệt', y: 0, h: 3.8, r: [
+      ['Sân trước', 'out', 0, 3.01],
+      ['Để xe', 'room', 3.01, 7.25, { h: 7.0, note: 'thông tầng cao 7 m · sâu thông thủy 3,94 m, Honda BR-V dài 4,49 m' }],
+      ['P. Khách', 'room', 7.25, 11.25, { h: 7.0, note: 'thông tầng cao 7 m · có thể không có cửa sổ' }]
+    ].concat(core, [
+      ['Bếp + ăn', 'room', 16.25, 20.75, { note: 'có thể không có cửa sổ' }],
+      ['WC', 'wc', 20.75, 22.35],
+      ['Sân sau', 'out', 22.35, 24.65]
+    ]) },
+    { n: 'Lửng', y: 3.8, h: 3.2, r: core.concat([
+      ['Sinh hoạt', 'room', 16.25, 20.75],
+      ['WC', 'wc', 20.75, 22.35]
+    ]) },
+    { n: 'T2', y: 7.0, h: 3.4, r: upper(bed) },
+    { n: 'T3', y: 10.4, h: 3.4, r: upper(bed) },
+    { n: 'T4', y: 13.8, h: 3.4, r: upper([['P. Thờ', 'tho', 0, 3.01, { note: 'phía mặt tiền' }], ['Đọc sách', 'room', 3.01, 7.25]]) },
+    { n: 'T5', y: 17.2, h: 3.2, r: [
+      ['Sân thượng', 'out', -1.4, 11.25, { note: 'lan can chưa ghi chiều cao' }],
+      ['Ô lấy sáng kính', 'void', 9.6, 11.25, { h: 0.1, z: [0.2, 1.8], note: 'chưa ghi tải trọng' }]
+    ].concat(core, [
+      ['Sân thượng', 'out', 16.25, 22.35, { note: 'lan can chưa ghi chiều cao' }]
+    ]) }
+  ];
+
+  var objs = [];
+  function add(geo, x, y, z, type, fi, meta, edges) {
+    var m = new THREE.Mesh(geo, new THREE.MeshLambertMaterial({ transparent: true, depthWrite: false }));
+    m.position.set(x, y, z);
+    var o = { mesh: m, type: type, fi: fi, meta: meta };
+    if (edges !== false) {
+      var dashed = type === 'void' || type === 'guard' || type === 'tank';
+      var em = dashed ? new THREE.LineDashedMaterial({ dashSize: .3, gapSize: .2, transparent: true }) : new THREE.LineBasicMaterial({ transparent: true });
+      o.edge = new THREE.LineSegments(new THREE.EdgesGeometry(geo), em);
+      if (dashed) o.edge.computeLineDistances();
+      m.add(o.edge);
+    }
+    m.userData.o = o; scene.add(m); objs.push(o); return o;
+  }
+  function box(x0, x1, y0, y1, z0, z1, type, fi, meta) {
+    var o = add(new THREE.BoxGeometry(x1 - x0, y1 - y0, z1 - z0), (x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2, type, fi, meta);
+    if (meta) meta.at = [(x0 + x1) / 2, y0 + Math.min(1.2, (y1 - y0) / 2), (z0 + z1) / 2];
+    return o;
+  }
+
+  F.forEach(function (f, fi) {
+    f.r.forEach(function (r) {
+      var opt = r[4] || {}, out = r[1] === 'out';
+      var z = opt.z || (out ? [0, 3.9] : [0.2, 3.7]);
+      var y0 = f.y + 0.02, y1 = out ? y0 + 0.08 : f.y + (opt.h || f.h) - 0.12;
+      box(r[2], r[3], y0, y1, z[0], z[1], r[1], fi, { name: r[0], fl: f.n, y: f.y, len: r[3] - r[2], note: opt.note, lab: true });
+    });
+  });
+  box(-2, 26.5, -0.07, -0.01, -0.6, 4.5, 'ground', 0, null);
+  box(14.45, 16.25, -1.65, 0, 0.2, 1.8, 'lift', 0, { name: 'Hố thang máy', fl: 'Trệt', y: -1.65, note: 'sâu 1,65 hay 1,55 m? chưa chống thấm' });
+  box(3.16, 7.65, 0.02, 1.685, 1.06, 2.84, 'car', 0, { name: 'Honda BR-V 2021/2022', fl: 'Trệt', y: 0, len: 4.49, note: 'rộng 1,78 m · lấn 55 cm sang phòng khách' });
+  box(22.55, 24.45, -1.8, -0.25, 0.35, 3.55, 'tank', 0, { name: 'Bể tự hoại (đề xuất)', fl: 'Trệt', y: -1.8, note: 'chưa có trên bản vẽ · dưới sân sau, sát hộp gen' });
+  [0.8, 5.2, 9.3, 16.3, 20.9].forEach(function (x) {
+    [0.4, 3.5].forEach(function (z) {
+      add(new THREE.CylinderGeometry(.15, .15, 5, 10), x, -2.5, z, 'pile', 0, { name: 'Cọc', fl: 'Móng', y: -24, note: 'dài 24 m, chưa có khoan địa chất' }, false);
+    });
+  });
+  box(14.45, 16.25, 20.4, 21.7, 0.2, 1.8, 'lift', 5, { name: 'Phòng kỹ thuật thang máy', fl: 'Mái', y: 20.4 });
+  box(11.25, 16.25, 20.4, 20.52, 0, 3.9, 'roof', 5, { name: 'Mái', fl: 'Mái', y: 20.4 });
+  box(-1.4, -1.2, 17.2, 21.9, 0, 3.9, 'frame', 5, { name: 'Khung mặt tiền', fl: 'T5', y: 17.2, note: 'cao tới +21,9' });
+  box(-1.4, 11.25, 17.2, 18.3, 0, 3.9, 'guard', 5, null);
+  box(16.25, 22.35, 17.2, 18.3, 0, 3.9, 'guard', 5, null);
+
+  function recolor() {
+    objs.forEach(function (o) {
+      o.mesh.material.color.set(cssv(T[o.type][0]));
+      if (o.edge) o.edge.material.color.set(cssv(EDGE[o.type] || '--ink'));
+    });
+    render();
+  }
+
+  // nhãn hướng nhà, nhãn phòng, chấm đỏ
+  function el(cls, text, tag) { var d = document.createElement(tag || 'div'); d.className = cls; d.textContent = text; layer.appendChild(d); return d; }
+  var ori = [[el('v3lab ori', '← Mặt tiền · đường Hồng Bàng'), [-1.6, 0.3, 1.95]], [el('v3lab ori', 'Phía sau →'), [24.8, 0.3, 1.95]]];
+  objs.forEach(function (o) { if (o.meta && o.meta.lab) o.lab = el('v3lab', o.meta.name); });
+  var PINS = [[1, 0, 6.0, -3.0, 0.4], [2, 5, 16.25, 18.8, 0.2], [3, 0, 15.35, -0.9, 1.0], [4, 5, 4.0, 18.4, 1.95], [5, 0, 5.1, 1.6, 1.95], [6, 0, 23.5, -1.0, 1.95]];
+  var showPins = true;
+  var pins = PINS.map(function (p) {
+    var b = el('v3pin', String(p[0]), 'button'); b.type = 'button'; b.setAttribute('aria-label', 'Chỗ cần hỏi số ' + p[0]);
+    b.addEventListener('click', function () {
+      var c = document.querySelector('.card[data-pin="' + p[0] + '"]'); if (!c) return;
+      c.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+      c.classList.add('on'); setTimeout(function () { c.classList.remove('on'); }, 1800);
+    });
+    return { b: b, n: String(p[0]), fi: p[1], at: [p[2], p[3], p[4]] };
+  });
+  [].forEach.call(document.querySelectorAll('.card[data-pin]'), function (c) {
+    var n = c.getAttribute('data-pin');
+    function hl(on) { pins.forEach(function (p) { if (p.n === n) p.b.classList.toggle('on', on); }); }
+    c.addEventListener('mouseenter', function () { hl(true); }); c.addEventListener('mouseleave', function () { hl(false); });
+    c.addEventListener('focus', function () { hl(true); }); c.addEventListener('blur', function () { hl(false); });
+  });
+
+  var v = new THREE.Vector3(), W = 1, H = 1;
+  function place(d, at) {
+    v.set(at[0], at[1], at[2]).project(camera);
+    var x = (v.x + 1) / 2 * W, y = (1 - v.y) / 2 * H;
+    if (v.z > 1 || x < -60 || x > W + 60 || y < -30 || y > H + 30) { d.style.display = 'none'; return null; }
+    d.style.display = ''; return [x, y];
+  }
+  var mode = -1;
+  function labels() {
+    ori.forEach(function (a) { var p = place(a[0], a[1]); if (p) a[0].style.transform = 'translate(' + p[0] + 'px,' + p[1] + 'px) translate(-50%,-50%)'; });
+    var shown = [];
+    objs.forEach(function (o) {
+      if (!o.lab) return;
+      if (mode < 0 || o.fi !== mode) { o.lab.style.display = 'none'; return; }
+      var p = place(o.lab, o.meta.at); if (!p) return;
+      var w = o.lab._w || (o.lab._w = o.lab.offsetWidth || 60), x0 = p[0] - w / 2, y0 = p[1] - 20;
+      var hit = shown.some(function (s) { return x0 < s[2] && x0 + w > s[0] && y0 < s[3] && y0 + 18 > s[1]; });
+      if (hit) { o.lab.style.display = 'none'; return; }
+      shown.push([x0 - 4, y0, x0 + w + 4, y0 + 18]);
+      o.lab.style.transform = 'translate(' + p[0] + 'px,' + p[1] + 'px) translate(-50%,-100%)';
+    });
+    pins.forEach(function (p) {
+      if (!showPins || (mode >= 0 && p.fi !== mode)) { p.b.style.display = 'none'; return; }
+      var q = place(p.b, p.at); if (q) p.b.style.transform = 'translate(' + q[0] + 'px,' + q[1] + 'px) translate(-50%,-50%)';
+    });
+  }
+  var queued = false;
+  function render() {
+    if (queued) return; queued = true;
+    requestAnimationFrame(function () { queued = false; renderer.render(scene, camera); labels(); });
+  }
+  controls.addEventListener('change', render);
+
+  // góc nhìn: điểm nhìn, hướng camera, khung cần vừa (rộng, cao)
+  function view(i) {
+    if (i < 0) return { t: [11.6, 8.6, 1.95], d: [-0.3, 0.22, 0.93], w: 36, h: 34 };
+    var f = F[i]; return { t: [10.6, f.y + 0.5, 1.95], d: [-0.15, 1.1, 0.62], w: 31, h: 14 };
+  }
+  var anim = null;
+  function go(i, instant) {
+    var p = view(i), aspect = W / H, k = 2 * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+    var dist = Math.max(p.h / k, p.w / (k * aspect)) * 1.05;
+    var dir = new THREE.Vector3(p.d[0], p.d[1], p.d[2]).normalize();
+    var t1 = new THREE.Vector3(p.t[0], p.t[1], p.t[2]), c1 = t1.clone().addScaledVector(dir, dist);
+    if (instant || matchMedia('(prefers-reduced-motion: reduce)').matches) { controls.target.copy(t1); camera.position.copy(c1); controls.update(); render(); return; }
+    var t0 = controls.target.clone(), c0 = camera.position.clone(), s = performance.now(), id = {};
+    anim = id;
+    (function step(now) {
+      if (anim !== id) return;
+      var a = Math.min(1, (now - s) / 550), e = a < .5 ? 2 * a * a : 1 - Math.pow(-2 * a + 2, 2) / 2;
+      controls.target.lerpVectors(t0, t1, e); camera.position.lerpVectors(c0, c1, e); controls.update();
+      if (a < 1) requestAnimationFrame(step);
+    })(s);
+  }
+  controls.addEventListener('start', function () { anim = null; });
+
+  var bar = document.getElementById('v3bar');
+  function apply() {
+    objs.forEach(function (o) {
+      var vis = mode < 0 || o.fi <= mode, dim = mode >= 0 && o.fi < mode;
+      o.mesh.visible = vis;
+      o.mesh.material.opacity = T[o.type][1] * (dim ? .15 : 1);
+      if (o.edge) o.edge.material.opacity = dim ? .06 : .7;
+    });
+    [].forEach.call(bar.children, function (b, j) { b.setAttribute('aria-pressed', String(j - 1 === mode)); });
+    render();
+  }
+  ['Cả nhà'].concat(F.map(function (f) { return f.n; })).forEach(function (t, j) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = t;
+    b.addEventListener('click', function () { mode = j - 1; apply(); go(mode); });
+    bar.appendChild(b);
+  });
+  document.getElementById('v3reset').addEventListener('click', function () { go(mode); });
+  document.getElementById('v3pins').addEventListener('change', function (e) { showPins = e.target.checked; render(); });
+
+  // chạm chọn phòng
+  var ray = new THREE.Raycaster(), ndc = new THREE.Vector2(), down = null, sel = null;
+  function fmt(n) { return (n >= 0 ? '+' : '') + n.toFixed(1).replace('.', ','); }
+  renderer.domElement.addEventListener('pointerdown', function (e) { down = [e.clientX, e.clientY]; });
+  renderer.domElement.addEventListener('pointerup', function (e) {
+    if (!down || Math.abs(e.clientX - down[0]) + Math.abs(e.clientY - down[1]) > 6) return;
+    var r = renderer.domElement.getBoundingClientRect();
+    ndc.set((e.clientX - r.left) / r.width * 2 - 1, -(e.clientY - r.top) / r.height * 2 + 1);
+    ray.setFromCamera(ndc, camera);
+    var hits = ray.intersectObjects(objs.filter(function (o) { return o.mesh.visible && o.meta; }).map(function (o) { return o.mesh; }));
+    if (sel) sel.mesh.material.emissive.set(0x000000);
+    sel = hits.length ? hits[0].object.userData.o : null;
+    if (!sel) { info.textContent = 'Chạm vào một phòng để xem tên và cao độ.'; render(); return; }
+    var m = sel.meta;
+    sel.mesh.material.emissive.set(cssv('--red')).multiplyScalar(.45);
+    info.textContent = m.name + ' · ' + m.fl + ' · cốt ' + fmt(m.y) + ' m' + (m.len ? ' · dài ≈ ' + m.len.toFixed(1).replace('.', ',') + ' m' : '') + (m.note ? ' · ' + m.note : '');
+    render();
+  });
+
+  function size() {
+    W = stage.clientWidth || 1; H = stage.clientHeight || 1;
+    renderer.setSize(W, H, false); camera.aspect = W / H; camera.updateProjectionMatrix();
+    objs.forEach(function (o) { if (o.lab) o.lab._w = 0; });
+    render();
+  }
+  size(); recolor(); apply(); go(-1, true);
+  if (window.ResizeObserver) new ResizeObserver(size).observe(stage); else window.addEventListener('resize', size);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', recolor);
+  new MutationObserver(recolor).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+</script>
+</body>
+</html>
