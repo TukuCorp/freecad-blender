@@ -150,6 +150,9 @@ section > p.lead { color: var(--muted); max-width: 62ch; margin: -6px 0 14px; }
 .limits .chip { color: var(--ink); background: var(--surface); }
 footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
 /* khối 3D */
+.v3head { display: grid; gap: 2px; padding: 12px 12px 0; }
+.v3head b { font-size: 16px; font-weight: 800; }
+.v3head span { color: var(--red); font-size: 13px; }
 .v3 { padding: 0; overflow: hidden; }
 .v3bar { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px; border-bottom: 1px solid var(--line); }
 .v3bar button, .v3foot button { font: inherit; font-family: var(--font-mono); font-size: 12px; min-height: 32px; padding: 4px 10px; background: transparent; color: var(--ink); border: 1px solid var(--line); cursor: pointer; }
@@ -185,7 +188,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
   <header class="hero">
     <h1>Chưa nên ép cọc hay đổ sàn.</h1>
     <div class="stamp" aria-label="Kết luận: dừng lại và hỏi nhà thầu">Dừng &amp; hỏi</div>
-    <p class="sub">Bản vẽ còn sáu chỗ phải hỏi lại nhà thầu. Hai chỗ đầu (móng sát nhà hàng xóm, bể tự hoại chưa có vị trí) phải chốt trước khi đổ móng.</p>
+    <p class="sub">Bản vẽ còn sáu chỗ phải hỏi lại nhà thầu. Hai chỗ đầu (móng sát nhà hàng xóm, bể tự hoại chưa có vị trí) phải chốt trước khi đổ móng. Trước hết, cần nhà thầu gửi bản PDF (hoặc file CAD) thay cho bản in: mọi số đo ở đây đọc từ ảnh chụp nên có thể sai.</p>
   </header>
 
   <div class="lanes" aria-label="Số điểm ba nhóm rà soát tìm ra">
@@ -208,6 +211,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
 
       <div class="sticky">
         <div class="panel v3">
+          <div class="v3head"><b>Khối nhà 3D, dựng từ ảnh chụp bản in</b><span>Chỉ là phác thảo. Cần bản PDF hoặc file CAD từ nhà thầu để dựng đúng kích thước.</span></div>
           <div class="v3bar" id="v3bar" role="toolbar" aria-label="Chọn tầng để xem"></div>
           <div class="v3stage" id="v3">
             <div class="v3layer" id="v3layer"></div>
