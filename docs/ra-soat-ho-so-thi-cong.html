@@ -141,6 +141,10 @@ section > p.lead { color: var(--muted); max-width: 62ch; margin: -6px 0 14px; }
 .tile.skip span { text-decoration: line-through; text-decoration-color: var(--red); }
 .sub2 { font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin: 16px 0 0; color: var(--muted); }
 
+.ownrows { display: grid; gap: 0; margin-top: 10px; }
+.ownrows > div { display: grid; grid-template-columns: 170px minmax(0,1fr); gap: 4px 14px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.ownrows b { font-weight: 700; }
+@media (max-width: 560px) { .ownrows > div { grid-template-columns: 1fr; } }
 /* danh sách gửi nhà thầu */
 .todo { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
 .todo li { display: grid; grid-template-columns: 24px minmax(0,1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); align-items: start; }
@@ -289,6 +293,27 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
   </section>
   <section>
     <h2>Phong thủy</h2>
+    <div class="panel own" style="margin-bottom:24px">
+      <div class="head-row"><h3 style="font-size:20px;font-weight:800">Chủ nhà: nam, Giáp Ngọ 1954 · cung Khảm</h3><span class="chip" style="border-color:var(--blue);color:var(--blue)">Đông tứ mệnh · hợp nhà hướng Nam</span></div>
+      <p style="color:var(--muted);max-width:72ch;margin-top:6px">Cung Khảm thuộc hành Thủy. Bốn hướng tốt: Đông Nam (Sinh Khí), Đông (Thiên Y, sức khỏe), Nam (Diên Niên, sống lâu), Bắc (Phục Vị). Bốn hướng xấu: Tây Nam, Đông Bắc, Tây Bắc, Tây. Các ô dưới đây giả định mặt tiền hướng Nam, nên hai tường hông là Đông và Tây.</p>
+      <div class="ownrows">
+        <div><b>Cửa chính</b><span>Hướng Nam là Diên Niên, hướng tốt của chủ nhà. Không cần sửa gì.</span></div>
+        <div><b>Phòng ngủ chủ nhà</b><span>Phòng ngủ phía trước tầng 2: nửa trước nhà là phía Nam (Diên Niên), gần thang máy, ít phải leo. Đầu giường sát tường hông phía Đông (Thiên Y).</span></div>
+        <div><b>Bàn thờ · tầng 4</b><span>Tựa tường hông phía Tây, mặt bàn thờ nhìn về Đông (Thiên Y). Không quay ra cửa kính mặt tiền, không chung tường với WC.</span></div>
+        <div><b>Bếp · tầng trệt</b><span>Đặt bếp sát tường hông phía Tây, người nấu quay lưng về Đông (Thiên Y). Bếp nằm nửa sau nhà, hợp với lệ “tọa hung hướng cát” ở mức nhà ống cho phép.</span></div>
+        <div><b>Bể tự hoại</b><span>Dưới sân sau, lệch về góc Tây Bắc (Lục Sát) hoặc Đông Bắc (Ngũ Quỷ), tức đặt chất thải vào hướng xấu. Chọn góc cùng bên với hộp gen thoát nước.</span></div>
+        <div><b>Bồn nước mái</b><span>Đặt trên sân thượng phía sau (Bắc, cung Khảm, cùng hành Thủy). Tránh nửa trước (Nam), nơi các nguồn cho là “thủy khắc hỏa”.</span></div>
+        <div><b>Màu</b><span>Theo mệnh nạp âm Sa Trung Kim (một trường phái khác Bát Trạch): trắng, xám, vàng đất hợp; hạn chế đỏ. Mặt tiền đã ốp xám và sơn trắng nên đã hợp.</span></div>
+      </div>
+      <div class="sub2">Xem tuổi làm nhà năm 2026 (Bính Ngọ) · tuổi mụ 73</div>
+      <div class="ownrows">
+        <div><b style="color:var(--red)">Kim Lâu · phạm</b><span>73 chia 9 dư 1 (Kim Lâu Thân, kỵ cho bản thân chủ nhà).</span></div>
+        <div><b style="color:var(--green)">Hoang Ốc · tốt</b><span>73 tuổi rơi vào Tứ Tấn Tài.</span></div>
+        <div><b style="color:var(--green)">Tam Tai · không</b><span>Tuổi Ngọ gặp Tam Tai vào các năm Thân, Dậu, Tuất (2028 đến 2030).</span></div>
+        <div><b>Năm tuổi</b><span>2026 là năm Ngọ, trùng tuổi chủ nhà. Có nơi kiêng, có nơi không.</span></div>
+        <div><b>Cách thường làm</b><span>Mượn tuổi một người nam trong nhà không phạm hạn để đứng lễ động thổ; việc xây vẫn tiến hành. Chờ sang 2027 không giúp gì: năm đó hết Kim Lâu nhưng Hoang Ốc rơi vào Ngũ Thọ Tử, cũng xấu.</span></div>
+      </div>
+    </div>
     <div class="pt">
       <div class="panel compass">
         <div class="cap">Hướng nhà · nhiều khả năng hướng Nam</div>
@@ -322,13 +347,12 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
         <div class="who" style="justify-content:center;margin-top:6px"><span class="chip" style="border-color:var(--blue);color:var(--blue)">Đông tứ: Bắc · Nam · Đông · Đ.Nam</span><span class="chip" style="border-color:var(--amber);color:var(--amber)">Tây tứ: Tây · T.Bắc · T.Nam · Đ.Bắc</span></div>
         <div class="verdict">
           <p><b>Vì sao đoán hướng Nam.</b> Bản vẽ không có mũi tên chỉ hướng Bắc. Theo bản đồ OpenStreetMap, đoạn đường Hồng Bàng gần kênh Tân Hóa chạy gần như thẳng Đông sang Tây. Nhà số chẵn nằm ở phía Bắc của đường, nên mặt tiền quay ra đường về phía Nam, lệch chừng 10° tùy đoạn.</p>
-          <p><b>Nếu đúng hướng Nam.</b> Nhà tọa Bắc, hướng Nam, thuộc nhóm Đông tứ trạch. Hợp với chủ nhà có cung Khảm, Ly, Chấn hoặc Tốn. Chủ nhà thuộc Tây tứ thì không đổi được hướng nhà, chỉ cần xoay bàn thờ, bếp và giường về hướng tốt của mình.</p>
+          <p><b>Nếu đúng hướng Nam.</b> Nhà tọa Bắc, hướng Nam, thuộc nhóm Đông tứ trạch. Chủ nhà cung Khảm cũng thuộc Đông tứ, nên nhà hợp mệnh: mặt tiền nhìn về Diên Niên.</p>
           <p><b>Về nắng.</b> Mặt tiền hướng Nam ở Sài Gòn ít bị nắng chiều gắt. Hai tường hông là hướng Đông và Tây, nhưng đều dùng chung với nhà bên nên gần như không ăn nắng.</p>
         </div>
         <div class="steps">
           <div><b>1</b><span>Đứng ở cửa chính, lưng quay vào nhà, mặt nhìn ra đường. Mở la bàn điện thoại và đọc số độ. Từ 158° đến 202° là hướng Nam.</span></div>
-          <div><b>2</b><span>Tra cung mệnh của chủ nhà theo năm sinh âm lịch và giới tính.</span></div>
-          <div><b>3</b><span>Cung thuộc nhóm Đông tứ (xanh) thì hợp nhà hướng Nam. Thuộc Tây tứ (cam) thì chỉnh bằng nội thất như các ô bên dưới.</span></div>
+          <div><b>2</b><span>Nếu số đo nằm ngoài 158° đến 202°, báo lại để tính lại các hướng ở trên.</span></div>
         </div>
       </div>
 
@@ -360,7 +384,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
             </g>
             <g font-size="11" style="fill:var(--ink)">
               <path d="M97 78 V38" style="stroke:var(--gold)" stroke-width="1.5"/><path d="M97 38 l8 -3 v14 l-8 3z" style="fill:var(--gold)"/>
-              <text x="112" y="38" style="fill:var(--ink)">Xoay bàn thờ về hướng tốt,</text><text x="112" y="52" style="fill:var(--ink)">không quay ra cửa kính mặt tiền</text>
+              <text x="112" y="38" style="fill:var(--ink)">Bàn thờ tựa tường Tây, nhìn về Đông,</text><text x="112" y="52" style="fill:var(--ink)">không quay ra cửa kính mặt tiền</text>
               <path d="M385 78 V18" style="stroke:var(--red)" stroke-width="1.5"/><path d="M385 18 l8 -3 v14 l-8 3z" style="fill:var(--red)"/>
               <text x="400" y="18" style="fill:var(--ink)">Cầu thang giữa nhà: không dời được.</text><text x="400" y="32" style="fill:var(--ink)">Đặt bình phong che lối lên.</text>
               <path d="M653 78 V55" style="stroke:var(--green)" stroke-width="1.5"/><path d="M644 62 l6 7 l12 -14" style="stroke:var(--green);fill:none" stroke-width="2.2"/>
@@ -371,10 +395,10 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
 
         <div class="sub2">Làm được ngay, gần như không tốn tiền</div>
         <div class="tiles">
-          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 24 V12 M3 20 H29 V24 M29 20 V16 a3 3 0 0 0 -3 -3 H13 V20"/><circle cx="8" cy="15" r="2.5"/></svg><span>Đầu giường kê sát tường hông, không nằm dưới dầm</span></div>
-          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 H26 M9 26 V14 H23 V26 M16 14 V8 M13 8 H19 M12 20 H20"/></svg><span>Bàn thờ xoay về hướng tốt, không chung tường với WC</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 24 V12 M3 20 H29 V24 M29 20 V16 a3 3 0 0 0 -3 -3 H13 V20"/><circle cx="8" cy="15" r="2.5"/></svg><span>Đầu giường sát tường hông phía Đông, không nằm dưới dầm</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 H26 M9 26 V14 H23 V26 M16 14 V8 M13 8 H19 M12 20 H20"/></svg><span>Bàn thờ nhìn về Đông (Thiên Y), không chung tường với WC</span></div>
           <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 26 V6 M27 26 V6 M5 9 H27 M12 9 V26 M20 9 V26"/></svg><span>Bình phong che lối lên cầu thang</span></div>
-          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C20 10 24 13 24 19 a8 8 0 0 1 -16 0 C8 14 12 12 12 8 C14 9 15 7 16 4Z"/></svg><span>Bếp đặt sao cho người nấu quay lưng về hướng tốt</span></div>
+          <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 C20 10 24 13 24 19 a8 8 0 0 1 -16 0 C8 14 12 12 12 8 C14 9 15 7 16 4Z"/></svg><span>Bếp sát tường Tây, người nấu quay lưng về Đông</span></div>
           <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 28 V5 H22 V28 M8 28 H26 M18 17 h1"/><path d="M22 7 L28 10 V28"/></svg><span>Cửa WC không mở thẳng vào giường</span></div>
           <div class="tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 26 H28 M7 26 V16 H14 V26 M18 26 V12 H25 V26"/><path d="M8 11 h4 M19 7 h4"/></svg><span>Để sân trước trống, không chất đồ</span></div>
         </div>
@@ -424,7 +448,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
       <div class="pt" style="margin-top:12px;gap:16px">
         <div class="verdict" style="margin-top:0">
           <p><b>Vì sao chọn sân sau.</b> Các nguồn phong thủy đều tránh để chất thải ở nửa trước khu đất hay trước cửa chính. Họ cũng tránh đặt bể dưới bếp, dưới phòng khách và ở trung cung. Ở nhà này, trung cung chính là khối cầu thang và thang máy. Một số nguồn gợi ý đặt dưới gara, nhưng gara ở đây chỉ sâu 3,94 m nên bánh xe sẽ đè thẳng lên nắp bể, dễ làm nứt bể.</p>
-          <p><b>Hợp với cả hai nhóm mệnh, nếu nhà hướng Nam.</b> Khi đó phía sau nhà là hướng Bắc. Chủ nhà Tây tứ thì Bắc là hướng xấu của mình, nên đặt bể ở giữa sân sau. Chủ nhà Đông tứ thì lệch bể về góc Đông Bắc hoặc Tây Bắc. Phải đo la bàn mới biết góc đó ở bên nào.</p>
+          <p><b>Góc nào của sân sau.</b> Nếu nhà hướng Nam thì phía sau là Bắc, hướng tốt (Phục Vị) của chủ nhà cung Khảm. Vì vậy lệch bể về góc Tây Bắc hoặc Đông Bắc, là hai hướng xấu của chủ nhà. Phải đo la bàn mới biết góc nào ở bên nào.</p>
         </div>
         <div class="verdict" style="margin-top:0">
           <p><b>Hỏi nhà thầu về mặt kỹ thuật.</b></p>
@@ -465,6 +489,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
       <span class="chip">Còn thiếu: địa chất · điện nước · bể tự hoại · bảng cửa</span>
       <span class="chip">Hướng Nam là suy từ bản đồ, chưa đo tại nhà</span>
       <span class="chip">Phong thủy là tập quán, không phải kỹ thuật</span>
+      <span class="chip">Chủ nhà: nam, Giáp Ngọ 1954, sinh sau Tết</span>
     </div>
     <span class="cap">Chi tiết: contractor/scan-2026-10-22/review/REVIEW.md · out-safety.md · out-design.md · out-phongthuy.md</span>
   </footer>

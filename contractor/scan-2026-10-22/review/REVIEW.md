@@ -72,3 +72,9 @@ I did not edit the spec or regenerate renders. Say so if you want the model re-i
 
 - Local only, nothing committed. `contractor/new contractor scane.zip` and `contractor/scan-2026-10-22/` (heic ≈16 MB, jpg, transcripts, reports) are untracked, and `_scan1022/` holds the agents' scratch files (fetched pages, scripts). I did not touch `.gitignore`.
 - Briefs and agent outputs stay here as the audit trail.
+
+## Owner data (2026-10-25)
+- Owner: male, born on or after Tết 1954, so lunar year Giáp Ngọ. Bát Trạch (formula in out-phongthuy.md §2.1): d = 1, k = 11 − 1 → 1, **cung Khảm** (Thủy, Đông tứ). Good directions: SE Sinh Khí, E Thiên Y, S Diên Niên, N Phục Vị. Bad: SW, NE, NW, W.
+- If the house faces South, it is a Đông tứ trạch and matches the owner. Placements are on the review page: altar against the West wall facing East, stove on the West wall with the cook's back to the East, headboards on the East wall, septic tank in the NW or NE corner of the rear yard, roof water tank on the rear terrace.
+- 2026 (tuổi mụ 73): Kim Lâu yes (73 mod 9 = 1); Hoang Ốc Tứ Tấn Tài (good); no Tam Tai (Ngọ gets Thân, Dậu, Tuất = 2028–2030). 2027: Hoang Ốc Ngũ Thọ Tử. The usual remedy is mượn tuổi for the động thổ ceremony.
+- Note: the Tam Tai group list in out-phongthuy.md §4.3 is garbled. The standard rule (Dần-Ngọ-Tuất → Thân, Dậu, Tuất) is used here.
