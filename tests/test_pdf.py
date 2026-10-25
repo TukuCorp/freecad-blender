@@ -5,6 +5,7 @@ import pytest
 
 from homedesign.compiler import compile_spec
 from homedesign import pdf
+from homedesign.plan2d import write_plans
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = REPO_ROOT / "spec" / "examples"
@@ -12,6 +13,15 @@ EXAMPLES = REPO_ROOT / "spec" / "examples"
 
 def load_example(name):
     return json.loads((EXAMPLES / name).read_text())
+
+
+@pytest.fixture(scope="module")
+def drawn_out(tmp_path_factory):
+    """Fresh plans/elevations/sections for tubehouse-mini in a temp output dir;
+    `output/` is gitignored, so CI has no pre-built drawings."""
+    out = tmp_path_factory.mktemp("output")
+    write_plans(compile_spec(load_example("tubehouse-mini.json")), out)
+    return out
 
 
 def _brief():
@@ -80,26 +90,26 @@ def test_room_schedule_lists_every_room_with_area_and_floor_totals():
     assert ground["total_m2"] == sum(r["area_m2"] for r in ground["rooms"])
 
 
-def test_render_brief_html_includes_title_narrative_and_requirements():
+def test_render_brief_html_includes_title_narrative_and_requirements(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
-    html = pdf.render_brief_html(model, _brief(), REPO_ROOT / "output", REPO_ROOT / "spec" / "examples" / "tubehouse-mini.json")
+    html = pdf.render_brief_html(model, _brief(), drawn_out, REPO_ROOT / "spec" / "examples" / "tubehouse-mini.json")
     assert "Test House Brief" in html
     assert "Paragraph one." in html
     assert "Requirement A" in html
     assert "@page { size: A3 landscape;" in html
 
 
-def test_render_brief_html_includes_one_plan_page_per_storey():
+def test_render_brief_html_includes_one_plan_page_per_storey(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
-    html = pdf.render_brief_html(model, _brief(), REPO_ROOT / "output", REPO_ROOT / "spec" / "examples" / "tubehouse-mini.json")
+    html = pdf.render_brief_html(model, _brief(), drawn_out, REPO_ROOT / "spec" / "examples" / "tubehouse-mini.json")
     for storey in model.storeys:
         assert storey.name in html
 
 
-def test_render_brief_html_lists_handover_files():
+def test_render_brief_html_lists_handover_files(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
     spec_path = REPO_ROOT / "spec" / "examples" / "tubehouse-mini.json"
-    html = pdf.render_brief_html(model, _brief(), REPO_ROOT / "output", spec_path)
+    html = pdf.render_brief_html(model, _brief(), drawn_out, spec_path)
     assert spec_path.name in html
     assert "tubehouse-mini_f0.dxf" in html
 
@@ -132,12 +142,10 @@ def test_takeoff_totals_row_matches_sum():
     assert abs(rows[-1]["gfa_m2"] - per_storey) < 0.1
 
 
-def test_render_brief_html_uses_relative_images_not_data_uris(tmp_path):
+def test_render_brief_html_uses_relative_images_not_data_uris(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
-    out = REPO_ROOT / "output"
-    hero = out / "png" / "tubehouse-mini_exterior.png"
-    if not hero.exists():
-        pytest.skip("no renders present")
+    out = drawn_out
+    _write_renders(out, model)
     html = pdf.render_brief_html(model, _brief(), out, EXAMPLES / "tubehouse-mini.json")
     # Gallery images referenced by relative path; the single cover-hero data
     # URI is the only base64 occurrence allowed.
@@ -145,21 +153,19 @@ def test_render_brief_html_uses_relative_images_not_data_uris(tmp_path):
     assert 'src="../pdf/img/' in html
 
 
-def test_render_brief_html_embed_images_embeds_all(tmp_path):
+def test_render_brief_html_embed_images_embeds_all(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
-    out = REPO_ROOT / "output"
-    hero = out / "png" / "tubehouse-mini_exterior.png"
-    if not hero.exists():
-        pytest.skip("no renders present")
+    out = drawn_out
+    _write_renders(out, model)
     html = pdf.render_brief_html(model, _brief(), out, EXAMPLES / "tubehouse-mini.json",
                                  embed_images=True)
     n_views = len(model.views) or 2
     assert html.count("data:image/png;base64") == n_views + 1  # gallery + hero
 
 
-def test_render_brief_html_includes_elevation_and_section_pages():
+def test_render_brief_html_includes_elevation_and_section_pages(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
-    html = pdf.render_brief_html(model, _brief(), REPO_ROOT / "output",
+    html = pdf.render_brief_html(model, _brief(), drawn_out,
                                  EXAMPLES / "tubehouse-mini.json")
     for heading in ("North Elevation", "South Elevation", "East Elevation", "West Elevation",
                     "Long Section", "Cross Section"):
@@ -172,6 +178,14 @@ def _write_real_png(path):
     except ImportError:
         pytest.skip("Pillow unavailable")
     Image.new("RGB", (12, 12), (255, 0, 0)).save(path)
+
+
+def _write_renders(out, model):
+    """Tiny real PNGs for every view, so the gallery has images to embed."""
+    png_dir = out / "png"
+    png_dir.mkdir(exist_ok=True)
+    for view in [v.name for v in model.views] or ["exterior", "interior"]:
+        _write_real_png(png_dir / f"{model.name}_{view}.png")
 
 
 def _stale_setup(tmp_path, hashes):
@@ -209,11 +223,11 @@ def test_gallery_stale_badge_absent_when_all_fresh(tmp_path):
     assert ">STALE<" not in html
 
 
-def test_render_brief_html_escapes_brief_title():
+def test_render_brief_html_escapes_brief_title(drawn_out):
     model = compile_spec(load_example("tubehouse-mini.json"))
     brief = _brief()
     brief["title"] = "Nhà & Sân"
-    html = pdf.render_brief_html(model, brief, REPO_ROOT / "output",
+    html = pdf.render_brief_html(model, brief, drawn_out,
                                  EXAMPLES / "tubehouse-mini.json")
     assert "Nhà &amp; Sân" in html
     assert "Nhà & Sân" not in html

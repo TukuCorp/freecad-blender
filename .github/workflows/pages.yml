@@ -5,6 +5,9 @@ name: Deploy Pages
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Repo default token is read-only; pushing to gh-pages needs write.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Deploy docs to Pages
