@@ -231,6 +231,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
             <span class="chip"><i style="background:var(--green);opacity:.5"></i>Sân · ban công</span>
             <span class="chip"><i style="border:1.5px dashed var(--red)"></i>Lan can chưa ghi cao</span>
             <span class="chip"><i style="border:1.5px dashed var(--green)"></i>Bể tự hoại đề xuất</span>
+            <span class="chip"><i style="background:var(--amber);opacity:.7"></i>Xe dài 4,49 m</span>
           </div>
         </div>
         <p class="cap" style="margin-top:8px;text-transform:none;letter-spacing:0">Dựng lại từ các kích thước trên 9 tờ kiến trúc mới. Kéo để xoay, cuộn hoặc chụm hai ngón để phóng to. Khối phác, không phải bản vẽ. Vị trí phòng ước lượng từ chuỗi kích thước đọc trên ảnh chụp, có thể lệch vài trăm mm. Thang máy được đặt sát một bên tường vì bản vẽ chưa rõ. Cọc chỉ vẽ 5 m đầu, thực tế dài 24 m.</p>
@@ -529,9 +530,9 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
   var T = {
     room: ['--muted', .22], wc: ['--blue', .45], stair: ['--red', .32], lift: ['--ink', .55], lobby: ['--muted', .1],
     tho: ['--gold', .6], out: ['--green', .35], void: ['--blue', .07], roof: ['--muted', .4], frame: ['--muted', .18],
-    guard: ['--red', 0], ground: ['--soil', .75], pile: ['--ink', .5], tank: ['--green', .3]
+    guard: ['--red', 0], ground: ['--soil', .75], pile: ['--ink', .5], tank: ['--green', .3], car: ['--amber', .45]
   };
-  var EDGE = { void: '--blue', out: '--green', guard: '--red', ground: '--line', tank: '--green' };
+  var EDGE = { void: '--blue', out: '--green', guard: '--red', ground: '--line', tank: '--green', car: '--amber' };
 
   // [tên, loại, x0, x1, tùy chọn {h: cao riêng, z: [z0, z1], note}]
   var core = [
@@ -605,6 +606,7 @@ footer .cap { display: block; margin-top: 10px; overflow-wrap: anywhere; }
   });
   box(-2, 26.5, -0.07, -0.01, -0.6, 4.5, 'ground', 0, null);
   box(14.45, 16.25, -1.65, 0, 0.2, 1.8, 'lift', 0, { name: 'Hố thang máy', fl: 'Trệt', y: -1.65, note: 'sâu 1,65 hay 1,55 m? chưa chống thấm' });
+  box(3.16, 7.65, 0.02, 1.685, 1.06, 2.84, 'car', 0, { name: 'Xe của nhà', fl: 'Trệt', y: 0, len: 4.49, note: 'rộng 1,78 m · lấn 55 cm sang phòng khách' });
   box(22.55, 24.45, -1.8, -0.25, 0.35, 3.55, 'tank', 0, { name: 'Bể tự hoại (đề xuất)', fl: 'Trệt', y: -1.8, note: 'chưa có trên bản vẽ · dưới sân sau, sát hộp gen' });
   [0.8, 5.2, 9.3, 16.3, 20.9].forEach(function (x) {
     [0.4, 3.5].forEach(function (z) {
